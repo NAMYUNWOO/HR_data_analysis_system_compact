@@ -1,0 +1,5 @@
+import requests
+header = { 'TDCProjectkey' : '161a0308-ef93-4875-9122-73264466f4de'}
+import datetime
+url = "https://apis.sktelecom.com/v1/eventday/days?type=h&year=2018&month=01&day=01"
+requests.get(url=url,headers= header).json()

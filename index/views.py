@@ -223,6 +223,7 @@ class Index(View):
 
 
         ################## lineChart #########################################################
+        """
         email_avgLineChart = self.lineChartGen(self.getEmpObj(EmailData),
                                   ["email_between_1904_mean_send", "email_month_var_receive", "email_day_mean_receive",
                                    "email_between_0709_daycnt_send", "email_between_1904_daycnt_send", "email_day_mean_send",
@@ -232,7 +233,7 @@ class Index(View):
                                          "07-09 메일사용","19-04 메일사용횟수","발신평균(일)",
                                          "근접중심성","부하 근접중심성","동료 근접중심성",
                                          "상사 위세중심성"])
-
+        """
         mep_avgLineChart = self.lineChartGen(self.getEmpObj(M_EPData),
                                             ["mep_early_tot", "mep_late_tot", "mep_early_day", "mep_late_day"],
                                             ["근무시간전1","근무시간후1","근무시간전2","근무시간후12"])
@@ -322,13 +323,14 @@ class Index(View):
             "employee_size": empBioObj.count(),
             "grade": grade_avgLineChart,
             "edu": edu_avgLineChart,
-            "email": email_avgLineChart,
+
             "thanks": thank_avgLineChart,
             "vdiShare": vdiShare_avgLineChart,
             "vdiIndi": vdiIndi_avgLineChart,
             "ep":ep_avgLineChart,
             "mep":mep_avgLineChart
         }
+        # "email": email_avgLineChart,
         """ useless contexts
         
             'scoreAvg':scores,
