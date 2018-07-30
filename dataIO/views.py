@@ -188,12 +188,12 @@ def preprocess2Analysis(start_date,end_date):
 
 
 def dataIO(request):
-    processedModels = [EmailData,Thanks_Data, VDI_indi_Data, VDI_share_Data,EPData,M_EPData,GatePassData]
-    # not using [Flow,IMSData,ApprovalData, Portable_out_Data, PC_out_Data, PC_control_Data,CafeteriaData, BlogData,MeetingData,PCMData,TMSData,ECMData]
+    processedModels = [EmailData,Token_Data,VDI_Data,M_EPData,GatePassData]
+    # not using [Thanks_Data,EPData,VDI_indi_Data, VDI_share_Data,Flow,IMSData,ApprovalData, Portable_out_Data, PC_out_Data, PC_control_Data,CafeteriaData, BlogData,MeetingData,PCMData,TMSData,ECMData]
     hrModels = [EmployeeBiography, EmployeeGrade, Education]
     # not using [Trip]
-    logModels = [ EmailLog,Thanks_log, VDI_indi_log, VDI_share_log,EP_log,M_EP_log,GatePass_log]
-    # not using [Reward_log,IMS_log, Approval_log, Portable_out_log, PC_out_log, PC_control_log, ECM_log, Cafeteria_log, Blog_log,Meeting_log,PCM_log,TMS_log]
+    logModels = [ EmailLog,Token_log ,VDI_log ,M_EP_log,GatePass_log]
+    # not using [Thanks_log,EP_log, VDI_indi_log, VDI_share_log,Reward_log,IMS_log, Approval_log, Portable_out_log, PC_out_log, PC_control_log, ECM_log, Cafeteria_log, Blog_log,Meeting_log,PCM_log,TMS_log]
     if request.method == 'GET':
         search_query = request.GET.get('search_box', None)
         if search_query != None:

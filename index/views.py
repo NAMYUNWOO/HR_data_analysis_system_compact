@@ -223,20 +223,20 @@ class Index(View):
 
 
         ################## lineChart #########################################################
-        """
+
         email_avgLineChart = self.lineChartGen(self.getEmpObj(EmailData),
-                                  ["email_between_1904_mean_send", "email_month_var_receive", "email_day_mean_receive",
-                                   "email_between_0709_daycnt_send", "email_between_1904_daycnt_send", "email_day_mean_send",
-                                    "sna_closeness", "buha_closeness", "dongryo_closeness",
-                                   "sangsa_eigenvector"],
-                                        ["19-04 메일사용평균","수신분산(월)","수신평균(일)",
-                                         "07-09 메일사용","19-04 메일사용횟수","발신평균(일)",
-                                         "근접중심성","부하 근접중심성","동료 근접중심성",
-                                         "상사 위세중심성"])
-        """
+                                  ["sendCnt", "sendCnt_nwh", "receiveCnt",
+                                   "sendCnt_byLevelRatio", "sendCnt_nwh_byLevelRatio",
+                                   "receiveCnt_byLevelRatio","nodeSize", "nodeSize_byLevelRatio",
+                                   "nodeSize_byGroupRatio"],
+                                  ["발신","발신(근무시간 외)","수신",
+                                   "발신 직급별 비율","발신 (근무시간 외) 직급별 비율",
+                                   "수신 직급별 비율","노드 사이즈","노드사이즈 직급별 비율",
+                                   "노드사이즈 조직별 비율"])
+
         mep_avgLineChart = self.lineChartGen(self.getEmpObj(M_EPData),
-                                            ["mep_early_tot", "mep_late_tot", "mep_early_day", "mep_late_day"],
-                                            ["근무시간전1","근무시간후1","근무시간전2","근무시간후12"])
+                                            ["mep_early", "mep_late", "mep_early_byLevelRatio", "mep_late_byLevelRatio"],
+                                            ["근무시간전1","근무시간후1","근무시간전 직급별 비율","근무시간전 직급별 비율"])
 
         ep_avgLineChart = self.lineChartGen(self.getEmpObj(EPData),
                                             ["ep_access_day_mean", "ep_access_day_var"],
@@ -252,18 +252,32 @@ class Index(View):
                                         ['edu_credit'],
                                         ['이수학점'])
 
+        token_avgLineChart = self.lineChartGen(self.getEmpObj(Token_Data),
+                                             ["token_send", "token_receive", "token_send_byLevelRatio","token_receive_byLevelRatio"],
+                                             ["근무시간전1", "근무시간후1", "근무시간전 직급별 비율", "근무시간전 직급별 비율"])
 
+
+        vdi_avgLineChart = self.lineChartGen(self.getEmpObj(VDI_Data),
+                                             ["vdi_early", "vdi_late", "vdi_early_byLevelRatio","vdi_late_byLevelRatio"],
+                                             ["근무시간전1", "근무시간후1", "근무시간전 직급별 비율", "근무시간전 직급별 비율"])
+        """
+        
+        email_avgLineChart = self.lineChartGen(self.getEmpObj(EmailData),
+                                  ["email_between_1904_mean_send", "email_month_var_receive", "email_day_mean_receive",
+                                   "email_between_0709_daycnt_send", "email_between_1904_daycnt_send", "email_day_mean_send",
+                                    "sna_closeness", "buha_closeness", "dongryo_closeness",
+                                   "sangsa_eigenvector"],
+                                        ["19-04 메일사용평균","수신분산(월)","수신평균(일)",
+                                         "07-09 메일사용","19-04 메일사용횟수","발신평균(일)",
+                                         "근접중심성","부하 근접중심성","동료 근접중심성",
+                                         "상사 위세중심성"])
         thank_avgLineChart = self.lineChartGen(self.getEmpObj(Thanks_Data),
-                                       ["thank_letter_tot_receive", "thank_letter_tot_send"],
-                                       ['감사편지수신', '감사편지발신'])
-
-        vdiShare_avgLineChart = self.lineChartGen(self.getEmpObj(VDI_share_Data),
-                                          ["vdi_share_mean_time"],
-                                          ['공용vdi사용'])
+                               ["thank_letter_tot_receive", "thank_letter_tot_send"],
+                               ['감사편지수신', '감사편지발신'])
         vdiIndi_avgLineChart = self.lineChartGen(self.getEmpObj(VDI_indi_Data),
                                          ["vdi_indi_mean_timem"],
                                          ['개인vdi사용'])
-        """
+        
         score_avgLineChart = self.lineChartGen(self.getEmpObj(Score),
                                            ['score1','score2','score3','score4'],
                                            ['몰입', '성과', '핵심', '업무'])
@@ -321,18 +335,19 @@ class Index(View):
             "currentBu":self.bu,
             "recentUpdateDate":  getRecentUpdateDate_str(),
             "employee_size": empBioObj.count(),
+            "email":email_avgLineChart,
             "grade": grade_avgLineChart,
             "edu": edu_avgLineChart,
-
-            "thanks": thank_avgLineChart,
-            "vdiShare": vdiShare_avgLineChart,
-            "vdiIndi": vdiIndi_avgLineChart,
+            "token":token_avgLineChart,
+            "vdi": vdi_avgLineChart,
             "ep":ep_avgLineChart,
             "mep":mep_avgLineChart
         }
         # "email": email_avgLineChart,
         """ useless contexts
-        
+            "thanks": thank_avgLineChart,
+            "vdiShare": vdiShare_avgLineChart,
+            "vdiIndi": vdiIndi_avgLineChart,
             'scoreAvg':scores,
             "survey": survey_avgLineChart,
             "trip": trip_avgLineChart,

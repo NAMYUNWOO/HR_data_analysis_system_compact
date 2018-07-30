@@ -5,6 +5,7 @@ from index.models import *
 import datetime
 import re,os,time
 import numpy as np
+import json
 from django.db.models.functions import TruncMonth, TruncDay
 from sklearn.cluster import KMeans
 from inspect import ismethod
@@ -147,6 +148,9 @@ class PreprocessData:
             isExists = self.Model.objects.filter(Q(employeeID=empObj) & Q(eval_date=self.eval_date) & Q(start_date=self.start_date))
             if isExists.count() != 0:
                 isExists.delete()
+            instance_i = self.Model(employeeID=empObj, employeeID_confirm=id_i, start_date=self.start_date,eval_date=self.eval_date)
+            """
+            # no difference between email and others
             if self.Model != EmailData:
                 instance_i = self.Model(employeeID=empObj, employeeID_confirm=id_i, start_date=self.start_date, eval_date=self.eval_date)
             else:
@@ -179,6 +183,7 @@ class PreprocessData:
                                         , sangsa_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_sangsa_eigenvector"])
                                         , sangsa_indegree=cls_ind_outd_sangsa[1]
                                         , sangsa_outdegree=cls_ind_outd_sangsa[2])
+            """
             attrs = []
             for name in dir(instance_i):
                 try:
@@ -220,43 +225,38 @@ class FillData:
             return False
 
         modelname_method = {
-         "Approval_log": self._fillApprovalData
+            "EmployeeBiography": self._fillHRdata
+            , "EmailLog": self._fillEmailData
+            , "VDI_log": self._fillVdiData
+            , "Token_log": self._fillTokenData
+            , 'M_EP_log': self._fillMEPData
+            , 'GatePass_log': self._fillGatePassData
+        }
 
-        , "Blog_log":  self._fillBlogData
-
-        , "Cafeteria_log": self._fillCafeteriaData
-
-        , "ECM_log": self._fillEcmData
+        # updateUselessModel
+        """
+        modelname_method.update({"Approval_log": self._fillApprovalData
         , "Education": self._fillEducationData
-        , "EmailLog": self._fillEmailData
-
-        , "EmployeeBiography": self._fillHRdata
         , "EmployeeGrade": self._fillGradeData
-
+        , "Blog_log":  self._fillBlogData
+        , "Cafeteria_log": self._fillCafeteriaData
+        , "ECM_log": self._fillEcmData
         , "IMS_log": self._fillImsData
-
         , "PC_control_log": self._fillPcControlData
-
         , "PC_out_log": self._fillPcOutData
-
         , "Portable_out_log": self._fillPortableOutData
         , "Reward_log": self._fillRewardData
         , "Score": self._fillScoreData
         , "Survey": self._fillSurveyData
-
         , "Thanks_log": self._fillThanksData
         , "Trip": self._fillTripData
-
         , "VDI_indi_log": self._fillVdiIndiData
-
         , "VDI_share_log": self._fillVdiShareData
         , "Meeting_log":self._fillMeetingData
         ,'EP_log':self._fillEPData
-        ,'M_EP_log':self._fillMEPData
         ,'PCM_log':self._fillPCMData
-        , 'TMS_log':self._fillTMSData
-        , 'GatePass_log':self._fillGatePassData}
-
+        , 'TMS_log':self._fillTMSData})
+        """
         methodToProcessData = modelname_method[self.modelName]
         methodToProcessData()
 
@@ -408,8 +408,6 @@ class FillData:
 
         return True
 
-
-
     def _fillGradeData(self):
         employeeGrade_list = []
         for i in range(len(self.df)):
@@ -470,6 +468,204 @@ class FillData:
             education_list.append(empEdu)
         Education.objects.bulk_create(education_list)
         return True
+
+
+
+    def _fillEmailData(self):
+        holiday_ = open("../holiday.json").read()
+        holidayHash = json.loads(holiday_)
+        def emailextractor(x):
+            try:
+                x1 = re.sub("[가-힣|\>|\<|' '*|;]", " ", str(x))
+                return re.findall("[^' ']*@[^' ']*", x1)
+            except:
+                return [""]
+        emailHash = {i:j for i,j in list(Employee.objects.values_list("email","id").distinct())}
+        success = False
+        self.df.columns = ["col" + str(i) for i in range(len(self.df.columns))]
+        self.df = self.df[self.df.col0 == "보낸메일함"]
+        self.df.index = range(len(self.df))
+        senders = self.df.col1
+        seval_date = self.df.col2
+        receivers = self.df[["col4", "col5", "col6"]]
+        senders = senders.map(lambda x: emailextractor(x))
+        receivers = receivers.applymap(lambda x: emailextractor(x))
+        receivers = receivers.col4 + receivers.col5 + receivers.col6
+        try:
+            earlyDate = EmailDateBeginEnd.objects.get(pk=0).eval_date
+            recentDate = EmailDateBeginEnd.objects.get(pk=1).eval_date
+        except:
+            earlyDate = EmailDateBeginEnd(id = 0, eval_date = datetime.datetime(9999,1,1))
+            recentDate = EmailDateBeginEnd(id = 1, eval_date = datetime.datetime(1,1,1))
+            earlyDate.save()
+            recentDate.save()
+            earlyDate = EmailDateBeginEnd.objects.get(pk=0).eval_date
+            recentDate = EmailDateBeginEnd.objects.get(pk=1).eval_date
+
+        if type(seval_date[0]) == str:
+            seval_date = seval_date.map(lambda x: self.__strEval_date_converter(x))
+        empEmailLog_list = []
+        for i in range(len(senders)):
+            if len(receivers[i]) == 0 or len(senders[i]) == 0:
+                continue
+            try:
+                sendID_ = emailHash[senders[i][0].strip()]
+            except:
+                continue
+            for receiver in receivers[i]:
+                try:
+                    receiveID_ = emailHash[receiver]
+                except:
+                    continue
+                try:
+                    sendID = Employee.objects.get(id=sendID_)
+                    receiveID = Employee.objects.get(id=receiveID_)
+                except:
+                    continue
+                eval_date = seval_date[i]
+                nwh = False
+                YMD = str(eval_date.year)+"-"+str(eval_date.month)+"-"+str(eval_date.day)
+                if holidayHash.get(YMD,False) or eval_date.hour > 20 or eval_date.hour < 8:
+                    nwh = True
+                #print(sendID,receiveID,eval_date)
+                empEmailLog = EmailLog(sendID=sendID, receiveID=receiveID, eval_date=eval_date,nwh=nwh)
+                empEmailLog_list.append(empEmailLog)
+                earlyDate = min(earlyDate,eval_date)
+                recentDate = max(eval_date,recentDate)
+                print(str(sendID) + " send to "+str(receiveID), end='\r')
+                success = True
+        if not success:
+            return False
+        EmailLog.objects.bulk_create(empEmailLog_list)
+        emailDateBegin = EmailDateBeginEnd.objects.get(pk=0)
+        emailDateEnd = EmailDateBeginEnd.objects.get(pk=1)
+        emailDateBegin.eval_date = earlyDate
+        emailDateEnd.eval_date = recentDate
+        emailDateBegin.save()
+        emailDateEnd.save()
+        return True
+
+
+    def _fillMEPData(self):
+        mep_list = []
+        for i in range(len(self.df)):
+            df_instance = self.df.iloc[i, :]
+            try:
+                employeeID_ = int(df_instance.id)
+                employeeID = Employee.objects.get(id=int(employeeID_))
+            except:
+                continue
+            if type(df_instance.eval_date) == str:
+                eval_date = self.__strEval_date_converter(df_instance.eval_date)
+            else:
+                eval_date = df_instance.eval_date
+            early = False
+            late = False
+            if 4 < eval_date.hour < 8:
+                early = True
+            if 20 < eval_date.hour or eval_date.hour < 3:
+                late = True
+            mep_i = M_EP_log(employeeID = employeeID,early=early,late=late,eval_date=eval_date)
+            mep_list.append(mep_i)
+            print(str(employeeID_)+str(eval_date),end="\r")
+        M_EP_log.objects.bulk_create(mep_list)
+        return True
+
+
+    def _fillVdiData(self):
+        success = False
+        vdi_log_obj_list = []
+        for i in range(len(self.df)):
+            df_instance = self.df.iloc[i, :]
+            employeeID_ = df_instance.id
+            try:
+                employeeID = Employee.objects.get(id=employeeID_)
+            except:
+                continue
+
+            eval_date = df_instance.eval_date
+            if type(eval_date) == str:
+                eval_date = self.__strEval_date_converter(eval_date)
+            early = False
+            late = False
+            if 4 < eval_date.hour < 8:
+                early = True
+            if 20 < eval_date.hour or eval_date.hour < 3 :
+                late = True
+            vdi_log_obj = VDI_log(employeeID=employeeID,early=early,late=late,eval_date=eval_date)
+            vdi_log_obj_list.append(vdi_log_obj)
+            success = True
+        if not success:
+            return False
+        VDI_log.objects.bulk_create(vdi_log_obj_list)
+        return True
+
+    def _fillTokenData(self):
+        token_log_list = []
+        self.df["type"] = self.df["type"].map(lambda x : x.strip())
+        self.df = self.df[self.df["type"] == "감사토큰"]
+        for i in range(len(self.df)):
+            df_instance = self.df.iloc[i, :]
+            token_sendID_ = df_instance.id_send
+            token_receiveID_ = df_instance.id_receive
+            eval_date = df_instance.eval_date
+            if type(eval_date) == str:
+                eval_date = self.__strEval_date_converter(eval_date)
+
+            try:
+                sendID = Employee.objects.get(id=int(token_sendID_))
+                tokenSend = Token_log(employeeID=sendID, isSend=True, eval_date=eval_date)
+                token_log_list.append(tokenSend)
+            except:
+                pass
+
+            try:
+                receiveID_raw = re.findall("[0-9]+", token_receiveID_)[0]
+                receiveID = Employee.objects.get(id= int(receiveID_raw))
+                tokenReceive = Token_log(employeeID=receiveID, isSend=False, eval_date=eval_date)
+                token_log_list.append(tokenReceive)
+            except:
+                pass
+        Token_log.objects.bulk_create(token_log_list)
+        return True
+
+    def _fillGatePassData(self):
+        gatepass_list = []
+        for i in range(len(self.df)):
+            df_instance = self.df.iloc[i, :]
+            try:
+                employeeID_ = int(df_instance.id)
+                employeeID = Employee.objects.get(id=int(employeeID_))
+            except:
+                continue
+            yyyymmdd = "-".join(re.findall('[0-9]+', df_instance.eval_date1))
+            hhmmss = ":".join(re.findall("[0-9]+", df_instance.eval_date2))
+            eval_date_ = yyyymmdd.strip()+" "+hhmmss.strip()
+            eval_date = self.__strEval_date_converter(eval_date_)
+            isIn = "입실" in df_instance.eventtype
+            gpl = GatePass_log(employeeID = employeeID,eval_date = eval_date,isIn = isIn)
+            gatepass_list.append(gpl)
+        GatePass_log.objects.bulk_create(gatepass_list)
+        return True
+
+
+
+
+
+
+
+
+
+
+
+
+#################################################################
+#
+#
+#  Useless methods belows
+#
+#
+#################################################################
 
     def _fillSurveyData(self):
         survey_list = []
@@ -581,24 +777,6 @@ class FillData:
         EP_log.objects.bulk_create(ep_list)
         return True
 
-    def _fillGatePassData(self):
-        gatepass_list = []
-        for i in range(len(self.df)):
-            df_instance = self.df.iloc[i, :]
-            try:
-                employeeID_ = int(df_instance.id)
-                employeeID = Employee.objects.get(id=int(employeeID_))
-            except:
-                continue
-            yyyymmdd = "-".join(re.findall('[0-9]+', df_instance.eval_date1))
-            hhmmss = ":".join(re.findall("[0-9]+", df_instance.eval_date2))
-            eval_date_ = yyyymmdd.strip()+" "+hhmmss.strip()
-            eval_date = self.__strEval_date_converter(eval_date_)
-            isIn = "입실" in df_instance.eventtype
-            gpl = GatePass_log(employeeID = employeeID,eval_date = eval_date,isIn = isIn)
-            gatepass_list.append(gpl)
-        GatePass_log.objects.bulk_create(gatepass_list)
-
 
     def _fillTMSData(self):
         tms_list = []
@@ -653,101 +831,6 @@ class FillData:
         PCM_log.objects.bulk_create(pcm_list)
         return True
 
-
-    def _fillMEPData(self):
-        mep_list = []
-        for i in range(len(self.df)):
-            df_instance = self.df.iloc[i, :]
-            try:
-                employeeID_ = int(df_instance.id)
-                employeeID = Employee.objects.get(id=int(employeeID_))
-            except:
-                continue
-            if type(df_instance.eval_date) == str:
-                eval_date = self.__strEval_date_converter(df_instance.eval_date)
-            else:
-                eval_date = df_instance.eval_date
-
-            mep_i = M_EP_log(employeeID = employeeID,eval_date=eval_date)
-            mep_list.append(mep_i)
-            print(str(employeeID_)+str(eval_date),end="\r")
-        M_EP_log.objects.bulk_create(mep_list)
-        return True
-
-
-    def _fillEmailData(self):
-        def emailextractor(x):
-            try:
-                x1 = re.sub("[가-힣|\>|\<|' '*|;]", " ", str(x))
-                return re.findall("[^' ']*@[^' ']*", x1)
-            except:
-                return [""]
-        emailHash = {i:j for i,j in list(Employee.objects.values_list("email","id").distinct())}
-        success = False
-        eval_date = datetime
-        self.df.columns = ["col" + str(i) for i in range(len(self.df.columns))]
-        self.df = self.df[self.df.col0 == "보낸메일함"]
-        self.df.index = range(len(self.df))
-        senders = self.df.col1
-        seval_date = self.df.col2
-        receivers = self.df[["col4", "col5", "col6"]]
-        senders = senders.map(lambda x: emailextractor(x))
-        receivers = receivers.applymap(lambda x: emailextractor(x))
-        receivers = receivers.col4 + receivers.col5 + receivers.col6
-        try:
-            earlyDate = EmailDateBeginEnd.objects.get(pk=0).eval_date
-            recentDate = EmailDateBeginEnd.objects.get(pk=1).eval_date
-        except:
-            earlyDate = EmailDateBeginEnd(id = 0, eval_date = datetime.datetime(9999,1,1))
-            recentDate = EmailDateBeginEnd(id = 1, eval_date = datetime.datetime(1,1,1))
-            earlyDate.save()
-            recentDate.save()
-            earlyDate = EmailDateBeginEnd.objects.get(pk=0).eval_date
-            recentDate = EmailDateBeginEnd.objects.get(pk=1).eval_date
-
-        if type(seval_date[0]) == str:
-            seval_date = seval_date.map(lambda x: self.__strEval_date_converter(x))
-        empEmailLog_list = []
-        for i in range(len(senders)):
-            if len(receivers[i]) == 0 or len(senders[i]) == 0:
-                continue
-            try:
-                sendID_ = emailHash[senders[i][0].strip()]
-            except:
-                continue
-            for receiver in receivers[i]:
-                try:
-                    receiveID_ = emailHash[receiver]
-                except:
-                    continue
-                try:
-                    sendID = Employee.objects.get(id=sendID_)
-                    receiveID = Employee.objects.get(id=receiveID_)
-                except:
-                    continue
-                eval_date = seval_date[i]
-                #print(sendID,receiveID,eval_date)
-                empEmailLog = EmailLog(sendID=sendID, receiveID=receiveID, eval_date=eval_date)
-                empEmailLog_list.append(empEmailLog)
-                earlyDate = min(earlyDate,eval_date)
-                recentDate = max(eval_date,recentDate)
-                print(str(sendID) + " send to "+str(receiveID), end='\r')
-                success = True
-        if not success:
-            return 0
-        EmailLog.objects.bulk_create(empEmailLog_list)
-        emailDateBegin = EmailDateBeginEnd.objects.get(pk=0)
-        emailDateEnd = EmailDateBeginEnd.objects.get(pk=1)
-        emailDateBegin.eval_date = earlyDate
-        emailDateEnd.eval_date = recentDate
-        emailDateBegin.save()
-        emailDateEnd.save()
-        """
-        timedelta_ = recentDate - earlyDate
-        if timedelta_.days > 120:
-             self.preprocessData(EmailData,eval_date)
-        """
-        return 1
 
 
     def _fillImsData(self):

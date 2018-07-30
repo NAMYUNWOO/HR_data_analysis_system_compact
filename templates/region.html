@@ -19,6 +19,56 @@
         </div>
     </div>
     <div class="container" align="center">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 style="margin-bottom:15px">성과 및 역량 평가</h5>
+                {{ grade.as_html }}
+            </div>
+            <div class="col-md-6">
+                <h5 style="margin-bottom:15px">교육참여</h5>
+                {{ edu.as_html }}
+            </div>
+        </div>
+        <hr><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h5 style="margin-bottom:15px">VDI</h5>
+                {{ vdi.as_html }}
+            </div>
+            <div class="col-md-6">
+                <h5 style="margin-bottom:15px">Mobile EP</h5>
+                {{ mep.as_html }}
+            </div>
+        </div>
+        <hr><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h5 style="margin-bottom:15px">Email</h5>
+                {{ email.as_html }}
+            </div>
+            <div class="col-md-6">
+                <h5 style="margin-bottom:15px">감사토큰</h5>
+                {{ token.as_html }}
+            </div>
+        </div>
+        <hr><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {% comment "currently not Using" %}
         {% if region == "센터.분당" %}
         <div class="row">
@@ -76,56 +126,6 @@
             <div class="col-md-2"></div>
         </div>
         <hr><br>
-        {% endcomment %}
-        <div class="row">
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">성과 및 역량 평가</h5>
-                {{ grade.as_html }}
-            </div>
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">교육참여</h5>
-                {{ edu.as_html }}
-            </div>
-        </div>
-        <hr><br>
-        <div class="row">
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">VDI 공용</h5>
-                {{ vdiShare.as_html }}
-            </div>
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">VDI 개별</h5>
-            {{ vdiIndi.as_html }}
-            </div>
-        </div>
-        <hr><br>
-        <div class="row">
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">EP</h5>
-                {{ ep.as_html }}
-            </div>
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">Mobile EP</h5>
-                {{ mep.as_html }}
-            </div>
-        </div>
-        <hr><br>
-        <div class="row">
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">Email</h5>
-                {{ email.as_html }}
-            </div>
-            <div class="col-md-6">
-                <h5 style="margin-bottom:15px">감사토큰</h5>
-                {{ thanks.as_html }}
-            </div>
-        </div>
-        <hr><br>
-
-
-
-        <!-- currently not using -->
-        {% comment "currently not Using" %}
         <div class="row">
             <div class="col-md-6">
                 <h5 style="margin-bottom:15px">설문조사</h5>

@@ -81,41 +81,9 @@ class EmployeeBiography(models.Model):
     def yearbeforpoint(self):
         return datetime.datetime.now() - datetime.timedelta(days=365)
 
-
-
     def __str__(self):
         return str(self.employeeID_confirm) + " from "+str(self.start_date)+" to "+str(self.eval_date)
 
-class Reward_log(models.Model):
-    rewardID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    eval_date = models.DateTimeField()
-
-class Flow(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-    flow = models.IntegerField(default=0)
-    created_at = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return str(self.employeeID_confirm) + "_score_"+str(self.flow) +'_at_' + str(self.eval_date)
-
-class Score(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-    #몰입
-    score1 =  models.FloatField(default=0)
-    # 성과
-    score2 = models.FloatField(default=0)
-    # 핵심
-    score3 = models.FloatField(default=0)
-    # 업무
-    score4 = models.FloatField(default=0)
-    created_at = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return str(self.employeeID_confirm) + "_score_"+str(self.score) +'_at_' + str(self.eval_date)
 
 
 # 직원평가
@@ -239,75 +207,6 @@ class Education(models.Model):
 
 
 
-
-# Survey
-class Survey(models.Model):
-
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-
-
-    # 업무몰입도 13번 질문 점수	13. 나는 지난 2주동안, 일할 때는 일 외의 다른 것들에 대해 아무 생각이 들지 않았다
-    cct1 = models.FloatField(null=True)
-
-    # 업무몰입도 14번 질문 점수	14. 업무를 할 때, 나는 에너지가 넘치는 걸 느낀다.
-    cct2 = models.FloatField(null=True)
-
-    # 업무몰입도 15번 질문 점수	15. 나에게 있어 포스코ICT는 내가 일할 수 있는 회사들 중에서 최고라고 생각한다.
-    cct3 = models.FloatField(null=True)
-
-    # 업무몰입도 16번 질문 점수	16. 나는 지난 2주동안 내 일에 완전히 몰두하였다.
-    cct4 = models.FloatField(null=True)
-
-    # 업무몰입도 17번 질문 점수	17. 적은 보수를 받더라도 나는 여전히 이 일을 하고 싶다
-    cct5 = models.FloatField(null=True)
-
-    # 평가일
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return str(self.employeeID_confirm)  + "_" +str(self.eval_date)
-
-
-# 출장
-class Trip(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-    trip_domestic = models.FloatField(null=True,default=0)
-    trip_town = models.FloatField(null=True,default=0)
-    trip_abroad = models.FloatField(null=True, default=0)
-    annual_vacation_gen_dt = models.DateField(null=True)
-    annual_vacation_gen_amt = models.FloatField(null=True, default=0)
-    annual_vacation_gen_usage = models.FloatField(null=True, default=0)
-    btrip_nbr = models.FloatField(null=True, default=0)
-
-    #연차소진률
-    off_use_pct_permon = models.FloatField(null=True, default=0)
-    # 평가일
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    # 출장 일수  1년 동안 총 출장 일수
-    def posco_set_btrip_nbr(self):
-        self.btrip_nbr = self.trip_domestic + self.trip_town + self.trip_abroad
-        return self.btrip_nbr
-
-    def posco_set_off_use_pct_permon(self):
-        nowdt = self.eval_date
-        monthgap = (nowdt.year * 12 + nowdt.month) - (self.annual_vacation_gen_dt.month + self.annual_vacation_gen_dt.year * 12)
-        try:
-            self.off_use_pct_permon = 100*(self.annual_vacation_gen_usage / self.annual_vacation_gen_amt)/ monthgap
-        except:
-            self.off_use_pct_permon = None
-        if  self.off_use_pct_permon == None or self.off_use_pct_permon < 0:
-            self.off_use_pct_permon = None
-        return self.off_use_pct_permon
-
-    def __str__(self):
-        return str(self.employeeID_confirm)  + "_" +str(self.eval_date)
-
 class Emaileigvec(models.Model):
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
     eval_date = models.DateTimeField()
@@ -333,12 +232,12 @@ class EmailData(models.Model):
     sendCnt = models.FloatField(null=True, default=0)
     sendCnt_nwh = models.FloatField(null=True, default=0)
     receiveCnt = models.FloatField(null=True, default=0)
-    sendCnt_level = models.FloatField(null=True, default=0)
-    sendCnt_nwh_level = models.FloatField(null=True, default=0)
-    receiveCnt_level = models.FloatField(null=True, default=0)
+    sendCnt_byLevelRatio= models.FloatField(null=True, default=0)
+    sendCnt_nwh_byLevelRatio = models.FloatField(null=True, default=0)
+    receiveCnt_byLevelRatio = models.FloatField(null=True, default=0)
     nodeSize = models.FloatField(null=True, default=0)
-    nodeSize_level = models.FloatField(null=True, default=0)
-    nodeSize_group = models.FloatField(null=True, default=0)
+    nodeSize_byLevelRatio = models.FloatField(null=True, default=0)
+    nodeSize_byGroupRatio = models.FloatField(null=True, default=0)
     def __str__(self):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
@@ -349,167 +248,12 @@ class EmailDateBeginEnd(models.Model):
     def __str__(self):
         return str(self.eval_date)
 
-class Thanks_log(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    #thxs_receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False,related_name="deadfield")
-    thxType = models.CharField(max_length=20,null=False) # {"감사노트":"thanksNote","감사문자":"thanksMsg","감사토큰":"thanksToken","감사편지":"thanksletter"}
-    writerType = models.CharField(max_length=20,null=False) # send, receive, follow,
-    followType = models.CharField(max_length=20,null=False) #c {"내용":"contents","공감":"like","댓글":"reply"}
-    eval_date = models.DateField()
-    def __str__(self):
-        return str(self.employeeID) + "_at_" + str(self.eval_date)
-
-class Thanks_Data(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-    thank_letter_tot_receive = models.FloatField(null=True,default=0)
-    thank_token_tot_receive = models.FloatField(null=True, default=0)
-    thank_msg_tot_receive = models.FloatField(null=True, default=0)
-    thank_note_tot_receive = models.FloatField(null=True, default=0)
-    thank_letter_tot_send = models.FloatField(null=True,default=0)
-    thank_token_tot_send = models.FloatField(null=True, default=0)
-    thank_msg_tot_send = models.FloatField(null=True, default=0)
-    thank_note_tot_send = models.FloatField(null=True, default=0)
-    thank_like_tot = models.FloatField(null=True, default=0)
-    thank_reply_tot = models.FloatField(null=True, default=0)
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-
-    def yearbeforpoint(self):
-        return Thanks_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
-
-    def posco_set_thank_tot_receive_send(self):
-        thxTypes_arr = ["thanksletter","thanksToken","thanksMsg","thanksNote"]
-        send_or_recieve = ["send", "receive"]
-        for thxType in thxTypes_arr:
-            for sor in send_or_recieve:
-                thxObj = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm)&Q(writerType=sor)&Q(thxType = thxType) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-                if thxType == "thanksletter" and sor == "send":
-                    self.thank_letter_tot_send = thxObj.count()
-                elif thxType == "thanksToken" and sor == "send":
-                    self.thank_token_tot_send = thxObj.count()
-                elif thxType == "thanksMsg" and sor == "send":
-                    self.thank_msg_tot_send = thxObj.count()
-                elif thxType == "thanksNote" and sor == "send":
-                    self.thank_note_tot_send = thxObj.count()
-                elif thxType == "thanksletter" and sor == "receive":
-                    self.thank_letter_tot_receive = thxObj.count()
-                elif thxType == "thanksToken" and sor == "receive":
-                    self.thank_token_tot_receive = thxObj.count()
-                elif thxType == "thanksMsg" and sor == "receive":
-                    self.thank_msg_tot_receive = thxObj.count()
-                elif thxType == "thanksNote" and sor == "receive":
-                    self.thank_note_tot_receive = thxObj.count()
-
-    def posco_set_thank_tot_follow(self):
-        thxObjLike = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(writerType="follow") & Q(followType="like") & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        thxObjReply = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(writerType="follow") & Q(followType="reply") & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        self.thank_like_tot = thxObjLike.count()
-        self.thank_reply_tot = thxObjReply.count()
-
-    def __str__(self):
-        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
-
-class VDI_indi_log(models.Model):
-    user_indi_ID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    useMinute = models.FloatField(default=0)
-    eval_date = models.DateField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return str(self.user_indi_ID) + "_at_" + str(self.eval_date)
-
-class VDI_indi_Data(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-    vdi_indi_mean_timem = models.FloatField(null=True,default=0)
-    vdi_indi_tot_access = models.FloatField(null=True,default=0)
-    created_at = models.DateTimeField(auto_now_add=True)
-    def yearbeforpoint(self):
-        return VDI_indi_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
-
-    def posco_set_vdi_indi_tot_access(self):
-        vdi_indi_Obj = VDI_indi_log.objects.filter(Q(user_indi_ID=self.employeeID_confirm)&Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        self.vdi_indi_tot_access = vdi_indi_Obj.count()
-        return self.vdi_indi_tot_access
-
-    def posco_set_vdi_indi_mean_timem(self):
-        vdi_indi_mean = VDI_indi_log.objects.filter(Q(user_indi_ID=self.employeeID_confirm)&Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1))).aggregate(avg = Avg("useMinute"))["avg"]
-        self.vdi_indi_mean_timem = vdi_indi_mean
-        return self.vdi_indi_mean_timem
-
-    def __str__(self):
-        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
-
-
-class VDI_share_log(models.Model):
-    user_share_ID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    useMinute = models.FloatField(default=0)
-    eval_date = models.DateField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return str(self.user_share_ID) + "_at_" + str(self.eval_date)
-
-class VDI_share_Data(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-    vdi_share_mean_time = models.FloatField(null=True,default=0)
-    created_at = models.DateTimeField(auto_now_add=True)
-    def yearbeforpoint(self):
-        return VDI_share_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
-
-    def posco_set_vdi_share_mean_time(self):
-        vdi_share_mean = VDI_share_log.objects.filter(Q(user_share_ID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1))).aggregate(avg = Avg("useMinute"))["avg"]
-        self.vdi_share_mean_time = vdi_share_mean
-        return self.vdi_share_mean_time
-    def __str__(self):
-        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
-
-
-
-class EP_log(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    eval_date = models.DateTimeField()
-
-    def __str__(self):
-        return str(self.employeeID) + "_at_" + str(self.eval_date)
-
-
-class EPData(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    employeeID_confirm = models.IntegerField(default=0)
-    ep_access_day_mean = models.FloatField(null=True, default=0)
-    ep_access_day_var = models.FloatField(null=True, default=0)
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-
-    def yearbeforpoint(self):
-        return EP_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
-
-
-    def posco_set_ep_access_day_mean(self):
-        epobj = EP_log.objects.filter(Q(employeeID=self.employeeID) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        if epobj.count() == 0:
-            return 0
-        avg = epobj.annotate(day=TruncDay("eval_date")).values("day").annotate(the_count=Count("employeeID")).aggregate(avg=Avg("the_count"))["avg"]
-        self.ep_access_day_mean = avg
-        return self.ep_access_day_mean
-
-    def posco_set_ep_access_day_var(self):
-        epobj = EP_log.objects.filter(Q(employeeID=self.employeeID) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        if epobj.count() == 0:
-            return 0
-        valList = list(epobj.annotate(day=TruncMonth("eval_date")).values("day").annotate(the_count=Count("employeeID")).values_list("the_count",flat=True))
-        var_ = np.std(valList)
-        self.ep_access_day_var = var_
-
-
 class M_EP_log(models.Model):
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     eval_date = models.DateTimeField()
+    early = models.BooleanField()
+    late = models.BooleanField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return str(self.employeeID) + "_at_" + str(self.eval_date)
@@ -517,31 +261,84 @@ class M_EP_log(models.Model):
 class M_EPData(models.Model):
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
-    mep_early_tot = models.FloatField(null=True, default=0)
-    mep_late_tot = models.FloatField(null=True, default=0)
-    mep_early_day = models.FloatField(null=True, default=0)
-    mep_late_day = models.FloatField(null=True, default=0)
     eval_date = models.DateTimeField()
     start_date = models.DateTimeField()
+    mep_normal = models.FloatField(null=True, default=0)
+    mep_early = models.FloatField(null=True,default=0)
+    mep_late = models.FloatField(null=True,default=0)
+    mep_normal_byLevelRatio = models.FloatField(null=True, default=0)
+    mep_early_byLevelRatio = models.FloatField(null=True,default=0)
+    mep_late_byLevelRatio = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
 
-    def posco_set_mep_early_tot(self):
-        mepObj = M_EP_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        cnt = mepObj.filter(Q(eval_date__hour__gte=7) & Q(eval_date__hour__lt=9)).count()
-        self.mep_early_tot = cnt
-    def posco_set_mep_late_tot(self):
-        mepObj = M_EP_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        cnt = mepObj.filter(Q(eval_date__hour__gte=19) | Q(eval_date__hour__lt=4)).count()
-        self.mep_late_tot = cnt
-    def posco_set_mep_early_day(self):
-        mepObj = M_EP_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        cnt = mepObj.filter(Q(eval_date__hour__gte=7) & Q(eval_date__hour__lt=9)).annotate(day=TruncDay("eval_date")).values("day").distinct().count()
-        self.mep_early_day = cnt
-    def posco_set_mep_late_day(self):
-        mepObj = M_EP_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
-        cnt = mepObj.filter(Q(eval_date__hour__gte=19) | Q(eval_date__hour__lt=4)).annotate(day=TruncDay("eval_date")).values("day").distinct().count()
-        self.mep_late_day = cnt
+    def posco_set_mep_early(self):
+        self.mep_early = 0
+
+    def yearbeforpoint(self):
+        return M_EP_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
     def __str__(self):
         return str(self.employeeID)
+
+
+class VDI_log(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateField()
+    early = models.BooleanField()
+    late = models.BooleanField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+class VDI_Data(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    vdi_normal = models.FloatField(null=True, default=0)
+    vdi_early = models.FloatField(null=True,default=0)
+    vdi_late = models.FloatField(null=True,default=0)
+    vdi_normal_byLevelRatio = models.FloatField(null=True, default=0)
+    vdi_early_byLevelRatio = models.FloatField(null=True,default=0)
+    vdi_late_byLevelRatio = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def posco_set_vdi_early(self):
+        self.vdi_early = 0
+
+    def yearbeforpoint(self):
+        return VDI_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+class Token_log(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    isSend = models.BooleanField()
+    eval_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.employeeID) +"isSend: " +str(self.isSend)
+
+class Token_Data(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    token_send = models.FloatField(null=True,default=0)
+    token_receive = models.FloatField(null=True,default=0)
+    token_send_byLevelRatio = models.FloatField(null=True,default=0)
+    token_receive_byLevelRatio = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def posco_set_token_send(self):
+        self.token_send = 0
+
+    def yearbeforpoint(self):
+        return Token_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
 
 class GatePass_log(models.Model):
@@ -732,6 +529,265 @@ class GatePassData(models.Model):
 # Useless Models below
 
 ##############################################################
+# Survey
+class Survey(models.Model):
+
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+
+
+    # 업무몰입도 13번 질문 점수	13. 나는 지난 2주동안, 일할 때는 일 외의 다른 것들에 대해 아무 생각이 들지 않았다
+    cct1 = models.FloatField(null=True)
+
+    # 업무몰입도 14번 질문 점수	14. 업무를 할 때, 나는 에너지가 넘치는 걸 느낀다.
+    cct2 = models.FloatField(null=True)
+
+    # 업무몰입도 15번 질문 점수	15. 나에게 있어 포스코ICT는 내가 일할 수 있는 회사들 중에서 최고라고 생각한다.
+    cct3 = models.FloatField(null=True)
+
+    # 업무몰입도 16번 질문 점수	16. 나는 지난 2주동안 내 일에 완전히 몰두하였다.
+    cct4 = models.FloatField(null=True)
+
+    # 업무몰입도 17번 질문 점수	17. 적은 보수를 받더라도 나는 여전히 이 일을 하고 싶다
+    cct5 = models.FloatField(null=True)
+
+    # 평가일
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.employeeID_confirm)  + "_" +str(self.eval_date)
+
+
+# 출장
+class Trip(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    trip_domestic = models.FloatField(null=True,default=0)
+    trip_town = models.FloatField(null=True,default=0)
+    trip_abroad = models.FloatField(null=True, default=0)
+    annual_vacation_gen_dt = models.DateField(null=True)
+    annual_vacation_gen_amt = models.FloatField(null=True, default=0)
+    annual_vacation_gen_usage = models.FloatField(null=True, default=0)
+    btrip_nbr = models.FloatField(null=True, default=0)
+
+    #연차소진률
+    off_use_pct_permon = models.FloatField(null=True, default=0)
+    # 평가일
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    # 출장 일수  1년 동안 총 출장 일수
+    def posco_set_btrip_nbr(self):
+        self.btrip_nbr = self.trip_domestic + self.trip_town + self.trip_abroad
+        return self.btrip_nbr
+
+    def posco_set_off_use_pct_permon(self):
+        nowdt = self.eval_date
+        monthgap = (nowdt.year * 12 + nowdt.month) - (self.annual_vacation_gen_dt.month + self.annual_vacation_gen_dt.year * 12)
+        try:
+            self.off_use_pct_permon = 100*(self.annual_vacation_gen_usage / self.annual_vacation_gen_amt)/ monthgap
+        except:
+            self.off_use_pct_permon = None
+        if  self.off_use_pct_permon == None or self.off_use_pct_permon < 0:
+            self.off_use_pct_permon = None
+        return self.off_use_pct_permon
+
+    def __str__(self):
+        return str(self.employeeID_confirm)  + "_" +str(self.eval_date)
+
+class Thanks_log(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    #thxs_receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False,related_name="deadfield")
+    thxType = models.CharField(max_length=20,null=False) # {"감사노트":"thanksNote","감사문자":"thanksMsg","감사토큰":"thanksToken","감사편지":"thanksletter"}
+    writerType = models.CharField(max_length=20,null=False) # send, receive, follow,
+    followType = models.CharField(max_length=20,null=False) #c {"내용":"contents","공감":"like","댓글":"reply"}
+    eval_date = models.DateField()
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+class Thanks_Data(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    thank_letter_tot_receive = models.FloatField(null=True,default=0)
+    thank_token_tot_receive = models.FloatField(null=True, default=0)
+    thank_msg_tot_receive = models.FloatField(null=True, default=0)
+    thank_note_tot_receive = models.FloatField(null=True, default=0)
+    thank_letter_tot_send = models.FloatField(null=True,default=0)
+    thank_token_tot_send = models.FloatField(null=True, default=0)
+    thank_msg_tot_send = models.FloatField(null=True, default=0)
+    thank_note_tot_send = models.FloatField(null=True, default=0)
+    thank_like_tot = models.FloatField(null=True, default=0)
+    thank_reply_tot = models.FloatField(null=True, default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+
+    def yearbeforpoint(self):
+        return Thanks_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_thank_tot_receive_send(self):
+        thxTypes_arr = ["thanksletter","thanksToken","thanksMsg","thanksNote"]
+        send_or_recieve = ["send", "receive"]
+        for thxType in thxTypes_arr:
+            for sor in send_or_recieve:
+                thxObj = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm)&Q(writerType=sor)&Q(thxType = thxType) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+                if thxType == "thanksletter" and sor == "send":
+                    self.thank_letter_tot_send = thxObj.count()
+                elif thxType == "thanksToken" and sor == "send":
+                    self.thank_token_tot_send = thxObj.count()
+                elif thxType == "thanksMsg" and sor == "send":
+                    self.thank_msg_tot_send = thxObj.count()
+                elif thxType == "thanksNote" and sor == "send":
+                    self.thank_note_tot_send = thxObj.count()
+                elif thxType == "thanksletter" and sor == "receive":
+                    self.thank_letter_tot_receive = thxObj.count()
+                elif thxType == "thanksToken" and sor == "receive":
+                    self.thank_token_tot_receive = thxObj.count()
+                elif thxType == "thanksMsg" and sor == "receive":
+                    self.thank_msg_tot_receive = thxObj.count()
+                elif thxType == "thanksNote" and sor == "receive":
+                    self.thank_note_tot_receive = thxObj.count()
+
+    def posco_set_thank_tot_follow(self):
+        thxObjLike = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(writerType="follow") & Q(followType="like") & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        thxObjReply = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(writerType="follow") & Q(followType="reply") & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.thank_like_tot = thxObjLike.count()
+        self.thank_reply_tot = thxObjReply.count()
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+
+class EP_log(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField()
+
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+
+class EPData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    ep_access_day_mean = models.FloatField(null=True, default=0)
+    ep_access_day_var = models.FloatField(null=True, default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+
+    def yearbeforpoint(self):
+        return EP_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+
+    def posco_set_ep_access_day_mean(self):
+        epobj = EP_log.objects.filter(Q(employeeID=self.employeeID) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        if epobj.count() == 0:
+            return 0
+        avg = epobj.annotate(day=TruncDay("eval_date")).values("day").annotate(the_count=Count("employeeID")).aggregate(avg=Avg("the_count"))["avg"]
+        self.ep_access_day_mean = avg
+        return self.ep_access_day_mean
+
+    def posco_set_ep_access_day_var(self):
+        epobj = EP_log.objects.filter(Q(employeeID=self.employeeID) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        if epobj.count() == 0:
+            return 0
+        valList = list(epobj.annotate(day=TruncMonth("eval_date")).values("day").annotate(the_count=Count("employeeID")).values_list("the_count",flat=True))
+        var_ = np.std(valList)
+        self.ep_access_day_var = var_
+
+class VDI_indi_log(models.Model):
+    user_indi_ID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    useMinute = models.FloatField(default=0)
+    eval_date = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.user_indi_ID) + "_at_" + str(self.eval_date)
+
+class VDI_indi_Data(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    vdi_indi_mean_timem = models.FloatField(null=True,default=0)
+    vdi_indi_tot_access = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return VDI_indi_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_vdi_indi_tot_access(self):
+        vdi_indi_Obj = VDI_indi_log.objects.filter(Q(user_indi_ID=self.employeeID_confirm)&Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.vdi_indi_tot_access = vdi_indi_Obj.count()
+        return self.vdi_indi_tot_access
+
+    def posco_set_vdi_indi_mean_timem(self):
+        vdi_indi_mean = VDI_indi_log.objects.filter(Q(user_indi_ID=self.employeeID_confirm)&Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1))).aggregate(avg = Avg("useMinute"))["avg"]
+        self.vdi_indi_mean_timem = vdi_indi_mean
+        return self.vdi_indi_mean_timem
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+class VDI_share_log(models.Model):
+    user_share_ID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    useMinute = models.FloatField(default=0)
+    eval_date = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.user_share_ID) + "_at_" + str(self.eval_date)
+
+class VDI_share_Data(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    vdi_share_mean_time = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return VDI_share_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_vdi_share_mean_time(self):
+        vdi_share_mean = VDI_share_log.objects.filter(Q(user_share_ID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1))).aggregate(avg = Avg("useMinute"))["avg"]
+        self.vdi_share_mean_time = vdi_share_mean
+        return self.vdi_share_mean_time
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+
+
+class Reward_log(models.Model):
+    rewardID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField()
+
+class Flow(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    flow = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_score_"+str(self.flow) +'_at_' + str(self.eval_date)
+
+class Score(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    #몰입
+    score1 =  models.FloatField(default=0)
+    # 성과
+    score2 = models.FloatField(default=0)
+    # 핵심
+    score3 = models.FloatField(default=0)
+    # 업무
+    score4 = models.FloatField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_score_"+str(self.score) +'_at_' + str(self.eval_date)
+
 
 class PCM_log(models.Model):
     employeeID =  models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
