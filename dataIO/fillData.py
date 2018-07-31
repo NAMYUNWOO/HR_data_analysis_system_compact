@@ -11,7 +11,12 @@ from sklearn.cluster import KMeans
 from inspect import ismethod
 from django import db
 import networkx as nx
-import  copy
+import copy
+from .Preprocess_EmailLog import preprocess_EmailLog
+from .Preprocess_GatePass_log import preprocess_GatePass_log
+from .Preprocess_M_EP_log import preprocess_M_EP_log
+from .Preprocess_Token_log import preprocess_Token_log
+from .Preprocess_VDI_log import preprocess_VDI_log
 TEMPEVAL_DATE = datetime.datetime.today()
 
 class EmailGraphProcess:
@@ -80,39 +85,57 @@ class EmailGraphProcess:
 
 
 class PreprocessData:
-
-
     def __init__(self,inputModel, start_date, eval_date):
 
         self.start_date = start_date
         self.eval_date = eval_date
-        self.log_data = {Approval_log:ApprovalData,
-                        Blog_log:BlogData,
-                        Cafeteria_log:CafeteriaData,
-                        ECM_log:ECMData,
-                        EmailLog:EmailData,
-                        IMS_log:IMSData,
-                        PC_control_log:PC_control_Data,
-                        PC_out_log:PC_out_Data,
-                        Portable_out_log:Portable_out_Data,
-                        Thanks_log:Thanks_Data,
-                        VDI_indi_log:VDI_indi_Data,
-                        VDI_share_log:VDI_share_Data,
-                        Meeting_log:MeetingData,
-                        EP_log:EPData,
-                        M_EP_log:M_EPData,
-                        PCM_log:PCMData,
-                        TMS_log:TMSData,
-                        GatePass_log : GatePassData}
-
-
+        self.inputModel = inputModel
+        self.log_data = {
+                            EmailLog:EmailData,
+                            Token_log:Token_Data,
+                            VDI_log:VDI_Data,
+                            M_EP_log:M_EPData,
+                            GatePass_log : GatePassData
+                        }
+        self.preprocess_func_hash = {
+            EmailLog : preprocess_EmailLog,
+            Token_log : preprocess_Token_log,
+            VDI_log : preprocess_VDI_log,
+            M_EP_log:preprocess_M_EP_log,
+            GatePass_log:preprocess_GatePass_log
+        }
+        """
+        # useless 
+        {
+            Approval_log:ApprovalData,
+            PCM_log:PCMData,
+            TMS_log:TMSData,
+            EP_log:EPData,
+            VDI_indi_log:VDI_indi_Data,
+            VDI_share_log:VDI_share_Data,
+            Meeting_log:MeetingData,
+            Thanks_log:Thanks_Data,
+            Portable_out_log:Portable_out_Data,
+            IMS_log:IMSData,
+            PC_control_log:PC_control_Data,
+            PC_out_log:PC_out_Data,
+            Blog_log:BlogData,
+            Cafeteria_log:CafeteriaData,
+            ECM_log:ECMData                
+        }
+        """
         if inputModel in self.log_data.values():
             self.Model = inputModel
         else:
             self.Model = self.log_data[inputModel]
+
+
+        """
+        # useless EmailGraph
         if self.Model == EmailData:
             self.egp = EmailGraphProcess(start_date=start_date,eval_date=eval_date)
-
+        """
+    """
     def getSnaData(self, empId, myDict=None, graph=None):
         closeness_indegree_outDegree = [None, None, None]
         if graph != None:
@@ -137,6 +160,14 @@ class PreprocessData:
             return rslt
         except:
             return None
+    """
+    def runPreprocess2(self):
+        preprocess_func = self.preprocess_func_hash.get(self.inputModel,None)
+        if preprocess_func == None:
+            return False
+        preprocess_func(self.inputModel,self.Model,(self.start_date,self.eval_date))
+        return True
+
 
     def runPreprocess(self):
         instance_i_list = []
@@ -614,18 +645,16 @@ class FillData:
 
             try:
                 sendID = Employee.objects.get(id=int(token_sendID_))
-                tokenSend = Token_log(employeeID=sendID, isSend=True, eval_date=eval_date)
-                token_log_list.append(tokenSend)
             except:
-                pass
+                continue
 
             try:
                 receiveID_raw = re.findall("[0-9]+", token_receiveID_)[0]
                 receiveID = Employee.objects.get(id= int(receiveID_raw))
-                tokenReceive = Token_log(employeeID=receiveID, isSend=False, eval_date=eval_date)
-                token_log_list.append(tokenReceive)
             except:
-                pass
+                continue
+        tokenlog = Token_log(sendID =sendID,receiveID=receiveID,eval_date=eval_date)
+        token_log_list.append(tokenlog)
         Token_log.objects.bulk_create(token_log_list)
         return True
 

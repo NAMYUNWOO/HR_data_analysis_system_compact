@@ -170,6 +170,10 @@ class Education(models.Model):
     employeeID_confirm = models.IntegerField(default=0)
     #Y - 1년이수과정학점
     edu_credit = models.FloatField(null=True, default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+
     """
     edu_nbr = models.FloatField(null=True,default=0)
     toeic = models.BooleanField()
@@ -194,10 +198,6 @@ class Education(models.Model):
         return self.lang_nbr
 
     """
-    created_at = models.DateTimeField(auto_now_add=True)
-    # 평가일
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
 
     # 교육이수학점 1년 동안 총 직무이수학점+비직무이수학점 (=사내이수학점+사외이수학점)
 
@@ -207,12 +207,7 @@ class Education(models.Model):
 
 
 
-class Emaileigvec(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
-    eval_date = models.DateTimeField()
-    start_date = models.DateTimeField()
-    eigvec = models.FloatField(default=0)
-    created_at = models.DateTimeField(auto_now_add=True)
+
 
 class EmailLog(models.Model):
     sendID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="sendID")
@@ -238,6 +233,9 @@ class EmailData(models.Model):
     nodeSize = models.FloatField(null=True, default=0)
     nodeSize_byLevelRatio = models.FloatField(null=True, default=0)
     nodeSize_byGroupRatio = models.FloatField(null=True, default=0)
+
+    def posco_set_field(self):
+        self.mep_early = 0
     def __str__(self):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
@@ -251,8 +249,6 @@ class EmailDateBeginEnd(models.Model):
 class M_EP_log(models.Model):
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     eval_date = models.DateTimeField()
-    early = models.BooleanField()
-    late = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -284,8 +280,6 @@ class M_EPData(models.Model):
 class VDI_log(models.Model):
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     eval_date = models.DateField()
-    early = models.BooleanField()
-    late = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return str(self.employeeID) + "_at_" + str(self.eval_date)
@@ -313,8 +307,8 @@ class VDI_Data(models.Model):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
 class Token_log(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    isSend = models.BooleanField()
+    sendID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="sendID")
+    receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="receiveID")
     eval_date = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
@@ -529,6 +523,15 @@ class GatePassData(models.Model):
 # Useless Models below
 
 ##############################################################
+
+
+class Emaileigvec(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    eigvec = models.FloatField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
 # Survey
 class Survey(models.Model):
 
