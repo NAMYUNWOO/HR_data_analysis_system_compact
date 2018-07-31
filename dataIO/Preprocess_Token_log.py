@@ -19,6 +19,7 @@ def mean_except_outlier(series):
 def preprocess_Token_log(Token_log,Token_Data,dateRange):
     rows = list(Token_log.objects.filter(Q(eval_date__gte=dateRange[0]) & Q(eval_date__lte=dateRange[1] + datetime.timedelta(days=1))).values_list("sendID_id", "eval_date", "receiveID_id"))
     token = pd.DataFrame(rows ,columns=["sender","date","receiver"])
+    del rows
     empInfo = pd.DataFrame(list(Employee.objects.values_list("id", "level")), columns=["ID", "level"])
     empInfo["sender"] = empInfo.ID
     empInfo["receiver"] = empInfo.ID

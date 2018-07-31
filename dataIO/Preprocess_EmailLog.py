@@ -36,6 +36,8 @@ def get_nodes_sizes_df(dt, temp):
 def preprocess_EmailLog(EmailLog,EmailData,dateRange):
     rows = list ( EmailLog.objects.filter(Q(eval_date__gte=dateRange[0]) & Q(eval_date__lte=dateRange[1] + datetime.timedelta(days=1))).values_list("sendID_id","receiveID_id","eval_date","nwh") )
     emaillog_v2 = pd.DataFrame(rows,columns=["senderID","receiverID","send_dt","isOverTime_email"])
+    del rows
+    emaillog_v2["year_x_month"] = emaillog_v2.send_dt.map(lambda x: x.month + x.year * 12)
     idExist = pd.Series(emaillog_v2.senderID.unique().tolist() + emaillog_v2.receiverID.unique().tolist()).unique()
     temp = emaillog_v2[["senderID", "year_x_month"]].groupby(["senderID", "year_x_month"]).size().reset_index(name="monthly_send")[["senderID", "monthly_send"]]
     sendCount_total_df = temp.groupby("senderID").monthly_send.agg(mean_with_option(isIn_q1_sub_3iqr)).reset_index(name="sendCount_total")
@@ -60,7 +62,7 @@ def preprocess_EmailLog(EmailLog,EmailData,dateRange):
     q1_iqr_df = temp[["senderID", "sendCnt"]].groupby("senderID").transform(q1_3iqr)
     temp["q1_3iqr"] = q1_iqr_df["sendCnt"]
 
-    temp = temp[temp.sendCnt > temp.q1_3iqr][["senderID", "year_x_month", "sendCnt"]]
+    temp = temp[temp.sendCnt >= temp.q1_3iqr][["senderID", "year_x_month", "sendCnt"]]
 
     temp = pd.merge(emaillog_v2, temp, how="left", on=["senderID", "year_x_month"])
     temp = temp[~temp.sendCnt.isnull()]
@@ -77,8 +79,11 @@ def preprocess_EmailLog(EmailLog,EmailData,dateRange):
     temp["year_x_month"] = temp.index
 
     temp.index = range(len(temp))
-
-    temp = reduce(lambda dt1,dt2:  pd.concat([get_nodes_sizes_df(dt1,temp),get_nodes_sizes_df(dt2,temp)],axis=0)  ,temp.year_x_month.unique())
+    uniqueMon = temp.year_x_month.unique()
+    if len(uniqueMon) == 1:
+        temp = get_nodes_sizes_df(uniqueMon[0],temp)
+    else:
+        temp = reduce(lambda dt1,dt2:  pd.concat([get_nodes_sizes_df(dt1,temp),get_nodes_sizes_df(dt2,temp)],axis=0),uniqueMon)
     temp = temp.sort_values(["node_1", "month", "conn_size"])[["node_1", "node_2", "conn_size"]].groupby(
         ["node_1", "node_2"]).agg(mean_last6mon)
 

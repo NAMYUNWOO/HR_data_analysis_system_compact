@@ -503,7 +503,9 @@ class FillData:
 
 
     def _fillEmailData(self):
-        holiday_ = open("../holiday.json").read()
+        module_dir = os.path.dirname(__file__)
+        file_path = os.path.join(module_dir, 'holiday.json')
+        holiday_ = open(file_path).read()
         holidayHash = json.loads(holiday_)
         def emailextractor(x):
             try:
@@ -590,15 +592,8 @@ class FillData:
                 eval_date = self.__strEval_date_converter(df_instance.eval_date)
             else:
                 eval_date = df_instance.eval_date
-            early = False
-            late = False
-            if 4 < eval_date.hour < 8:
-                early = True
-            if 20 < eval_date.hour or eval_date.hour < 3:
-                late = True
-            mep_i = M_EP_log(employeeID = employeeID,early=early,late=late,eval_date=eval_date)
+            mep_i = M_EP_log(employeeID = employeeID,eval_date=eval_date)
             mep_list.append(mep_i)
-            print(str(employeeID_)+str(eval_date),end="\r")
         M_EP_log.objects.bulk_create(mep_list)
         return True
 
@@ -617,13 +612,7 @@ class FillData:
             eval_date = df_instance.eval_date
             if type(eval_date) == str:
                 eval_date = self.__strEval_date_converter(eval_date)
-            early = False
-            late = False
-            if 4 < eval_date.hour < 8:
-                early = True
-            if 20 < eval_date.hour or eval_date.hour < 3 :
-                late = True
-            vdi_log_obj = VDI_log(employeeID=employeeID,early=early,late=late,eval_date=eval_date)
+            vdi_log_obj = VDI_log(employeeID=employeeID,eval_date=eval_date)
             vdi_log_obj_list.append(vdi_log_obj)
             success = True
         if not success:
@@ -635,26 +624,26 @@ class FillData:
         token_log_list = []
         self.df["type"] = self.df["type"].map(lambda x : x.strip())
         self.df = self.df[self.df["type"] == "감사토큰"]
+        print(self.df)
         for i in range(len(self.df)):
             df_instance = self.df.iloc[i, :]
-            token_sendID_ = df_instance.id_send
-            token_receiveID_ = df_instance.id_receive
+            token_sendID_ = df_instance.sendID
+            token_receiveID_ = df_instance.receiveID
             eval_date = df_instance.eval_date
             if type(eval_date) == str:
                 eval_date = self.__strEval_date_converter(eval_date)
-
             try:
                 sendID = Employee.objects.get(id=int(token_sendID_))
+
             except:
                 continue
-
             try:
                 receiveID_raw = re.findall("[0-9]+", token_receiveID_)[0]
                 receiveID = Employee.objects.get(id= int(receiveID_raw))
             except:
                 continue
-        tokenlog = Token_log(sendID =sendID,receiveID=receiveID,eval_date=eval_date)
-        token_log_list.append(tokenlog)
+            tokenlog = Token_log(sendID =sendID,receiveID=receiveID,eval_date=eval_date)
+            token_log_list.append(tokenlog)
         Token_log.objects.bulk_create(token_log_list)
         return True
 

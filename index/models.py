@@ -210,8 +210,8 @@ class Education(models.Model):
 
 
 class EmailLog(models.Model):
-    sendID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="sendID")
-    receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="receiveID")
+    sendID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="email_sendID")
+    receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="email_receiveID")
     nwh = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     eval_date = models.DateTimeField()
@@ -234,8 +234,6 @@ class EmailData(models.Model):
     nodeSize_byLevelRatio = models.FloatField(null=True, default=0)
     nodeSize_byGroupRatio = models.FloatField(null=True, default=0)
 
-    def posco_set_field(self):
-        self.mep_early = 0
     def __str__(self):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
@@ -267,9 +265,6 @@ class M_EPData(models.Model):
     mep_late_byLevelRatio = models.FloatField(null=True,default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def posco_set_mep_early(self):
-        self.mep_early = 0
-
     def yearbeforpoint(self):
         return M_EP_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
 
@@ -279,7 +274,7 @@ class M_EPData(models.Model):
 
 class VDI_log(models.Model):
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
-    eval_date = models.DateField()
+    eval_date = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return str(self.employeeID) + "_at_" + str(self.eval_date)
@@ -297,9 +292,6 @@ class VDI_Data(models.Model):
     vdi_late_byLevelRatio = models.FloatField(null=True,default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def posco_set_vdi_early(self):
-        self.vdi_early = 0
-
     def yearbeforpoint(self):
         return VDI_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
 
@@ -307,12 +299,12 @@ class VDI_Data(models.Model):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
 class Token_log(models.Model):
-    sendID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="sendID")
-    receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="receiveID")
+    sendID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="token_sendID")
+    receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="token_receiveID")
     eval_date = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return str(self.employeeID) +"isSend: " +str(self.isSend)
+        return str(self.sendID) +"to" +str(self.receiveID)
 
 class Token_Data(models.Model):
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
@@ -324,9 +316,6 @@ class Token_Data(models.Model):
     token_send_byLevelRatio = models.FloatField(null=True,default=0)
     token_receive_byLevelRatio = models.FloatField(null=True,default=0)
     created_at = models.DateTimeField(auto_now_add=True)
-
-    def posco_set_token_send(self):
-        self.token_send = 0
 
     def yearbeforpoint(self):
         return Token_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)

@@ -78,8 +78,10 @@ def getSingleModelFields(model,empObj,start_date, eval_date):
         return field_val_dic
     for name_i in fieldNames:
         field_val_dic[name_i] = eval("modelObj."+name_i)
+    """
     if model == EmployeeBiography:
         field_val_dic.update({"rewardyn":modelObj.rewardyn})
+    """
     return field_val_dic
 
 def getAllModelFields(models,empObj,start_date, eval_date):
@@ -286,7 +288,9 @@ def dataIO(request):
             start_date = datetime.datetime(int(reqDict["start_date_year"][0]),int(reqDict["start_date_month"][0]),int(reqDict["start_date_day"][0]))
             end_date = datetime.datetime(int(reqDict["end_date_year"][0]),int(reqDict["end_date_month"][0]),int(reqDict["end_date_day"][0]))
             print("preprocess "+modelname + " from " + str(start_date) + " to " + str(end_date))
-            PreprocessData(eval(modelname),start_date,end_date).runPreprocess()
+            preprocessData = PreprocessData(eval(modelname),start_date,end_date)
+            if not preprocessData.runPreprocess2():
+                preprocessData.runPreprocess()
 
         elif 'analysis_' in reqKeyString:
             modelname = re.findall(r"analysis_([A-Z|a-z|_]*)", reqKeyString)[0]

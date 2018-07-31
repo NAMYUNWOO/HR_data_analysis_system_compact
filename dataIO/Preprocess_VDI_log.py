@@ -26,6 +26,7 @@ def preprocess_VDI_log(VDI_log, VDI_Data, dateRange):
         Q(eval_date__gte=dateRange[0]) & Q(eval_date__lte=dateRange[1] + datetime.timedelta(days=1))).values_list(
         "eval_date", "employeeID_id"))
     df = pd.DataFrame(rows, columns=["dt", "ID"])
+    del rows
     df.index = range(len(df))
 
     df = df[~ df.ID.isin([i for i in df.ID.unique() if bool(re.search("[^0-9]", str(i)))])]

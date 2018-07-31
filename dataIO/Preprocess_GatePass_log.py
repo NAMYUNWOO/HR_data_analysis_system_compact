@@ -14,7 +14,7 @@ def preprocess_GatePass_log(GatePass_log,GatePassData,dateRange):
         empObj = Employee.objects.get(pk=emp_id)
         gpobj = GatePass_log.objects.filter(Q(employeeID=emp_id) & Q(eval_date__gte=dateRange[0]) & Q(eval_date__lte=dateRange[1] + datetime.timedelta(days=1)))
         if gpobj.count() == 0:
-            return
+            continue
         gp_list = list(gpobj.values("eval_date", "isIn").order_by("eval_date"))
         outtingFreqArr = []
         inTimeArr = []
