@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cd1011-ea31-4e3a-9b40-1b54910c461f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/Education_2017-06-01 ~ 2018-06-01" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/EmailData_2016-01-01 ~ 2018-01-01" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/EmployeeBiography_2017-06-01 ~ 2018-06-01" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/EmployeeBiography_2017-06-30 ~ 2018-06-30" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/EmployeeBiography_2018-01-01 ~ 2018-06-30" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/EmployeeGrade_2016-07-01 ~ 2017-06-30" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/EmployeeGrade_2017-06-01 ~ 2018-06-01" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/GatePassData_2017-12-01 ~ 2017-12-31" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/M_EPData_2016-01-01 ~ 2018-01-01" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/Token_Data_2016-01-01 ~ 2018-01-01" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/excels/VDI_Data_2016-01-01 ~ 2018-01-01" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/poscoictsystem.iml" afterPath="$PROJECT_DIR$/.idea/poscoictsystem.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataIO/fillData.py" afterPath="$PROJECT_DIR$/dataIO/fillData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataIO/views.py" afterPath="$PROJECT_DIR$/dataIO/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/employee/views.py" afterPath="$PROJECT_DIR$/employee/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dataIO.html" afterPath="$PROJECT_DIR$/templates/dataIO.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poscoictsystem/settings.py" afterPath="$PROJECT_DIR$/poscoictsystem/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,9 +18,23 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="375">
               <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="11" />
-              <folding />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4230">
+              <caret line="282" column="73" lean-forward="false" selection-start-line="282" selection-start-column="73" selection-end-line="282" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,13 +43,13 @@
         <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
-              <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fillData.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fillData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
@@ -120,11 +118,11 @@
       <find>post</find>
       <find>Employee</find>
       <find>Employee(</find>
-      <find>debug</find>
       <find>fa</find>
       <find>favicon</find>
       <find>../gitbook/images/favicon.ico</find>
       <find>favicon.ico</find>
+      <find>debug</find>
     </findStrings>
     <replaceStrings>
       <replace>poscoictsystem</replace>
@@ -190,9 +188,9 @@
         <option value="$PROJECT_DIR$/dataIO/models.py" />
         <option value="$PROJECT_DIR$/templates/dataIO.html" />
         <option value="$PROJECT_DIR$/dataIO/views.py" />
-        <option value="$PROJECT_DIR$/poscoictsystem/settings.py" />
         <option value="$PROJECT_DIR$/employee/views.py" />
         <option value="$PROJECT_DIR$/dataIO/fillData.py" />
+        <option value="$PROJECT_DIR$/poscoictsystem/settings.py" />
       </list>
     </option>
   </component>
@@ -592,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="282" column="73" lean-forward="false" selection-start-line="282" selection-start-column="73" selection-end-line="282" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dataIO.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -631,14 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/employee/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -665,14 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/popper.js/docs/_includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -694,6 +669,34 @@
         <state relative-caret-position="208">
           <caret line="505" column="20" lean-forward="false" selection-start-line="505" selection-start-column="20" selection-end-line="505" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4230">
+          <caret line="282" column="73" lean-forward="false" selection-start-line="282" selection-start-column="73" selection-end-line="282" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

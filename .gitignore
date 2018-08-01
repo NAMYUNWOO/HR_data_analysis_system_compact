@@ -1,7 +1,2 @@
 *.sqlite3
-*.xlsx
-*.csv
-*.xls
-*.zip
-*.txt
 README.md

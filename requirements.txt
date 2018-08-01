@@ -1,3 +1,5 @@
-Django
+Django 2.0.7
 django-jchart
 django-excel
+django-nvd3
+python-nvd3
