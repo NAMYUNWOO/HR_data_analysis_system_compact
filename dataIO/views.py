@@ -223,7 +223,10 @@ def dataIO(request):
             for idx, filehandle in enumerate(files):
                 print(str(filehandle))
                 fd = FillData(modelname, filePathName=filehandle)
-                fd.fillDB()
+                try:
+                    fd.fillDB()
+                except:
+                    return render(request,"inputFail.html",{})
             return HttpResponseRedirect(reverse('dataIO'))
         elif 'inputWithDatetime_' in reqKeyString:
             modelname = re.findall(r"inputWithDatetime_([A-Z|a-z|_]*)", reqKeyString)[0]
@@ -313,11 +316,25 @@ def dataIO(request):
 
             scoredf = pd.read_csv("./static/excels/output.csv")
             _fillScoreData(scoredf, start_date,end_date)
-        print(request.POST)
+        elif "getTestData" in reqKeyString:
+            from poscoictsystem.settings import STATICFILES_DIRS
+            import zipfile, os, io
+            testDataPath = STATICFILES_DIRS[0] + "/testData/"
+            zip_subdir = "testData"
+            zip_filename = "%s.zip" % zip_subdir
+            filenames = os.listdir(testDataPath)
+            b = io.BytesIO()
+            zf = zipfile.ZipFile(b, "w")
+            for fpath in filenames:
+                fpath = testDataPath + fpath
+                fdir, fname = os.path.split(fpath)
+                zip_path = os.path.join(zip_subdir, fname)
+                zf.write(fpath, zip_path)
+            zf.close()
+            resp = HttpResponse(b.getvalue(), content_type="application/zip")
+            resp['Content-Disposition'] = 'attachment; filename=%s' % zip_filename
+            return resp
         return HttpResponseRedirect(reverse('dataIO'))
-
-
-
     else:
         db.connections.close_all()
         form1 = UploadFileForm()

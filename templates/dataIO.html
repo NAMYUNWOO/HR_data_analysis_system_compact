@@ -13,10 +13,14 @@
         <div class="container" style="white-space: nowrap;display: inline-block;">
             <h1 class="display-3">데이터관리</h1>
             <br>
-            &nbsp;&nbsp;
             <div class="container">
                 <h5><strong>로그 데이터 이력</strong></h5>
-                &nbsp;
+
+                <form action="."  enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    <td><button type="submit" name='getTestData'>테스트 데이터 받기</button></td>
+                </form>
+                <br>
                 <table border="1" cellpadding="10px">
                     <tbody>
                     <tr>
@@ -40,9 +44,9 @@
                             <td>{{ logDataSelect.visible_fields.1.label  }}&nbsp;{{ logDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ logDataSelect.visible_fields.2.label  }}&nbsp;{{ logDataSelect.visible_fields.2  }}</td>
                             {% csrf_token %}
                             {% if logDataSelect.visible_fields.0.label == "Reward_log" %}
-                                <td><button type="submit" name= 'preprocess_{{ logDataSelect.visible_fields.0.label }}' disabled >전처리</button></td>
+                            <td><button type="submit" name= 'preprocess_{{ logDataSelect.visible_fields.0.label }}' disabled >전처리</button></td>
                             {% else %}
-                                <td><button type="submit" name= 'preprocess_{{ logDataSelect.visible_fields.0.label }}' >전처리</button></td>
+                            <td><button type="submit" name= 'preprocess_{{ logDataSelect.visible_fields.0.label }}' >전처리</button></td>
                             {% endif %}
                             {% csrf_token %}
                             <td><button type="submit" name= 'removeWithDatetime_{{ logDataSelect.visible_fields.0.label }}' >삭제</button></td>
@@ -71,10 +75,10 @@
                         <th>{{ hrDataSelect.visible_fields.0.label  }}</th>
                         <form action="."  enctype="multipart/form-data" method="post">
                             {% if forloop.counter0 == 0 %}
-                                <td rowspan={{ hrDataSelects|length }} align="center">{{ hrDataSelect.visible_fields.1.label  }}&nbsp;{{ hrDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ hrDataSelect.visible_fields.2.label  }}&nbsp;{{ hrDataSelect.visible_fields.2  }}<br><br>
-                                    </td>
-                                <td rowspan={{ hrDataSelects|length }}>{{ form1.visible_fields.0 }}
-                                    {% csrf_token %}
+                            <td rowspan={{ hrDataSelects|length }} align="center">{{ hrDataSelect.visible_fields.1.label  }}&nbsp;{{ hrDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ hrDataSelect.visible_fields.2.label  }}&nbsp;{{ hrDataSelect.visible_fields.2  }}<br><br>
+                            </td>
+                            <td rowspan={{ hrDataSelects|length }}>{{ form1.visible_fields.0 }}
+                                {% csrf_token %}
                                 <button type="submit" name= 'inputWithDatetime_{{ hrDataSelect.visible_fields.0.label }}' >입력</button></td>
                             {% endif %}
                         </form>
@@ -186,8 +190,8 @@
                         <form action="."  enctype="multipart/form-data" method="post">
                             <td align="center">{{ scoreDataSelect.visible_fields.1.label  }}&nbsp;{{ scoreDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ scoreDataSelect.visible_fields.2.label  }}&nbsp;{{ scoreDataSelect.visible_fields.2  }}<br><br>
 
-                            {% csrf_token %}
-                            <button type="submit" name= 'analysis_{{ scoreDataSelect.visible_fields.0.label }}' >분석</button></td>
+                                {% csrf_token %}
+                                <button type="submit" name= 'analysis_{{ scoreDataSelect.visible_fields.0.label }}' >분석</button></td>
                         </form>
                         <form action="."  enctype="multipart/form-data" method="post">
                             <td>{{ scoreDataSelect.visible_fields.0  }}</td>

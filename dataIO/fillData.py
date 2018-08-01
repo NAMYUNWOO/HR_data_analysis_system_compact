@@ -420,7 +420,7 @@ class FillData:
                 emp = Employee(id= id_,bu=bu, place=place,empname=name,level = level,email=email)
                 emp.save()
             else:
-                emp = Employee.objects.filter(pk=id_).update(level=level,bu=bu,place = place ,email=email)
+                emp = Employee.objects.filter(pk=id_).update(level=level,bu=bu,place = place ,email=email,empname=name)
             empBio = EmployeeBiography(employeeID = Employee.objects.get(pk=id_),employeeID_confirm = id_ ,bu=bu, place=place,empname=name,
                                       start_date= self.start_date ,eval_date = self.eval_date,level = level,email=email)
             EmployeeBiography_list.append(empBio)

@@ -68,7 +68,7 @@ def employee(request,id):
                                          ["vdi_early", "vdi_late", "vdi_early_byLevelRatio","vdi_late_byLevelRatio"],
                                          ["근무시간전 접속", "근무시간후 접속", "근무시간전 접속 직급별 비율", "근무시간후 접속 직급별 비율"])
 
-    gatepass_LineChart = lineChartGen(GatePassData,empobj
+    gatepass_LineChart = lineChartGen(GatePassData,empobj,
                                               ["staying_office_meanM", "outting_freq_mean", "inTime_mean",
                                                "outTime_mean", "working_days"],
                                               ["근무시간(분)", "외출빈도", "출근시간", "퇴근시간", "근무일"])
