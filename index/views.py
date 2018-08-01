@@ -229,37 +229,37 @@ class Index(View):
                                    "sendCnt_byLevelRatio", "sendCnt_nwh_byLevelRatio",
                                    "receiveCnt_byLevelRatio","nodeSize", "nodeSize_byLevelRatio",
                                    "nodeSize_byGroupRatio"],
-                                  ["발신","발신(근무시간 외)","수신",
-                                   "발신 직급별 비율","발신 (근무시간 외) 직급별 비율",
-                                   "수신 직급별 비율","노드 사이즈","노드사이즈 직급별 비율",
+                                  ["발신량","발신량(근무시간 외)","수신량",
+                                   "발신량 직급별 비율","발신량 (근무시간 외) 직급별 비율",
+                                   "수신량 직급별 비율","노드 사이즈","노드사이즈 직급별 비율",
                                    "노드사이즈 조직별 비율"])
 
         mep_avgLineChart = self.lineChartGen(self.getEmpObj(M_EPData),
                                             ["mep_early", "mep_late", "mep_early_byLevelRatio", "mep_late_byLevelRatio"],
-                                            ["근무시간전1","근무시간후1","근무시간전 직급별 비율","근무시간전 직급별 비율"])
+                                            ["근무시간전 접속","근무시간후 접속","근무시간전 접속 직급별 비율","근무시간후 접속 직급별 비율"])
 
         ep_avgLineChart = self.lineChartGen(self.getEmpObj(EPData),
                                             ["ep_access_day_mean", "ep_access_day_var"],
                                             ["data1","data2"])
 
         grade_avgLineChart = self.lineChartGen(self.getEmpObj(EmployeeGrade),
-                                           ['grade_1','grade_r2_avg','grade_co_r2_avg','grade_sv_r2_avg'],
-                                           ['성과평가-1','성과2년평균', '동료평가 2년평균','상사평가 2년평균'])
+                                           ['grade_r2_avg','grade_co_r2_avg','grade_sv_r2_avg'],
+                                           ['성과 2년평균', '동료평가 2년평균','상사평가 2년평균'])
 
 
 
         edu_avgLineChart = self.lineChartGen(self.getEmpObj(Education),
                                         ['edu_credit'],
-                                        ['이수학점'])
+                                        ['사내교육 이수학점'])
 
         token_avgLineChart = self.lineChartGen(self.getEmpObj(Token_Data),
                                              ["token_send", "token_receive", "token_send_byLevelRatio","token_receive_byLevelRatio"],
-                                             ["근무시간전1", "근무시간후1", "근무시간전 직급별 비율", "근무시간전 직급별 비율"])
+                                             ["토큰발신", "토큰수신", "토큰발신 직급별 비율", "토큰수신 직급별 비율"])
 
 
         vdi_avgLineChart = self.lineChartGen(self.getEmpObj(VDI_Data),
                                              ["vdi_early", "vdi_late", "vdi_early_byLevelRatio","vdi_late_byLevelRatio"],
-                                             ["근무시간전1", "근무시간후1", "근무시간전 직급별 비율", "근무시간전 직급별 비율"])
+                                             ["근무시간전 접속", "근무시간후 접속", "근무시간전 접속 직급별 비율", "근무시간후 접속 직급별 비율"])
         """
         
         email_avgLineChart = self.lineChartGen(self.getEmpObj(EmailData),

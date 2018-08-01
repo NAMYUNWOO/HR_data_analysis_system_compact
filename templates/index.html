@@ -5,16 +5,18 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-3">{{ region }}</h1>
+            {% comment "score deprecated" %}
             <h4>몰입: {{ scoreAvg.0 }}</h4>
             <h4>성과: {{ scoreAvg.1 }}</h4>
             <h4>핵심: {{ scoreAvg.2 }}</h4>
             <h4>업무: {{ scoreAvg.3 }}</h4>
+            {% endcomment %}
             {% if recentUpdateDate and employee_size %}
             <span><b>
 
             최근 업데이트일: {{ recentUpdateDate }} <br>
             분석 대상 직원수: {{ employee_size }} 명
-          </b></span>
+            </b></span>
             {% endif %}
 
         </div>
