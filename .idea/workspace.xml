@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cd1011-ea31-4e3a-9b40-1b54910c461f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataIO/fillData.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataIO/fillData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataIO/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataIO/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/employee/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/buGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/buGroup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/region.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/region.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataIO/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataIO/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +16,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="95">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -37,7 +28,7 @@
       <file leaf-file-name="fillData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3717">
+            <state relative-caret-position="-1463">
               <caret line="708" selection-start-line="708" selection-end-line="708" />
               <folding>
                 <element signature="e#23#42#0" expanded="true" />
@@ -46,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dataIO/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1399">
-              <caret line="246" column="17" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="17" />
+            <state relative-caret-position="444">
+              <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -58,7 +49,7 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
+            <state relative-caret-position="1026">
               <caret line="57" column="73" selection-start-line="57" selection-start-column="61" selection-end-line="57" selection-end-column="73" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -67,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -88,7 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_fillBiographyData</find>
       <find>holi</find>
       <find>sendCnt</find>
       <find>sendCount_total_df</find>
@@ -118,6 +108,7 @@
       <find>type</find>
       <find>event</find>
       <find>getDatelist2</find>
+      <find>updateEmailDateBeginEnd</find>
     </findStrings>
     <replaceStrings>
       <replace>poscoictsystem</replace>
@@ -169,7 +160,6 @@
         <option value="$PROJECT_DIR$/dataIO/Token_log_preprocess.py" />
         <option value="$PROJECT_DIR$/dataIO/Preporcess_M_EP_log.py" />
         <option value="$PROJECT_DIR$/dataIO/Edge.py" />
-        <option value="$PROJECT_DIR$/dataIO/views.py" />
         <option value="$PROJECT_DIR$/dataIO/Preprocess_EmailLog.py" />
         <option value="$PROJECT_DIR$/dataIO/Preprocess_M_EP_log.py" />
         <option value="$PROJECT_DIR$/dataIO/Preprocess_Token_log.py" />
@@ -186,13 +176,14 @@
         <option value="$PROJECT_DIR$/index/models.py" />
         <option value="$PROJECT_DIR$/dataIO/fillData.py" />
         <option value="$PROJECT_DIR$/dataIO/models.py" />
+        <option value="$PROJECT_DIR$/dataIO/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="388" />
-    <option name="y" value="196" />
-    <option name="width" value="2541" />
+    <option name="x" value="385" />
+    <option name="y" value="195" />
+    <option name="width" value="2543" />
     <option name="height" value="1692" />
   </component>
   <component name="ProjectView">
@@ -318,9 +309,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="259" y="131" width="1694" height="1128" extended-state="0" />
+    <frame x="257" y="130" width="1695" height="1128" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1404762" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14039262" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.32913166" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5028612" side_tool="true" weight="0.32913166" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49713877" weight="0.32913166" />
@@ -522,9 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -532,10 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
           <caret line="56" selection-start-line="56" selection-end-line="66" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#1;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#1;n#div#3;n#div#1;n#main#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -543,10 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2071">
           <caret line="109" column="22" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#6;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#1;n#div#3;n#div#6;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,9 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1577">
           <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -564,10 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3235">
           <caret line="22" selection-start-line="22" selection-end-line="65" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#1;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#1;n#div#3;n#div#1;n#main#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,9 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="100" column="29" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#99#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -585,10 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#1;n#div#3;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,7 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="95">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -616,26 +583,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3717">
-          <caret line="708" selection-start-line="708" selection-end-line="708" />
-          <folding>
-            <element signature="e#23#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataIO/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1399">
-          <caret line="246" column="17" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataIO/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
+        <state relative-caret-position="1026">
           <caret line="57" column="73" selection-start-line="57" selection-start-column="61" selection-end-line="57" selection-end-column="73" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -646,7 +596,24 @@
     <entry file="file://$PROJECT_DIR$/dataIO/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1463">
+          <caret line="708" selection-start-line="708" selection-end-line="708" />
+          <folding>
+            <element signature="e#23#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataIO/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
         </state>
       </provider>
     </entry>

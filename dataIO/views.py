@@ -151,18 +151,13 @@ def _fillScoreData(df,start_date,eval_date):
     return True
 
 
-def updateEmailDateBeginEnd():
-    emailDateBegin = EmailDateBeginEnd.objects.get(pk=0).eval_date
-    emailDateEnd = EmailDateBeginEnd.objects.get(pk=1).eval_date
-    emailOrderby = EmailLog.objects.order_by("-eval_date")
-    if emailOrderby.count() == 0:
-        emailDateBegin = datetime.datetime.now()+datetime.timedelta(days=1)
-        emailDateEnd = datetime.datetime(1900,1,1)
-    else:
-        emailDateBegin = min(emailOrderby.last().eval_date, emailDateBegin)
-        emailDateEnd = max(emailOrderby.first().eval_date, emailDateEnd)
-    EmailDateBeginEnd(pk=0, eval_date=emailDateBegin).save()
-    EmailDateBeginEnd(pk=1, eval_date=emailDateEnd).save()
+def updateEmailDateBeginEnd(Model):
+    ModelOrderby = Model.objects.order_by("eval_date")
+    if len(ModelOrderby) == 0:
+        LogFirstLast.objects.get(pk=Model.__name__).delete()
+        return
+    LogFirstLast.objects.filter(pk=Model.__name__).update(start_date = ModelOrderby.first().eval_date,end_date=ModelOrderby.last().eval_date)
+    return
 
 def dateRangeStr2datetime(dateRangeStr):
     start_date, eval_date = [datetime.datetime.strptime(dt, "%Y-%m-%d") for dt in map(lambda x: x.strip(), dateRangeStr.split("~"))]
@@ -229,8 +224,6 @@ def dataIO(request):
                 print(str(filehandle))
                 fd = FillData(modelname, filePathName=filehandle)
                 fd.fillDB()
-            if modelname == "EmailLog":
-                updateEmailDateBeginEnd()
             return HttpResponseRedirect(reverse('dataIO'))
         elif 'inputWithDatetime_' in reqKeyString:
             modelname = re.findall(r"inputWithDatetime_([A-Z|a-z|_]*)", reqKeyString)[0]
@@ -280,8 +273,7 @@ def dataIO(request):
             end_date = datetime.datetime(int(reqDict["end_date_year"][0]),int(reqDict["end_date_month"][0]),int(reqDict["end_date_day"][0]))
             modelInstances = getModelInstanceWithDateRange(eval(modelname),dateRange=[start_date,end_date+datetime.timedelta(days=1)])
             modelInstances.delete()
-            if modelname == "EmailLog":
-                updateEmailDateBeginEnd()
+            updateEmailDateBeginEnd(eval(modelname))
 
         elif 'preprocess_' in reqKeyString:
             modelname = re.findall(r"preprocess_([A-Z|a-z|_]*)", reqKeyString)[0]
