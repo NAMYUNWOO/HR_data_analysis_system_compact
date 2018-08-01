@@ -3,3 +3,5 @@ django-jchart
 django-excel
 django-nvd3
 python-nvd3
+
+https://docs.google.com/uc?&id=1h1ESV2_-NfDwzPuUrxoNxsFwadSEawLC
