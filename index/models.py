@@ -8,6 +8,14 @@ import datetime
 # Create your models here.
 
 
+class LogFirstLast(models.Model):
+    modelName = models.CharField(primary_key=True,max_length=100)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+
+    def __str__(self):
+        return self.modelName + " start at "+str(self.start_date) +", end at "+ str(self.end_date)
+
 class Employee(models.Model):
     id = models.IntegerField(primary_key=True)
 

@@ -260,6 +260,12 @@ class Index(View):
         vdi_avgLineChart = self.lineChartGen(self.getEmpObj(VDI_Data),
                                              ["vdi_early", "vdi_late", "vdi_early_byLevelRatio","vdi_late_byLevelRatio"],
                                              ["근무시간전 접속", "근무시간후 접속", "근무시간전 접속 직급별 비율", "근무시간후 접속 직급별 비율"])
+
+        gatepass_avgLineChart = self.lineChartGen(self.getEmpObj(GatePassData),
+                                             ["staying_office_meanM", "outting_freq_mean", "inTime_mean","outTime_mean","working_days"],
+                                             ["근무시간(분)", "외출빈도", "출근시간", "퇴근시간","근무일"])
+
+
         """
         
         email_avgLineChart = self.lineChartGen(self.getEmpObj(EmailData),
@@ -341,7 +347,8 @@ class Index(View):
             "token":token_avgLineChart,
             "vdi": vdi_avgLineChart,
             "ep":ep_avgLineChart,
-            "mep":mep_avgLineChart
+            "mep":mep_avgLineChart,
+            "gate":gatepass_avgLineChart
         }
         # "email": email_avgLineChart,
         """ useless contexts

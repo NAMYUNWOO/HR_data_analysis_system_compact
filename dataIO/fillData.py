@@ -420,18 +420,7 @@ class FillData:
                 emp = Employee(id= id_,bu=bu, place=place,empname=name,level = level,email=email)
                 emp.save()
             else:
-                emp = Employee.objects.get(pk=id_)
-                emp.level = level
-                emp.bu = bu
-                emp.place = place
-                """
-                emp.age = age
-                emp.coreyn = coreyn
-                emp.work_duration = work_duration
-                emp.pmlevel = pmlevel
-                emp.istarget = istarget
-                """
-                emp.save()
+                emp = Employee.objects.filter(pk=id_).update(level=level,bu=bu,place = place ,email=email)
             empBio = EmployeeBiography(employeeID = Employee.objects.get(pk=id_),employeeID_confirm = id_ ,bu=bu, place=place,empname=name,
                                       start_date= self.start_date ,eval_date = self.eval_date,level = level,email=email)
             EmployeeBiography_list.append(empBio)
@@ -525,15 +514,15 @@ class FillData:
         receivers = receivers.applymap(lambda x: emailextractor(x))
         receivers = receivers.col4 + receivers.col5 + receivers.col6
         try:
-            earlyDate = EmailDateBeginEnd.objects.get(pk=0).eval_date
-            recentDate = EmailDateBeginEnd.objects.get(pk=1).eval_date
+            logFirstLast = LogFirstLast.objects.get(pk=EmailLog.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
         except:
-            earlyDate = EmailDateBeginEnd(id = 0, eval_date = datetime.datetime(9999,1,1))
-            recentDate = EmailDateBeginEnd(id = 1, eval_date = datetime.datetime(1,1,1))
-            earlyDate.save()
-            recentDate.save()
-            earlyDate = EmailDateBeginEnd.objects.get(pk=0).eval_date
-            recentDate = EmailDateBeginEnd.objects.get(pk=1).eval_date
+            emailLogFirstLast = LogFirstLast(modelName = EmailLog.__name__, start_date = datetime.datetime(9999,1,1), end_date = datetime.datetime(1,1,1))
+            emailLogFirstLast.save()
+            logFirstLast = LogFirstLast.objects.get(pk=EmailLog.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
 
         if type(seval_date[0]) == str:
             seval_date = seval_date.map(lambda x: self.__strEval_date_converter(x))
@@ -560,27 +549,34 @@ class FillData:
                 YMD = str(eval_date.year)+"-"+str(eval_date.month)+"-"+str(eval_date.day)
                 if holidayHash.get(YMD,False) or eval_date.hour > 20 or eval_date.hour < 8:
                     nwh = True
-                #print(sendID,receiveID,eval_date)
+
                 empEmailLog = EmailLog(sendID=sendID, receiveID=receiveID, eval_date=eval_date,nwh=nwh)
                 empEmailLog_list.append(empEmailLog)
                 earlyDate = min(earlyDate,eval_date)
                 recentDate = max(eval_date,recentDate)
-                print(str(sendID) + " send to "+str(receiveID), end='\r')
                 success = True
         if not success:
             return False
         EmailLog.objects.bulk_create(empEmailLog_list)
-        emailDateBegin = EmailDateBeginEnd.objects.get(pk=0)
-        emailDateEnd = EmailDateBeginEnd.objects.get(pk=1)
-        emailDateBegin.eval_date = earlyDate
-        emailDateEnd.eval_date = recentDate
-        emailDateBegin.save()
-        emailDateEnd.save()
+        LogFirstLast.objects.filter(pk=EmailLog.__name__).update(start_date = earlyDate, end_date = recentDate)
         return True
 
 
     def _fillMEPData(self):
         mep_list = []
+
+
+        try:
+            logFirstLast = LogFirstLast.objects.get(pk=M_EP_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
+        except:
+            emailLogFirstLast = LogFirstLast(modelName = M_EP_log.__name__, start_date = datetime.datetime(9999,1,1), end_date = datetime.datetime(1,1,1))
+            emailLogFirstLast.save()
+            logFirstLast = LogFirstLast.objects.get(pk=M_EP_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
+
         for i in range(len(self.df)):
             df_instance = self.df.iloc[i, :]
             try:
@@ -592,15 +588,28 @@ class FillData:
                 eval_date = self.__strEval_date_converter(df_instance.eval_date)
             else:
                 eval_date = df_instance.eval_date
+            earlyDate = min(earlyDate, eval_date)
+            recentDate = max(eval_date, recentDate)
             mep_i = M_EP_log(employeeID = employeeID,eval_date=eval_date)
             mep_list.append(mep_i)
         M_EP_log.objects.bulk_create(mep_list)
+        LogFirstLast.objects.filter(pk=M_EP_log.__name__).update(start_date=earlyDate, end_date=recentDate)
         return True
 
 
     def _fillVdiData(self):
         success = False
         vdi_log_obj_list = []
+        try:
+            logFirstLast = LogFirstLast.objects.get(pk=VDI_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
+        except:
+            emailLogFirstLast = LogFirstLast(modelName = VDI_log.__name__, start_date = datetime.datetime(9999,1,1), end_date = datetime.datetime(1,1,1))
+            emailLogFirstLast.save()
+            logFirstLast = LogFirstLast.objects.get(pk=VDI_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
         for i in range(len(self.df)):
             df_instance = self.df.iloc[i, :]
             employeeID_ = df_instance.id
@@ -612,12 +621,15 @@ class FillData:
             eval_date = df_instance.eval_date
             if type(eval_date) == str:
                 eval_date = self.__strEval_date_converter(eval_date)
+            earlyDate = min(earlyDate, eval_date)
+            recentDate = max(eval_date, recentDate)
             vdi_log_obj = VDI_log(employeeID=employeeID,eval_date=eval_date)
             vdi_log_obj_list.append(vdi_log_obj)
             success = True
         if not success:
             return False
         VDI_log.objects.bulk_create(vdi_log_obj_list)
+        LogFirstLast.objects.filter(pk=VDI_log.__name__).update(start_date=earlyDate, end_date=recentDate)
         return True
 
     def _fillTokenData(self):
@@ -625,6 +637,16 @@ class FillData:
         self.df["type"] = self.df["type"].map(lambda x : x.strip())
         self.df = self.df[self.df["type"] == "감사토큰"]
         print(self.df)
+        try:
+            logFirstLast = LogFirstLast.objects.get(pk=Token_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
+        except:
+            emailLogFirstLast = LogFirstLast(modelName = Token_log.__name__, start_date = datetime.datetime(9999,1,1), end_date = datetime.datetime(1,1,1))
+            emailLogFirstLast.save()
+            logFirstLast = LogFirstLast.objects.get(pk=Token_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
         for i in range(len(self.df)):
             df_instance = self.df.iloc[i, :]
             token_sendID_ = df_instance.sendID
@@ -632,6 +654,8 @@ class FillData:
             eval_date = df_instance.eval_date
             if type(eval_date) == str:
                 eval_date = self.__strEval_date_converter(eval_date)
+            earlyDate = min(earlyDate, eval_date)
+            recentDate = max(eval_date, recentDate)
             try:
                 sendID = Employee.objects.get(id=int(token_sendID_))
 
@@ -645,10 +669,21 @@ class FillData:
             tokenlog = Token_log(sendID =sendID,receiveID=receiveID,eval_date=eval_date)
             token_log_list.append(tokenlog)
         Token_log.objects.bulk_create(token_log_list)
+        LogFirstLast.objects.filter(pk=Token_log.__name__).update(start_date=earlyDate, end_date=recentDate)
         return True
 
     def _fillGatePassData(self):
         gatepass_list = []
+        try:
+            logFirstLast = LogFirstLast.objects.get(pk=GatePass_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
+        except:
+            emailLogFirstLast = LogFirstLast(modelName = GatePass_log.__name__, start_date = datetime.datetime(9999,1,1), end_date = datetime.datetime(1,1,1))
+            emailLogFirstLast.save()
+            logFirstLast = LogFirstLast.objects.get(pk=GatePass_log.__name__)
+            earlyDate = logFirstLast.start_date
+            recentDate = logFirstLast.end_date
         for i in range(len(self.df)):
             df_instance = self.df.iloc[i, :]
             try:
@@ -660,10 +695,13 @@ class FillData:
             hhmmss = ":".join(re.findall("[0-9]+", df_instance.eval_date2))
             eval_date_ = yyyymmdd.strip()+" "+hhmmss.strip()
             eval_date = self.__strEval_date_converter(eval_date_)
+            earlyDate = min(earlyDate, eval_date)
+            recentDate = max(eval_date, recentDate)
             isIn = "입실" in df_instance.eventtype
             gpl = GatePass_log(employeeID = employeeID,eval_date = eval_date,isIn = isIn)
             gatepass_list.append(gpl)
         GatePass_log.objects.bulk_create(gatepass_list)
+        LogFirstLast.objects.filter(pk=GatePass_log.__name__).update(start_date=earlyDate, end_date=recentDate)
         return True
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from index.views import get_Bu_buUrl
-from index.models import Employee,EmployeeBiography,EmailData,M_EPData,EmployeeGrade,Education,Token_Data,VDI_Data
+from index.models import Employee,EmployeeBiography,EmailData,M_EPData,EmployeeGrade,Education,Token_Data,VDI_Data,GatePassData
 from index.views import LineChart
 from django.db.models import F
 from django.urls import reverse
@@ -17,13 +17,7 @@ def lineChartGen(Model,empobj,fields,labels):
     lineChart.getXdataYdata(modelObj,labels)
     return lineChart
 
-def getScore(id):
-    empScores = Score.objects.filter(employeeID = id).order_by('-eval_date')
-    if empScores.count() == 0:
-        return [None]*4
-    recentScore = list(empScores.values_list('score1','score2','score3','score4'))[0]
-    scores = list(map(lambda x:'%.1f' % round(x, 2),recentScore))
-    return scores
+
 
 def employee(request,id):
     # search
@@ -74,13 +68,14 @@ def employee(request,id):
                                          ["vdi_early", "vdi_late", "vdi_early_byLevelRatio","vdi_late_byLevelRatio"],
                                          ["근무시간전 접속", "근무시간후 접속", "근무시간전 접속 직급별 비율", "근무시간후 접속 직급별 비율"])
 
-
-
+    gatepass_LineChart = lineChartGen(GatePassData,empobj
+                                              ["staying_office_meanM", "outting_freq_mean", "inTime_mean",
+                                               "outTime_mean", "working_days"],
+                                              ["근무시간(분)", "외출빈도", "출근시간", "퇴근시간", "근무일"])
 
 
 
     context = {"bu":get_Bu_buUrl(),
-               "scoreAvg":getScore(id),
                "empID":id, "name":empobj.empname,
                "place":empobj.place,
                "bonbu":empobj.bu,
@@ -91,6 +86,7 @@ def employee(request,id):
                "grade":grade_LineChart,
                "edu":edu_LineChart,
                "token":token_LineChart,
-               "vdi":vdi_LineChart
+               "vdi":vdi_LineChart,
+               "gate":gatepass_LineChart
                }
     return render(request, 'employee.html',context)

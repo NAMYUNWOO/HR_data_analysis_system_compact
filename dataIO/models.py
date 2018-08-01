@@ -13,17 +13,16 @@ def modelList():
 
 
 def getDatelist2(Model):
-    if Model.__name__.endswith('log'):
-        dt_= Model.objects.order_by("-eval_date")
-        if dt_.count() == 0:
+    if Model.__name__.lower().endswith("log"):
+        try:
+            logfirstlast = LogFirstLast.objects.get(pk=Model.__name__)
+            return [str(logfirstlast.start_date)[:10] + " ~ " + str(logfirstlast.end_date)[:10]]
+        except:
             return ["0개의 업데이트"]
-        return [str(dt_.last().eval_date)[:10] +" ~ "+ str(dt_.first().eval_date)[:10]]
-    elif Model.__name__.endswith('EmailLog'):
-        if EmailLog.objects.count() == 0:
-            return ["0개의 업데이트"]
-        return [str(EmailDateBeginEnd.objects.first().eval_date)[:10] +" ~ "+ str(EmailDateBeginEnd.objects.last().eval_date)[:10]]
-    evaldate_startdate = Model.objects.order_by("-eval_date").values_list('eval_date','start_date').distinct()
-    return list(map(lambda x: str(x[1])[:10] + " ~ " + str(x[0])[:10], evaldate_startdate))
+    else:
+        evaldate_startdate = Model.objects.order_by("-eval_date").values_list('eval_date', 'start_date').distinct()
+        return list(map(lambda x: str(x[1])[:10] + " ~ " + str(x[0])[:10], evaldate_startdate))
+
 
 
 def lastUpdateDates2(ModelList):
