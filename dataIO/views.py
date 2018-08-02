@@ -154,8 +154,11 @@ def _fillScoreData(df,start_date,eval_date):
 def updateEmailDateBeginEnd(Model):
     ModelOrderby = Model.objects.order_by("eval_date")
     if len(ModelOrderby) == 0:
-        LogFirstLast.objects.get(pk=Model.__name__).delete()
-        return
+        try:
+            LogFirstLast.objects.get(pk=Model.__name__).delete()
+            return
+        except:
+            return
     LogFirstLast.objects.filter(pk=Model.__name__).update(start_date = ModelOrderby.first().eval_date,end_date=ModelOrderby.last().eval_date)
     return
 
@@ -265,18 +268,19 @@ def dataIO(request):
                 for hrmodel in hrModels:
                     modelname_i = hrmodel.__name__
                     modelInstances = getModelInstanceWithDateRange(eval(modelname_i), dateRangeStr=updateList[selectedDate])
-                    modelInstances.delete()
+                    delRslt = modelInstances.delete()
             else:
                 modelInstances = getModelInstanceWithDateRange(eval(modelname),dateRangeStr=updateList[selectedDate])
-                modelInstances.delete()
+                delRslt = modelInstances.delete()
 
         elif 'removeWithDatetime_' in reqKeyString:
             modelname = re.findall(r"removeWithDatetime_([A-Z|a-z|_]*)", reqKeyString)[0]
             start_date = datetime.datetime(int(reqDict["start_date_year"][0]),int(reqDict["start_date_month"][0]),int(reqDict["start_date_day"][0]))
             end_date = datetime.datetime(int(reqDict["end_date_year"][0]),int(reqDict["end_date_month"][0]),int(reqDict["end_date_day"][0]))
             modelInstances = getModelInstanceWithDateRange(eval(modelname),dateRange=[start_date,end_date+datetime.timedelta(days=1)])
-            modelInstances.delete()
+            delRslt = modelInstances.delete()
             updateEmailDateBeginEnd(eval(modelname))
+            return HttpResponse(str(delRslt))
 
         elif 'preprocess_' in reqKeyString:
             modelname = re.findall(r"preprocess_([A-Z|a-z|_]*)", reqKeyString)[0]
