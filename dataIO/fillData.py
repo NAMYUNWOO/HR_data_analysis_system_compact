@@ -7,7 +7,6 @@ import re,os,time
 import numpy as np
 import json
 from django.db.models.functions import TruncMonth, TruncDay
-from sklearn.cluster import KMeans
 from inspect import ismethod
 from django import db
 import networkx as nx
@@ -1264,7 +1263,7 @@ class FillData:
         df["cctavg"] = (df.cct1 + df.cct4)/2
         df = df.drop(["employeeID","cct1","cct4"],1)
         df = df.dropna()
-        y_pred = KMeans(n_clusters=3).fit_predict(df) + 1
+        y_pred = 0
         df["flow"] = y_pred
         flow_list = []
         for i in range(len(df)):
