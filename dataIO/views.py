@@ -150,6 +150,11 @@ def _fillScoreData(df,start_date,eval_date):
         empScore.save()
     return True
 
+def vacuumDB():
+    from django.db import connection, transaction
+    cursor = connection.cursor()
+    cursor.execute("vacuum")
+    transaction.commit()
 
 def updateEmailDateBeginEnd(Model):
     ModelOrderby = Model.objects.order_by("eval_date")
@@ -244,6 +249,8 @@ def dataIO(request):
             return HttpResponseRedirect(reverse('dataIO'))
 
         elif 'output_' in reqKeyString:
+            from poscoictsystem.settings import STATICFILES_DIRS
+            outputPath = STATICFILES_DIRS[0] + "/excels/"
             modelname = re.findall(r"output_([A-Z|a-z|_]*)",reqKeyString)[0]
             updateList = getDatelist2(eval(modelname))
             selectedDate = int(reqDict['prefix'][0])
@@ -253,8 +260,8 @@ def dataIO(request):
             df = getTable([eval(modelname)],start_date,eval_date)
             df = df.fillna("NA")
             filename = modelname+"_"+dateRangeStr
-            df.reindex_axis(sorted(df.columns), axis=1).to_csv("./static/excels/"+filename,encoding='cp949')
-            filetosend = open("./static/excels/"+filename, 'r', encoding='cp949')
+            df.reindex_axis(sorted(df.columns), axis=1).to_csv(outputPath+filename,encoding='cp949')
+            filetosend = open(outputPath+filename, 'r', encoding='cp949')
             response = HttpResponse(filetosend, content_type="text/csv", charset='cp949')
             response['Content-Disposition'] = "attachment; filename=%s.csv" % (filename)
             return response
@@ -268,19 +275,22 @@ def dataIO(request):
                 for hrmodel in hrModels:
                     modelname_i = hrmodel.__name__
                     modelInstances = getModelInstanceWithDateRange(eval(modelname_i), dateRangeStr=updateList[selectedDate])
-                    delRslt = modelInstances.delete()
+                    modelInstances.delete()
             else:
                 modelInstances = getModelInstanceWithDateRange(eval(modelname),dateRangeStr=updateList[selectedDate])
-                delRslt = modelInstances.delete()
+                modelInstances.delete()
+            vacuumDB()
+
 
         elif 'removeWithDatetime_' in reqKeyString:
             modelname = re.findall(r"removeWithDatetime_([A-Z|a-z|_]*)", reqKeyString)[0]
             start_date = datetime.datetime(int(reqDict["start_date_year"][0]),int(reqDict["start_date_month"][0]),int(reqDict["start_date_day"][0]))
             end_date = datetime.datetime(int(reqDict["end_date_year"][0]),int(reqDict["end_date_month"][0]),int(reqDict["end_date_day"][0]))
             modelInstances = getModelInstanceWithDateRange(eval(modelname),dateRange=[start_date,end_date+datetime.timedelta(days=1)])
-            delRslt = modelInstances.delete()
+            modelInstances.delete()
             updateEmailDateBeginEnd(eval(modelname))
-            return HttpResponse(str(delRslt))
+            vacuumDB()
+
 
         elif 'preprocess_' in reqKeyString:
             modelname = re.findall(r"preprocess_([A-Z|a-z|_]*)", reqKeyString)[0]
