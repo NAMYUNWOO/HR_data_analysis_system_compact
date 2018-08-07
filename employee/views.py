@@ -50,13 +50,13 @@ def employee(request,id):
                                         ["근무시간전 접속","근무시간후 접속","근무시간전 접속 직급별 비율","근무시간후 접속 직급별 비율"])
 
     grade_LineChart = lineChartGen(EmployeeGrade,empobj,
-                                       ['grade_r2_avg','grade_co_r2_avg','grade_sv_r2_avg'],
-                                       ['성과 2년평균', '동료평가 2년평균','상사평가 2년평균'])
+                                       ['grade_r3_avg','grade_co_r3_avg','grade_sv_r3_avg'],
+                                       ['성과 3년평균', '동료평가 3년평균','상사평가 3년평균'])
 
 
 
     edu_LineChart = lineChartGen(Education,empobj,
-                                    ['edu_credit'],
+                                    ['edu_course_cnt'],
                                     ['사내교육 이수학점'])
 
     token_LineChart = lineChartGen(Token_Data,empobj,

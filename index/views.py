@@ -188,25 +188,6 @@ class Index(View):
         self.bu = bu
         empBioObj = self.getEmpBioObj()
         """
-        ################## pieChart #########################################################
-        
-        place_count = empBioObj.values("place").annotate(the_count=Count('place'))
-        coreyn_count = empBioObj.values("coreyn").annotate(the_count=Count('coreyn'))
-        sex_count = empBioObj.values("sex").annotate(the_count=Count('sex'))
-        ageRange_count = empBioObj.values("age").annotate(ageRange=Round(F('age') / 10) * 10
-                                                         ).values('ageRange').annotate(the_count=Count("ageRange"))
-
-        chartdataPlace, charttypePlace = PieChartdata(place_count, "place").getchartDataType()
-
-        chartdataCore, charttypeCore = PieChartdata(coreyn_count, "coreyn", {True: "핵심", False: "보통"}) \
-            .getchartDataType()
-        chartdataSex, charttypeSex = PieChartdata(sex_count, "sex", {False: "여자", True: "남자"}) \
-            .getchartDataType()
-        chartdataAge, charttypeAge = PieChartdata(ageRange_count, "ageRange", {}, " 대") \
-            .getchartDataType()
-
-        ################ PieChart End #######################################################
-        
         ################ Get Scores #######################################################
         def rounding_none(x):
             if x == None:
@@ -238,18 +219,15 @@ class Index(View):
                                             ["mep_early", "mep_late", "mep_early_byLevelRatio", "mep_late_byLevelRatio"],
                                             ["근무시간전 접속","근무시간후 접속","근무시간전 접속 직급별 비율","근무시간후 접속 직급별 비율"])
 
-        ep_avgLineChart = self.lineChartGen(self.getEmpObj(EPData),
-                                            ["ep_access_day_mean", "ep_access_day_var"],
-                                            ["data1","data2"])
 
         grade_avgLineChart = self.lineChartGen(self.getEmpObj(EmployeeGrade),
-                                           ['grade_r2_avg','grade_co_r2_avg','grade_sv_r2_avg'],
-                                           ['성과 2년평균', '동료평가 2년평균','상사평가 2년평균'])
+                                           ['grade_r3_avg','grade_co_r3_avg','grade_sv_r3_avg'],
+                                           ['성과 3년평균', '동료평가 3년평균','상사평가 3년평균'])
 
 
 
         edu_avgLineChart = self.lineChartGen(self.getEmpObj(Education),
-                                        ['edu_credit'],
+                                        ['edu_course_cnt'],
                                         ['사내교육 이수학점'])
 
         token_avgLineChart = self.lineChartGen(self.getEmpObj(Token_Data),
@@ -265,70 +243,9 @@ class Index(View):
                                              ["staying_office_meanM", "outting_freq_mean", "inTime_mean","outTime_mean","working_days"],
                                              ["근무시간(분)", "외출빈도", "출근시간", "퇴근시간","근무일"])
 
-
-        """
-        
-        email_avgLineChart = self.lineChartGen(self.getEmpObj(EmailData),
-                                  ["email_between_1904_mean_send", "email_month_var_receive", "email_day_mean_receive",
-                                   "email_between_0709_daycnt_send", "email_between_1904_daycnt_send", "email_day_mean_send",
-                                    "sna_closeness", "buha_closeness", "dongryo_closeness",
-                                   "sangsa_eigenvector"],
-                                        ["19-04 메일사용평균","수신분산(월)","수신평균(일)",
-                                         "07-09 메일사용","19-04 메일사용횟수","발신평균(일)",
-                                         "근접중심성","부하 근접중심성","동료 근접중심성",
-                                         "상사 위세중심성"])
-        thank_avgLineChart = self.lineChartGen(self.getEmpObj(Thanks_Data),
-                               ["thank_letter_tot_receive", "thank_letter_tot_send"],
-                               ['감사편지수신', '감사편지발신'])
-        vdiIndi_avgLineChart = self.lineChartGen(self.getEmpObj(VDI_indi_Data),
-                                         ["vdi_indi_mean_timem"],
-                                         ['개인vdi사용'])
-        
-        score_avgLineChart = self.lineChartGen(self.getEmpObj(Score),
-                                           ['score1','score2','score3','score4'],
-                                           ['몰입', '성과', '핵심', '업무'])
-
-        survey_avgLineChart =  self.lineChartGen(self.getEmpObj(Survey),
-                                        ['cct1','cct2','cct3','cct4','cct5'],
-                                        ['13번질문','14번질문','15번질문','16번질문','17번질문'])
-
-        trip_avgLineChart = self.lineChartGen(self.getEmpObj(Trip),
-                                      ['btrip_nbr'],
-                                      ['1년간 출장일수'])
-
-        holiday_avgLineChart = self.lineChartGen(self.getEmpObj(Trip),
-                                         ['off_use_pct_permon'],
-                                         ['월평균 연차소진률'])
-        ims_avgLineChart = self.lineChartGen(self.getEmpObj(IMSData),
-                                     ["ims_tot_enroll", "ims_tot_opinion_enroll"],
-                                     ['IMS 등록수', 'IMS 의견등록수'])
-
-        approval_avgLineChart = self.lineChartGen(self.getEmpObj(ApprovalData),
-                                          ["approve_tot_request", "approve_tot_sign"],
-                                          ['결재요청 수', '결재사인 수'])
-
-        portable_avgLineChart = self.lineChartGen(self.getEmpObj(Portable_out_Data),
-                                          ["porta_tot_request"],
-                                          ["휴대장치반출 요청"])
-
-        pcout_avgLineChart = self.lineChartGen(self.getEmpObj(PC_out_Data),
-                                       ["pcout_tot_request"],
-                                       ["PC반출 요청"])
-
-        pccontrol_avglineChart = self.lineChartGen(self.getEmpObj(PC_control_Data),
-                                           ["pccontrol_mean_timeh"],
-                                           ["PC컨트롤 요청 응답시간(H)"])
-        ecm_avgLineChart = self.lineChartGen(self.getEmpObj(ECMData),
-                                     ["ecm_before_in79"],
-                                     ['AM 07~09 ECM사용'])
-        cafe_avgLineChart = self.lineChartGen(self.getEmpObj(CafeteriaData),
-                                      ["food_tot_spend"],
-                                      ['카페사용총액'])
-
-        blog_avgLineChart = self.lineChartGen(self.getEmpObj(BlogData),
-                                      ["blog_tot_visit"],
-                                      ['블로그방문횟수'])
-        """
+        leadership_avgLineChart = self.lineChartGen(self.getEmpObj(Leadership),
+                                             ["leadership_env_job","leadership_env","leadership_env_common"],
+                                             ["리더쉽.환경.직무", "리더쉽.환경.리더쉽", "러더쉽.환경.공통"])
         ################ lineChart End #######################################################
 
 
@@ -346,40 +263,10 @@ class Index(View):
             "edu": edu_avgLineChart,
             "token":token_avgLineChart,
             "vdi": vdi_avgLineChart,
-            "ep":ep_avgLineChart,
             "mep":mep_avgLineChart,
-            "gate":gatepass_avgLineChart
+            "gate":gatepass_avgLineChart,
+            "leadership":leadership_avgLineChart
         }
-        # "email": email_avgLineChart,
-        """ useless contexts
-            "thanks": thank_avgLineChart,
-            "vdiShare": vdiShare_avgLineChart,
-            "vdiIndi": vdiIndi_avgLineChart,
-            'scoreAvg':scores,
-            "survey": survey_avgLineChart,
-            "trip": trip_avgLineChart,
-            "holiday": holiday_avgLineChart,
-            "survey": survey_avgLineChart,
-            "trip": trip_avgLineChart,
-            "holiday": holiday_avgLineChart,
-            "ims": ims_avgLineChart,
-            "approval": approval_avgLineChart,
-            "portable": portable_avgLineChart,
-            "pcout": pcout_avgLineChart,
-            "pccontrol": pccontrol_avglineChart,
-            "ecm": ecm_avgLineChart,
-            "cafe": cafe_avgLineChart,
-            "blog": blog_avgLineChart
-            "charttypePlace": charttypePlace,
-            "chartdataPlace": chartdataPlace,
-            "charttypeCore": charttypeCore,
-            "chartdataCore": chartdataCore,
-            "charttypeSex": charttypeSex,
-            "chartdataSex": chartdataSex,
-            "charttypeAge": charttypeAge,
-            "chartdataAge": chartdataAge,
-        
-        """
 
         if self.region == "all":
             context["region"] = "POSCO ICT"

@@ -99,6 +99,44 @@
                 <hr>
                 <br>
 
+                <h5><strong>일반 데이터 이력</strong></h5>
+                &nbsp;
+                <table border="1" cellpadding="10px">
+                    <tbody>
+                        <tr>
+                            <th>데이터</th>
+                            <th>입력 데이터 유효 범위</th>
+                            <th>입력 수행</th>
+                            <th>입력된 데이터 범위 </th>
+                            <th>지정범위 출력</th>
+                            <th>지정범위 삭제</th>
+                        </tr>
+                        {% for normalDataSelect in normalDataSelects %}
+                        <tr>
+                            <form action="."  enctype="multipart/form-data" method="post">
+
+                                <th>{{ normalDataSelect.visible_fields.0.label  }}</th>
+                                <td>{{ normalDataSelect.visible_fields.1.label  }}&nbsp;{{ normalDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ normalDataSelect.visible_fields.2.label  }}&nbsp;{{ normalDataSelect.visible_fields.2  }}<br><br>
+                                </td>
+                                <td>{{ form1.visible_fields.0 }}
+                                    {% csrf_token %}
+                                    <button type="submit" name= 'inputWithDatetime_{{ normalDataSelect.visible_fields.0.label }}' >입력</button></td>
+                            </form>
+                            <form action="."  enctype="multipart/form-data" method="post">
+                                <td>{{ normalDataSelect.visible_fields.0  }}</td>
+
+                                {% csrf_token %}
+                                <td><button type="submit" name= 'output_{{ normalDataSelect.visible_fields.0.label }}' >출력</button></td>
+                                {% csrf_token %}
+                                <td><button type="submit" name= 'remove_{{ normalDataSelect.visible_fields.0.label }}' >삭제</button></td>
+                            </form>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <hr>
+                <br>
+
                 <!-- Deprecated Start
                 {% comment "Survey deprecated" %}
                 <h5><strong>서베이 데이터 이력</strong></h5>

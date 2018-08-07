@@ -15,9 +15,7 @@ from .models import *
 from django import db
 import subprocess,re
 
-MODELS_TO_ANALYSIS = [EmployeeBiography, EmailData,Flow,EmployeeGrade, Education, Survey, Trip, IMSData,
-                ApprovalData, Portable_out_Data, PC_out_Data, PC_control_Data, Thanks_Data, VDI_indi_Data,
-                VDI_share_Data, ECMData, CafeteriaData, BlogData]
+MODELS_TO_ANALYSIS = [EmployeeBiography, EmailData,EmployeeGrade, Education, Leadership]
 
 
 
@@ -131,23 +129,6 @@ def placeencode(x):
         return "etc"
 
 def _fillScoreData(df,start_date,eval_date):
-    for i in range(len(df)):
-        df_instance = df.iloc[i, :]
-        employeeID_ = df_instance.id
-        try:
-            employeeID = Employee.objects.get(id=employeeID_)
-        except:
-            continue
-        employeeID_confirm = df_instance.id
-        score1 = df_instance.score1
-        score2 = df_instance.score2
-        score3 = df_instance.score3
-        score4 = df_instance.score4
-        empScore = Score(employeeID=employeeID, employeeID_confirm=employeeID_confirm,
-                           score1=score1, score2=score2, score3=score3, score4=score4,start_date=start_date,
-                           eval_date=eval_date)
-
-        empScore.save()
     return True
 
 def vacuumDB():
@@ -194,32 +175,19 @@ def preprocess2Analysis(start_date,end_date):
 
 def dataIO(request):
     processedModels = [EmailData,Token_Data,VDI_Data,M_EPData,GatePassData]
-    # not using [Thanks_Data,EPData,VDI_indi_Data, VDI_share_Data,Flow,IMSData,ApprovalData, Portable_out_Data, PC_out_Data, PC_control_Data,CafeteriaData, BlogData,MeetingData,PCMData,TMSData,ECMData]
+
     hrModels = [EmployeeBiography, EmployeeGrade, Education]
-    # not using [Trip]
+
     logModels = [ EmailLog,Token_log ,VDI_log ,M_EP_log,GatePass_log]
-    # not using [Thanks_log,EP_log, VDI_indi_log, VDI_share_log,Reward_log,IMS_log, Approval_log, Portable_out_log, PC_out_log, PC_control_log, ECM_log, Cafeteria_log, Blog_log,Meeting_log,PCM_log,TMS_log]
+
+    normalModels = [Leadership]
+
     if request.method == 'GET':
         search_query = request.GET.get('search_box', None)
         if search_query != None:
             return HttpResponseRedirect(reverse('employee', args=[search_query]))
 
     if request.method == "POST":
-        """
-        form1 = UploadFileForm(request.POST, request.FILES)
-        form1_1 = DateRangePickForm(request.POST)
-        form2 = DateRangePickForm(request.POST)
-        form3 = DateRangePickForm(request.POST)
-        form4 = remove_choice_Form(request.POST)
-
-        processedDataSelects = [ProcessedDataSelect(request.POST,model=processedModel) for processedModel in processedModels]
-
-        logDataSelects = [LogDataSelect(request.POST,model=logmodel) for logmodel in logModels]
-
-        hrDataSelects = [HRDataSelect(request.POST,model=hrmodel) for hrmodel in hrModels]
-
-        scoreDataSelects = [ScoreDataSelect(request.POST,model=Score)]
-        """
         reqDict = dict(request.POST)
         reqKeyString = "&".join(list(reqDict.keys()))
 
@@ -363,11 +331,12 @@ def dataIO(request):
 
         logDataSelects = [LogDataSelect(model=logmodel) for logmodel in logModels]
 
-        hrDataSelects = [StructuredDataSelect(model = hrmodel)  for  hrmodel in hrModels ]
+        hrDataSelects = [StructuredDataSelect(model = hrmodel)  for  hrmodel in hrModels]
 
+        normalDataSelects = [StructuredDataSelect(model=normalmodel) for normalmodel in normalModels]
 
-        scoreDataSelects = [StructuredDataSelect(model = Score)]
-        surveyDataSelects = [StructuredDataSelect(model=Survey)]
+        #scoreDataSelects = [StructuredDataSelect(model = "")]
+
 
     context = {  'bu': get_Bu_buUrl(),
                  'form1': form1,
@@ -377,10 +346,10 @@ def dataIO(request):
                  'form4':form4,
                  "recentUpdateDate": getRecentUpdateDates(),
                  'processedDataSelects':processedDataSelects,
+                 'normalDataSelects':normalDataSelects,
                  'hrDataSelects':hrDataSelects,
-                 'scoreDataSelects':scoreDataSelects,
+                 #'scoreDataSelects':scoreDataSelects,
                  'logDataSelects':logDataSelects,
-                 'surveyDataSelects':surveyDataSelects,
                  'title': 'Excel file upload and download example',
                  'header': ('Please choose any excel file ' +
                             'from your cloned repository:')
@@ -401,64 +370,3 @@ def dataIO(request):
 
 
 
-
-
-
-
-
-
-
-
-
-def deleteErrorInput(fileName, t1, t2):
-    fileName = fileName.lower()
-    if fileName.startswith("biography"):
-        EmployeeBiography.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("grade"):
-        EmployeeGrade.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("trip"):
-        Trip.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("educa"):
-        Education.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("approval"):
-        Approval_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        ApprovalData.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("blog"):
-        Blog_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        BlogData.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("ecm"):
-        ECM_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        ECMData.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("ims"):
-        IMS_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        IMSData.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("pccontrol"):
-        PC_control_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        PC_control_Data.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("pcout"):
-        PC_out_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        PC_out_Data.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("portableout"):
-        Portable_out_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        Portable_out_Data.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("reward"):
-        Reward_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("survey"):
-        Survey.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("thanks"):
-        Thanks_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        Thanks_Data.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("vdi_indi"):
-        VDI_indi_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        VDI_indi_Data.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("vdi_share"):
-        VDI_share_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        VDI_share_Data.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("cafeteria"):
-        Cafeteria_log.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        CafeteriaData.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("email"):
-        EmailLog.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-        EmailData.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()
-    elif fileName.startswith("score"):
-        Score.objects.filter(Q(created_at__gte=t1) & Q(created_at__lte=t2)).delete()

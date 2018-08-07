@@ -2,12 +2,8 @@ from django.db import models
 from index.models import *
 # Create your models here.
 def modelList():
-    modellist = [EmployeeBiography ,Reward_log, Flow, Score, EmployeeGrade, Education, Survey, Trip,
-                 Token_Data,Token_log,VDI_Data,VDI_log,
-                 EmailData, EmailLog, IMSData, IMS_log, ApprovalData, Approval_log, Portable_out_Data,
-                 Portable_out_log, PC_out_Data, PC_control_Data, PC_out_log, PC_control_log, Thanks_Data,
-                 Thanks_log, VDI_indi_Data, VDI_share_Data, VDI_indi_log, VDI_share_log, ECMData, ECM_log,
-                 CafeteriaData, Cafeteria_log, BlogData, Blog_log]
+    modellist = [EmployeeBiography , EmployeeGrade, Education, Leadership,
+                 Token_Data,Token_log,VDI_Data,VDI_log,EmailData, EmailLog]
 
     return modellist
 
