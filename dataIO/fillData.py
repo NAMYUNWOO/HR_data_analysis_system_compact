@@ -104,7 +104,7 @@ class PreprocessData:
             GatePass_log:preprocess_GatePass_log
         }
         """
-        # useless 
+        # useless
         {
             Approval_log:ApprovalData,
             PCM_log:PCMData,
@@ -120,7 +120,7 @@ class PreprocessData:
             PC_out_log:PC_out_Data,
             Blog_log:BlogData,
             Cafeteria_log:CafeteriaData,
-            ECM_log:ECMData                
+            ECM_log:ECMData
         }
         """
         if inputModel in self.log_data.values():
@@ -146,14 +146,11 @@ class PreprocessData:
                 closeness_indegree_outDegree[1] = graph.in_degree(empId)
             except:
                 pass
-
             try:
                 closeness_indegree_outDegree[2] = graph.out_degree(empId)
             except:
                 pass
-
             return closeness_indegree_outDegree
-
         try:
             rslt = myDict[empId]
             return rslt
@@ -195,19 +192,16 @@ class PreprocessData:
                                         , sna_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson["all_eigenvector"])
                                         , sna_indegree=cls_ind_outd_all[1]
                                         , sna_outdegree=cls_ind_outd_all[2]
-
                                         , buha_closeness=cls_ind_outd_buha[0]
                                         , buha_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_buha_betweenness"])
                                         , buha_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_buha_eigenvector"])
                                         , buha_indegree=cls_ind_outd_buha[1]
                                         , buha_outdegree=cls_ind_outd_buha[2]
-
                                         , dongryo_closeness=cls_ind_outd_dongryo[0]
                                         , dongryo_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson[ str(empObj.level) + "_dongryo_betweenness"])
                                         , dongryo_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_dongryo_eigenvector"])
                                         , dongryo_indegree=cls_ind_outd_dongryo[1]
                                         , dongryo_outdegree=cls_ind_outd_dongryo[2]
-
                                         , sangsa_closeness=cls_ind_outd_sangsa[0]
                                         , sangsa_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson[ str(empObj.level) + "_sangsa_betweenness"])
                                         , sangsa_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_sangsa_eigenvector"])
@@ -261,6 +255,7 @@ class FillData:
             , "Token_log": self._fillTokenData
             , 'M_EP_log': self._fillMEPData
             , 'GatePass_log': self._fillGatePassData
+            , 'Leadership':self._fillLeaderShipData
         }
 
         # updateUselessModel
@@ -369,10 +364,10 @@ class FillData:
 
         if len(eval_date_) >= 11:
             TEMPEVAL_DATE = datetime.datetime.strptime(eval_date_.strip(), "%Y-%m-%d %H:%M:%S")
-            return datetime.datetime.strptime(eval_date_.strip(), "%Y-%m-%d %H:%M:%S")
+            return TEMPEVAL_DATE
         else:
             TEMPEVAL_DATE = datetime.datetime.strptime(eval_date_.strip(), "%Y-%m-%d")
-            return datetime.datetime.strptime(eval_date_.strip(), "%Y-%m-%d")
+            return TEMPEVAL_DATE
 
 
     def _fillBiographyData(self):
@@ -396,7 +391,7 @@ class FillData:
         EmployeeBiography_list = []
         for i in range(len(self.df)):
             df_instance = self.df.iloc[i, :]
-            id_ = int(df_instance.id)
+            id_ = int(df_instance["id"])
             bu = df_instance.bu
             place = placeExtract(df_instance.place)
             email = df_instance.email
@@ -406,7 +401,7 @@ class FillData:
                 level = int(re.findall('[0-9]{1}',df_instance.level)[0])
             except:
                 level = 0
-            """ not using 
+            """ not using
             age = df_instance.age
             coreyn = bool(df_instance.coreyn)
             sex = df_instance.sex.startswith("남")
@@ -486,17 +481,23 @@ class FillData:
 
     def _fillLeaderShipData(self):
         Leadership_list = []
+        def floatOrNan(x):
+            try:
+                return float(x)
+            except:
+                return np.NaN
         for i in range(len(self.df)):
             df_instance = self.df.iloc[i, :]
-            employeeID_ = df_instance.id
+
             try:
+                employeeID_ = int(df_instance.id)
                 employeeID = Employee.objects.get(id=employeeID_)
             except:
                 continue
-            employeeID_confirm = df_instance.id
-            leadership_env_job = df_instance.leadership_env_job
-            leadership_env = df_instance.leadership_env
-            leadership_env_common = df_instance.leadership_env_common
+            employeeID_confirm = employeeID_
+            leadership_env_job = floatOrNan(df_instance.leadership_env_job)
+            leadership_env = floatOrNan(df_instance.leadership_env)
+            leadership_env_common = floatOrNan(df_instance.leadership_env_common)
             leadershipObj = Leadership(employeeID=employeeID,employeeID_confirm=employeeID_confirm,
                                 leadership_env_job=leadership_env_job,leadership_env = leadership_env,
                                 leadership_env_common=leadership_env_common,eval_date=self.eval_date, start_date = self.start_date)
@@ -717,6 +718,3 @@ class FillData:
         GatePass_log.objects.bulk_create(gatepass_list)
         LogFirstLast.objects.filter(pk=GatePass_log.__name__).update(start_date=earlyDate, end_date=recentDate)
         return True
-
-
-

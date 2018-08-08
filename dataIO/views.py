@@ -39,7 +39,7 @@ def lastUpdateDates(ModelList):
     updateMat = [list(
                     map(lambda x: x if type(x) == str else str(x)[:10],
                         zeroLenprocess(
-                            getDatelist(Model)
+                            getDatelist2(Model)
                         )
                     )
                 )for Model in ModelList
@@ -139,13 +139,18 @@ def vacuumDB():
 
 def updateEmailDateBeginEnd(Model):
     ModelOrderby = Model.objects.order_by("eval_date")
-    if len(ModelOrderby) == 0:
+    if ModelOrderby.count() == 0:
         try:
             LogFirstLast.objects.get(pk=Model.__name__).delete()
             return
         except:
             return
-    LogFirstLast.objects.filter(pk=Model.__name__).update(start_date = ModelOrderby.first().eval_date,end_date=ModelOrderby.last().eval_date)
+    logFirstLast= LogFirstLast.objects.filter(pk=Model.__name__)
+    if logFirstLast.count() == 0:
+        logFirstLast_i = LogFirstLast(modelName=Model.__name__,start_date = ModelOrderby.first().eval_date,end_date=ModelOrderby.last().eval_date)
+        logFirstLast_i.save()
+    else:
+        logFirstLast.update(start_date = ModelOrderby.first().eval_date,end_date=ModelOrderby.last().eval_date)
     return
 
 def dateRangeStr2datetime(dateRangeStr):
