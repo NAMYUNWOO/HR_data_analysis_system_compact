@@ -117,7 +117,8 @@ def getRecentUpdateDate_str():
     for name_dt in dateList:
         if name_dt[1][0] == "0개의 업데이트":
             continue
-        dt = datetime.datetime.strptime(name_dt[1][0],"%Y-%m-%d")
+        name_dt_i = list(map(lambda x: x.strip() ,name_dt[1][0].split("~")))
+        dt = datetime.datetime.strptime(name_dt_i[-1],"%Y-%m-%d")
         arr.append(dt)
     if len(arr) == 0:
         return "0개의 업데이트"
