@@ -1,2 +1,6 @@
 *.sqlite3
+*.csv
+*.xlsx
+*.xls
+settings.py
 README.md
