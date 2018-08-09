@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cd1011-ea31-4e3a-9b40-1b54910c461f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/poscoictsystem.iml" afterPath="$PROJECT_DIR$/.idea/poscoictsystem.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/testData/testHR.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/testData/test_Email2.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/testData/test_EmailLog.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/testData/test_GatePass_log.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/testData/test_M_EP_log.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/testData/test_Token_log.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/testData/test_VDI_log.xlsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataIO/fillData.py" afterPath="$PROJECT_DIR$/dataIO/fillData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataIO/views.py" afterPath="$PROJECT_DIR$/dataIO/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/views.py" afterPath="$PROJECT_DIR$/index/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,18 +24,28 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="2527">
               <caret line="147" column="64" lean-forward="false" selection-start-line="147" selection-start-column="64" selection-end-line="147" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1311">
+              <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5396">
-              <caret line="290" column="0" lean-forward="true" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+            <state relative-caret-position="172">
+              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -40,7 +54,7 @@
       <file leaf-file-name="Preprocess_VDI_log.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/Preprocess_VDI_log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-950">
+            <state relative-caret-position="304">
               <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding />
             </state>
@@ -50,8 +64,8 @@
       <file leaf-file-name="Preprocess_EmailLog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/Preprocess_EmailLog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1716">
-              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+            <state relative-caret-position="342">
+              <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -60,8 +74,30 @@
       <file leaf-file-name="fillData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-911">
-              <caret line="508" column="18" lean-forward="false" selection-start-line="508" selection-start-column="9" selection-end-line="508" selection-end-column="18" />
+            <state relative-caret-position="153">
+              <caret line="489" column="27" lean-forward="false" selection-start-line="489" selection-start-column="27" selection-end-line="489" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bu_group/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="157" column="59" lean-forward="true" selection-start-line="157" selection-start-column="59" selection-end-line="157" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -79,10 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edu_cours</find>
-      <find>edu_course</find>
-      <find>edu_course_</find>
-      <find>edu_course_c</find>
       <find>edu_course_cn</find>
       <find>edu_course_cnt</find>
       <find>edu_c</find>
@@ -104,11 +136,15 @@
       <find>__strEval_date_converter</find>
       <find>def __strEval_date_converter</find>
       <find>vdi</find>
-      <find>token</find>
       <find>create</find>
       <find>fillemail</find>
       <find>logfirst</find>
+      <find>token</find>
       <find>updateEmailDateBeginEnd</find>
+      <find>m_ep</find>
+      <find>fillvdi</find>
+      <find>getEmpBioObj</find>
+      <find>class Employee</find>
     </findStrings>
     <replaceStrings>
       <replace>poscoictsystem</replace>
@@ -176,21 +212,21 @@
         <option value="$PROJECT_DIR$/index/admin.py" />
         <option value="$PROJECT_DIR$/templates/dataIO.html" />
         <option value="$PROJECT_DIR$/index/models.py" />
-        <option value="$PROJECT_DIR$/index/views.py" />
         <option value="$PROJECT_DIR$/templates/region.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/buGroup.html" />
         <option value="$PROJECT_DIR$/templates/employee.html" />
         <option value="$PROJECT_DIR$/dataIO/fillData.py" />
         <option value="$PROJECT_DIR$/dataIO/views.py" />
+        <option value="$PROJECT_DIR$/index/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="213" />
-    <option name="y" value="267" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="580" />
+    <option name="y" value="233" />
     <option name="width" value="1816" />
-    <option name="height" value="732" />
+    <option name="height" value="731" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -207,14 +243,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="HR_data_analysis_system_compact" type="b2602c69:ProjectViewProjectNode" />
               <item name="HR_data_analysis_system_compact" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HR_data_analysis_system_compact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HR_data_analysis_system_compact" type="462c0819:PsiDirectoryNode" />
+              <item name="bu_group" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HR_data_analysis_system_compact" type="b2602c69:ProjectViewProjectNode" />
@@ -226,10 +265,17 @@
               <item name="HR_data_analysis_system_compact" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HR_data_analysis_system_compact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HR_data_analysis_system_compact" type="462c0819:PsiDirectoryNode" />
+              <item name="poscoictsystem" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,10 +387,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="213" y="267" width="1816" height="732" extended-state="1" />
-    <editor active="true" />
+    <frame x="580" y="233" width="1816" height="731" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19362187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19817768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -438,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bu_group/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/employee/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -479,13 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -545,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="267" column="13" lean-forward="true" selection-start-line="267" selection-start-column="13" selection-end-line="267" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataIO/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -591,13 +615,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="4" column="74" lean-forward="false" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataIO/Preprocess_VDI_log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
+        <state relative-caret-position="304">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding />
         </state>
@@ -605,32 +628,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataIO/Preprocess_EmailLog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1716">
-          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-911">
-          <caret line="508" column="18" lean-forward="false" selection-start-line="508" selection-start-column="9" selection-end-line="508" selection-end-column="18" />
+        <state relative-caret-position="342">
+          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataIO/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="2527">
           <caret line="147" column="64" lean-forward="false" selection-start-line="147" selection-start-column="64" selection-end-line="147" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="489" column="27" lean-forward="false" selection-start-line="489" selection-start-column="27" selection-end-line="489" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bu_group/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5396">
-          <caret line="290" column="0" lean-forward="true" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+        <state relative-caret-position="172">
+          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="157" column="59" lean-forward="true" selection-start-line="157" selection-start-column="59" selection-end-line="157" selection-end-column="59" />
           <folding />
         </state>
       </provider>

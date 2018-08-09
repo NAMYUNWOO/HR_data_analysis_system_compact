@@ -155,7 +155,7 @@ class Index(View):
             else:
                 return empBioAll.filter(place="포항")
         else:
-            empBioAll = EmployeeBiography.objects.filter(bu=self.bu)
+            empBioAll = Employee.objects.filter(bu=self.bu)
             return empBioAll
 
     def getEmpObj(self,Model):
