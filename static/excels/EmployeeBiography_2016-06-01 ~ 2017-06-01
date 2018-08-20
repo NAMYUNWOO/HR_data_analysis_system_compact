@@ -1,0 +1,2400 @@
+,bu,email,empname,holiday,id,level,place
+0,상근임원,yhdintr@poscoict.com,윤형덕,NA,3306,9,판교
+1,비상근임원,seojy1@poscoict.com,서정연,NA,3523,0,판교
+2,상근임원,dwight@poscoict.com,최두환,NA,3556,1,판교
+3,상근임원,ddchoi@poscoict.com,최동덕,NA,3580,8,판교
+4,상근임원,welcome7@poscoict.com,김민영,NA,3591,8,광양
+5,상근임원,jdk@poscoict.com,정덕균,NA,3603,8,서울
+6,상근임원,castpark@poscoict.com,박주철,NA,3693,9,포항
+7,상근임원,lcb4409@poscoict.com,이창복,NA,3705,8,판교
+8,상근임원,jhdata@poscoict.com,김종현,NA,3716,8,etc
+9,비상근임원,kkssbbksb2@poscoict.com,고석범,NA,3820,0,etc
+10,상근임원,ysmoon43@poscoict.com,문용석,NA,3831,9,etc
+11,에너지융합사업실,jtj803@poscoict.com,정태진,7.0,200238,4,포항
+12,Smart EIC사업실,dim922@poscoict.com,박일만,12.5,201130,4,포항
+13,Smart EIC사업실,ksy75@poscoict.com,김성연,7.0,201196,4,포항
+14,Smart EIC사업실,sonsk@poscoict.com,손승국,3.5,201208,4,포항
+15,Smart EIC사업실,ods226@poscoict.com,오대식,16.0,201380,4,포항
+16,SOC사업실,bhyoon@poscoict.com,윤병호,NA,201447,4,etc
+17,Smart EIC사업실,k0058@poscoict.com,강석기,9.0,201868,4,포항
+18,에너지융합사업실,kck103@poscoict.com,곽충근,7.5,201904,4,포항
+19,Smart EIC사업실,jky620@poscoict.com,유진국,NA,202188,4,광양
+20,Smart EIC사업실,songcy@poscoict.com,송치영,3.0,202270,4,광양
+21,Smart EIC사업실,yhkim119@poscoict.com,김영호,3.0,202281,5,광양
+22,Smart EIC사업실,lsm224@poscoict.com,이상민,1.0,202292,5,광양
+23,에너지융합사업실,sjc625@poscoict.com,신재천,NA,202406,4,포항
+24,Smart EIC사업실,kmk420@poscoict.com,김민기,NA,202508,4,광양
+25,Smart EIC사업실,mbg811@poscoict.com,문병근,NA,202576,5,광양
+26,Smart EIC사업실,gdw065@poscoict.com,김동운,NA,202587,4,광양
+27,Smart EIC사업실,dokhee@poscoict.com,이석희,NA,202598,4,광양
+28,Smart EIC사업실,jkmoon@poscoict.com,문종국,15.0,202931,4,포항
+29,Smart EIC사업실,lee426@poscoict.com,이태호,13.0,203012,5,포항
+30,Smart EIC사업실,yys874@poscoict.com,양용승,14.5,203023,4,광양
+31,SOC사업실,jeech@poscoict.com,지찬효,NA,203034,4,etc
+32,에너지융합사업실,yjc914@poscoict.com,유재철,21.5,203158,5,광양
+33,Smart EIC사업실,sjm100@poscoict.com,신재만,9.5,203295,4,포항
+34,Smart EIC사업실,lbh122@poscoict.com,이병훈,18.0,203307,4,광양
+35,에너지융합사업실,gds308@poscoict.com,길대순,11.5,203318,4,포항
+36,Smart EIC사업실,js885@poscoict.com,정진수,13.5,203320,4,광양
+37,Smart EIC사업실,kgs100@poscoict.com,김금석,6.0,203694,4,포항
+38,Smart EIC사업실,chy21c@poscoict.com,최하영,10.5,203808,4,광양
+39,SOC사업실,kjh105@poscoict.com,김조환,NA,203821,4,etc
+40,Smart IT사업실,lpg707@poscoict.com,이풍기,5.5,203843,4,광양
+41,에너지융합사업실,kmh323@poscoict.com,김민호,4.5,203945,4,포항
+42,Smart EIC사업실,forte5@poscoict.com,오수환,5.0,203956,4,포항
+43,에너지융합사업실,kjs630@poscoict.com,김경효,7.5,203967,4,포항
+44,Smart EIC사업실,hyp114@poscoict.com,홍윤표,3.0,203980,4,포항
+45,Smart EIC사업실,lhw622@poscoict.com,임현우,13.5,203991,4,광양
+46,Smart EIC사업실,kks831@poscoict.com,김관수,6.5,204004,4,광양
+47,Smart EIC사업실,ltw123@poscoict.com,이태우,8.0,204015,5,광양
+48,에너지융합사업실,cha789@poscoict.com,차순국,8.0,204026,4,포항
+49,Smart EIC사업실,jkyang@poscoict.com,양정근,10.5,204130,4,광양
+50,Smart EIC사업실,jsy3086@poscoict.com,정성용,10.0,204141,4,etc
+51,Smart EIC사업실,hyk333@poscoict.com,함영국,4.5,204152,4,광양
+52,Smart EIC사업실,cbs011@poscoict.com,천병석,6.0,204163,4,포항
+53,Smart EIC사업실,ottoks@poscoict.com,오경선,12.5,204174,4,광양
+54,Smart EIC사업실,ssh666@poscoict.com,서상환,3.5,204460,4,포항
+55,Smart EIC사업실,ksg360@poscoict.com,강희곤,3.5,204926,4,포항
+56,Smart EIC사업실,pjh625@poscoict.com,박지환,21.5,205166,4,포항
+57,Smart EIC사업실,kks522@poscoict.com,곽금선,14.0,205326,4,광양
+58,경영지원실,hee236@poscoict.com,박장희,17.0,205428,4,포항
+59,Smart EIC사업실,lph918@poscoict.com,이판호,17.5,205441,4,포항
+60,경영지원실,choyd@poscoict.com,조연덕,13.0,205452,4,포항
+61,에너지융합사업실,pst100@poscoict.com,박성태,5.5,205463,4,포항
+62,에너지융합사업실,cwh008@poscoict.com,조원효,7.0,205508,4,포항
+63,Smart EIC사업실,kks999@poscoict.com,구규석,15.5,205714,5,광양
+64,Smart EIC사업실,sds777@poscoict.com,송대섭,8.5,205851,4,포항
+65,Smart EIC사업실,sdkpos@poscoict.com,성대경,3.0,205862,4,etc
+66,본사근무파견/기타,kgm120@poscoict.com,김강모,11.0,206067,4,etc
+67,Smart EIC사업실,kyu572@poscoict.com,송석규,15.0,206136,4,광양
+68,Smart EIC사업실,gjw401@poscoict.com,김종우,9.0,206158,4,광양
+69,Smart EIC사업실,ltrade@poscoict.com,이제원,15.5,206182,4,광양
+70,에너지융합사업실,bumho@poscoict.com,남궁범호,11.0,206193,4,판교
+71,Smart EIC사업실,lgc297@poscoict.com,이규철,3.0,206205,4,포항
+72,본사근무파견/기타,suteki@poscoict.com,임용재,15.0,206216,5,etc
+73,Smart EIC사업실,cdb102@poscoict.com,조덕봉,10.5,206284,4,광양
+74,본사근무파견/기타,kkm704@poscoict.com,김기명,3.0,206318,4,etc
+75,Smart EIC사업실,bsh844@poscoict.com,백승훈,9.0,206331,4,광양
+76,Smart EIC사업실,n41404@poscoict.com,문윤관,13.0,206342,4,광양
+77,Smart EIC사업실,ljlove@poscoict.com,이두환,11.0,206353,4,광양
+78,Smart EIC사업실,hdo877@poscoict.com,황동오,17.5,206364,4,광양
+79,본사근무파견/기타,jky925@poscoict.com,정규영,19.0,206386,4,etc
+80,Smart EIC사업실,cjj007@poscoict.com,최정준,17.0,206397,4,포항
+81,Smart EIC사업실,lee410@poscoict.com,이경호,12.0,206411,4,광양
+82,SOC사업실,clausj@poscoict.com,정길연,13.5,207130,4,판교
+83,Smart EIC사업실,ijh225@poscoict.com,임재환,14.0,207141,4,광양
+84,Smart EIC사업실,ldi1191@poscoict.com,이동일,12.0,207152,4,광양
+85,SOC사업실,Jamesdoo@poscoict.com,이두호,3.0,207174,4,etc
+86,Smart EIC사업실,kjb818@poscoict.com,김정배,12.5,207185,4,포항
+87,Smart EIC사업실,cbc641@poscoict.com,최봉찬,NA,207221,4,포항
+88,Smart EIC사업실,ksb01a@poscoict.com,김상빈,14.5,207232,4,광양
+89,Smart EIC사업실,jh0520@poscoict.com,진황,8.5,207458,4,광양
+90,Smart EIC사업실,pf01_smith@poscoict.com,이영희,3.5,207482,4,포항
+91,SOC사업실,pjm111@poscoict.com,박재명,7.5,207733,4,판교
+92,Smart EIC사업실,lsl222@poscoict.com,이상이,6.0,207744,3,광양
+93,SOC사업실,kgc369@poscoict.com,김경찬,8.5,207802,4,판교
+94,경영기획실,lsy100@poscoict.com,이순영,10.5,207824,4,판교
+95,경영지원실,ldc017@poscoict.com,임동철,12.0,207835,4,포항
+96,Smart EIC사업실,ajh178@poscoict.com,안중현,4.0,207846,5,광양
+97,Smart EIC사업실,lsh090@poscoict.com,이성희,5.0,207868,4,광양
+98,Smart EIC사업실,yeo383@poscoict.com,여경수,9.0,207870,4,포항
+99,Smart EIC사업실,ldh113@poscoict.com,이동혁,12.0,207881,4,포항
+100,Smart EIC사업실,jinhoo@poscoict.com,조진호,14.0,207892,4,광양
+101,Smart EIC사업실,hjh611@poscoict.com,허종희,4.0,207948,4,광양
+102,Smart EIC사업실,jsi005@poscoict.com,주성일,12.0,207950,4,광양
+103,Smart EIC사업실,sy1108@poscoict.com,윤석영,5.0,207961,4,광양
+104,Smart EIC사업실,nss825@poscoict.com,남상섭,4.5,207983,4,포항
+105,Smart EIC사업실,jsjin@poscoict.com,정사진,8.5,207994,4,포항
+106,Smart EIC사업실,sks623@poscoict.com,서규섭,11.5,208007,4,광양
+107,에너지융합사업실,bang64@poscoict.com,방영욱,4.0,208018,4,포항
+108,Smart EIC사업실,isb006@poscoict.com,이승봉,12.0,208020,4,포항
+109,Smart EIC사업실,sys792@poscoict.com,손영섭,5.5,208031,4,광양
+110,Smart EIC사업실,kyg001@poscoict.com,김영곤,9.0,208042,4,포항
+111,에너지융합사업실,jgy129@poscoict.com,장계용,5.5,208053,4,포항
+112,Smart EIC사업실,yks001@poscoict.com,양경식,13.5,208075,4,광양
+113,Smart EIC사업실,shin12@poscoict.com,신선현,9.0,208452,4,광양
+114,Smart EIC사업실,lim2259@poscoict.com,임진상,9.5,208463,4,광양
+115,Smart EIC사업실,lha682@poscoict.com,이해암,6.5,208645,4,포항
+116,Smart EIC사업실,hyj740@poscoict.com,허용진,12.0,208656,4,포항
+117,SOC사업실,lim350@poscoict.com,임복택,5.5,208678,4,etc
+118,Smart EIC사업실,lkh640@poscoict.com,이광혁,5.0,208680,4,포항
+119,Smart EIC사업실,wdh050@poscoict.com,우동하,5.5,208862,4,광양
+120,본사근무파견/기타,psm977@poscoict.com,박성민,2.5,208964,4,etc
+121,Smart EIC사업실,ksh777@poscoict.com,이상훈,8.5,209125,4,etc
+122,SOC사업실,k11231@poscoict.com,김윤상,NA,209238,4,판교
+123,Smart EIC사업실,oys503@poscoict.com,오용세,4.5,209240,4,포항
+124,Smart EIC사업실,lis123@poscoict.com,류인석,2.5,209262,6,광양
+125,Smart EIC사업실,smh556@poscoict.com,신민호,1.0,209273,4,광양
+126,Smart EIC사업실,kyh813@poscoict.com,권용화,2.5,209284,4,etc
+127,Smart EIC사업실,hwp412@poscoict.com,한원필,5.0,209295,4,포항
+128,Smart EIC사업실,khs183@poscoict.com,김형수,4.0,209307,4,광양
+129,Smart EIC사업실,search@poscoict.com,박태홍,16.0,209331,4,광양
+130,Smart EIC사업실,pmh724@poscoict.com,박명호,4.0,209342,4,포항
+131,Smart EIC사업실,kms034@poscoict.com,김민수,9.0,209353,4,광양
+132,SOC사업실,cmahn@poscoict.com,안철모,NA,209898,4,etc
+133,Smart EIC사업실,his211@poscoict.com,한인식,NA,209912,3,포항
+134,Smart EIC사업실,ssi203@poscoict.com,송수인,14.5,209980,4,광양
+135,Smart EIC사업실,dosong@poscoict.com,송두옥,10.5,210038,4,광양
+136,에너지융합사업실,xorbs@poscoict.com,신태균,10.5,210131,4,포항
+137,본사근무파견/기타,sjs456@poscoict.com,신재상,1.0,210186,4,포항
+138,에너지융합사업실,cgh112@poscoict.com,조근희,5.0,210211,4,판교
+139,SOC사업실,pyj901@poscoict.com,박영재,6.0,210222,4,판교
+140,Smart EIC사업실,psg256@poscoict.com,박상길,8.5,210233,6,광양
+141,SOC사업실,kss473@poscoict.com,고서순,2.0,210415,4,etc
+142,Smart EIC사업실,ljn153@poscoict.com,이자노,NA,210461,4,광양
+143,에너지융합사업실,ksw1171@poscoict.com,김상욱,14.0,210483,4,판교
+144,경영지원실,pwk325@poscoict.com,박위근,7.5,210506,4,포항
+145,Smart EIC사업실,asc007@poscoict.com,안선찬,11.5,210517,4,광양
+146,Smart EIC사업실,kangbh@poscoict.com,강병헌,7.0,210528,4,포항
+147,SOC사업실,ahndj71@poscoict.com,안두전,3.0,210530,4,etc
+148,Smart EIC사업실,ks0268@poscoict.com,윤길섭,6.5,210541,4,포항
+149,Smart EIC사업실,csb666@poscoict.com,최순백,12.0,210552,4,광양
+150,Smart EIC사업실,kyk777@poscoict.com,김영길,11.0,210563,4,광양
+151,Smart EIC사업실,iso405@poscoict.com,임상옥,1.0,211065,4,광양
+152,Smart EIC사업실,njh203@poscoict.com,남장호,2.5,211076,4,광양
+153,Smart EIC사업실,ljh123@poscoict.com,이주형,NA,211203,4,포항
+154,Smart EIC사업실,pjg284@poscoict.com,박준기,19.5,211260,4,광양
+155,에너지융합사업실,pja005@poscoict.com,박재안,13.5,211271,5,포항
+156,Smart EIC사업실,k4258@poscoict.com,김대경,12.5,211475,4,포항
+157,Smart IT사업실,pkh@poscoict.com,박길현,17.0,211943,4,서울
+158,경영기획실,lion@poscoict.com,이종언,14.0,211965,4,판교
+159,SOC사업실,pkj001@poscoict.com,박경주,7.0,211976,4,etc
+160,Smart IT사업실,proseo@poscoict.com,서정수,8.5,212070,4,포항
+161,Smart IT사업실,cck8113@poscoict.com,최창규,2.0,213016,4,판교
+162,Smart IT사업실,cyj1234@poscoict.com,최영주,16.5,213040,4,판교
+163,Smart IT사업실,shinbee@poscoict.com,신영철,0.5,213062,4,판교
+164,Smart IT사업실,wonjb@poscoict.com,원종빈,NA,213084,4,판교
+165,SOC사업실,iamcsp@poscoict.com,최상필,4.5,213107,4,판교
+166,Smart IT사업실,jaiyoung.lee@poscoict.com,이재영,14.5,213118,4,etc
+167,경영지원실,hosang@poscoict.com,신호상,14.0,213120,4,판교
+168,Smart IT사업실,hs_kang@poscoict.com,강현성,19.0,213131,4,판교
+169,SOC사업실,kangsan@poscoict.com,김광준,5.5,213142,4,포항
+170,Smart IT사업실,rainroot@poscoict.com,김우근,15.0,213153,4,판교
+171,Smart IT사업실,pf01_tiger@poscoict.com,박주범,9.0,213175,4,판교
+172,Smart IT사업실,shimji@poscoict.com,심재익,4.0,213186,4,센터
+173,Smart IT사업실,n2phone@poscoict.com,이광민,10.0,213197,5,센터
+174,Smart EIC사업실,jbkim@poscoict.com,김종백,2.5,213211,4,포항
+175,Smart IT사업실,ghlee@poscoict.com,이건훈,1.5,213233,4,광양
+176,Smart IT사업실,scs1128@poscoict.com,서춘석,10.5,213461,4,판교
+177,Smart IT사업실,jaeroyk@poscoict.com,이재록,18.5,213528,4,센터
+178,Smart IT사업실,hys1234@poscoict.com,한윤섭,7.0,213585,4,판교
+179,경영지원실,sonic@poscoict.com,한성진,12.0,215115,4,판교
+180,Smart EIC사업실,jjs012@poscoict.com,장정숙,10.0,215137,3,포항
+181,Smart EIC사업실,cbs119@poscoict.com,최병섭,12.5,215217,4,포항
+182,SOC사업실,kbo119@poscoict.com,김병옥,15.0,215228,4,판교
+183,Smart EIC사업실,lde007@poscoict.com,임동언,15.0,215274,4,광양
+184,Smart EIC사업실,jbpark8@poscoict.com,박종배,13.5,215285,4,포항
+185,NA,pkhjjh@poscoict.com,박민규,9.5,215536,4,포항
+186,본사근무파견/기타,shc525@poscoict.com,신형칠,9.5,215627,4,etc
+187,본사근무파견/기타,bss200@poscoict.com,백순삼,NA,215638,4,포항
+188,Smart EIC사업실,hsh888@poscoict.com,현승훈,13.5,215662,4,광양
+189,Smart EIC사업실,lgnakj@poscoict.com,이강진,11.5,215673,4,광양
+190,경영지원실,ysk319@poscoict.com,염순구,7.0,215844,5,판교
+191,본사근무파견/기타,lst411@poscoict.com,임사택,3.5,215924,4,etc
+192,에너지융합사업실,doc3018@poscoict.com,이덕희,13.0,216027,6,판교
+193,R&D센터,taeseung@poscoict.com,정태승,14.0,216038,6,판교
+194,Smart IT사업실,kangjw@poscoict.com,강종원,8.5,216040,4,판교
+195,Smart IT사업실,kdnam@poscoict.com,남기대,3.0,216073,4,판교
+196,Smart IT사업실,seoung41@poscoict.com,양태승,7.0,216313,4,포항
+197,Smart EIC사업실,ldssun@poscoict.com,이돈성,9.5,216368,4,광양
+198,Smart EIC사업실,lbb707@poscoict.com,임병복,6.5,216370,5,광양
+199,Smart EIC사업실,cth085@poscoict.com,조태호,9.0,216381,4,etc
+200,에너지융합사업실,acer@poscoict.com,김점호,8.5,216803,4,포항
+201,Smart EIC사업실,huguen@poscoict.com,이후근,12.5,216814,6,광양
+202,Smart EIC사업실,moodybluce@poscoict.com,김문기,9.5,216825,6,광양
+203,SOC사업실,jjhane@poscoict.com,장재형,1.0,216836,5,etc
+204,SOC사업실,lis908@poscoict.com,이인섭,12.0,216847,4,판교
+205,에너지융합사업실,pji888@poscoict.com,박종일,13.0,216858,4,포항
+206,Smart EIC사업실,khc019@poscoict.com,김홍창,10.0,216860,6,포항
+207,Smart EIC사업실,jsm516@poscoict.com,정상만,6.0,216893,4,광양
+208,Smart EIC사업실,sup119@poscoict.com,류광섭,4.0,216905,4,광양
+209,Smart EIC사업실,sss005@poscoict.com,서성섭,15.0,216938,4,광양
+210,Smart EIC사업실,lily21@poscoict.com,이승일,5.0,216940,4,광양
+211,Smart EIC사업실,sgy316@poscoict.com,송광영,5.5,216951,4,광양
+212,Smart EIC사업실,lsg604@poscoict.com,이수길,8.5,216962,4,광양
+213,Smart EIC사업실,och053@poscoict.com,오청희,9.5,216984,4,포항
+214,R&D센터,hbk@poscoict.com,한복규,7.5,217316,4,판교
+215,Smart IT사업실,kcs@poscoict.com,김춘식,10.5,217338,4,etc
+216,경영지원실,daewon@poscoict.com,이대원,7.5,217577,4,판교
+217,경영지원실,kyg910@poscoict.com,권영길,11.0,217588,5,판교
+218,경영지원실,chy119@poscoict.com,최호영,9.0,217635,5,판교
+219,Smart EIC사업실,kb8545@poscoict.com,강구봉,6.0,217704,4,포항
+220,Smart EIC사업실,sv007@poscoict.com,김철환,6.0,217715,4,포항
+221,Smart EIC사업실,ysl116@poscoict.com,이윤섭,4.5,218183,4,포항
+222,Smart IT사업실,jino@poscoict.com,조진호,2.0,218387,4,판교
+223,Smart EIC사업실,richmaster@poscoict.com,김상진,2.5,218401,4,광양
+224,경영지원실,lcj367@poscoict.com,이정재,8.0,218478,4,판교
+225,Smart IT사업실,pcm1978@poscoict.com,박종만,3.5,218720,4,판교
+226,Smart IT사업실,g1ydh1@poscoict.com,윤대한,5.5,218731,4,판교
+227,Smart IT사업실,lgs007@poscoict.com,이광섭,3.5,218742,4,판교
+228,SOC사업실,dooyoung@poscoict.com,김두영,4.0,218753,6,판교
+229,Smart IT사업실,han9595@poscoict.com,한상식,6.0,218764,4,센터
+230,Smart IT사업실,shbaek@poscoict.com,백성현,NA,218775,4,판교
+231,Smart IT사업실,geniusp@poscoict.com,박재천,4.0,218786,6,판교
+232,경영지원실,mhjung@poscoict.com,정민효,2.0,218811,4,광양
+233,Smart IT사업실,sunshinecha@poscoict.com,차광환,5.0,218844,4,판교
+234,에너지융합사업실,oislsa@poscoict.com,오인석,6.5,218855,4,판교
+235,Smart EIC사업실,yiho225@poscoict.com,이이호,NA,219073,4,포항
+236,SOC사업실,kdy650@poscoict.com,김도연,NA,219084,4,판교
+237,Smart EIC사업실,jamjkc@poscoict.com,정구철,1.5,219095,4,포항
+238,Smart EIC사업실,ljy289@poscoict.com,이주영,NA,219107,4,포항
+239,경영지원실,jdw091@poscoict.com,정도웅,NA,219118,4,포항
+240,에너지융합사업실,ljg527@poscoict.com,이진근,NA,219131,4,포항
+241,Smart IT사업실,kijeon@poscoict.com,전광일,17.0,219621,4,포항
+242,Smart EIC사업실,ltd100@poscoict.com,이태봉,8.5,219701,5,포항
+243,본사근무파견/기타,kng303@poscoict.com,김태철,10.0,219712,5,판교
+244,본사근무파견/기타,kyr738@poscoict.com,김용렬,12.5,219723,3,etc
+245,본사근무파견/기타,gyu807@poscoict.com,구연운,16.5,219734,4,판교
+246,Smart EIC사업실,lce111@poscoict.com,임채을,23.0,219745,4,광양
+247,Smart EIC사업실,kth669@poscoict.com,김태협,20.0,219767,4,포항
+248,Smart EIC사업실,hw1826@poscoict.com,박상문,13.5,219778,4,광양
+249,Smart IT사업실,ksk022@poscoict.com,권성균,10.5,219780,4,광양
+250,Smart EIC사업실,sjh317@poscoict.com,신준호,11.0,219791,4,광양
+251,본사근무파견/기타,jjy636@poscoict.com,정재열,14.5,219814,4,etc
+252,Smart EIC사업실,sjw007@poscoict.com,송정욱,8.0,219825,4,포항
+253,SOC사업실,chachayj@poscoict.com,차영진,2.5,219836,4,etc
+254,Smart EIC사업실,kms@poscoict.com,김명식,17.5,219847,4,광양
+255,Smart IT사업실,parkman@poscoict.com,박만진,13.0,220135,6,판교
+256,Smart IT사업실,cybernet35@poscoict.com,남기일,25.0,220146,4,센터
+257,경영지원실,k95221@poscoict.com,김명호,8.5,220283,4,포항
+258,Smart IT사업실,smkh@poscoict.com,김기항,19.5,220751,4,판교
+259,Smart EIC사업실,gmchung@poscoict.com,정갑모,8.5,220886,4,포항
+260,Smart IT사업실,hankey@poscoict.com,한기석,12.0,220897,4,센터
+261,본사근무파견/기타,jung03@poscoict.com,박중기,16.5,220900,4,etc
+262,Smart EIC사업실,lbh333@poscoict.com,이부희,12.0,220922,4,광양
+263,Smart IT사업실,ohjun@poscoict.com,오준석,11.5,220933,4,판교
+264,에너지융합사업실,cho146@poscoict.com,조강찬,6.0,221253,5,판교
+265,Smart IT사업실,cho222@poscoict.com,조선일,18.0,221457,4,센터
+266,에너지융합사업실,huni@poscoict.com,이기훈,11.0,221470,4,판교
+267,Smart IT사업실,alex1624@poscoict.com,김경주,12.5,221481,4,판교
+268,Smart IT사업실,5my790@poscoict.com,김채홍,10.0,221492,6,판교
+269,Smart IT사업실,wgseo@poscoict.com,서원규,9.0,221504,5,센터
+270,Smart IT사업실,kcpark@poscoict.com,박기철,13.0,221515,4,센터
+271,R&D센터,mingki@poscoict.com,장근영,10.0,221526,6,판교
+272,Smart EIC사업실,ldr001@poscoict.com,이동로,9.5,222336,4,광양
+273,Smart IT사업실,chulwook@poscoict.com,김철욱,6.0,222405,4,센터
+274,Smart IT사업실,egg@poscoict.com,황경숙,6.5,222416,5,포항
+275,Smart IT사업실,boardman@poscoict.com,이형렬,10.0,222427,4,판교
+276,Smart IT사업실,minwoo@poscoict.com,김민우,3.0,222440,4,판교
+277,에너지융합사업실,ybd417@poscoict.com,양병동,11.0,222815,4,판교
+278,Smart EIC사업실,psc001@poscoict.com,박성창,10.5,222826,4,포항
+279,Smart EIC사업실,kjs01@poscoict.com,김종순,8.0,223250,4,포항
+280,본사근무파견/기타,jooyeol@poscoict.com,김주열,NA,223330,6,etc
+281,에너지융합사업실,kjh354@poscoict.com,곽증효,9.5,223352,4,포항
+282,에너지융합사업실,crowwing@poscoict.com,신현석,7.5,223363,5,판교
+283,Smart EIC사업실,yeskim@poscoict.com,김명재,8.0,223396,5,광양
+284,마케팅전략실,mailksh@poscoict.com,김수호,13.5,223818,4,판교
+285,Smart IT사업실,hanfront@poscoict.com,한우영,10.5,223820,4,판교
+286,본사근무파견/기타,bcbae@poscoict.com,배병천,NA,223831,5,etc
+287,경영지원실,swallow@poscoict.com,황운준,7.0,223853,6,판교
+288,Smart IT사업실,paul@poscoict.com,정태수,10.5,223875,4,센터
+289,경영지원실,psc@poscoict.com,박수철,2.0,224297,6,판교
+290,에너지융합사업실,kkr777@poscoict.com,김광래,2.0,224390,6,판교
+291,Smart EIC사업실,ljs611@poscoict.com,이정식,3.0,224402,4,포항
+292,Smart EIC사업실,pgy702@poscoict.com,박길영,5.5,224468,4,포항
+293,Smart EIC사업실,kicheol.kwon@poscoict.com,권기철,5.0,225154,4,포항
+294,Smart IT사업실,kwk6585@poscoict.com,김우경,1.5,225256,4,포항
+295,Smart IT사업실,ckadmin@poscoict.com,강순식,7.0,225267,4,판교
+296,Smart IT사업실,chulsoo@poscoict.com,김철수,4.5,225416,4,판교
+297,Smart IT사업실,ck_jung@poscoict.com,정창기,NA,225644,4,판교
+298,Smart EIC사업실,isj214@poscoict.com,임성재,14.0,225872,4,광양
+299,Smart EIC사업실,kse419@poscoict.com,김상은,17.5,225894,4,광양
+300,본사근무파견/기타,lit498@poscoict.com,이인태,20.0,225906,4,etc
+301,Smart EIC사업실,bgt248@poscoict.com,배경택,15.0,225917,4,광양
+302,경영지원실,hys722@poscoict.com,한양섭,15.5,225928,4,광양
+303,Smart EIC사업실,boksoo@poscoict.com,박복수,14.0,225930,4,광양
+304,본사근무파견/기타,kh8853@poscoict.com,김형곤,13.0,225941,3,etc
+305,SOC사업실,yysyy@poscoict.com,윤영식,16.0,225952,5,판교
+306,Smart EIC사업실,pys745@poscoict.com,박용순,18.0,225963,4,광양
+307,Smart EIC사업실,pyg625@poscoict.com,박윤기,20.5,225974,4,광양
+308,Smart EIC사업실,ky7511@poscoict.com,이광용,15.5,225996,4,포항
+309,Smart EIC사업실,ldw776@poscoict.com,이동욱,20.0,226033,4,포항
+310,Smart IT사업실,chkim.ict@poscoict.com,김철호,12.0,226784,6,판교
+311,Smart IT사업실,okh1907@poscoict.com,오경호,8.0,226818,4,etc
+312,Smart EIC사업실,mhi21@poscoict.com,문형일,13.0,227105,4,포항
+313,Smart EIC사업실,ksingo@poscoict.com,기신호,10.0,227116,4,광양
+314,본사근무파견/기타,kjw123@poscoict.com,김재완,8.0,227127,3,etc
+315,R&D센터,hussey@poscoict.com,박기수,11.5,227138,6,판교
+316,본사근무파견/기타,lch238@poscoict.com,임채희,12.0,227162,4,etc
+317,본사근무파견/기타,kjh680@poscoict.com,김정환,2.5,227173,4,etc
+318,Smart EIC사업실,iksson@poscoict.com,임경수,14.0,227184,4,광양
+319,본사근무파견/기타,gth944@poscoict.com,공태화,11.5,227207,4,etc
+320,마케팅전략실,r1220@poscoict.com,임정찬,4.5,227218,4,판교
+321,Smart EIC사업실,asg001@poscoict.com,안성기,15.5,227652,4,광양
+322,Smart EIC사업실,kh5858@poscoict.com,변경호,9.0,227674,4,포항
+323,본사근무파견/기타,songbc@poscoict.com,송병철,7.0,227696,3,etc
+324,Smart EIC사업실,kjj421@poscoict.com,김진조,6.0,227708,4,etc
+325,에너지융합사업실,chg790@poscoict.com,최강희,16.0,227710,4,광양
+326,Smart EIC사업실,bhk120@poscoict.com,배황근,14.5,227732,4,포항
+327,Smart EIC사업실,yk4154@poscoict.com,박완규,5.0,227754,4,포항
+328,Smart EIC사업실,bsy690@poscoict.com,배상용,9.0,227765,4,광양
+329,Smart EIC사업실,kjh76@poscoict.com,고정학,19.5,227787,4,포항
+330,Smart EIC사업실,jsh571@poscoict.com,전세호,NA,227834,3,포항
+331,NA,richard9988@poscoict.com,이재홍,13.0,228278,5,판교
+332,Smart IT사업실,gskim@poscoict.com,김경수,5.5,228280,5,판교
+333,Smart IT사업실,jcw1333@poscoict.com,정철원,7.0,228303,4,판교
+334,Smart IT사업실,pf01_jrlee@poscoict.com,이재룡,7.0,228314,4,광양
+335,Smart IT사업실,stkim@poscoict.com,김승태,7.5,228325,5,판교
+336,Smart IT사업실,byounghee.choi@poscoict.com,최병희,17.5,228336,4,판교
+337,Smart IT사업실,kyunjin7@poscoict.com,이승균,7.0,228347,4,센터
+338,Smart IT사업실,jrlove225@poscoict.com,이종열,14.0,228358,4,판교
+339,경영기획실,kimhj@poscoict.com,김현중,12.5,228416,5,판교
+340,본사근무파견/기타,kgm129@poscoict.com,강경모,7.5,229066,4,포항
+341,에너지융합사업실,hyuntae@poscoict.com,주현태,13.0,229077,4,포항
+342,SOC사업실,odg386@poscoict.com,오동근,11.5,229088,4,판교
+343,Smart EIC사업실,jwj333@poscoict.com,정원종,11.0,229090,5,포항
+344,Smart IT사업실,htw202@poscoict.com,한태우,3.5,229102,5,광양
+345,에너지융합사업실,kc7300@poscoict.com,기철,6.5,229146,5,판교
+346,Smart EIC사업실,ljh685@poscoict.com,이정환,7.5,229168,3,포항
+347,에너지융합사업실,pyh123@poscoict.com,박용하,14.0,229625,4,판교
+348,Smart EIC사업실,shp000@poscoict.com,성휴표,16.5,229636,6,포항
+349,Smart EIC사업실,ksh000@poscoict.com,김세현,12.0,229660,5,포항
+350,Smart EIC사업실,kyh178@poscoict.com,김윤호,9.5,229671,5,포항
+351,경영기획실,idug04@poscoict.com,임대욱,7.5,229682,5,판교
+352,Smart EIC사업실,jcs917@poscoict.com,전창석,10.0,229693,5,포항
+353,Smart EIC사업실,hoon1422@poscoict.com,황필훈,10.5,229705,4,포항
+354,Smart EIC사업실,kdj001@poscoict.com,김동주,15.0,229716,4,광양
+355,Smart EIC사업실,lch582@poscoict.com,임창환,10.0,229727,4,광양
+356,SOC사업실,pcs510@poscoict.com,박찬석,0.5,229738,4,etc
+357,Smart EIC사업실,kdh671@poscoict.com,김대희,8.0,229740,4,포항
+358,에너지융합사업실,lhy531@poscoict.com,이훈,14.5,229751,4,판교
+359,Smart EIC사업실,mos321@poscoict.com,민옥선,15.0,229762,4,포항
+360,Smart EIC사업실,hsh725@poscoict.com,황재진,7.0,229784,4,포항
+361,Smart EIC사업실,pbh601@poscoict.com,박부희,10.5,229795,5,포항
+362,Smart EIC사업실,wsk107@poscoict.com,곽원석,12.5,229818,4,포항
+363,경영지원실,lsm122@poscoict.com,이승만,12.5,229820,5,판교
+364,Smart EIC사업실,kjc100@poscoict.com,권정철,4.5,229831,4,포항
+365,경영지원실,lht329@poscoict.com,임희태,13.5,230152,4,판교
+366,Smart IT사업실,ysjeon@poscoict.com,전용수,21.0,230276,4,판교
+367,경영지원실,chosang@poscoict.com,조기상,9.5,230527,4,판교
+368,Smart IT사업실,saba@poscoict.com,이종현,5.5,230870,4,센터
+369,Smart EIC사업실,adh20852@poscoict.com,안동혁,7.5,230881,4,포항
+370,Smart IT사업실,cinabro@poscoict.com,조대연,7.0,230892,4,etc
+371,Smart IT사업실,khjoon@poscoict.com,김현준,7.5,231292,5,센터
+372,Smart EIC사업실,sbk116@poscoict.com,성봉근,11.5,231337,4,광양
+373,경영지원실,akody2@poscoict.com,윤승희,12.0,231587,4,판교
+374,Smart EIC사업실,khw123@poscoict.com,김한욱,7.0,231598,4,포항
+375,Smart EIC사업실,yeo765@poscoict.com,여기철,12.0,231645,4,포항
+376,SOC사업실,jeonsy0411@poscoict.com,전순영,2.5,231725,4,etc
+377,Smart EIC사업실,pnh555@poscoict.com,박노훈,4.0,232182,4,포항
+378,Smart EIC사업실,lgs293@poscoict.com,이기삼,11.5,232193,4,포항
+379,Smart EIC사업실,ssk33@poscoict.com,신성균,12.0,232205,6,포항
+380,Smart EIC사업실,lji302@poscoict.com,이정일,7.0,232227,4,광양
+381,Smart EIC사업실,jae289@poscoict.com,조재현,8.5,232238,4,포항
+382,Smart EIC사업실,lsh123@poscoict.com,이상호,3.5,232240,4,포항
+383,Smart IT사업실,wonkim@poscoict.com,김원준,7.0,232502,4,판교
+384,Smart EIC사업실,sin007@poscoict.com,윤문신,7.5,232557,5,광양
+385,Smart EIC사업실,il315@poscoict.com,최석일,1.5,233130,3,포항
+386,경영기획실,shu@poscoict.com,서광환,3.0,233301,6,판교
+387,NA,jjhwa@poscoict.com,정종화,4.0,233312,4,포항
+388,Smart IT사업실,hyun365@poscoict.com,장현주,7.0,233631,4,센터
+389,NA,seven@poscoict.com,최종도,12.5,233711,6,판교
+390,Smart IT사업실,joonkim@poscoict.com,김학준,9.5,233733,4,etc
+391,Smart IT사업실,ljh@poscoict.com,이정훈,NA,233835,4,etc
+392,Smart IT사업실,jungjs@poscoict.com,정종섭,7.0,233857,5,광양
+393,에너지융합사업실,iwjang@poscoict.com,장일우,11.5,234007,4,판교
+394,SOC사업실,psj903@poscoict.com,박성준,14.0,234111,4,판교
+395,Smart IT사업실,jongin@poscoict.com,이종인,15.5,234257,4,센터
+396,본사근무파견/기타,pf01_hdpark@poscoict.com,박희두,NA,234532,4,판교
+397,Smart IT사업실,lhh@poscoict.com,이학형,3.5,234543,4,판교
+398,Smart IT사업실,jjsik@poscoict.com,전점식,1.0,234576,4,etc
+399,Smart IT사업실,yjyoon@poscoict.com,윤영진,3.0,234587,4,판교
+400,Smart IT사업실,park27@poscoict.com,박계형,6.5,234598,4,포항
+401,Smart IT사업실,p01234@poscoict.com,김선호,1.0,234612,4,센터
+402,Smart IT사업실,kyungyou@poscoict.com,유운경,15.5,234634,4,센터
+403,Smart IT사업실,gihyung@poscoict.com,조기형,7.5,234656,5,판교
+404,Smart IT사업실,leeks3514@poscoict.com,이광식,8.5,234667,4,센터
+405,Smart IT사업실,credos_chang@poscoict.com,장성수,1.0,234678,4,판교
+406,Smart IT사업실,syna@poscoict.com,나석영,10.5,234680,4,판교
+407,Smart IT사업실,yulee@poscoict.com,이영욱,6.5,234691,4,센터
+408,Smart IT사업실,joajoa11@poscoict.com,엄종안,12.5,234725,4,판교
+409,Smart IT사업실,dolpin96@poscoict.com,김유종,14.0,234736,4,센터
+410,본사근무파견/기타,jipang@poscoict.com,한형률,NA,234747,5,판교
+411,R&D센터,wido@poscoict.com,기위도,14.5,234758,6,판교
+412,Smart IT사업실,kjg15@poscoict.com,김종구,4.5,234760,4,판교
+413,Smart IT사업실,yeonghee@poscoict.com,김영희,10.5,234771,4,센터
+414,Smart IT사업실,pinochio@poscoict.com,심운섭,14.5,234782,4,etc
+415,Smart IT사업실,kyc6469@poscoict.com,김영찬,14.0,234793,5,센터
+416,마케팅전략실,intksmin@poscoict.com,김승민,14.0,234805,5,판교
+417,본사근무파견/기타,kimks2497@poscoict.com,김광석,5.0,234816,6,etc
+418,Smart IT사업실,cwjeong@poscoict.com,정창화,12.0,234827,4,판교
+419,본사근무파견/기타,pf01_steel@poscoict.com,백승철,9.0,234840,4,etc
+420,Smart IT사업실,pf01_kimjy@poscoict.com,김준영,9.5,234884,4,판교
+421,Smart IT사업실,heebum@poscoict.com,박희범,NA,234907,4,판교
+422,본사근무파견/기타,jhbaek@poscoict.com,백진호,8.0,234918,4,etc
+423,Smart IT사업실,cdol@poscoict.com,김치욱,9.5,234931,4,판교
+424,Smart IT사업실,ohk@poscoict.com,오혜경,9.0,234942,4,판교
+425,Smart IT사업실,proto@poscoict.com,이원형,1.0,234975,4,판교
+426,Smart IT사업실,gogumak@poscoict.com,김명선,8.5,234986,4,광양
+427,Smart IT사업실,jangsh0309@poscoict.com,장성희,11.5,236482,4,포항
+428,Smart EIC사업실,hck019@poscoict.com,허철곤,9.0,236540,4,etc
+429,Smart EIC사업실,khh808@poscoict.com,강현호,11.0,236551,4,광양
+430,Smart EIC사업실,ykj888@poscoict.com,윤관진,12.0,236562,4,광양
+431,Smart IT사업실,apache7@poscoict.com,민경원,11.0,236755,4,서울
+432,Smart IT사업실,ksh3369@poscoict.com,김수헌,13.0,236766,4,판교
+433,Smart IT사업실,yhchoi1@poscoict.com,최양훈,10.5,236788,6,판교
+434,에너지융합사업실,iris2violet@poscoict.com,안원경,8.5,237155,4,판교
+435,NA,choiwi64@poscoict.com,최우인,11.0,237188,5,판교
+436,SOC사업실,jth518@poscoict.com,정태희,11.5,237213,4,판교
+437,Smart EIC사업실,hdh719@poscoict.com,한동훈,10.0,237246,4,포항
+438,Smart IT사업실,ybm@poscoict.com,양병무,12.5,237406,4,광양
+439,R&D센터,hylee88@poscoict.com,이희영,9.0,237441,4,판교
+440,Smart EIC사업실,ljw007@poscoict.com,이장우,6.0,237474,4,포항
+441,Smart EIC사업실,yun777@poscoict.com,윤종모,12.5,237485,4,etc
+442,R&D센터,marso@poscoict.com,김말수,9.5,237703,5,판교
+443,Smart EIC사업실,shc101@poscoict.com,신화철,10.5,237714,4,포항
+444,Smart EIC사업실,jjk007@poscoict.com,정종극,10.0,237725,4,포항
+445,에너지융합사업실,s3233@poscoict.com,심영섭,7.0,237931,4,판교
+446,Smart EIC사업실,hanmso@poscoict.com,한명섭,10.5,237942,5,포항
+447,Smart EIC사업실,jang-hun.lee@poscoict.com,이장훈,11.0,237964,5,포항
+448,R&D센터,bukmin@poscoict.com,서영민,6.5,237975,4,포항
+449,에너지융합사업실,lol376@poscoict.com,문호정,9.0,237986,4,판교
+450,Smart EIC사업실,jhd007@poscoict.com,진호돈,7.5,237997,5,광양
+451,Smart EIC사업실,sbt976@poscoict.com,송병탁,10.0,238012,5,광양
+452,경영지원실,jyl119@poscoict.com,정윤림,6.5,238023,4,판교
+453,Smart IT사업실,lnh001@poscoict.com,이남호,12.5,238672,5,판교
+454,Smart IT사업실,backpro@poscoict.com,남병규,18.5,238956,4,광양
+455,경영지원실,jws126@poscoict.com,장우식,18.5,239117,5,판교
+456,에너지융합사업실,jmo115@poscoict.com,정미옥,15.5,239128,3,포항
+457,Smart EIC사업실,kkj909@poscoict.com,김경종,11.5,239312,4,광양
+458,에너지융합사업실,big21c@poscoict.com,조계경,16.5,239323,4,판교
+459,에너지융합사업실,cho256@poscoict.com,최정호,16.0,239334,4,포항
+460,본사근무파견/기타,jks831@poscoict.com,정광석,10.5,239345,4,etc
+461,Smart EIC사업실,sunwok@poscoict.com,김선우,12.0,239356,4,광양
+462,본사근무파견/기타,ksj709@poscoict.com,김성태,20.0,239367,3,포항
+463,SOC사업실,sky1004@poscoict.com,윤석근,1.0,239378,4,etc
+464,SOC사업실,bkshhs@poscoict.com,변광식,12.5,239380,4,판교
+465,Smart EIC사업실,yksm02@poscoict.com,양기석,13.5,239403,3,광양
+466,Smart EIC사업실,yooyoung.kim@poscoict.com,김유영,12.0,239835,5,광양
+467,본사근무파견/기타,jfs506@poscoict.com,정화수,16.0,239846,4,etc
+468,SOC사업실,egh326@poscoict.com,엄기호,5.0,239870,3,etc
+469,Smart EIC사업실,jkhup@poscoict.com,진경훈,8.5,239881,4,포항
+470,Smart EIC사업실,jwss25@poscoict.com,정원섭,19.0,239892,4,광양
+471,본사근무파견/기타,love31@poscoict.com,김흥전,NA,239904,4,광양
+472,Smart EIC사업실,gjb502@poscoict.com,김종보,16.5,239915,4,etc
+473,Smart EIC사업실,jmy007@poscoict.com,정민영,14.0,239926,4,광양
+474,Smart EIC사업실,k12555@poscoict.com,강병원,6.0,239948,4,광양
+475,SOC사업실,jhg055@poscoict.com,장형기,8.0,239950,3,etc
+476,Smart EIC사업실,kjs815@poscoict.com,김진섭,17.5,239972,4,광양
+477,Smart IT사업실,jscchoi@poscoict.com,최정식,16.5,240258,4,포항
+478,마케팅전략실,jrpark@poscoict.com,박정로,19.0,240327,4,판교
+479,Smart EIC사업실,ljh227@poscoict.com,이중화,17.0,240555,4,포항
+480,Smart EIC사업실,bycchul@poscoict.com,배용철,8.0,240566,4,포항
+481,Smart EIC사업실,kjc106@poscoict.com,김재찬,13.0,240577,4,포항
+482,Smart EIC사업실,yangjc@poscoict.com,양종천,16.5,240590,5,포항
+483,Smart EIC사업실,nnu350@poscoict.com,송문수,14.0,240794,3,포항
+484,Smart EIC사업실,pmk023@poscoict.com,박만권,10.0,240806,4,포항
+485,Smart EIC사업실,lsw123@poscoict.com,이상원,7.5,240874,3,포항
+486,Smart EIC사업실,hoo001@poscoict.com,송재호,NA,240896,4,etc
+487,Smart EIC사업실,kns123@poscoict.com,김남수,8.0,240910,4,포항
+488,Smart EIC사업실,ldu135@poscoict.com,이동욱,10.5,240976,4,포항
+489,Smart EIC사업실,bkh930@poscoict.com,배기환,19.0,240987,3,etc
+490,Smart EIC사업실,kks029@poscoict.com,김광수,12.0,241002,3,포항
+491,Smart EIC사업실,lss106@poscoict.com,이성수,8.0,241274,4,포항
+492,경영지원실,nicemeet@poscoict.com,박상덕,12.0,241800,4,판교
+493,Smart IT사업실,netring@poscoict.com,이영수,13.5,241811,4,센터
+494,경영기획실,hthahn@poscoict.com,한호태,13.5,241924,5,판교
+495,경영기획실,epiphany@poscoict.com,강승인,6.0,241935,4,etc
+496,Smart IT사업실,pf01_mykim@poscoict.com,김미영,10.5,241946,6,판교
+497,Smart IT사업실,ksy2971@poscoict.com,김성열,9.5,241957,4,판교
+498,에너지융합사업실,pkwuk36@poscoict.com,박기원,11.0,241970,4,판교
+499,경영지원실,hjh000@poscoict.com,한정현,17.0,241981,4,광양
+500,에너지융합사업실,lmj514@poscoict.com,이명진,16.5,241992,4,판교
+501,SOC사업실,rhr106@poscoict.com,류행렬,4.0,242370,4,etc
+502,Smart IT사업실,psh611@poscoict.com,백승혜,6.5,242392,4,판교
+503,Smart EIC사업실,hsp777@poscoict.com,홍상표,6.5,242437,4,포항
+504,본사근무파견/기타,pbh138@poscoict.com,박병후,8.5,242448,4,etc
+505,Smart EIC사업실,le9707@poscoict.com,이민열,9.5,242450,4,광양
+506,Smart EIC사업실,c9454@poscoict.com,정완재,11.0,242461,4,포항
+507,SOC사업실,yjh337@poscoict.com,연재호,4.0,242472,3,etc
+508,Smart EIC사업실,kch383@poscoict.com,김창호,13.0,242483,4,etc
+509,Smart EIC사업실,skw505@poscoict.com,서기원,14.0,242506,4,포항
+510,Smart EIC사업실,llllsd@poscoict.com,임성동,13.5,242517,4,광양
+511,Smart EIC사업실,taemin.jun@poscoict.com,전태민,9.0,242528,4,포항
+512,Smart EIC사업실,cjh361@poscoict.com,조정현,14.0,242541,4,광양
+513,Smart EIC사업실,parksd@poscoict.com,박상달,10.0,242552,4,광양
+514,SOC사업실,ydk100@poscoict.com,윤동기,5.0,242563,4,etc
+515,에너지융합사업실,ysshin@poscoict.com,신희용,6.5,242574,4,판교
+516,Smart EIC사업실,mch777@poscoict.com,문창희,9.5,242654,3,포항
+517,Smart EIC사업실,namkh70@poscoict.com,남경훈,10.0,242665,4,포항
+518,Smart EIC사업실,southkim@poscoict.com,김남국,6.5,242676,4,광양
+519,Smart EIC사업실,kss216@poscoict.com,김성수,7.5,242687,4,광양
+520,Smart EIC사업실,khj122@poscoict.com,김호준,2.5,242698,4,포항
+521,Smart EIC사업실,sun329@poscoict.com,최영선,9.0,242701,3,포항
+522,Smart EIC사업실,hsjung@poscoict.com,정현식,8.0,243087,4,광양
+523,Smart IT사업실,jjyoung@poscoict.com,정성영,4.5,243098,4,광양
+524,SOC사업실,eschoi@poscoict.com,최의식,2.5,243167,4,etc
+525,R&D센터,kkangmak@poscoict.com,이창원,10.0,243178,4,서울
+526,에너지융합사업실,pks018@poscoict.com,박경수,13.5,243191,6,판교
+527,R&D센터,kyc516@poscoict.com,구연춘,13.5,243225,3,포항
+528,에너지융합사업실,changsu.kim@poscoict.com,김창수,10.5,243236,4,판교
+529,SOC사업실,lms121@poscoict.com,이민섭,8.5,243258,4,판교
+530,에너지융합사업실,syrack@poscoict.com,손용락,10.0,243260,4,포항
+531,SOC사업실,bhj717@poscoict.com,배종화,5.0,243282,4,판교
+532,Smart EIC사업실,bba107@poscoict.com,이재경,10.0,243305,5,포항
+533,Smart EIC사업실,cjh671@poscoict.com,조진형,11.0,243316,4,광양
+534,Smart EIC사업실,ybm212@poscoict.com,유병만,10.5,243327,4,광양
+535,에너지융합사업실,khd090@poscoict.com,김흥동,10.0,243338,4,포항
+536,Smart EIC사업실,syw123@poscoict.com,손영우,9.0,243362,4,포항
+537,Smart EIC사업실,yonghag@poscoict.com,정용학,3.0,243373,4,etc
+538,Smart EIC사업실,jsj012@poscoict.com,조승제,9.5,243384,4,포항
+539,Smart IT사업실,year94@poscoict.com,김문년,7.0,243932,4,판교
+540,Smart IT사업실,bestfriend@poscoict.com,오장호,5.0,243943,5,판교
+541,Smart IT사업실,kjw@poscoict.com,김장원,3.5,243954,4,판교
+542,Smart IT사업실,iamjin@poscoict.com,허진,3.5,243976,5,센터
+543,Smart IT사업실,kej0914@poscoict.com,김응진,7.5,243998,4,판교
+544,Smart IT사업실,hskim@poscoict.com,김형섭,5.0,244002,4,센터
+545,Smart IT사업실,jinyoung.park@poscoict.com,박진영,5.0,244024,4,etc
+546,Smart EIC사업실,csw812@poscoict.com,차세원,NA,244401,3,광양
+547,Smart EIC사업실,yks820@poscoict.com,유기선,9.0,244412,4,포항
+548,Smart EIC사업실,select@poscoict.com,김채규,4.0,244423,4,광양
+549,SOC사업실,swhuh@poscoict.com,허승욱,3.5,244434,4,etc
+550,Smart EIC사업실,auto04@poscoict.com,김영철,NA,244445,4,포항
+551,Smart EIC사업실,kdi128@poscoict.com,김동일,3.5,244456,4,광양
+552,Smart EIC사업실,ksy007@poscoict.com,김성용,3.0,244467,4,광양
+553,Smart IT사업실,jji@poscoict.com,장재익,13.0,244935,4,판교
+554,Smart EIC사업실,ljs711@poscoict.com,이재성,18.0,245005,4,광양
+555,Smart IT사업실,hs.shin@poscoict.com,신현석,16.5,245095,5,판교
+556,Smart EIC사업실,lss285@poscoict.com,이상승,16.0,245186,4,광양
+557,Smart EIC사업실,hi3555@poscoict.com,정형인,12.0,245197,4,etc
+558,Smart EIC사업실,psk206@poscoict.com,박성구,15.5,245200,4,포항
+559,R&D센터,pjh@poscoict.com,박종현,16.5,245211,4,판교
+560,SOC사업실,cgbaek@poscoict.com,백철기,22.0,245288,4,판교
+561,Smart IT사업실,h100@poscoict.com,하정철,4.5,245302,4,포항
+562,Smart EIC사업실,stshin@poscoict.com,신성태,17.0,245415,4,etc
+563,Smart EIC사업실,kjc819@poscoict.com,김재철,10.5,245426,4,포항
+564,Smart EIC사업실,sh0135@poscoict.com,주수환,11.0,245437,3,광양
+565,Smart EIC사업실,jyb3358@poscoict.com,장용봉,11.5,245448,4,포항
+566,Smart EIC사업실,rjs005@poscoict.com,류자선,11.0,245461,4,광양
+567,R&D센터,okh101@poscoict.com,오기형,14.0,245472,4,포항
+568,Smart EIC사업실,f43210@poscoict.com,서상윤,12.0,245483,4,광양
+569,Smart EIC사업실,jjh1615@poscoict.com,정진호,15.5,245494,4,광양
+570,Smart EIC사업실,kdh213@poscoict.com,김동호,17.5,245506,4,포항
+571,에너지융합사업실,kds113@poscoict.com,김동석,16.0,245517,4,광양
+572,Smart EIC사업실,lth400@poscoict.com,이택희,11.0,245528,4,포항
+573,Smart EIC사업실,jyw777@poscoict.com,정연원,13.0,245541,4,포항
+574,에너지융합사업실,yjc793@poscoict.com,윤재철,17.0,245552,3,광양
+575,Smart EIC사업실,phy005@poscoict.com,박형영,18.0,245585,4,광양
+576,에너지융합사업실,ljyun@poscoict.com,이종윤,13.5,245608,4,광양
+577,에너지융합사업실,bjw777@poscoict.com,변진우,18.5,245621,3,포항
+578,Smart EIC사업실,ksh518@poscoict.com,김상호,11.0,245632,3,광양
+579,에너지융합사업실,suns76@poscoict.com,선상순,20.0,245665,3,판교
+580,Smart IT사업실,kyk@poscoict.com,김용국,8.5,246065,4,센터
+581,Smart IT사업실,mcsin@poscoict.com,신민철,4.0,246260,4,etc
+582,Smart EIC사업실,sassun@poscoict.com,황용구,14.0,246293,4,광양
+583,SOC사업실,kyd51@poscoict.com,김영동,1.5,246305,4,etc
+584,Smart EIC사업실,otj119@poscoict.com,오태진,13.5,246316,5,광양
+585,Smart EIC사업실,jjs152@poscoict.com,장재섭,4.0,246327,4,포항
+586,Smart EIC사업실,jclee38@poscoict.com,이종철,9.0,246338,4,포항
+587,에너지융합사업실,ojing@poscoict.com,오진호,15.0,246340,5,판교
+588,본사근무파견/기타,kds294@poscoict.com,김동수,10.0,246351,4,광양
+589,Smart EIC사업실,jys100@poscoict.com,장영수,4.0,246362,4,포항
+590,Smart EIC사업실,sangsoo.kim@poscoict.com,김상수,8.0,246384,5,광양
+591,NA,ppkhs@poscoict.com,박판기,9.0,246395,5,광양
+592,Smart EIC사업실,ygbae@poscoict.com,배영근,15.0,246418,4,광양
+593,Smart IT사업실,kevinshin@poscoict.com,신경진,1.0,246761,4,포항
+594,Smart IT사업실,shlim@poscoict.com,임석현,NA,246783,5,포항
+595,Smart IT사업실,ohsjung@poscoict.com,정혁선,6.0,246806,4,센터
+596,에너지융합사업실,dwkim516@poscoict.com,김덕우,15.5,246965,4,광양
+597,Smart EIC사업실,ohj409@poscoict.com,오홍준,11.0,246987,4,광양
+598,SOC사업실,gio248@poscoict.com,이원범,9.5,246998,4,판교
+599,SOC사업실,yyc228@poscoict.com,이연재,0.5,247002,4,etc
+600,에너지융합사업실,kyh944@poscoict.com,김영하,13.0,247013,4,판교
+601,SOC사업실,chch37@poscoict.com,조득제,4.0,247024,4,etc
+602,에너지융합사업실,kjh009@poscoict.com,김재훈,10.5,247046,4,포항
+603,Smart EIC사업실,msb777@poscoict.com,문병선,12.0,247057,4,광양
+604,Smart EIC사업실,ssh123@poscoict.com,서승환,12.0,247068,4,포항
+605,경영지원실,jh1827@poscoict.com,이재하,16.0,247070,4,포항
+606,Smart EIC사업실,ljs117@poscoict.com,이중수,10.5,247081,4,광양
+607,본사근무파견/기타,kjn403@poscoict.com,김재남,12.5,247092,3,광양
+608,R&D센터,pv515@poscoict.com,이명준,6.5,247104,4,판교
+609,에너지융합사업실,bullet@poscoict.com,이동선,10.0,247115,4,판교
+610,Smart EIC사업실,ljssos@poscoict.com,이종성,13.0,247126,4,광양
+611,에너지융합사업실,hw0105@poscoict.com,허욱,15.5,247137,4,판교
+612,Smart EIC사업실,pjyksc@poscoict.com,김상철,14.5,247148,4,포항
+613,경영지원실,seo729@poscoict.com,오상언,12.0,247150,3,판교
+614,Smart IT사업실,csw950@poscoict.com,조상원,13.5,247217,3,광양
+615,Smart EIC사업실,ljk149@poscoict.com,이정근,10.0,247228,4,광양
+616,Smart EIC사업실,il2201@poscoict.com,안일균,11.0,247241,4,etc
+617,SOC사업실,jjy098@poscoict.com,정준영,5.0,247263,4,etc
+618,마케팅전략실,rainmaker@poscoict.com,구성규,10.5,247560,4,판교
+619,Smart IT사업실,tony11@poscoict.com,김현우,8.0,247616,4,판교
+620,SOC사업실,lks101@poscoict.com,이경수,9.0,247946,5,판교
+621,Smart EIC사업실,yhj130@poscoict.com,유호진,11.5,247957,5,포항
+622,Smart IT사업실,h2o@poscoict.com,최병원,8.0,248038,4,판교
+623,에너지융합사업실,pjh130@poscoict.com,박준환,8.0,248051,3,포항
+624,Smart EIC사업실,pkj125@poscoict.com,박경재,9.0,248073,4,광양
+625,SOC사업실,pyh7425@poscoict.com,박영호,8.5,248084,4,판교
+626,Smart EIC사업실,kjh100@poscoict.com,김재형,10.0,248095,4,포항
+627,에너지융합사업실,caeshi@poscoict.com,이용수,6.0,248107,4,포항
+628,Smart EIC사업실,jyd122@poscoict.com,전용덕,7.5,248118,5,포항
+629,Smart EIC사업실,leejr@poscoict.com,이정열,8.5,248120,4,광양
+630,SOC사업실,chd999@poscoict.com,조현대,3.5,248131,4,포항
+631,본사근무파견/기타,cbs817@poscoict.com,최백순,NA,248142,4,포항
+632,R&D센터,kwonbg@poscoict.com,권병기,7.5,248153,6,판교
+633,본사근무파견/기타,gokbg1@poscoict.com,김보근,6.0,248164,5,etc
+634,R&D센터,lsb001@poscoict.com,이송범,11.0,248175,4,서울
+635,Smart IT사업실,wbc@poscoict.com,우병철,9.5,248437,4,센터
+636,Smart IT사업실,cjymail@poscoict.com,최중열,0.5,248448,4,센터
+637,Smart IT사업실,wondolboy@poscoict.com,조원석,9.0,248461,4,센터
+638,Smart IT사업실,a01st1@poscoict.com,이상태,4.0,248654,5,센터
+639,Smart IT사업실,ksj2348@poscoict.com,권성주,13.0,248676,4,센터
+640,Smart IT사업실,seongilsa@poscoict.com,사성일,8.0,248687,5,센터
+641,SOC사업실,lybmail@poscoict.com,이영배,8.0,248698,4,판교
+642,Smart IT사업실,joohong@poscoict.com,박주홍,6.5,248701,4,판교
+643,Smart IT사업실,namht@poscoict.com,남현태,13.0,248723,5,판교
+644,경영지원실,girl2440@poscoict.com,박상걸,10.0,248734,4,판교
+645,본사근무파견/기타,eskim1@poscoict.com,김은숙,NA,248745,5,센터
+646,Smart IT사업실,kate.kim@poscoict.com,김보영,11.0,248767,6,센터
+647,SOC사업실,khs555@poscoict.com,김응석,NA,249178,4,etc
+648,R&D센터,caren@poscoict.com,김형균,20.0,249327,4,포항
+649,R&D센터,seunghun.ryu@poscoict.com,류승훈,12.5,249453,5,센터
+650,Smart IT사업실,4021kjg@poscoict.com,고정규,19.0,249475,4,판교
+651,Smart EIC사업실,popos@poscoict.com,박기웅,17.5,249566,4,포항
+652,경영지원실,skh130@poscoict.com,손강호,10.0,249577,5,판교
+653,Smart EIC사업실,jc2202@poscoict.com,이종창,14.5,249590,4,포항
+654,SOC사업실,cskim@poscoict.com,김종서,14.5,249624,3,etc
+655,Smart IT사업실,kchljy@poscoict.com,김철환,16.0,249646,4,포항
+656,Smart IT사업실,choi_SeungYong@poscoict.com,최승용,12.5,249657,4,판교
+657,Smart IT사업실,haan@poscoict.com,한기정,9.5,249896,4,판교
+658,Smart IT사업실,hyuncdk@poscoict.com,최대균,15.0,249908,4,판교
+659,Smart IT사업실,cwlim@poscoict.com,임채환,4.5,249910,4,판교
+660,Smart IT사업실,choi-jg@poscoict.com,최종기,5.0,249921,4,포항
+661,Smart IT사업실,rightthink@poscoict.com,김원일,10.0,249943,4,광양
+662,Smart IT사업실,leejb6398@poscoict.com,이종범,11.5,249954,4,광양
+663,Smart IT사업실,yskang@poscoict.com,강용식,1.0,249976,4,센터
+664,Smart IT사업실,future001@poscoict.com,김남일,12.0,250025,6,판교
+665,Smart IT사업실,orgjhoh@poscoict.com,오종환,3.5,250036,5,센터
+666,Smart IT사업실,jhchang@poscoict.com,장준화,7.0,250047,4,판교
+667,Smart IT사업실,shbae@poscoict.com,배승호,12.0,250093,4,판교
+668,Smart IT사업실,nisus@poscoict.com,이영기,9.5,250333,4,etc
+669,SOC사업실,ysj@poscoict.com,윤석진,9.0,250377,6,판교
+670,경영기획실,triptoroz@poscoict.com,김병석,11.5,250388,5,판교
+671,Smart IT사업실,cshak@poscoict.com,조성학,9.5,250390,4,광양
+672,Smart IT사업실,bestchoice@poscoict.com,윤상철,8.5,250402,6,센터
+673,R&D센터,bhk69@poscoict.com,정대현,16.0,250413,4,판교
+674,R&D센터,blues@poscoict.com,전광남,17.5,250424,4,판교
+675,Smart IT사업실,juhan.kim@poscoict.com,김주한,9.0,250435,5,판교
+676,Smart IT사업실,bsjoo@poscoict.com,주봉수,11.5,250446,5,센터
+677,SOC사업실,youknowk@poscoict.com,김윤옥,17.5,250457,4,etc
+678,Smart IT사업실,bitlife@poscoict.com,윤현철,12.5,250468,5,센터
+679,Smart IT사업실,redpants@poscoict.com,유현우,16.5,250470,4,판교
+680,Smart IT사업실,09root@poscoict.com,박종근,3.5,250481,4,포항
+681,Smart IT사업실,jsmoon@poscoict.com,문종선,12.0,250492,5,센터
+682,Smart IT사업실,night@poscoict.com,최동현,8.5,250504,4,판교
+683,Smart IT사업실,nubduk@poscoict.com,이연호,13.0,250515,4,포항
+684,본사근무파견/기타,psh01@poscoict.com,박수한,5.0,250526,4,etc
+685,Smart IT사업실,zzangs700@poscoict.com,정장수,14.5,250537,5,판교
+686,본사근무파견/기타,bigbang@poscoict.com,박용남,2.0,250550,4,etc
+687,Smart IT사업실,jin@poscoict.com,정한진,12.5,250561,6,센터
+688,Smart IT사업실,pf01_sookyun@poscoict.com,배수균,8.5,250606,4,판교
+689,Smart IT사업실,jhhwang@poscoict.com,황정호,4.0,250628,3,판교
+690,에너지융합사업실,ryoums@poscoict.com,류명선,11.0,250903,4,판교
+691,Smart EIC사업실,kblack@poscoict.com,김정권,0.5,250914,4,포항
+692,에너지융합사업실,jcy891@poscoict.com,장치영,5.0,250925,5,판교
+693,Smart EIC사업실,jk6352@poscoict.com,안재균,7.5,250947,4,포항
+694,Smart EIC사업실,schwang@poscoict.com,황순철,9.0,250958,4,광양
+695,Smart IT사업실,jangkys@poscoict.com,장경식,8.0,251096,5,판교
+696,Smart IT사업실,jbhur@poscoict.com,허정범,7.0,251314,4,포항
+697,에너지융합사업실,kkyuje@poscoict.com,이규제,17.5,251325,4,판교
+698,Smart IT사업실,kangsw@poscoict.com,강서원,NA,251358,4,판교
+699,Smart IT사업실,swpark01@poscoict.com,박석우,NA,251382,4,판교
+700,Smart IT사업실,janghb@poscoict.com,장홍범,NA,251393,4,판교
+701,Smart IT사업실,pjy@poscoict.com,박종용,11.5,251405,4,판교
+702,본사근무파견/기타,johnson@poscoict.com,박종성,NA,251416,5,센터
+703,Smart IT사업실,pf01_steve@poscoict.com,류성환,NA,251427,4,판교
+704,SOC사업실,youngju@poscoict.com,박영주,15.5,251438,4,판교
+705,Smart IT사업실,hankh59@poscoict.com,한경호,5.0,251531,4,센터
+706,R&D센터,kimjinkyoo@poscoict.com,김진규,12.0,251542,4,판교
+707,Smart IT사업실,iksu@poscoict.com,이익수,7.5,251553,4,광양
+708,에너지융합사업실,bklee@poscoict.com,이병길,6.0,251597,4,판교
+709,Smart IT사업실,posiklee@poscoict.com,이인기,7.5,251600,4,광양
+710,Smart EIC사업실,kyn@poscoict.com,김용노,9.0,251611,4,광양
+711,Smart IT사업실,mipia@poscoict.com,박해정,20.0,251622,4,광양
+712,Smart IT사업실,chu007@poscoict.com,추교석,NA,251644,4,etc
+713,Smart IT사업실,myungjin@poscoict.com,김명진,14.5,251655,4,센터
+714,Smart IT사업실,onetime@poscoict.com,김한동,8.0,251666,4,포항
+715,Smart IT사업실,jhjin@poscoict.com,진준한,NA,251677,4,센터
+716,Smart IT사업실,jun1009@poscoict.com,이준용,8.5,251702,4,포항
+717,Smart IT사업실,hjhclee@poscoict.com,이희지,11.5,251713,4,서울
+718,SOC사업실,ysh8cma@poscoict.com,윤성환,5.0,251724,4,etc
+719,Smart IT사업실,inchoulkim@poscoict.com,김인철,14.0,251735,4,포항
+720,SOC사업실,kbeom@poscoict.com,엄기복,1.0,251746,6,판교
+721,Smart IT사업실,ykcho@poscoict.com,조유경,9.5,251768,4,센터
+722,Smart IT사업실,jinheechoi@poscoict.com,최진희,7.0,251770,4,판교
+723,Smart EIC사업실,kjyong@poscoict.com,김정용,10.0,252146,4,포항
+724,경영지원실,jangwon@poscoict.com,황장원,4.5,252168,4,광양
+725,Smart IT사업실,hwpark1@poscoict.com,박한웅,1.5,252170,4,판교
+726,SOC사업실,kbh507@poscoict.com,김보현,0.5,253641,4,etc
+727,Smart EIC사업실,cybot@poscoict.com,이동훈,8.5,253652,4,광양
+728,경영기획실,hjan47@poscoict.com,안혜정,6.0,253708,3,판교
+729,Smart EIC사업실,park.yh@poscoict.com,박양호,6.0,253732,4,포항
+730,Smart IT사업실,ymkwon@poscoict.com,권용만,11.0,253891,4,판교
+731,본사근무파견/기타,ihsong@poscoict.com,송인호,NA,254052,3,포항
+732,SOC사업실,iltaek.cho@poscoict.com,조일택,NA,254267,5,판교
+733,Smart IT사업실,hobang@poscoict.com,최연호,7.0,254314,4,etc
+734,SOC사업실,jwahn@poscoict.com,안진우,8.0,254382,4,etc
+735,Smart IT사업실,shk@poscoict.com,김성한,18.5,254438,5,센터
+736,SOC사업실,pc124838@poscoict.com,정찬완,6.0,254462,6,판교
+737,SOC사업실,janghs@poscoict.com,장헌수,15.5,254473,5,판교
+738,Smart IT사업실,hbs@poscoict.com,허복숙,5.5,254484,4,etc
+739,Smart IT사업실,noteol@poscoict.com,노영호,13.0,254495,4,etc
+740,경영지원실,hjy@poscoict.com,허준영,7.5,254507,5,판교
+741,Smart IT사업실,leesc@poscoict.com,이상철,14.0,254518,4,광양
+742,본사근무파견/기타,bangalo@poscoict.com,이동준,NA,254520,5,etc
+743,Smart IT사업실,pf01_ljy@poscoict.com,이재영,7.0,254531,5,etc
+744,에너지융합사업실,hhokim@poscoict.com,김현호,9.5,254542,4,판교
+745,Smart IT사업실,sukwon@poscoict.com,석기원,8.5,254564,4,etc
+746,Smart IT사업실,guny@poscoict.com,권오건,15.0,254586,4,서울
+747,Smart IT사업실,monami4u@poscoict.com,신중삼,6.5,254600,4,센터
+748,Smart IT사업실,piaobb@poscoict.com,박병배,7.0,254611,4,센터
+749,Smart IT사업실,arcview@poscoict.com,박소연,7.0,254622,4,포항
+750,Smart IT사업실,bjkwon@poscoict.com,권병준,14.5,254757,5,포항
+751,Smart IT사업실,swan@poscoict.com,서재곤,9.0,254768,4,포항
+752,Smart IT사업실,iceman70@poscoict.com,곽병제,6.0,254770,4,포항
+753,Smart IT사업실,yeobong@poscoict.com,윤여봉,12.0,254792,4,포항
+754,경영지원실,ysl@poscoict.com,이영수,10.5,254837,4,판교
+755,Smart EIC사업실,duck@poscoict.com,이미자,11.5,255022,3,광양
+756,Smart IT사업실,friendem@poscoict.com,서은미,0.5,255113,4,판교
+757,R&D센터,hjsheen@poscoict.com,신흥재,NA,255124,4,판교
+758,Smart IT사업실,bluefalls@poscoict.com,박형안,NA,255146,4,판교
+759,Smart IT사업실,teeny@poscoict.com,권보경,NA,255157,4,센터
+760,Smart IT사업실,jspark@poscoict.com,박정숙,NA,255170,4,판교
+761,Smart IT사업실,hosil@poscoict.com,황호실,NA,255192,4,판교
+762,R&D센터,ash@poscoict.com,안승희,NA,255261,6,판교
+763,Smart IT사업실,mrha@poscoict.com,하미라,16.5,255421,4,etc
+764,SOC사업실,minsk11@poscoict.com,민세기,5.0,255556,4,etc
+765,SOC사업실,dongwoo.kim@poscoict.com,김동우,4.0,255603,5,판교
+766,Smart IT사업실,sdpark93@poscoict.com,박승도,7.5,255614,4,판교
+767,SOC사업실,jhha@poscoict.com,하준현,16.5,255625,4,판교
+768,Smart IT사업실,mskang3@poscoict.com,강명숙,12.5,255647,4,판교
+769,Smart IT사업실,dbapro2000@poscoict.com,임병태,4.5,255693,4,판교
+770,Smart IT사업실,banggae@poscoict.com,박일권,12.5,255716,4,판교
+771,Smart IT사업실,jisan@poscoict.com,진지산,18.5,255727,4,판교
+772,경영지원실,hkang@poscoict.com,강현,9.5,255738,5,판교
+773,경영지원실,yrchoi@poscoict.com,최영란,11.0,255831,5,판교
+774,Smart IT사업실,kusung@poscoict.com,성경욱,11.0,255922,4,판교
+775,SOC사업실,bokmani0@poscoict.com,김형석,6.0,255933,4,etc
+776,Smart IT사업실,area88@poscoict.com,문희영,4.0,255944,4,센터
+777,Smart IT사업실,bamzzang@poscoict.com,정선희,8.0,255955,4,판교
+778,Smart IT사업실,jbjin@poscoict.com,진병정,14.0,256036,4,판교
+779,Smart IT사업실,cokorman@poscoict.com,박종규,9.0,256058,5,판교
+780,Smart IT사업실,hobbyman@poscoict.com,공현석,14.0,256060,4,판교
+781,Smart IT사업실,tae-sam.kwon@poscoict.com,권태삼,12.5,256071,4,판교
+782,Smart IT사업실,gemboy@poscoict.com,이의재,15.0,256082,4,판교
+783,Smart IT사업실,kypark75@poscoict.com,박광용,12.0,256127,4,판교
+784,Smart IT사업실,minjoo.cha@poscoict.com,차민주,11.0,256138,4,판교
+785,Smart IT사업실,ssassin@poscoict.com,김태연,12.0,256140,4,서울
+786,마케팅전략실,sugi@poscoict.com,백정숙,12.0,256151,4,판교
+787,Smart IT사업실,ehbaek@poscoict.com,백은희,14.5,256162,4,판교
+788,본사근무파견/기타,yearan@poscoict.com,황예란,NA,256173,4,판교
+789,Smart IT사업실,c84033@poscoict.com,윤준혁,7.0,256195,4,포항
+790,SOC사업실,banhm@poscoict.com,반형민,8.5,256333,4,판교
+791,경영기획실,hsy80@poscoict.com,홍서영,9.0,256366,3,판교
+792,경영기획실,abc@poscoict.com,한문석,12.5,256377,4,판교
+793,SOC사업실,dhacker@poscoict.com,이도학,5.5,256413,4,etc
+794,Smart IT사업실,jjmum@poscoict.com,주정문,14.0,256435,4,판교
+795,Smart IT사업실,ytum@poscoict.com,엄윤태,6.5,256548,4,판교
+796,Smart IT사업실,cscdata@poscoict.com,최상철,5.0,256594,4,판교
+797,Smart IT사업실,khban@poscoict.com,반규혁,10.5,256630,3,판교
+798,Smart IT사업실,syuhan@poscoict.com,한상유,6.5,256685,4,센터
+799,Smart IT사업실,sgpark@poscoict.com,박승구,6.0,256776,4,etc
+800,Smart IT사업실,hksong@poscoict.com,송희강,1.0,256812,4,센터
+801,SOC사업실,hyunchul@poscoict.com,김현철,NA,256878,4,etc
+802,Smart IT사업실,cheong1001@poscoict.com,김청환,6.0,256880,4,판교
+803,Smart IT사업실,hkh7208@poscoict.com,황규홍,6.0,256903,4,광양
+804,R&D센터,mosori@poscoict.com,박병조,7.0,256914,4,판교
+805,Smart IT사업실,hgko@poscoict.com,고한규,9.0,256960,5,센터
+806,Smart IT사업실,westado@poscoict.com,김영식,3.0,257074,5,판교
+807,Smart IT사업실,su6699@poscoict.com,박상수,6.0,257085,5,센터
+808,Smart IT사업실,1254@poscoict.com,김종민,6.0,257108,4,센터
+809,경영지원실,dyahn@poscoict.com,안도영,1.0,257267,4,판교
+810,Smart IT사업실,isa0505@poscoict.com,김상배,4.5,257347,4,광양
+811,Smart IT사업실,baradek@poscoict.com,송주호,2.0,257360,4,판교
+812,Smart IT사업실,97fairy@poscoict.com,이갑목,6.5,257382,4,판교
+813,Smart IT사업실,yoopm@poscoict.com,윤박모,6.0,257393,4,센터
+814,Smart IT사업실,kek9412@poscoict.com,김은규,2.0,257462,5,판교
+815,Smart IT사업실,slept@poscoict.com,주진규,3.5,257597,4,포항
+816,Smart IT사업실,qtpie@poscoict.com,구광일,NA,257633,4,판교
+817,Smart IT사업실,leejungkyoo@poscoict.com,이정규,NA,257655,4,판교
+818,Smart IT사업실,hopark@poscoict.com,박호안,NA,257666,4,판교
+819,Smart IT사업실,chooya@poscoict.com,박석호,NA,257735,4,판교
+820,Smart IT사업실,leejhpia@poscoict.com,이진행,NA,257768,3,센터
+821,Smart IT사업실,jhjoo97@poscoict.com,주정희,NA,257792,4,판교
+822,Smart IT사업실,hsjo@poscoict.com,조해식,NA,257804,4,서울
+823,Smart IT사업실,ironkoo@poscoict.com,구철수,16.5,257917,4,판교
+824,Smart IT사업실,salmoon@poscoict.com,김문희,21.0,257928,4,판교
+825,경영기획실,ykk@poscoict.com,유경국,14.5,257996,5,판교
+826,R&D센터,tspirit@poscoict.com,곽현호,15.5,258000,4,etc
+827,R&D센터,syhwang125@poscoict.com,황서연,19.5,258077,6,판교
+828,SOC사업실,scpark@poscoict.com,박성철,14.5,258124,4,판교
+829,Smart EIC사업실,rain513@poscoict.com,김정미,15.0,258157,3,포항
+830,본사근무파견/기타,dj.hwang@poscoict.com,황동진,10.0,258204,4,etc
+831,Smart IT사업실,road@poscoict.com,김영길,19.0,258215,4,판교
+832,Smart IT사업실,dhseong@poscoict.com,성동훈,13.5,258294,5,센터
+833,Smart IT사업실,chaeki@poscoict.com,김채기,7.5,258385,5,판교
+834,에너지융합사업실,cais21@poscoict.com,김경섭,15.0,258408,4,포항
+835,경영지원실,sunny77@poscoict.com,정일선,11.5,258534,3,포항
+836,Smart IT사업실,macgyber@poscoict.com,김명수,14.0,258580,5,판교
+837,SOC사업실,kim.yong.tae@poscoict.com,김용태,16.5,258591,4,etc
+838,Smart IT사업실,ehyojae@poscoict.com,이효재,5.5,258603,3,판교
+839,Smart IT사업실,leewin@poscoict.com,이광우,6.0,258636,5,센터
+840,Smart IT사업실,posdata@poscoict.com,김상모,4.0,258807,4,판교
+841,Smart IT사업실,indigo@poscoict.com,김정현,16.0,258820,4,센터
+842,경영지원실,march74@poscoict.com,정형진,12.5,258831,4,판교
+843,Smart IT사업실,guns94@poscoict.com,양남건,11.0,258842,4,판교
+844,Smart IT사업실,yhjung@poscoict.com,정용호,7.5,258853,4,센터
+845,Smart IT사업실,jwpark@poscoict.com,박지원,7.0,258864,4,서울
+846,Smart IT사업실,cjkim74@poscoict.com,김철중,19.5,258875,4,판교
+847,Smart IT사업실,nayeon.kim@poscoict.com,김나연,7.0,258886,4,포항
+848,Smart IT사업실,yousu@poscoict.com,이진,9.5,258911,4,포항
+849,경영기획실,nurion@poscoict.com,정승만,10.0,258944,4,판교
+850,Smart IT사업실,sakura@poscoict.com,박소연,6.0,258988,4,판교
+851,Smart IT사업실,oklho@poscoict.com,이현옥,11.5,259140,4,판교
+852,SOC사업실,ceviano@poscoict.com,박승정,8.5,259253,5,판교
+853,Smart IT사업실,parkday@poscoict.com,박대희,4.0,259275,4,판교
+854,Smart IT사업실,lscone@poscoict.com,이성철,10.0,259344,4,판교
+855,마케팅전략실,csw@poscoict.com,조성원,10.0,259435,6,판교
+856,Smart IT사업실,herman@poscoict.com,김용욱,6.5,259468,4,판교
+857,Smart IT사업실,qazcha@poscoict.com,차용주,9.5,259481,3,포항
+858,Smart IT사업실,cometrue@poscoict.com,장덕재,3.0,259685,5,판교
+859,Smart IT사업실,hofle@poscoict.com,김필호,9.0,259696,4,판교
+860,R&D센터,smh@poscoict.com,송명희,7.0,259823,4,판교
+861,Smart IT사업실,picaseo@poscoict.com,김경훈,5.0,259834,4,판교
+862,본사근무파견/기타,anticapt@poscoict.com,이석훈,NA,259856,5,etc
+863,Smart IT사업실,ibihappy@poscoict.com,이영현,5.0,259925,3,판교
+864,Smart IT사업실,zenalee@poscoict.com,이진화,NA,259982,4,판교
+865,Smart IT사업실,ckh@poscoict.com,최광호,11.0,260020,4,포항
+866,R&D센터,magiclamp777@poscoict.com,유경선,7.5,260064,4,센터
+867,SOC사업실,infomat@poscoict.com,이용석,NA,260133,4,판교
+868,Smart IT사업실,sychoi70@poscoict.com,최성용,5.0,260144,4,서울
+869,Smart IT사업실,mahkim@poscoict.com,김만홍,1.5,260177,5,판교
+870,R&D센터,tongki@poscoict.com,김동기,5.0,260190,4,판교
+871,Smart IT사업실,dreamgu@poscoict.com,정구,4.0,260202,4,판교
+872,Smart IT사업실,hiflyer@poscoict.com,이봉해,3.0,260213,4,광양
+873,에너지융합사업실,qkd1637@poscoict.com,방정현,5.0,260224,4,판교
+874,Smart IT사업실,pf01_thkang@poscoict.com,강태훈,4.5,260235,4,센터
+875,Smart IT사업실,jonny94@poscoict.com,김홍주,2.0,260257,4,판교
+876,본사근무파견/기타,yjbaek76@poscoict.com,백용준,NA,260268,4,센터
+877,Smart IT사업실,wljeong@poscoict.com,정원이,1.0,260326,3,판교
+878,Smart IT사업실,4me4u@poscoict.com,이현희,1.5,260361,4,판교
+879,Smart IT사업실,jongwookim@poscoict.com,김종우,3.5,260394,3,서울
+880,Smart IT사업실,jungwon@poscoict.com,공정원,6.0,260406,4,판교
+881,Smart IT사업실,jycha@poscoict.com,차주엽,6.5,260428,3,판교
+882,SOC사업실,pjhero@poscoict.com,박종호,7.0,260441,4,etc
+883,경영기획실,hyukap@poscoict.com,김휴갑,4.0,260452,4,판교
+884,SOC사업실,njma@poscoict.com,남진만,5.0,260667,4,판교
+885,Smart IT사업실,mtssg3@poscoict.com,이병준,NA,260736,4,판교
+886,Smart IT사업실,jongyub@poscoict.com,배종규,NA,260747,4,판교
+887,SOC사업실,you@poscoict.com,유대성,17.5,260793,5,판교
+888,Smart IT사업실,kimhot@poscoict.com,김학준,NA,260816,4,etc
+889,Smart IT사업실,ywm@poscoict.com,양원모,14.0,260862,5,판교
+890,에너지융합사업실,happyai@poscoict.com,김홍은,17.0,260884,4,포항
+891,본사근무파견/기타,hnsohn@poscoict.com,손한나,NA,260907,4,판교
+892,Smart IT사업실,jhkim0107@poscoict.com,김지훈,12.0,260918,4,판교
+893,Smart IT사업실,kizard@poscoict.com,김상준,12.5,260920,4,판교
+894,Smart IT사업실,arimang@poscoict.com,김주환,12.0,260953,5,센터
+895,경영기획실,skrkwk@poscoict.com,정재희,17.0,260975,6,판교
+896,경영기획실,ljw6981@poscoict.com,이정우,9.0,261012,5,판교
+897,에너지융합사업실,ddolmax@poscoict.com,조형민,9.0,261056,4,판교
+898,Smart IT사업실,kbpark@poscoict.com,박기봉,7.0,261227,4,판교
+899,마케팅전략실,jasonboy@poscoict.com,이제석,19.0,261240,5,판교
+900,Smart IT사업실,swkim2003@poscoict.com,김상우,9.0,261320,4,판교
+901,Smart IT사업실,pf01_kspark@poscoict.com,박경수,7.5,261433,4,센터
+902,Smart IT사업실,knshin@poscoict.com,신국남,14.0,261502,4,센터
+903,Smart IT사업실,ncy753@poscoict.com,노충영,11.0,261568,5,판교
+904,Smart IT사업실,raputa20@poscoict.com,이해용,13.0,261581,4,판교
+905,Smart IT사업실,uni909@poscoict.com,진교윤,5.0,261785,4,etc
+906,Smart IT사업실,farnaway@poscoict.com,김동민,6.5,261796,4,광양
+907,R&D센터,jmkwon@poscoict.com,권지민,12.0,261810,4,센터
+908,Smart IT사업실,hckang@poscoict.com,강훈철,8.5,262050,4,판교
+909,R&D센터,chihoon2@poscoict.com,송치훈,9.5,262061,5,판교
+910,Smart IT사업실,goo411@poscoict.com,김남구,12.5,262083,5,센터
+911,R&D센터,phantom@poscoict.com,이성제,14.0,262094,5,판교
+912,R&D센터,dkbae@poscoict.com,배대근,13.0,262128,4,센터
+913,Smart IT사업실,nas7@poscoict.com,나종철,10.0,262141,4,판교
+914,Smart IT사업실,khnahm@poscoict.com,남광현,5.5,262163,4,센터
+915,Smart IT사업실,pospower@poscoict.com,노종옥,13.0,262196,4,판교
+916,Smart IT사업실,cgim@poscoict.com,임채근,4.5,262208,4,광양
+917,R&D센터,passwd@poscoict.com,이영래,13.5,262210,4,판교
+918,Smart IT사업실,xxdokixx@poscoict.com,도기혁,3.5,262232,4,센터
+919,Smart IT사업실,daebuie@poscoict.com,김희중,8.5,262287,4,광양
+920,SOC사업실,ccloudy@poscoict.com,이종원,6.0,262301,4,판교
+921,Smart IT사업실,nomail@poscoict.com,노용선,11.5,262312,4,센터
+922,Smart IT사업실,jmoh@poscoict.com,오정민,6.0,262323,4,판교
+923,Smart IT사업실,yoon.seokbae@poscoict.com,윤석배,7.0,262334,4,서울
+924,Smart IT사업실,hjwon@poscoict.com,원현진,2.0,262380,4,판교
+925,Smart IT사업실,syshin@poscoict.com,신승용,11.0,262403,4,센터
+926,Smart IT사업실,csship@poscoict.com,조선호,5.5,262436,4,센터
+927,Smart IT사업실,agoodday@poscoict.com,이병일,11.5,262447,4,포항
+928,Smart IT사업실,wkd1819@poscoict.com,장성록,11.0,262482,4,판교
+929,Smart IT사업실,taehoon@poscoict.com,이태훈,10.5,262551,4,서울
+930,Smart IT사업실,saykan@poscoict.com,안홍조,11.5,262562,4,etc
+931,R&D센터,mchyun@poscoict.com,현명철,9.5,262573,4,판교
+932,Smart IT사업실,shiwonlee@poscoict.com,이시원,9.0,262653,4,etc
+933,Smart IT사업실,jangno@poscoict.com,윤장노,7.0,262664,4,포항
+934,Smart IT사업실,yoseph@poscoict.com,이강우,7.0,262675,4,포항
+935,Smart IT사업실,ysungsue@poscoict.com,윤성수,5.5,262697,4,판교
+936,Smart IT사업실,sgjin@poscoict.com,진상규,11.5,262733,4,판교
+937,Smart IT사업실,daesik.kim@poscoict.com,김대식,8.5,262744,4,광양
+938,Smart IT사업실,kkauss@poscoict.com,우충균,8.5,262777,4,센터
+939,Smart IT사업실,ares12@poscoict.com,김성현,3.5,262813,4,서울
+940,Smart IT사업실,dong0671@poscoict.com,김승환,NA,262846,4,센터
+941,본사근무파견/기타,premo97@poscoict.com,김미옥,NA,262857,3,판교
+942,Smart IT사업실,jooyounshin@poscoict.com,신주연,8.5,262868,4,포항
+943,R&D센터,fairies@poscoict.com,황유진,7.0,262892,4,판교
+944,Smart IT사업실,demanche@poscoict.com,김순복,5.5,262915,4,판교
+945,Smart IT사업실,jisoo.park@poscoict.com,박지수,3.0,262926,4,판교
+946,Smart IT사업실,khyejin@poscoict.com,김혜진,11.5,263417,4,판교
+947,Smart IT사업실,floree@poscoict.com,이현숙,2.0,263485,4,판교
+948,경영기획실,yjshin@poscoict.com,신용진,8.5,263554,3,판교
+949,Smart IT사업실,charo@poscoict.com,이창호,12.0,263680,4,판교
+950,Smart IT사업실,coverica@poscoict.com,박광희,NA,263827,4,판교
+951,Smart IT사업실,jykim76@poscoict.com,김진이,2.5,263862,3,판교
+952,Smart IT사업실,cthee@poscoict.com,채희동,2.0,263895,4,판교
+953,Smart IT사업실,ykkimsh@poscoict.com,김영권,NA,263986,4,포항
+954,에너지융합사업실,jongwon.baek@poscoict.com,백종원,1.5,264034,4,판교
+955,Smart EIC사업실,kbs981@poscoict.com,김부섭,1.0,264080,3,포항
+956,Smart EIC사업실,ssy970@poscoict.com,심수열,3.5,264103,3,포항
+957,Smart EIC사업실,kem003@poscoict.com,김은미,1.5,264147,2,포항
+958,SOC사업실,kipunsan@poscoict.com,김필영,NA,264160,4,판교
+959,Smart IT사업실,rokmc@poscoict.com,김태헌,NA,264171,4,판교
+960,SOC사업실,joogc@poscoict.com,주경천,NA,264251,4,판교
+961,R&D센터,goodguy@poscoict.com,김종화,NA,264273,4,판교
+962,Smart EIC사업실,jstwow@poscoict.com,전성태,NA,264295,4,광양
+963,SOC사업실,jeonkp@poscoict.com,전경표,NA,264466,5,판교
+964,Smart IT사업실,ongali@poscoict.com,유성환,14.0,264650,3,판교
+965,Smart IT사업실,younghoc@poscoict.com,최영호,16.5,264694,4,판교
+966,Smart IT사업실,wooea@poscoict.com,김의회,17.0,264717,4,판교
+967,Smart IT사업실,jwkoko11@poscoict.com,고재환,13.0,264730,4,센터
+968,Smart IT사업실,ceojw@poscoict.com,최지원,10.5,264741,4,판교
+969,Smart IT사업실,xero@poscoict.com,노해종,17.0,264752,4,판교
+970,Smart IT사업실,kim_js@poscoict.com,김정식,21.5,264763,4,판교
+971,Smart IT사업실,lkhdream@poscoict.com,임경호,11.0,264774,4,판교
+972,Smart IT사업실,goodbear@poscoict.com,우동성,25.0,264808,3,판교
+973,Smart IT사업실,eratres@poscoict.com,서가원,16.5,264810,4,판교
+974,Smart IT사업실,poshs@poscoict.com,이현수,15.0,264821,4,센터
+975,Smart IT사업실,mongny@poscoict.com,정혜윤,21.0,264832,4,판교
+976,경영기획실,smhong7@poscoict.com,홍승민,16.0,264956,5,판교
+977,마케팅전략실,kkim12@poscoict.com,김경우,12.0,265048,4,판교
+978,마케팅전략실,darknee@poscoict.com,전경재,17.5,265128,4,판교
+979,R&D센터,meenjoon@poscoict.com,윤석준,4.0,265334,4,판교
+980,Smart IT사업실,always@poscoict.com,서영호,17.5,265391,4,센터
+981,R&D센터,wrapper@poscoict.com,심현석,13.5,265458,5,판교
+982,Smart IT사업실,leetheo@poscoict.com,이태호,13.0,265482,4,판교
+983,경영지원실,isidore.han@poscoict.com,한광수,16.0,265631,4,판교
+984,SOC사업실,hjh132@poscoict.com,하정훈,13.5,265686,4,판교
+985,에너지융합사업실,ldk132@poscoict.com,이동규,11.0,265697,4,포항
+986,경영기획실,choish@poscoict.com,최성호,8.5,265711,5,판교
+987,Smart EIC사업실,control@poscoict.com,궉호균,17.0,265733,4,포항
+988,Smart IT사업실,pos1969@poscoict.com,최종해,18.0,265972,4,판교
+989,Smart IT사업실,mjkim@poscoict.com,김문주,16.5,265994,4,센터
+990,Smart IT사업실,wshwang@poscoict.com,황우식,13.5,266018,4,센터
+991,Smart IT사업실,dogyun.kim@poscoict.com,김도균,7.5,266020,4,판교
+992,에너지융합사업실,hbw461@poscoict.com,한병욱,6.5,266326,4,판교
+993,본사근무파견/기타,csa448@poscoict.com,최선아,NA,266337,4,서울
+994,Smart EIC사업실,kjh346@poscoict.com,김종화,7.0,266361,4,광양
+995,Smart EIC사업실,pju368@poscoict.com,박진욱,9.5,266394,4,포항
+996,Smart EIC사업실,hamjy@poscoict.com,함준열,6.0,266417,4,포항
+997,Smart EIC사업실,cig450@poscoict.com,최정규,7.5,266430,4,광양
+998,Smart EIC사업실,sej381@poscoict.com,신은진,11.5,266463,4,포항
+999,Smart IT사업실,jiwoo21c@poscoict.com,이정훈,4.0,266543,4,판교
+1000,마케팅전략실,junghoon@poscoict.com,김정훈,11.5,266554,4,판교
+1001,SOC사업실,dasomy@poscoict.com,윤용학,4.0,266680,4,판교
+1002,SOC사업실,paulcjg@poscoict.com,최정규,1.5,266816,4,etc
+1003,마케팅전략실,hanneul@poscoict.com,김철현,17.0,266827,4,판교
+1004,본사근무파견/기타,seomk@poscoict.com,서만교,NA,266838,6,etc
+1005,Smart EIC사업실,jc_kim@poscoict.com,김종철,5.0,266862,4,포항
+1006,경영기획실,kazak@poscoict.com,김정호,8.0,266873,5,판교
+1007,에너지융합사업실,ksch20@poscoict.com,최경수,7.0,266895,5,센터
+1008,경영지원실,sol1293@poscoict.com,설명환,7.5,266986,5,판교
+1009,Smart IT사업실,kimchanglae@poscoict.com,김청래,2.0,267034,4,판교
+1010,Smart IT사업실,nazana@poscoict.com,심경보,3.5,267078,4,판교
+1011,R&D센터,ddurung@poscoict.com,허두녕,1.0,267227,4,판교
+1012,경영지원실,jong2255@poscoict.com,박현종,2.0,267397,4,판교
+1013,Smart IT사업실,educall@poscoict.com,고한준,17.0,267502,4,etc
+1014,Smart IT사업실,kjd0220@poscoict.com,김좌동,15.5,267546,4,포항
+1015,Smart IT사업실,kwonsh@poscoict.com,권상현,12.0,267568,4,포항
+1016,Smart IT사업실,injungs@poscoict.com,권영섭,12.5,267570,3,포항
+1017,Smart IT사업실,mie0520@poscoict.com,최태순,12.0,267604,4,광양
+1018,Smart IT사업실,sykang@poscoict.com,강수영,19.0,267615,3,센터
+1019,Smart IT사업실,namsys@poscoict.com,나남혁,12.0,267626,3,etc
+1020,Smart IT사업실,sunx9@poscoict.com,이준엽,17.0,267637,2,광양
+1021,Smart IT사업실,mooneve@poscoict.com,문태진,5.0,267650,4,etc
+1022,Smart IT사업실,jshwang@poscoict.com,황진선,21.5,267672,4,광양
+1023,SOC사업실,ok@poscoict.com,양영섭,3.5,267796,3,etc
+1024,Smart IT사업실,milpaso@poscoict.com,홍석철,8.5,267808,3,판교
+1025,Smart IT사업실,fhlgml@poscoict.com,이뢰희,13.5,267810,4,판교
+1026,Smart IT사업실,yulajang@poscoict.com,엄홍률,13.5,267843,3,광양
+1027,R&D센터,siahn@poscoict.com,안선일,9.0,267945,5,판교
+1028,Smart IT사업실,aeiou@poscoict.com,박재형,10.5,267967,4,센터
+1029,Smart IT사업실,cozy0329@poscoict.com,서민승,12.5,267978,3,센터
+1030,SOC사업실,blue7483@poscoict.com,배강철,8.0,268061,4,판교
+1031,R&D센터,chodr687@poscoict.com,조동래,5.5,268595,4,판교
+1032,Smart IT사업실,hongjh698@poscoict.com,홍주혜,5.5,268618,3,센터
+1033,경영기획실,cjy0219@poscoict.com,최재연,NA,269111,3,판교
+1034,Smart IT사업실,klipsch5@poscoict.com,박수현,22.0,269257,4,판교
+1035,SOC사업실,jjjang@poscoict.com,장재준,18.0,269394,6,판교
+1036,Smart IT사업실,sky_sung@poscoict.com,성기영,8.5,269417,4,판교
+1037,Smart IT사업실,leo24@poscoict.com,이달우,NA,269441,4,센터
+1038,에너지융합사업실,juno.chung@poscoict.com,정준호,20.5,269452,4,판교
+1039,Smart IT사업실,eunju@poscoict.com,김은주,8.0,269736,4,판교
+1040,Smart IT사업실,kwonjb@poscoict.com,권재범,18.0,269747,4,판교
+1041,Smart IT사업실,tojackie@poscoict.com,한희석,13.5,269851,4,포항
+1042,Smart EIC사업실,kys069@poscoict.com,김용선,16.5,269873,3,광양
+1043,SOC사업실,szh729@poscoict.com,송지호,4.5,269884,4,etc
+1044,SOC사업실,kdh79@poscoict.com,김동하,6.5,269918,3,etc
+1045,SOC사업실,jkm319@poscoict.com,전기만,5.0,269920,3,etc
+1046,Smart EIC사업실,lwk798@poscoict.com,이우근,7.5,269931,4,포항
+1047,본사근무파견/기타,kse102@poscoict.com,김서은,NA,269942,4,판교
+1048,SOC사업실,mjkwon@poscoict.com,권미진,4.0,269953,4,etc
+1049,Smart EIC사업실,snkim@poscoict.com,김수년,4.5,270627,4,포항
+1050,SOC사업실,pty333@poscoict.com,박태엽,4.5,270638,3,etc
+1051,SOC사업실,ccw223@poscoict.com,최치웅,1.5,270640,4,etc
+1052,경영기획실,yun112@poscoict.com,윤종,16.5,270651,4,판교
+1053,SOC사업실,kth325@poscoict.com,김태환,3.0,270673,3,etc
+1054,SOC사업실,bluekhk@poscoict.com,김황근,9.0,270684,2,etc
+1055,SOC사업실,dj1212@poscoict.com,이동진,12.5,270742,4,판교
+1056,SOC사업실,shinss@poscoict.com,신승식,5.0,270753,4,서울
+1057,Smart IT사업실,bombox@poscoict.com,김병준,10.0,270775,4,센터
+1058,SOC사업실,tophschoi@poscoict.com,최해식,9.0,270890,4,etc
+1059,경영지원실,lcw2020@poscoict.com,이철우,8.5,270902,4,판교
+1060,SOC사업실,seo76@poscoict.com,서정훈,8.5,270981,3,판교
+1061,에너지융합사업실,ictmsyun@poscoict.com,윤민성,6.5,270992,4,판교
+1062,Smart EIC사업실,yhs1339@poscoict.com,임호성,10.0,271016,4,광양
+1063,Smart EIC사업실,ljy855@poscoict.com,이재열,3.5,271040,2,포항
+1064,SOC사업실,hs1021@poscoict.com,박효수,6.0,271051,3,etc
+1065,Smart EIC사업실,sss33@poscoict.com,서성수,9.0,271073,2,포항
+1066,SOC사업실,knk123@poscoict.com,김남권,3.0,271118,3,etc
+1067,SOC사업실,ldm918@poscoict.com,이동민,3.5,271120,3,etc
+1068,Smart EIC사업실,nhj486@poscoict.com,노환주,13.5,271131,3,포항
+1069,Smart EIC사업실,osy0603@poscoict.com,오성용,7.0,271142,3,포항
+1070,Smart EIC사업실,psb719@poscoict.com,박수범,8.5,271153,3,포항
+1071,Smart EIC사업실,jsj05@poscoict.com,정성진,2.5,271164,3,포항
+1072,SOC사업실,sjh830@poscoict.com,서종훈,2.0,271175,2,etc
+1073,SOC사업실,lhj007@poscoict.com,이황주,3.0,271197,3,etc
+1074,SOC사업실,gun907@poscoict.com,이재근,3.0,271200,2,포항
+1075,Smart EIC사업실,nsb0213@poscoict.com,나성복,6.5,271233,2,광양
+1076,Smart EIC사업실,mong82@poscoict.com,김성훈,12.0,271244,2,광양
+1077,SOC사업실,psg130@poscoict.com,박상규,4.0,271255,2,etc
+1078,Smart EIC사업실,gogo82@poscoict.com,고도현,8.5,271266,3,포항
+1079,Smart EIC사업실,ks6989@poscoict.com,김광현,8.0,271277,2,포항
+1080,R&D센터,jhlee5@poscoict.com,이종화,7.5,271288,5,판교
+1081,Smart IT사업실,jehoony80@poscoict.com,김제훈,7.0,271368,4,판교
+1082,SOC사업실,hanjh@poscoict.com,한진호,9.0,271563,4,판교
+1083,Smart IT사업실,jinha.jeong@poscoict.com,정진하,0.5,271610,4,판교
+1084,R&D센터,jej0125@poscoict.com,제은진,16.5,271665,3,판교
+1085,SOC사업실,lar9860@poscoict.com,이아람,2.0,271734,2,판교
+1086,경영지원실,any623@poscoict.com,안윤기,6.0,271780,4,판교
+1087,SOC사업실,yhkim@poscoict.com,김용현,NA,271860,4,판교
+1088,Smart EIC사업실,k3w@poscoict.com,김상우,NA,271927,4,포항
+1089,SOC사업실,erics@poscoict.com,김봉현,NA,271938,4,판교
+1090,Smart EIC사업실,neon75@poscoict.com,장치호,NA,271940,3,포항
+1091,경영지원실,kjy21@poscoict.com,구자윤,NA,271951,4,판교
+1092,Smart EIC사업실,sy1204@poscoict.com,박성용,NA,272008,3,포항
+1093,에너지융합사업실,okok9@poscoict.com,권도형,NA,272010,3,판교
+1094,Smart EIC사업실,run04@poscoict.com,박성진,NA,272021,3,포항
+1095,Smart EIC사업실,yjh333@poscoict.com,윤주현,NA,272054,2,포항
+1096,Smart EIC사업실,kjk791@poscoict.com,김종기,NA,272065,3,광양
+1097,Smart EIC사업실,cmf950@poscoict.com,이병열,NA,272076,2,포항
+1098,SOC사업실,hjh1326@poscoict.com,한정훈,NA,272098,3,etc
+1099,Smart EIC사업실,hyunjo.cho@poscoict.com,조현조,NA,272101,3,포항
+1100,SOC사업실,jh8424@poscoict.com,이준혁,NA,272134,2,etc
+1101,Smart EIC사업실,rooker7@poscoict.com,김성광,NA,272145,3,광양
+1102,SOC사업실,sunghun@poscoict.com,정성훈,NA,272156,2,etc
+1103,Smart EIC사업실,bmx400@poscoict.com,설남현,NA,272178,3,광양
+1104,본사근무파견/기타,sad98@poscoict.com,최태호,NA,272191,3,etc
+1105,Smart EIC사업실,mc0906@poscoict.com,김무철,NA,272203,3,포항
+1106,Smart EIC사업실,parkddddd5@poscoict.com,박시후,NA,272214,1,포항
+1107,Smart EIC사업실,lyh1307@poscoict.com,이영하,NA,272247,3,etc
+1108,SOC사업실,skr99@poscoict.com,서경록,NA,272258,3,판교
+1109,Smart EIC사업실,kyu44@poscoict.com,정준규,NA,272293,3,광양
+1110,Smart EIC사업실,park68@poscoict.com,박영진,NA,272316,2,광양
+1111,SOC사업실,sky824@poscoict.com,이상윤,NA,272327,3,etc
+1112,SOC사업실,mhyang@poscoict.com,양민호,8.5,272475,4,etc
+1113,Smart IT사업실,kcahn@poscoict.com,안경칠,14.5,272681,4,포항
+1114,경영기획실,jcchoi@poscoict.com,최진철,13.0,272794,4,판교
+1115,SOC사업실,demisoda@poscoict.com,이성재,11.5,272896,4,판교
+1116,Smart IT사업실,avain@poscoict.com,장경욱,15.0,272943,4,서울
+1117,R&D센터,hoan@poscoict.com,김용환,13.0,273148,4,판교
+1118,Smart IT사업실,eunice@poscoict.com,김민영,13.5,273194,4,센터
+1119,Smart IT사업실,iamkwon@poscoict.com,권혁,8.5,273206,4,포항
+1120,Smart IT사업실,staijia@poscoict.com,송충호,18.0,273241,3,광양
+1121,Smart IT사업실,bestamb@poscoict.com,이준현,19.0,273263,3,포항
+1122,Smart IT사업실,karma0224@poscoict.com,유영준,16.5,273274,3,판교
+1123,R&D센터,yeha@poscoict.com,예상국,15.0,273285,4,판교
+1124,경영기획실,phsook@poscoict.com,박향숙,19.0,273321,4,판교
+1125,Smart IT사업실,peneast@poscoict.com,문동신,4.0,273662,4,판교
+1126,Smart IT사업실,yong@poscoict.com,권성용,6.5,273695,4,etc
+1127,Smart IT사업실,anneshirley@poscoict.com,이미선,12.0,273718,3,서울
+1128,Smart IT사업실,shhyun@poscoict.com,현승훈,10.0,273797,4,서울
+1129,Smart IT사업실,dogrice@poscoict.com,서정범,9.5,273811,3,서울
+1130,Smart IT사업실,amatras98@poscoict.com,이경준,12.0,273866,4,센터
+1131,Smart IT사업실,esgong@poscoict.com,공의성,10.0,273888,4,판교
+1132,본사근무파견/기타,hy_lee@poscoict.com,이혜영,NA,273913,3,판교
+1133,Smart IT사업실,phbkd@poscoict.com,백기동,15.0,273946,3,판교
+1134,에너지융합사업실,ischung@poscoict.com,정인섭,14.5,273970,3,판교
+1135,SOC사업실,easthero@poscoict.com,이동준,14.5,273981,3,판교
+1136,Smart IT사업실,hinbi911@poscoict.com,윤철현,11.0,273992,4,판교
+1137,NA,kyohoon80@poscoict.com,주교훈,12.5,274027,4,판교
+1138,Smart IT사업실,western32@poscoict.com,이정환,9.5,274051,3,판교
+1139,Smart IT사업실,cys810@poscoict.com,최용수,11.0,274062,3,판교
+1140,Smart IT사업실,bhtak@poscoict.com,탁봉환,12.5,274073,3,판교
+1141,경영지원실,kkh3893@poscoict.com,고광훈,15.5,274084,3,판교
+1142,Smart IT사업실,healess@poscoict.com,김수상,13.0,274107,4,판교
+1143,NA,hyejin@poscoict.com,전혜진,13.5,274118,3,센터
+1144,Smart IT사업실,ljhee@poscoict.com,이정희,2.0,274120,3,판교
+1145,경영지원실,dazzling@poscoict.com,김지혜,9.0,274131,3,판교
+1146,Smart IT사업실,crystal100@poscoict.com,백수정,8.0,274142,3,판교
+1147,본사근무파견/기타,1346@poscoict.com,유지영,NA,274164,3,판교
+1148,Smart IT사업실,junghee@poscoict.com,김정희,15.0,274175,4,판교
+1149,Smart IT사업실,hhlee@poscoict.com,이현희,10.0,274186,3,판교
+1150,Smart IT사업실,miaekim@poscoict.com,김미애,13.5,274197,3,판교
+1151,Smart IT사업실,kim.eunjung@poscoict.com,김은정,10.5,274211,3,판교
+1152,마케팅전략실,jihye@poscoict.com,박지혜,11.0,274244,3,판교
+1153,Smart IT사업실,backsu21@poscoict.com,정재호,9.5,274290,5,광양
+1154,SOC사업실,changwon@poscoict.com,서창원,5.0,274302,4,판교
+1155,Smart IT사업실,j.slee@poscoict.com,이정섭,10.0,274313,4,센터
+1156,에너지융합사업실,jongho21@poscoict.com,황종호,10.5,274461,4,판교
+1157,Smart IT사업실,mrkimsy@poscoict.com,김선영,3.0,274596,4,판교
+1158,Smart IT사업실,slee@poscoict.com,이성표,10.5,274610,4,판교
+1159,Smart IT사업실,webcus@poscoict.com,송호섭,9.0,274621,4,판교
+1160,Smart IT사업실,starbaby@poscoict.com,윤성동,NA,274632,3,광양
+1161,SOC사업실,ljhoon01@poscoict.com,이정훈,14.5,274654,4,판교
+1162,경영기획실,eunb0613@poscoict.com,김정진,8.5,274676,3,판교
+1163,SOC사업실,psk6568@poscoict.com,박상국,0.5,274858,4,판교
+1164,SOC사업실,shlee.vip@poscoict.com,이승희,8.5,274882,4,판교
+1165,R&D센터,melody@poscoict.com,신경숙,3.5,274905,4,판교
+1166,SOC사업실,khpark@poscoict.com,박기호,6.0,274916,4,판교
+1167,경영기획실,poskim@poscoict.com,김호상,3.5,274984,5,판교
+1168,Smart IT사업실,sjinno@poscoict.com,노성진,4.0,275008,4,센터
+1169,SOC사업실,sgjung@poscoict.com,정상길,7.5,275087,4,판교
+1170,Smart IT사업실,hansulim@poscoict.com,임한수,9.0,275098,3,판교
+1171,SOC사업실,tellme36@poscoict.com,김효중,0.5,275134,4,etc
+1172,Smart IT사업실,dhhan@poscoict.com,한덕화,6.0,275258,4,센터
+1173,에너지융합사업실,shyeo@poscoict.com,여상현,3.5,275260,4,판교
+1174,SOC사업실,tklsky@poscoict.com,임택근,NA,275395,4,판교
+1175,Smart IT사업실,bibong@poscoict.com,김성욱,NA,275418,4,판교
+1176,경영지원실,yeon@poscoict.com,이재연,9.0,275464,4,판교
+1177,Smart IT사업실,yangdm1@poscoict.com,양덕모,8.0,275486,4,판교
+1178,Smart IT사업실,sjin0927@poscoict.com,진성오,11.0,275497,4,센터
+1179,SOC사업실,hhjung@poscoict.com,정형호,4.0,275533,4,etc
+1180,SOC사업실,willykim@poscoict.com,김형종,7.5,275555,5,etc
+1181,SOC사업실,poison@poscoict.com,장윤자,4.0,275566,4,판교
+1182,Smart IT사업실,01031926739@poscoict.com,김규호,6.5,275588,4,판교
+1183,에너지융합사업실,jane104@poscoict.com,지미선,2.5,275602,3,판교
+1184,경영기획실,pretower@poscoict.com,김연주,6.5,275668,3,판교
+1185,경영지원실,rose2ve@poscoict.com,장미현,5.5,275670,2,판교
+1186,경영기획실,sy_park@poscoict.com,박신유,14.0,275748,4,판교
+1187,에너지융합사업실,sungsoo@poscoict.com,김성수,13.0,275783,4,판교
+1188,마케팅전략실,yw@poscoict.com,신용욱,9.0,275806,5,판교
+1189,Smart IT사업실,hthoon@poscoict.com,하태훈,11.5,275828,4,판교
+1190,SOC사업실,kbh0316@poscoict.com,김보현,22.0,275863,4,etc
+1191,Smart IT사업실,psicool@poscoict.com,박상일,12.5,275932,4,센터
+1192,SOC사업실,ignah@poscoict.com,라일구,14.5,275998,4,판교
+1193,Smart IT사업실,hawk@poscoict.com,김윤창,17.5,276013,4,센터
+1194,Smart IT사업실,cuty7@poscoict.com,한승준,19.0,276035,4,판교
+1195,Smart IT사업실,dh-kang@poscoict.com,강동훈,10.0,276046,4,서울
+1196,SOC사업실,nuri196@poscoict.com,안문기,20.5,276068,4,판교
+1197,R&D센터,flower@poscoict.com,서현자,20.0,276070,4,판교
+1198,SOC사업실,cadenza@poscoict.com,장지현,16.5,276081,3,판교
+1199,에너지융합사업실,sky8090@poscoict.com,곽종근,16.0,276092,3,포항
+1200,경영지원실,teamares@poscoict.com,박진선,12.5,276104,4,판교
+1201,경영지원실,jiyoun81@poscoict.com,신지연,17.0,276115,3,판교
+1202,에너지융합사업실,gourry@poscoict.com,김병진,15.5,276228,2,판교
+1203,Smart IT사업실,luckyguy@poscoict.com,박승선,11.5,276241,4,판교
+1204,Smart IT사업실,jiny0920@poscoict.com,전성진,12.5,276252,4,etc
+1205,Smart IT사업실,sjl@poscoict.com,이성진,12.5,276296,4,판교
+1206,Smart IT사업실,eunyoung.hwang@poscoict.com,황은영,11.5,276332,4,판교
+1207,SOC사업실,jmhyun@poscoict.com,현재명,9.5,276376,3,판교
+1208,Smart IT사업실,khw0327@poscoict.com,김혜원,12.5,276401,3,센터
+1209,본사근무파견/기타,ywhwang@poscoict.com,황용원,3.0,276423,2,광양
+1210,Smart IT사업실,hong2ya@poscoict.com,김유홍,9.5,276445,3,판교
+1211,Smart IT사업실,yh_shin@poscoict.com,신영훈,13.0,276456,3,판교
+1212,Smart IT사업실,jeehyun100@poscoict.com,백지현,13.5,276478,3,판교
+1213,SOC사업실,yskoh@poscoict.com,고영승,5.5,276480,3,판교
+1214,Smart IT사업실,coolcool@poscoict.com,이창우,7.0,276503,4,판교
+1215,Smart IT사업실,arcma@poscoict.com,김경헌,13.5,276514,3,센터
+1216,Smart IT사업실,skwnsrb@poscoict.com,라준규,10.0,276525,3,서울
+1217,Smart IT사업실,silverwolf@poscoict.com,양준석,14.5,276558,3,판교
+1218,Smart IT사업실,bsjeon@poscoict.com,전병선,7.0,276605,3,센터
+1219,Smart IT사업실,jkyoo@poscoict.com,유종국,8.0,276616,3,판교
+1220,Smart IT사업실,whjung@poscoict.com,정원혁,14.0,276627,3,센터
+1221,Smart IT사업실,ji-eunn@poscoict.com,권지은,8.0,276651,3,판교
+1222,본사근무파견/기타,choes@poscoict.com,조은숙,6.0,276673,3,판교
+1223,Smart IT사업실,hwlee82@poscoict.com,이효원,9.5,276684,3,센터
+1224,R&D센터,highsilver@poscoict.com,고은,15.0,276718,3,판교
+1225,Smart IT사업실,yeonju21@poscoict.com,정연주,14.5,276720,3,판교
+1226,Smart IT사업실,jeo@poscoict.com,오정은,10.0,276731,3,판교
+1227,Smart IT사업실,sun1209@poscoict.com,권순원,7.5,276742,2,센터
+1228,에너지융합사업실,ivalley.ku@poscoict.com,구대성,5.0,276968,4,판교
+1229,경영지원실,skwoo@poscoict.com,우상균,8.5,276992,4,판교
+1230,경영지원실,yjkim7@poscoict.com,김유정,10.5,277040,0,판교
+1231,SOC사업실,kimhyun@poscoict.com,김현,8.0,277051,4,etc
+1232,SOC사업실,debug94@poscoict.com,박주호,10.5,277062,4,판교
+1233,에너지융합사업실,parknohsang@poscoict.com,박노상,9.5,277084,4,판교
+1234,SOC사업실,cbs814@poscoict.com,최병수,8.0,277118,3,판교
+1235,Smart EIC사업실,choi873@poscoict.com,최진열,4.5,277175,3,포항
+1236,Smart EIC사업실,ksg1576@poscoict.com,김선구,11.0,277197,2,광양
+1237,본사근무파견/기타,hh6549@poscoict.com,양한호,7.5,277211,2,etc
+1238,경영지원실,sjy119@poscoict.com,신재용,NA,277222,3,포항
+1239,Smart EIC사업실,5898sj@poscoict.com,임성진,7.0,277233,2,광양
+1240,경영지원실,ohooh3@poscoict.com,김성진,5.0,277244,3,포항
+1241,본사근무파견/기타,tmdgj81@poscoict.com,홍승허,5.0,277255,3,etc
+1242,경영지원실,ysh909@poscoict.com,윤순한,6.5,277266,3,광양
+1243,Smart IT사업실,bass8105@poscoict.com,안종평,5.5,277313,4,etc
+1244,에너지융합사업실,m.v.p@poscoict.com,원종철,4.0,277324,4,포항
+1245,에너지융합사업실,jason_kim@poscoict.com,김장환,8.5,277335,4,판교
+1246,Smart IT사업실,kim_changho@poscoict.com,김창호,6.5,277346,4,광양
+1247,본사근무파견/기타,youki100@poscoict.com,김선영,NA,277415,4,판교
+1248,R&D센터,jsseong@poscoict.com,성진수,5.0,277426,4,판교
+1249,Smart IT사업실,h4ckkioo@poscoict.com,김희현,7.0,277437,4,센터
+1250,Smart IT사업실,hotak90@poscoict.com,정호택,11.0,277448,4,etc
+1251,NA,namsk@poscoict.com,김남수,9.5,277450,5,판교
+1252,Smart IT사업실,mk209@poscoict.com,이명규,3.5,277472,4,etc
+1253,R&D센터,smkim72@poscoict.com,김승모,4.0,277585,4,서울
+1254,본사근무파견/기타,hyerim@poscoict.com,최혜림,NA,277621,3,판교
+1255,경영지원실,victor.lee@poscoict.com,이승기,14.0,277712,4,판교
+1256,본사근무파견/기타,bmoc@poscoict.com,박지영,NA,277734,3,판교
+1257,SOC사업실,ydkim27@poscoict.com,김용대,4.5,277756,3,etc
+1258,R&D센터,amour@poscoict.com,이충렬,5.0,277791,3,판교
+1259,Smart EIC사업실,jjong2@poscoict.com,이종수,7.5,277814,3,광양
+1260,경영기획실,pjh80@poscoict.com,박종훈,12.5,277825,3,판교
+1261,경영지원실,ldh07@poscoict.com,이동훈,9.0,277836,3,판교
+1262,에너지융합사업실,kkw351@poscoict.com,김광우,6.5,277847,3,포항
+1263,R&D센터,hcmjj@poscoict.com,황창민,3.0,277858,3,포항
+1264,Smart EIC사업실,jyh007@poscoict.com,정양훈,6.5,277860,3,광양
+1265,Smart EIC사업실,hjcha@poscoict.com,차호진,12.5,277882,3,광양
+1266,에너지융합사업실,kyh07@poscoict.com,김연환,3.5,277905,3,포항
+1267,Smart EIC사업실,gbj81@poscoict.com,구병주,6.5,277916,3,광양
+1268,Smart EIC사업실,jjj38@poscoict.com,주재준,7.0,277927,4,광양
+1269,에너지융합사업실,red81@poscoict.com,오광덕,4.5,277938,4,포항
+1270,Smart EIC사업실,karee7@poscoict.com,이상은,8.0,277940,4,포항
+1271,SOC사업실,west2020@poscoict.com,박종길,7.0,277962,3,etc
+1272,Smart EIC사업실,modera@poscoict.com,한광일,7.5,277984,3,광양
+1273,Smart IT사업실,slkim@poscoict.com,김설,2.5,278008,3,판교
+1274,경영기획실,lek918@poscoict.com,이은경,7.5,278043,3,판교
+1275,본사근무파견/기타,sy1225@poscoict.com,조수연,NA,278054,3,판교
+1276,Smart EIC사업실,smart7@poscoict.com,이한나,6.0,278065,3,포항
+1277,Smart IT사업실,stanjo@poscoict.com,조범식,5.5,278098,4,판교
+1278,Smart IT사업실,harbor@poscoict.com,이항구,10.5,278145,4,판교
+1279,Smart IT사업실,ykyoon1@poscoict.com,윤여권,4.0,278178,4,판교
+1280,SOC사업실,gun004159@poscoict.com,김문영,9.0,278203,4,판교
+1281,본사근무파견/기타,airksy@poscoict.com,김성열,NA,278214,4,센터
+1282,Smart IT사업실,kim2484@poscoict.com,김재영,10.0,278225,3,광양
+1283,NA,mgchang@poscoict.com,장명규,1.0,278258,4,판교
+1284,Smart IT사업실,jingyu@poscoict.com,김진규,7.5,278260,4,포항
+1285,Smart IT사업실,jewelrykim@poscoict.com,김보석,5.0,278305,4,판교
+1286,마케팅전략실,skyjoon@poscoict.com,최원준,6.0,278316,4,판교
+1287,Smart IT사업실,kimdin@poscoict.com,김경현,2.0,278338,4,판교
+1288,Smart IT사업실,thankyou72@poscoict.com,박상민,3.0,278351,4,etc
+1289,Smart IT사업실,simys1234@poscoict.com,심윤섭,3.0,278384,3,광양
+1290,Smart IT사업실,goka79@poscoict.com,이곡화,7.0,278395,4,포항
+1291,Smart IT사업실,sunpower@poscoict.com,이상희,NA,278407,4,포항
+1292,SOC사업실,jhyou@poscoict.com,유제희,9.0,278420,4,판교
+1293,Smart EIC사업실,ljh335@poscoict.com,이진호,2.5,278464,2,광양
+1294,Smart EIC사업실,kth8530@poscoict.com,김태형,4.0,278522,4,포항
+1295,Smart EIC사업실,rcj346@poscoict.com,류철준,6.0,278533,3,광양
+1296,Smart IT사업실,sjhan79@poscoict.com,한성주,8.5,278555,3,포항
+1297,에너지융합사업실,parkjm@poscoict.com,박종문,6.5,278577,4,판교
+1298,Smart IT사업실,baeyb@poscoict.com,배용범,4.0,278590,4,판교
+1299,SOC사업실,sky2051@poscoict.com,김민수,6.0,278602,3,판교
+1300,Smart IT사업실,kona@poscoict.com,강광석,5.0,278624,4,센터
+1301,Smart IT사업실,jlkim1@poscoict.com,김태훈,4.0,278646,3,센터
+1302,본사근무파견/기타,anes@poscoict.com,전미애,NA,278772,3,판교
+1303,Smart IT사업실,pppark@poscoict.com,박용기,5.0,278806,4,포항
+1304,SOC사업실,osjc92@poscoict.com,장백산,3.0,278910,3,판교
+1305,Smart IT사업실,sangmin77@poscoict.com,오상민,2.5,278921,3,포항
+1306,R&D센터,kjy121@poscoict.com,김자영,0.5,278932,3,서울
+1307,마케팅전략실,kdyang@poscoict.com,양구달,5.5,278943,4,판교
+1308,R&D센터,csjun@poscoict.com,전춘수,NA,279252,4,판교
+1309,Smart IT사업실,crlee@poscoict.com,이충렬,3.5,279263,5,etc
+1310,Smart IT사업실,jinyoung.so@poscoict.com,소진영,14.0,279296,4,판교
+1311,경영지원실,parkjy00@poscoict.com,박재용,0.5,279332,5,판교
+1312,Smart EIC사업실,pmr@poscoict.com,박미령,NA,279365,4,포항
+1313,에너지융합사업실,pf01_hwlee@poscoict.com,이형원,0.5,279376,5,판교
+1314,에너지융합사업실,michael.joo@poscoict.com,주민호,NA,279401,5,판교
+1315,Smart EIC사업실,ucdc93@poscoict.com,신석진,NA,279456,2,광양
+1316,Smart EIC사업실,chc781@poscoict.com,최현철,NA,279467,3,광양
+1317,Smart EIC사업실,mhc781@poscoict.com,전은남,NA,279480,2,광양
+1318,Smart EIC사업실,hankuk@poscoict.com,전상진,NA,279491,2,광양
+1319,Smart EIC사업실,psn486@poscoict.com,김국현,NA,279514,2,광양
+1320,Smart EIC사업실,ksj123@poscoict.com,권세준,NA,279525,2,광양
+1321,Smart EIC사업실,ths83@poscoict.com,손수한,NA,279558,2,광양
+1322,Smart EIC사업실,ljg510@poscoict.com,이종구,NA,279560,2,광양
+1323,Smart EIC사업실,new123@poscoict.com,최재중,NA,279582,2,광양
+1324,경영기획실,hwang@poscoict.com,황영도,14.5,279651,6,판교
+1325,에너지융합사업실,hgh417@poscoict.com,황광호,7.0,279731,4,포항
+1326,R&D센터,jlove@poscoict.com,홍두영,16.5,279742,4,판교
+1327,SOC사업실,samwy@poscoict.com,이기복,6.5,279753,3,판교
+1328,Smart EIC사업실,fox5112@poscoict.com,김유선,14.0,279786,2,광양
+1329,에너지융합사업실,eric.han@poscoict.com,한영창,14.0,279797,4,판교
+1330,경영지원실,dhekfl@poscoict.com,강성진,12.5,279811,3,판교
+1331,Smart IT사업실,jbseo@poscoict.com,서정범,15.5,279822,3,판교
+1332,R&D센터,supelta@poscoict.com,홍석준,16.0,279833,4,판교
+1333,SOC사업실,jkhan00@poscoict.com,한종국,22.0,279844,3,etc
+1334,SOC사업실,kimkims@poscoict.com,김승중,7.5,279913,4,판교
+1335,Smart IT사업실,shoh@poscoict.com,오세훈,7.0,279935,4,판교
+1336,Smart IT사업실,dwkang@poscoict.com,강동우,10.0,279992,4,포항
+1337,SOC사업실,dacechoi@poscoict.com,최병철,18.5,280006,4,포항
+1338,SOC사업실,bkan@poscoict.com,안병식,14.0,280041,4,판교
+1339,Smart EIC사업실,phj0566@poscoict.com,박홍재,11.0,280108,2,광양
+1340,본사근무파견/기타,sj1298@poscoict.com,이성재,19.0,280110,2,판교
+1341,SOC사업실,valkilmer007@poscoict.com,장광훈,21.5,280121,2,판교
+1342,SOC사업실,lecoqsport@poscoict.com,이진성,3.0,280132,3,etc
+1343,Smart IT사업실,SangDae.Park@poscoict.com,박상대,12.0,280176,4,센터
+1344,Smart IT사업실,lawrence@poscoict.com,유승한,4.0,280314,4,포항
+1345,Smart IT사업실,pdy001@poscoict.com,박대용,8.0,280347,4,포항
+1346,SOC사업실,wjkim70@poscoict.com,김원준,14.5,280393,4,판교
+1347,SOC사업실,kyu747@poscoict.com,한태규,7.5,280405,3,판교
+1348,Smart EIC사업실,bluesky01@poscoict.com,고재현,11.5,280416,4,광양
+1349,Smart IT사업실,dama0101@poscoict.com,김조현,11.0,280473,4,판교
+1350,Smart IT사업실,skkbj@poscoict.com,조범진,9.0,280507,4,센터
+1351,Smart IT사업실,heaven1210@poscoict.com,임두호,12.0,280575,3,판교
+1352,SOC사업실,tgkim@poscoict.com,김태규,12.0,280600,3,센터
+1353,Smart IT사업실,sck7620@poscoict.com,송창근,11.5,280622,3,판교
+1354,경영기획실,code-cjw@poscoict.com,최준우,4.5,280644,3,판교
+1355,Smart IT사업실,parkminjae@poscoict.com,박민재,14.5,280655,3,판교
+1356,Smart IT사업실,shpark724@poscoict.com,박성환,10.0,280666,3,판교
+1357,Smart IT사업실,mllha@poscoict.com,윤형근,11.0,280688,3,판교
+1358,Smart IT사업실,jeon.ds@poscoict.com,전덕산,14.0,280724,3,판교
+1359,Smart IT사업실,appletree@poscoict.com,양용환,10.5,280746,3,판교
+1360,경영기획실,ohseokwoon@poscoict.com,오석운,9.0,280781,3,판교
+1361,Smart IT사업실,happygold@poscoict.com,이금희,8.5,280804,3,판교
+1362,Smart IT사업실,ybossson@poscoict.com,허재범,9.0,280826,3,센터
+1363,SOC사업실,ebada7@poscoict.com,신정은,14.5,280848,3,판교
+1364,Smart IT사업실,modish@poscoict.com,하정임,9.5,280850,3,서울
+1365,Smart IT사업실,sjoonpark@poscoict.com,박석준,14.5,280861,3,판교
+1366,경영지원실,flyryu@poscoict.com,류재현,12.0,280883,3,판교
+1367,Smart IT사업실,ashcroft147@poscoict.com,김정현,14.5,280906,3,판교
+1368,Smart IT사업실,ybkim@poscoict.com,김용범,12.5,280928,3,판교
+1369,Smart IT사업실,neopaz@poscoict.com,천범호,14.0,281000,3,센터
+1370,Smart IT사업실,es318@poscoict.com,신은수,13.0,281044,3,판교
+1371,경영지원실,shyun@poscoict.com,윤상희,6.0,281055,3,판교
+1372,Smart IT사업실,possun85@poscoict.com,이선영,7.0,281066,3,판교
+1373,Smart IT사업실,turbe@poscoict.com,이주형,11.0,281088,4,포항
+1374,Smart IT사업실,yunsoo.kang@poscoict.com,강윤수,10.5,281090,4,센터
+1375,Smart IT사업실,yws11011@poscoict.com,유웅석,15.5,281102,3,판교
+1376,에너지융합사업실,ygcho@poscoict.com,조영구,7.0,281181,4,판교
+1377,SOC사업실,sam1999@poscoict.com,김삼수,3.0,281226,4,etc
+1378,SOC사업실,capmoon@poscoict.com,문상철,5.5,281237,5,판교
+1379,에너지융합사업실,q0112@poscoict.com,곽현미,12.0,281261,3,판교
+1380,Smart IT사업실,impkjs@poscoict.com,김재숙,7.5,281272,3,판교
+1381,SOC사업실,khroh@poscoict.com,노광환,12.0,281454,4,판교
+1382,Smart IT사업실,ajsung@poscoict.com,안재성,11.0,281534,3,센터
+1383,Smart IT사업실,bumicorea@poscoict.com,김종범,6.0,281545,4,판교
+1384,Smart IT사업실,jhs5062@poscoict.com,정현숙,9.5,281580,3,센터
+1385,Smart IT사업실,acttop@poscoict.com,소기수,8.5,281658,4,판교
+1386,SOC사업실,cyjjune@poscoict.com,최영준,5.0,281671,4,판교
+1387,Smart IT사업실,wyk7947@poscoict.com,김왕용,8.5,281682,3,센터
+1388,Smart IT사업실,sinbaram@poscoict.com,김주연,11.5,281818,3,판교
+1389,경영지원실,init022@poscoict.com,김성훈,13.0,281831,3,포항
+1390,Smart EIC사업실,glorykim@poscoict.com,김영광,9.5,281886,3,포항
+1391,에너지융합사업실,nihiblue11@poscoict.com,홍정성,16.5,281897,3,판교
+1392,경영지원실,ohks@poscoict.com,오광수,4.5,281911,3,판교
+1393,SOC사업실,y2hong@poscoict.com,윤홍용,3.0,281922,3,판교
+1394,Smart EIC사업실,bhk@poscoict.com,배호광,8.0,281933,3,포항
+1395,에너지융합사업실,chw81@poscoict.com,조희욱,13.5,281944,3,판교
+1396,경영기획실,shyoum@poscoict.com,염성호,7.0,281955,3,판교
+1397,SOC사업실,khs330@poscoict.com,김형석,5.0,281966,3,판교
+1398,Smart EIC사업실,jhseo@poscoict.com,서진호,4.5,281988,3,포항
+1399,SOC사업실,cleu@poscoict.com,이진호,2.5,282003,3,판교
+1400,SOC사업실,lim202@poscoict.com,임정훈,5.5,282025,3,판교
+1401,SOC사업실,khy323@poscoict.com,김희영,12.5,282047,3,판교
+1402,Smart EIC사업실,sjh138@poscoict.com,서정훈,11.0,282058,3,광양
+1403,Smart EIC사업실,dhsohn@poscoict.com,손대호,7.0,282060,3,포항
+1404,에너지융합사업실,ikl82@poscoict.com,임겨레,7.5,282071,3,판교
+1405,SOC사업실,ldj103@poscoict.com,이동준,7.5,282082,3,판교
+1406,에너지융합사업실,jm1105@poscoict.com,명재용,12.0,282093,3,판교
+1407,Smart IT사업실,ssung2@poscoict.com,최성이,12.5,282116,3,센터
+1408,Smart EIC사업실,hjk553@poscoict.com,한준기,3.0,282162,3,포항
+1409,R&D센터,korhcj@poscoict.com,허철준,7.0,282207,4,판교
+1410,에너지융합사업실,hmhong@poscoict.com,홍현민,11.5,282297,4,판교
+1411,SOC사업실,vikjs@poscoict.com,권준성,1.0,282550,2,판교
+1412,SOC사업실,sjpark01@poscoict.com,박성진,9.0,282561,4,판교
+1413,Smart EIC사업실,sky131@poscoict.com,문성관,2.5,282594,2,광양
+1414,Smart EIC사업실,sms81@poscoict.com,소명수,7.0,282628,2,광양
+1415,SOC사업실,ljs83@poscoict.com,이준식,4.0,282674,2,etc
+1416,SOC사업실,wgha21@poscoict.com,하운기,2.0,282685,2,etc
+1417,SOC사업실,greatnam@poscoict.com,김용남,2.0,282708,2,etc
+1418,SOC사업실,kimkt1@poscoict.com,김근택,4.0,282721,2,etc
+1419,SOC사업실,EngineerJeong@poscoict.com,정인철,4.0,282732,2,etc
+1420,Smart EIC사업실,ks9775@poscoict.com,김귀성,5.0,282743,2,광양
+1421,SOC사업실,kilji2@poscoict.com,길지훈,3.0,282754,2,etc
+1422,Smart EIC사업실,micaella@poscoict.com,박경만,6.5,282856,4,포항
+1423,마케팅전략실,kimsj03@poscoict.com,김성지,10.5,282903,4,판교
+1424,경영지원실,thrygo@poscoict.com,김건용,8.0,282914,4,판교
+1425,R&D센터,pd095597@poscoict.com,김동수,5.5,282958,4,etc
+1426,경영기획실,danielkim@poscoict.com,김달형,7.0,282960,5,판교
+1427,SOC사업실,hdl2797@poscoict.com,현도림,NA,282982,2,판교
+1428,Smart IT사업실,jinsubsong@poscoict.com,송진섭,6.0,283041,3,센터
+1429,Smart IT사업실,jykwon@poscoict.com,권주엽,6.0,283052,2,판교
+1430,Smart IT사업실,minhohwang@poscoict.com,황민호,3.0,283063,3,센터
+1431,Smart IT사업실,doopark@poscoict.com,박두환,8.0,283085,3,판교
+1432,Smart IT사업실,emuce@poscoict.com,임원선,10.0,283096,3,센터
+1433,Smart IT사업실,dulee1015@poscoict.com,이동욱,5.0,283108,3,포항
+1434,Smart IT사업실,dudrms81@poscoict.com,정영근,11.5,283110,3,포항
+1435,R&D센터,taeseok.kim@poscoict.com,김태석,3.0,283121,3,판교
+1436,Smart IT사업실,Leeks7@poscoict.com,이경수,9.0,283132,3,판교
+1437,Smart IT사업실,youngil520@poscoict.com,염영일,10.5,283143,3,etc
+1438,Smart IT사업실,ysolmi@poscoict.com,용솔미,12.0,283198,3,판교
+1439,Smart IT사업실,jin831120@poscoict.com,최진용,7.0,283201,2,광양
+1440,Smart IT사업실,jhpos@poscoict.com,황재혁,8.0,283256,3,서울
+1441,에너지융합사업실,philip.joo@poscoict.com,주형진,4.0,283347,5,판교
+1442,SOC사업실,p999kc@poscoict.com,정요,4.5,283382,3,판교
+1443,Smart IT사업실,wsjang@poscoict.com,장원석,6.5,283462,4,센터
+1444,Smart IT사업실,ekdy11@poscoict.com,임동용,5.0,283518,3,광양
+1445,경영지원실,yjy522@poscoict.com,윤종엽,3.0,283575,3,판교
+1446,경영지원실,mustwin22@poscoict.com,고초롱,6.0,283586,2,판교
+1447,SOC사업실,tsyoo@poscoict.com,유태석,5.0,283666,4,판교
+1448,Smart IT사업실,gardstar@poscoict.com,윤정은,6.0,283690,3,etc
+1449,마케팅전략실,ryan@poscoict.com,김영복,9.0,283702,3,판교
+1450,경영기획실,ssanghwacha1zan@poscoict.com,박미숙,6.0,283724,3,판교
+1451,Smart IT사업실,hskim308@poscoict.com,김혜숙,4.0,283735,3,센터
+1452,경영기획실,dmswn26@poscoict.com,이은주,4.5,283746,3,판교
+1453,SOC사업실,leegs1112@poscoict.com,이기선,6.0,283768,3,etc
+1454,Smart IT사업실,yhyun@poscoict.com,윤영희,2.5,283815,4,판교
+1455,SOC사업실,jinhwan.noh@poscoict.com,노진환,NA,283837,3,판교
+1456,Smart IT사업실,gochol@poscoict.com,김헌철,3.0,283848,4,포항
+1457,SOC사업실,davidbae@poscoict.com,배상호,NA,283861,4,etc
+1458,Smart IT사업실,njkwon@poscoict.com,권남진,NA,284033,4,판교
+1459,R&D센터,idohee@poscoict.com,김도희,2.5,284077,4,판교
+1460,SOC사업실,wtkim@poscoict.com,김완태,1.0,284146,4,판교
+1461,Smart IT사업실,shawn@poscoict.com,박제환,0.5,284168,4,판교
+1462,마케팅전략실,mk0911@poscoict.com,유민근,NA,284204,4,판교
+1463,경영기획실,joyfulmj@poscoict.com,이미진,NA,284215,3,판교
+1464,에너지융합사업실,p0mman@poscoict.com,김효언,NA,284250,2,포항
+1465,SOC사업실,dhl@poscoict.com,이동호,NA,284328,3,etc
+1466,Smart IT사업실,swhan1@poscoict.com,한상우,NA,284341,4,판교
+1467,SOC사업실,milosu@poscoict.com,이재욱,NA,284352,3,etc
+1468,SOC사업실,jikim01@poscoict.com,김자일,NA,284363,3,etc
+1469,SOC사업실,hacm72@poscoict.com,하춘목,23.0,284476,4,판교
+1470,Smart IT사업실,jeongs@poscoict.com,전민정,19.5,284487,4,판교
+1471,Smart IT사업실,keumt@poscoict.com,금정웅,11.0,284501,2,포항
+1472,경영기획실,myagnes@poscoict.com,김유선,15.0,284512,4,판교
+1473,에너지융합사업실,nick.jung@poscoict.com,정재용,17.0,284523,4,판교
+1474,Smart IT사업실,cemey@poscoict.com,최우철,10.0,284567,4,판교
+1475,SOC사업실,kjhsales@poscoict.com,김준호,11.0,284603,4,판교
+1476,Smart IT사업실,kimunchan@poscoict.com,김운찬,18.0,284705,4,센터
+1477,Smart IT사업실,hijun94@poscoict.com,전호익,15.0,284738,4,센터
+1478,SOC사업실,formman@poscoict.com,김재학,10.5,284762,3,판교
+1479,Smart IT사업실,tjdcks80@poscoict.com,박성찬,16.0,284773,3,판교
+1480,경영지원실,hoyeon@poscoict.com,류호연,10.0,284886,4,판교
+1481,SOC사업실,shs5179@poscoict.com,심형섭,16.0,284900,4,etc
+1482,Smart EIC사업실,pd053081@poscoict.com,탁문순,14.5,284911,3,광양
+1483,Smart IT사업실,mjhong@poscoict.com,홍민정,8.0,284933,4,판교
+1484,Smart IT사업실,shadowik@poscoict.com,이인규,8.5,284944,3,판교
+1485,Smart IT사업실,kjw4709@poscoict.com,김진욱,11.0,284955,3,판교
+1486,Smart EIC사업실,pjk66@poscoict.com,박종길,2.5,284988,4,포항
+1487,Smart IT사업실,bona@poscoict.com,박종혁,10.0,284990,4,판교
+1488,Smart IT사업실,woogyumi@poscoict.com,김우겸,16.0,285025,3,판교
+1489,Smart IT사업실,nagagopa@poscoict.com,이헌철,9.5,285058,4,판교
+1490,Smart IT사업실,onetwo@poscoict.com,김원태,9.5,285071,4,판교
+1491,경영지원실,xebeclee@poscoict.com,이일환,15.0,285093,3,판교
+1492,Smart EIC사업실,kals08@poscoict.com,전성범,7.5,285140,2,포항
+1493,경영기획실,dydby@poscoict.com,김용표,18.5,285162,3,판교
+1494,Smart EIC사업실,steelers@poscoict.com,구민국,5.5,285184,3,포항
+1495,본사근무파견/기타,hj1001@poscoict.com,구현정,12.5,285264,3,판교
+1496,Smart IT사업실,incurable.taik@poscoict.com,임형택,10.0,285333,3,판교
+1497,Smart IT사업실,parkhankyu@poscoict.com,박한규,7.0,285344,3,센터
+1498,Smart IT사업실,gc.jung@poscoict.com,정규철,13.5,285355,3,판교
+1499,R&D센터,scpark81@poscoict.com,박성철,9.5,285366,3,판교
+1500,Smart IT사업실,trnambang@poscoict.com,남인우,1.0,285377,3,센터
+1501,Smart IT사업실,tigger@poscoict.com,김성현,6.0,285388,2,센터
+1502,Smart IT사업실,kimsw@poscoict.com,김승우,12.0,285424,3,판교
+1503,Smart IT사업실,woogyu@poscoict.com,정우규,12.0,285435,2,판교
+1504,본사근무파견/기타,ehjang@poscoict.com,장은하,NA,285446,3,서울
+1505,Smart IT사업실,hyejin.park@poscoict.com,박혜진,11.5,285468,3,판교
+1506,SOC사업실,parkjy91@poscoict.com,박진영,12.5,285504,4,판교
+1507,Smart IT사업실,pd096215@poscoict.com,홍성일,9.5,285515,4,포항
+1508,Smart IT사업실,mi.jang@poscoict.com,장미,9.5,285550,4,센터
+1509,Smart EIC사업실,ygsun2@poscoict.com,선영규,4.5,285856,4,포항
+1510,Smart IT사업실,kjy3230@poscoict.com,김재영,NA,285914,4,판교
+1511,경영지원실,jin137@poscoict.com,최진균,1.5,285971,2,판교
+1512,에너지융합사업실,rjw321@poscoict.com,류종욱,NA,285982,3,포항
+1513,경영기획실,chr137@poscoict.com,최혜림,6.5,286028,3,판교
+1514,SOC사업실,hawks5@poscoict.com,장승갑,NA,286085,2,etc
+1515,R&D센터,kyh78@poscoict.com,권용효,NA,286096,3,서울
+1516,경영지원실,pjs79@poscoict.com,박종서,NA,286108,3,판교
+1517,Smart EIC사업실,qqwze@poscoict.com,이종형,NA,286154,1,포항
+1518,Smart EIC사업실,ghtjrz@poscoict.com,강호석,NA,286223,2,광양
+1519,에너지융합사업실,kjy75@poscoict.com,김진용,18.5,286267,3,판교
+1520,Smart IT사업실,kstletsgo@poscoict.com,권순태,NA,286462,4,판교
+1521,Smart IT사업실,imsanda@poscoict.com,윤수구,NA,286473,3,판교
+1522,Smart IT사업실,ksy7630@poscoict.com,김삼영,1.0,286495,4,판교
+1523,경영지원실,visionpark@poscoict.com,박인만,13.0,286507,4,etc
+1524,Smart IT사업실,hyunsik703@poscoict.com,최현식,11.0,286518,4,센터
+1525,SOC사업실,chj414@poscoict.com,최호진,12.0,286531,4,판교
+1526,SOC사업실,kbr35@poscoict.com,김상호,6.0,286586,4,etc
+1527,경영지원실,iyjung77@poscoict.com,정일영,16.5,286597,4,판교
+1528,Smart EIC사업실,yes.park@poscoict.com,박영순,9.0,286600,3,포항
+1529,경영지원실,sso@poscoict.com,윤서진,16.0,286611,2,판교
+1530,SOC사업실,kjjeon52@poscoict.com,전기종,18.5,286633,2,판교
+1531,경영지원실,pks410@poscoict.com,박광식,18.0,286644,3,판교
+1532,SOC사업실,ysj01@poscoict.com,윤성종,4.0,286655,2,판교
+1533,본사근무파견/기타,ygk81@poscoict.com,권윤구,NA,286666,3,판교
+1534,Smart IT사업실,sun99@poscoict.com,박미선,12.5,286677,3,판교
+1535,경영지원실,unyang33@poscoict.com,김종현,6.5,286690,2,판교
+1536,경영지원실,happyman100@poscoict.com,백재현,15.0,286702,2,판교
+1537,R&D센터,chan61@poscoict.com,조찬호,13.0,286781,3,판교
+1538,Smart IT사업실,ktw82@poscoict.com,김태우,11.0,286826,2,etc
+1539,에너지융합사업실,khj82@poscoict.com,김해중,12.5,286837,2,포항
+1540,SOC사업실,pasmal0320@poscoict.com,강병석,9.0,286848,2,판교
+1541,Smart EIC사업실,guru9@poscoict.com,구기룡,9.5,286850,3,포항
+1542,Smart EIC사업실,gk0226@poscoict.com,김권철,8.0,286883,2,광양
+1543,R&D센터,choi27@poscoict.com,최종철,13.0,286894,2,포항
+1544,Smart EIC사업실,jst1333@poscoict.com,정성태,9.5,286941,2,광양
+1545,R&D센터,antimo79@poscoict.com,천종화,6.5,286952,3,포항
+1546,Smart EIC사업실,kbryu79@poscoict.com,류근배,10.0,286963,2,광양
+1547,본사근무파견/기타,rhi7@poscoict.com,나형일,NA,286974,3,판교
+1548,Smart EIC사업실,kyh1137@poscoict.com,김영훈,10.5,286985,2,포항
+1549,본사근무파견/기타,kjh82@poscoict.com,김재화,12.0,286996,2,etc
+1550,Smart EIC사업실,force1@poscoict.com,주민옥,5.0,287022,2,광양
+1551,에너지융합사업실,cwshim@poscoict.com,심청우,14.5,287102,4,판교
+1552,Smart IT사업실,chods@poscoict.com,조대수,18.0,287113,4,판교
+1553,Smart IT사업실,komis93@poscoict.com,고규상,NA,287124,4,판교
+1554,Smart IT사업실,shlee311@poscoict.com,이상헌,11.0,287170,4,포항
+1555,Smart IT사업실,still790@poscoict.com,이영석,NA,287181,2,포항
+1556,마케팅전략실,hik278@poscoict.com,홍인기,8.5,287294,4,판교
+1557,Smart IT사업실,myflight20@poscoict.com,김미정,2.0,287317,2,판교
+1558,Smart IT사업실,pjs@poscoict.com,박재수,4.5,287396,5,포항
+1559,Smart IT사업실,jdj@poscoict.com,정대진,8.0,287408,4,포항
+1560,Smart IT사업실,lsm@poscoict.com,이상면,5.0,287410,4,포항
+1561,Smart IT사업실,an313420@poscoict.com,최상섭,5.0,287443,4,포항
+1562,Smart IT사업실,kwkiworld@poscoict.com,김원기,7.5,287465,3,포항
+1563,Smart IT사업실,recoba4236@poscoict.com,황재운,5.0,287476,3,포항
+1564,Smart IT사업실,nis999@poscoict.com,나일상,5.0,287487,4,판교
+1565,Smart IT사업실,msjang@poscoict.com,장만선,NA,287498,4,판교
+1566,Smart IT사업실,onlycwpark@poscoict.com,박창원,8.0,287545,6,센터
+1567,Smart IT사업실,zhenxi2@poscoict.com,이정희,14.5,287556,4,판교
+1568,SOC사업실,kth3570@poscoict.com,김태형,3.0,287567,3,판교
+1569,에너지융합사업실,youjae34@poscoict.com,유재원,NA,287716,2,etc
+1570,Smart EIC사업실,eun82@poscoict.com,김길은,2.0,287762,2,광양
+1571,Smart EIC사업실,psch88@poscoict.com,박상채,NA,287795,1,포항
+1572,Smart EIC사업실,namu80@poscoict.com,장두환,1.0,287807,1,광양
+1573,Smart EIC사업실,gtm123@poscoict.com,김경문,3.0,287831,1,광양
+1574,본사근무파견/기타,ssleda@poscoict.com,조상수,NA,287875,1,etc
+1575,Smart EIC사업실,seohj2@poscoict.com,서현주,NA,287933,1,광양
+1576,Smart EIC사업실,inters_fever@poscoict.com,김성훈,NA,287944,1,광양
+1577,SOC사업실,solepk@poscoict.com,이용주,12.0,288014,4,etc
+1578,R&D센터,sychoi2@poscoict.com,최소연,17.0,288025,2,판교
+1579,Smart IT사업실,ljh2352@poscoict.com,이재호,2.5,288036,2,판교
+1580,Smart EIC사업실,nsy02@poscoict.com,노세영,16.0,288047,2,포항
+1581,Smart IT사업실,ljj237@poscoict.com,이재중,9.5,288060,4,판교
+1582,에너지융합사업실,djshin21@poscoict.com,신동진,14.5,288082,4,판교
+1583,Smart EIC사업실,jhwoo9@poscoict.com,우종호,20.0,288093,4,포항
+1584,SOC사업실,chocodia@poscoict.com,이청희,6.5,288116,2,etc
+1585,SOC사업실,ism865@poscoict.com,임성민,5.5,288127,2,etc
+1586,Smart IT사업실,kks01@poscoict.com,권경수,11.0,288138,4,센터
+1587,SOC사업실,malsan2010@poscoict.com,최종선,10.5,288162,4,판교
+1588,Smart IT사업실,kyj79@poscoict.com,권용자,12.5,288173,4,광양
+1589,본사근무파견/기타,lotiz@poscoict.com,안정남,NA,288195,2,판교
+1590,Smart IT사업실,dri38@poscoict.com,이상현,13.0,288207,3,포항
+1591,Smart IT사업실,phh21@poscoict.com,박형훈,17.0,288218,2,광양
+1592,Smart IT사업실,jangyt@poscoict.com,장영택,15.5,288264,3,etc
+1593,Smart IT사업실,jongbin_han@poscoict.com,한종빈,6.5,288275,3,etc
+1594,Smart IT사업실,tklee@poscoict.com,이태규,11.0,288297,4,etc
+1595,Smart EIC사업실,ljd7852@poscoict.com,이재덕,6.0,288333,2,광양
+1596,SOC사업실,qockddl@poscoict.com,이창배,6.0,288344,2,etc
+1597,Smart EIC사업실,kyhzzangu@poscoict.com,김용호,18.0,288390,1,광양
+1598,Smart EIC사업실,momljh@poscoict.com,이지헌,9.5,288413,1,광양
+1599,Smart EIC사업실,youngbong@poscoict.com,박영봉,7.5,288572,4,포항
+1600,Smart IT사업실,choidj224@poscoict.com,최두진,5.5,288594,3,판교
+1601,Smart IT사업실,bluenature@poscoict.com,홍은식,10.5,288606,3,판교
+1602,R&D센터,sjin0215@poscoict.com,오승진,11.0,288617,3,서울
+1603,SOC사업실,steelho@poscoict.com,성철호,11.0,288628,4,판교
+1604,Smart EIC사업실,sjdody@poscoict.com,허웅,6.5,288652,2,포항
+1605,마케팅전략실,jhlee0820@poscoict.com,이정훈,6.5,288663,2,판교
+1606,Smart EIC사업실,jhj711@poscoict.com,지현재,7.5,288685,4,포항
+1607,SOC사업실,khkang12@poscoict.com,강경현,7.5,288696,3,판교
+1608,SOC사업실,yikim7@poscoict.com,김용일,14.5,288708,2,판교
+1609,에너지융합사업실,syh@poscoict.com,송요훈,15.5,288721,2,판교
+1610,Smart IT사업실,jahn@poscoict.com,안준성,10.0,288732,2,서울
+1611,에너지융합사업실,dklim11@poscoict.com,임동권,11.5,288743,2,판교
+1612,경영기획실,jungsh2011@poscoict.com,정상훈,10.5,288754,2,판교
+1613,본사근무파견/기타,fly37sky@poscoict.com,최욱선,NA,288765,2,센터
+1614,마케팅전략실,hyung.yeom@poscoict.com,염형,12.0,288798,3,판교
+1615,Smart IT사업실,hs8532@poscoict.com,임혜숙,9.0,288801,3,판교
+1616,Smart IT사업실,jhjeongs@poscoict.com,정지혜,7.0,288812,3,판교
+1617,Smart EIC사업실,gon77@poscoict.com,황창욱,7.5,288834,4,포항
+1618,Smart IT사업실,hera44@poscoict.com,김태주,12.0,288845,5,판교
+1619,Smart IT사업실,kws51@poscoict.com,김우섭,8.5,288880,3,판교
+1620,Smart IT사업실,honky01@poscoict.com,홍경효,10.5,288891,4,센터
+1621,Smart IT사업실,jwyoon75@poscoict.com,윤지원,7.0,288936,4,판교
+1622,SOC사업실,rojerrap@poscoict.com,김강모,4.5,288958,4,판교
+1623,Smart EIC사업실,sbseo76@poscoict.com,서상배,5.5,288971,4,포항
+1624,Smart IT사업실,kimks9811@poscoict.com,김갑수,13.0,288982,4,etc
+1625,Smart IT사업실,wsm1005@poscoict.com,우수미,10.5,288993,3,판교
+1626,Smart IT사업실,lschang2@poscoict.com,이석창,15.5,289006,4,센터
+1627,Smart IT사업실,leetk1974@poscoict.com,이태경,5.0,289028,4,판교
+1628,Smart IT사업실,shc77@poscoict.com,신현철,11.0,289030,2,광양
+1629,Smart IT사업실,kdnoh@poscoict.com,노경동,5.5,289041,3,포항
+1630,Smart EIC사업실,amy0213@poscoict.com,안민영,10.0,289052,4,포항
+1631,Smart IT사업실,informang75@poscoict.com,김명열,8.0,289063,4,포항
+1632,Smart IT사업실,youngjaekim@poscoict.com,김영재,4.0,289096,3,판교
+1633,R&D센터,lsh2017@poscoict.com,이성훈,14.5,289110,2,서울
+1634,R&D센터,jonghak@poscoict.com,이종학,11.0,289121,3,서울
+1635,Smart IT사업실,sujin.shin@poscoict.com,신수진,6.5,289143,5,센터
+1636,Smart IT사업실,ajh@poscoict.com,안정환,11.5,289165,4,센터
+1637,Smart IT사업실,sungjin_park@poscoict.com,박성진,9.0,289201,4,판교
+1638,Smart IT사업실,ysd1234@poscoict.com,윤상도,3.0,289212,5,판교
+1639,Smart IT사업실,ygkim91@poscoict.com,김영길,6.5,289223,4,판교
+1640,에너지융합사업실,khlee73@poscoict.com,이관희,10.5,289291,4,판교
+1641,SOC사업실,candle12@poscoict.com,이철주,10.0,289303,4,판교
+1642,Smart IT사업실,rockstarj@poscoict.com,박진하,4.0,289347,2,포항
+1643,Smart IT사업실,dvsion@poscoict.com,최영민,7.5,289371,2,판교
+1644,SOC사업실,newkwon21@poscoict.com,권우근,4.0,289382,4,etc
+1645,Smart EIC사업실,zztae@poscoict.com,정종태,4.0,289416,2,광양
+1646,SOC사업실,ngr1015@poscoict.com,노진문,10.0,289427,3,판교
+1647,SOC사업실,myworld@poscoict.com,강종호,12.0,289440,3,판교
+1648,SOC사업실,wooje.kim@poscoict.com,김우제,4.0,289451,4,판교
+1649,SOC사업실,kyunghoon.kim@poscoict.com,김경훈,14.0,289462,4,판교
+1650,SOC사업실,jgkang@poscoict.com,강중구,NA,289473,4,판교
+1651,Smart EIC사업실,aja1106@poscoict.com,문진영,9.5,289495,2,광양
+1652,SOC사업실,kck1225@poscoict.com,김창국,2.0,289507,4,etc
+1653,Smart EIC사업실,represent677@poscoict.com,장상훈,5.0,289518,3,광양
+1654,Smart EIC사업실,khr3911@poscoict.com,김형래,8.0,289531,2,포항
+1655,Smart EIC사업실,jongok86@poscoict.com,박종옥,2.5,289542,1,광양
+1656,본사근무파견/기타,jungcy2001@poscoict.com,정치용,7.0,289553,1,etc
+1657,Smart EIC사업실,donghokim@poscoict.com,김동호,6.0,289564,2,광양
+1658,본사근무파견/기타,pcok0114@poscoict.com,박창옥,NA,289586,2,광양
+1659,Smart EIC사업실,cha6498@poscoict.com,차영환,7.5,289597,3,광양
+1660,Smart EIC사업실,yjshin82@poscoict.com,신영진,6.5,289600,3,광양
+1661,Smart EIC사업실,ldh7133@poscoict.com,이두혁,9.0,289622,2,포항
+1662,Smart EIC사업실,ksbfeel@poscoict.com,김석봉,7.0,289644,3,광양
+1663,Smart EIC사업실,lsg3939@poscoict.com,이상구,5.5,289655,3,포항
+1664,Smart EIC사업실,ym6185@poscoict.com,조용만,4.0,289688,3,광양
+1665,Smart EIC사업실,electronic83@poscoict.com,유승근,NA,289690,2,포항
+1666,Smart EIC사업실,jdw78@poscoict.com,장동완,7.0,289713,3,광양
+1667,Smart EIC사업실,cannon17@poscoict.com,이형우,6.5,289724,3,광양
+1668,Smart EIC사업실,ldh3369@poscoict.com,이동호,11.0,289735,3,포항
+1669,Smart EIC사업실,ckj1104@poscoict.com,최구정,5.0,289746,2,포항
+1670,SOC사업실,lampon@poscoict.com,차세운,6.0,289768,4,판교
+1671,Smart IT사업실,crazyparan81@poscoict.com,손길재,4.0,289770,3,판교
+1672,Smart IT사업실,mjpark@poscoict.com,박미정,2.0,289781,4,etc
+1673,Smart IT사업실,helloit33@poscoict.com,이영주,5.5,289792,4,etc
+1674,Smart IT사업실,joonko@poscoict.com,고준,10.0,289804,4,판교
+1675,Smart IT사업실,crispy1673@poscoict.com,배성열,1.0,289815,4,판교
+1676,Smart IT사업실,jinuws@poscoict.com,문진우,5.5,289837,3,판교
+1677,본사근무파견/기타,yrh11@poscoict.com,한유리,NA,289848,3,판교
+1678,경영지원실,dk0326@poscoict.com,고대경,4.5,289861,3,판교
+1679,에너지융합사업실,jjh79@poscoict.com,전지환,4.5,289883,3,판교
+1680,Smart IT사업실,taejoo78@poscoict.com,송태주,4.0,289906,3,판교
+1681,에너지융합사업실,jaewoo.lim@poscoict.com,임재우,3.5,289917,3,판교
+1682,경영지원실,mega@poscoict.com,김경훈,6.0,289928,3,판교
+1683,Smart IT사업실,jkjung11@poscoict.com,정재경,4.0,289930,3,etc
+1684,Smart IT사업실,ledcox@poscoict.com,윤영민,2.0,289941,4,센터
+1685,Smart IT사업실,basket9@poscoict.com,김재환,3.0,289952,3,판교
+1686,Smart IT사업실,ymbak@poscoict.com,박영민,6.0,289963,4,etc
+1687,Smart IT사업실,ymchoi@poscoict.com,최양모,4.5,289985,3,판교
+1688,SOC사업실,mh.bae@poscoict.com,배명훈,2.0,289996,4,판교
+1689,Smart IT사업실,hkhappy0711@poscoict.com,김희경,3.0,290034,3,판교
+1690,Smart IT사업실,viskyk@poscoict.com,김용관,3.0,290056,4,판교
+1691,Smart EIC사업실,pangonjung@poscoict.com,정판곤,2.0,290067,3,포항
+1692,R&D센터,jaemanii.lee@poscoict.com,이재만,1.5,290078,3,판교
+1693,경영기획실,sjyang11@poscoict.com,양세진,5.0,290080,2,판교
+1694,마케팅전략실,jylee87@poscoict.com,이주영,3.0,290091,2,판교
+1695,경영기획실,hub99@poscoict.com,남정오,5.5,290103,3,판교
+1696,Smart EIC사업실,kimhy85@poscoict.com,김희영,6.0,290114,3,포항
+1697,Smart IT사업실,kdkpro@poscoict.com,김동규,NA,290125,4,센터
+1698,SOC사업실,jesmin@poscoict.com,정석민,2.0,290136,4,판교
+1699,R&D센터,ltg@poscoict.com,이태규,4.5,290147,3,판교
+1700,SOC사업실,jjw80@poscoict.com,정진우,2.0,290158,3,판교
+1701,경영기획실,syk@poscoict.com,손영규,7.5,290160,4,판교
+1702,Smart EIC사업실,leon@poscoict.com,장현재,3.5,290171,2,포항
+1703,NA,sjcho47x@poscoict.com,조성재,7.5,290182,3,판교
+1704,Smart IT사업실,kcum@poscoict.com,엄기철,5.0,290193,3,판교
+1705,Smart IT사업실,erupt@poscoict.com,정범진,5.5,290205,4,판교
+1706,경영지원실,js4947@poscoict.com,고진수,7.5,290216,3,판교
+1707,Smart IT사업실,d.w.park@poscoict.com,박동원,12.0,290240,5,etc
+1708,Smart IT사업실,jdlee61@poscoict.com,이지동,6.5,290251,4,판교
+1709,Smart IT사업실,kskang01@poscoict.com,강기석,11.0,290262,4,서울
+1710,Smart IT사업실,ykmin333@poscoict.com,민윤기,6.0,290273,4,etc
+1711,Smart IT사업실,dpskvos@poscoict.com,황지영,NA,290284,5,etc
+1712,Smart IT사업실,godc@poscoict.com,고두찬,17.0,290295,4,etc
+1713,Smart IT사업실,hofe@poscoict.com,한영철,2.0,290307,4,etc
+1714,Smart IT사업실,meele@poscoict.com,서영석,11.0,290320,4,판교
+1715,Smart IT사업실,idxxip@poscoict.com,양진선,15.0,290331,4,광양
+1716,Smart IT사업실,capjang92@poscoict.com,장주인,NA,290342,4,etc
+1717,Smart IT사업실,rh1no@poscoict.com,안종환,10.5,290364,4,etc
+1718,Smart IT사업실,june1575@poscoict.com,손석준,8.0,290375,4,etc
+1719,Smart IT사업실,jyjung2413@poscoict.com,정지영,7.5,290386,4,etc
+1720,Smart IT사업실,limjaeho@poscoict.com,임재호,6.5,290397,4,etc
+1721,Smart IT사업실,yeta3599@poscoict.com,박은정,10.0,290433,4,etc
+1722,Smart IT사업실,nicejinny@poscoict.com,김현진,7.0,290444,4,etc
+1723,Smart IT사업실,juneseuk@poscoict.com,김준석,13.5,290455,3,etc
+1724,Smart IT사업실,ajjlove78@poscoict.com,장준,12.0,290466,3,etc
+1725,Smart IT사업실,pinezone@poscoict.com,임동진,10.0,290488,3,etc
+1726,Smart IT사업실,halim2@poscoict.com,임현아,8.0,290490,2,etc
+1727,Smart IT사업실,cysrose@poscoict.com,조연숙,9.0,290502,3,광양
+1728,Smart IT사업실,joohye@poscoict.com,김주혜,17.5,290513,2,etc
+1729,Smart IT사업실,leems2@poscoict.com,이만수,16.5,290524,3,etc
+1730,Smart IT사업실,tchwang@poscoict.com,황태철,1.0,290535,3,포항
+1731,Smart IT사업실,freetough2@poscoict.com,정준희,1.0,290546,3,etc
+1732,Smart IT사업실,hkn0118@poscoict.com,한국남,14.0,290570,3,etc
+1733,Smart IT사업실,hrjung@poscoict.com,정혜림,16.5,290604,3,etc
+1734,Smart EIC사업실,yikim4168@poscoict.com,김영일,8.5,290650,6,포항
+1735,경영기획실,jcmoon@poscoict.com,문재철,5.5,290694,4,판교
+1736,에너지융합사업실,sunraised@poscoict.com,나승운,5.0,290706,2,판교
+1737,경영기획실,jihee.song@poscoict.com,송지희,1.5,290717,3,판교
+1738,Smart IT사업실,tkkim71@poscoict.com,김태권,4.0,290728,4,판교
+1739,Smart IT사업실,nksjss13@poscoict.com,나권서,5.0,290730,4,판교
+1740,Smart IT사업실,jungjh73@poscoict.com,정재혁,4.0,290741,4,판교
+1741,Smart IT사업실,guru@poscoict.com,최태용,3.0,290752,4,판교
+1742,Smart IT사업실,key282@poscoict.com,김은영,5.0,290785,3,판교
+1743,Smart IT사업실,eh0417@poscoict.com,박은혜,7.0,290796,2,판교
+1744,Smart IT사업실,jaekyung@poscoict.com,신재경,4.5,290810,3,판교
+1745,Smart IT사업실,lmj4070@poscoict.com,이명재,5.0,290832,2,판교
+1746,Smart IT사업실,syper@poscoict.com,최익규,5.0,290843,4,판교
+1747,Smart IT사업실,parann@poscoict.com,최정현,2.0,290854,3,판교
+1748,Smart IT사업실,parkcm62@poscoict.com,박춘만,2.0,290912,4,판교
+1749,Smart IT사업실,myjjsoon10@poscoict.com,장장순,1.0,290934,3,etc
+1750,Smart IT사업실,sanu77@poscoict.com,박성용,2.0,290945,3,판교
+1751,Smart IT사업실,heojin0@poscoict.com,허진영,3.0,291026,3,포항
+1752,본사근무파견/기타,sopnsk@poscoict.com,김남신,NA,291106,4,etc
+1753,에너지융합사업실,park08281027@poscoict.com,박병주,2.0,291117,3,판교
+1754,에너지융합사업실,jacha611@poscoict.com,박동건,5.0,291128,3,판교
+1755,Smart IT사업실,dkkim74@poscoict.com,김대균,NA,291174,4,판교
+1756,경영기획실,kjs12464@poscoict.com,고진성,2.0,291185,3,판교
+1757,Smart EIC사업실,ucion6699@poscoict.com,고형종,NA,291196,3,포항
+1758,Smart IT사업실,hjy0222@poscoict.com,하주용,NA,291208,2,서울
+1759,경영기획실,cw.park@poscoict.com,박철우,NA,291221,4,판교
+1760,Smart IT사업실,25vv@poscoict.com,이호,NA,291232,2,센터
+1761,Smart EIC사업실,hong1543@poscoict.com,홍석우,NA,291254,2,광양
+1762,Smart EIC사업실,naia-1004@poscoict.com,김성수,NA,291265,2,광양
+1763,Smart EIC사업실,jskim79@poscoict.com,김재성,NA,291276,3,광양
+1764,Smart IT사업실,nidseo80@poscoict.com,서정진,NA,291287,3,판교
+1765,Smart IT사업실,bk.lee@poscoict.com,이병귀,NA,291301,3,광양
+1766,Smart EIC사업실,jmlee21@poscoict.com,이재민,NA,291312,2,광양
+1767,Smart EIC사업실,kang8024@poscoict.com,강백만,NA,291323,3,포항
+1768,Smart EIC사업실,cdu@poscoict.com,조대웅,NA,291334,3,광양
+1769,Smart IT사업실,tylee33@poscoict.com,이태영,NA,291345,2,etc
+1770,Smart EIC사업실,lyh1816@poscoict.com,이용현,NA,291356,2,광양
+1771,Smart IT사업실,hwlee79@poscoict.com,이현욱,2.0,291378,3,센터
+1772,Smart IT사업실,yhkim0316@poscoict.com,김영화,NA,291391,3,판교
+1773,Smart IT사업실,hym@poscoict.com,홍영미,NA,291403,3,센터
+1774,Smart IT사업실,hana.yoon@poscoict.com,윤규선,NA,291904,4,센터
+1775,Smart EIC사업실,turi82@poscoict.com,박부관,9.5,291937,3,포항
+1776,Smart EIC사업실,yshong0623@poscoict.com,홍용수,19.5,291950,2,포항
+1777,Smart IT사업실,kang0404@poscoict.com,강우준,13.0,291961,2,센터
+1778,Smart EIC사업실,rookies07@poscoict.com,이광현,14.5,291972,2,포항
+1779,Smart EIC사업실,neno01@poscoict.com,이석민,19.0,292018,2,포항
+1780,Smart IT사업실,create4u@poscoict.com,강진웅,14.5,292020,2,판교
+1781,Smart IT사업실,hanako88@poscoict.com,고하나,23.5,292031,2,판교
+1782,R&D센터,kyungho.ku@poscoict.com,구경호,14.5,292042,2,판교
+1783,Smart IT사업실,dae03301@poscoict.com,김대영,20.0,292064,2,판교
+1784,Smart IT사업실,kdh0925@poscoict.com,김대호,16.5,292075,2,판교
+1785,경영지원실,jiyun.kim@poscoict.com,김지연,22.5,292086,2,판교
+1786,마케팅전략실,ghan511@poscoict.com,김지한,17.5,292097,2,판교
+1787,Smart EIC사업실,jykim85@poscoict.com,김진영,15.0,292100,2,광양
+1788,Smart IT사업실,cashcow@poscoict.com,김태형,15.0,292111,2,센터
+1789,Smart IT사업실,aerang19@poscoict.com,문애랑,20.0,292133,2,센터
+1790,Smart EIC사업실,pme@poscoict.com,박맑음,13.0,292144,2,광양
+1791,에너지융합사업실,pyt0513@poscoict.com,박용태,11.0,292155,2,포항
+1792,Smart IT사업실,jkpark85@poscoict.com,박준규,10.0,292166,2,판교
+1793,Smart EIC사업실,curian0@poscoict.com,배홍주,16.5,292177,2,포항
+1794,Smart IT사업실,hosuk.seo@poscoict.com,서호석,17.0,292188,3,etc
+1795,Smart IT사업실,yjyang83@poscoict.com,양유정,1.0,292190,2,센터
+1796,R&D센터,jhy11@poscoict.com,윤지현,15.0,292202,2,센터
+1797,경영지원실,gj.lee@poscoict.com,이금재,15.5,292224,2,판교
+1798,Smart EIC사업실,lsh3833@poscoict.com,이상혁,16.0,292235,2,포항
+1799,Smart IT사업실,peach35@poscoict.com,이상현,14.0,292246,2,판교
+1800,Smart IT사업실,wj03@poscoict.com,이원진,17.0,292268,2,판교
+1801,에너지융합사업실,inside7@poscoict.com,이인섭,16.0,292270,2,판교
+1802,Smart IT사업실,jwlee427@poscoict.com,이재웅,16.0,292281,2,etc
+1803,SOC사업실,jeonsh@poscoict.com,전상호,7.5,292290,2,판교
+1804,R&D센터,bgjang11@poscoict.com,장봉규,17.0,292292,3,판교
+1805,Smart EIC사업실,jhking02@poscoict.com,정종화,17.5,292304,2,포항
+1806,Smart IT사업실,jyjung1052@poscoict.com,정진영,20.5,292315,2,판교
+1807,에너지융합사업실,jwk19@poscoict.com,조원규,14.0,292326,3,판교
+1808,Smart IT사업실,jyj0914@poscoict.com,지윤진,16.5,292337,2,판교
+1809,본사근무파견/기타,wonchoi@poscoict.com,최원식,1.0,292348,2,판교
+1810,Smart EIC사업실,huhsehong@poscoict.com,허세홍,13.0,292350,2,포항
+1811,Smart IT사업실,xmche19@poscoict.com,차설매,22.5,292372,3,센터
+1812,Smart EIC사업실,jh1203@poscoict.com,정중호,9.0,292383,3,포항
+1813,Smart IT사업실,syk1st@poscoict.com,손영권,14.5,292417,3,판교
+1814,R&D센터,parkjs922@poscoict.com,박재선,16.0,292430,3,센터
+1815,Smart IT사업실,cis5237@poscoict.com,최인식,11.0,292441,3,서울
+1816,Smart IT사업실,yjh901@poscoict.com,윤준혁,15.5,292474,3,포항
+1817,SOC사업실,lyp99@poscoict.com,이영표,11.0,292485,2,etc
+1818,SOC사업실,wjpstyles1@poscoict.com,왕종표,13.0,292496,2,etc
+1819,Smart IT사업실,kgryu@poscoict.com,류근권,16.0,292508,4,센터
+1820,Smart IT사업실,neoeast@poscoict.com,고동신,14.0,292532,3,etc
+1821,Smart IT사업실,parkjw4u@poscoict.com,박정운,9.0,292543,4,판교
+1822,Smart IT사업실,ohmysens@poscoict.com,김성진,18.5,292554,3,포항
+1823,Smart EIC사업실,koear99@poscoict.com,권종혁,12.5,292565,3,포항
+1824,Smart IT사업실,naturelife@poscoict.com,이희동,16.0,292576,4,etc
+1825,Smart IT사업실,c_hunter33@poscoict.com,김현기,2.0,292601,3,etc
+1826,에너지융합사업실,viasky@poscoict.com,배강오,23.5,292634,4,판교
+1827,마케팅전략실,yhyang7@poscoict.com,양윤희,11.5,292667,2,판교
+1828,Smart EIC사업실,tpkkd@poscoict.com,김광덕,2.5,292703,4,포항
+1829,SOC사업실,atcsun@poscoict.com,선동조,2.5,292736,2,etc
+1830,R&D센터,kks615@poscoict.com,김광식,10.0,292760,3,판교
+1831,Smart IT사업실,vaquero@poscoict.com,안용근,15.5,292771,4,판교
+1832,R&D센터,munjs@poscoict.com,문정식,11.5,292793,3,판교
+1833,Smart IT사업실,jslee82@poscoict.com,이재승,11.0,292805,3,판교
+1834,Smart IT사업실,euiyoung.hwang@poscoict.com,황의영,4.0,292816,3,판교
+1835,SOC사업실,cky1135@poscoict.com,채경용,6.5,292838,2,etc
+1836,Smart EIC사업실,shy09@poscoict.com,서호연,12.0,292840,1,광양
+1837,SOC사업실,4936@poscoict.com,장정윤,5.0,292862,1,etc
+1838,경영지원실,yjoo@poscoict.com,오윤주,NA,292873,0,판교
+1839,Smart IT사업실,yyk01@poscoict.com,임용균,6.5,292884,3,센터
+1840,Smart IT사업실,dhkang0158@poscoict.com,강동한,10.5,292895,2,광양
+1841,Smart EIC사업실,kcj1004@poscoict.com,김철준,8.0,292907,2,광양
+1842,Smart IT사업실,badboy1805@poscoict.com,배원호,16.5,292918,3,포항
+1843,Smart EIC사업실,hyoune@poscoict.com,박재현,5.0,292931,4,포항
+1844,Smart EIC사업실,ksg98@poscoict.com,김상길,5.0,292953,4,포항
+1845,Smart EIC사업실,waterjy1@poscoict.com,하지영,8.0,292997,4,포항
+1846,Smart EIC사업실,holyych@poscoict.com,윤창훈,8.5,293001,4,포항
+1847,Smart EIC사업실,jgchoi99@poscoict.com,최정기,2.5,293034,3,포항
+1848,Smart EIC사업실,lsj78@poscoict.com,이성진,9.0,293056,3,포항
+1849,Smart EIC사업실,kichoda@poscoict.com,조경일,NA,293067,3,포항
+1850,Smart EIC사업실,khj0011@poscoict.com,김흥진,9.0,293080,4,etc
+1851,R&D센터,redbugs@poscoict.com,신현갑,9.0,293091,4,포항
+1852,에너지융합사업실,tskim77@poscoict.com,김태석,3.0,293103,4,판교
+1853,Smart IT사업실,nhchoi2018@poscoict.com,최남훈,12.0,293114,3,센터
+1854,Smart IT사업실,jumi.bang@poscoict.com,방주미,9.5,293125,3,판교
+1855,본사근무파견/기타,odong5842@poscoict.com,오동훈,NA,293136,2,포항
+1856,에너지융합사업실,donggeun99@poscoict.com,이동근,1.5,293160,2,포항
+1857,에너지융합사업실,hyo-83@poscoict.com,손병효,14.5,293171,2,판교
+1858,에너지융합사업실,bjrgenius83@poscoict.com,배준열,9.5,293193,2,포항
+1859,Smart EIC사업실,soonjjh@poscoict.com,전재환,9.5,293205,3,포항
+1860,Smart EIC사업실,msjung21@poscoict.com,정민수,8.0,293227,2,포항
+1861,Smart EIC사업실,maru007@poscoict.com,황가영,13.5,293238,2,광양
+1862,Smart EIC사업실,jsmoon00@poscoict.com,문준식,4.5,293240,2,포항
+1863,Smart IT사업실,yookyung.seo@poscoict.com,서유경,16.0,293262,4,판교
+1864,Smart IT사업실,prohuni12@poscoict.com,김정훈,11.5,293284,4,판교
+1865,Smart IT사업실,woos0804@poscoict.com,우서준,10.0,293295,3,판교
+1866,Smart IT사업실,globe@poscoict.com,김태우,8.0,293307,3,포항
+1867,Smart IT사업실,yoosn@poscoict.com,유상영,8.5,293318,3,센터
+1868,Smart EIC사업실,asraspp@poscoict.com,이장환,13.0,293320,1,포항
+1869,Smart IT사업실,mantack.lee@poscoict.com,이만택,12.0,293353,3,센터
+1870,Smart EIC사업실,bgkim99@poscoict.com,김병균,7.5,293375,2,포항
+1871,에너지융합사업실,sblee11@poscoict.com,이석배,3.5,293386,4,판교
+1872,Smart EIC사업실,thsmart1@poscoict.com,정태호,16.0,293400,3,포항
+1873,에너지융합사업실,shuaige0712@poscoict.com,유종훈,6.5,293411,4,판교
+1874,Smart IT사업실,jejeon@poscoict.com,전지은,5.0,293433,3,판교
+1875,Smart IT사업실,namki73@poscoict.com,김남기,8.5,293455,4,판교
+1876,R&D센터,twinx93@poscoict.com,이인,5.5,293466,4,판교
+1877,R&D센터,kangkss2@poscoict.com,강길섭,7.0,293488,2,판교
+1878,Smart EIC사업실,iyounghee@poscoict.com,박영희,4.5,293524,4,포항
+1879,Smart IT사업실,smlee79@poscoict.com,이상민,6.0,293557,3,포항
+1880,Smart EIC사업실,parkjho2000@poscoict.com,박준호,3.0,293568,2,포항
+1881,Smart IT사업실,jun12@poscoict.com,김준희,7.0,293581,2,센터
+1882,R&D센터,dudals0206@poscoict.com,박영민,3.5,293615,2,서울
+1883,Smart EIC사업실,mindteens@poscoict.com,박정경,16.5,293626,2,광양
+1884,Smart IT사업실,juliana0925@poscoict.com,최재연,11.5,293637,2,판교
+1885,Smart EIC사업실,jhsung3104@poscoict.com,성종현,13.5,293648,2,광양
+1886,Smart EIC사업실,sungjinu83@poscoict.com,성진우,9.0,293650,2,포항
+1887,Smart EIC사업실,smiledj1984@poscoict.com,신동진,6.5,293683,2,포항
+1888,Smart EIC사업실,shsep@poscoict.com,신흥섭,5.0,293694,2,포항
+1889,Smart EIC사업실,bluesp33@poscoict.com,양승표,8.5,293706,2,포항
+1890,본사근무파견/기타,wseonmin625@poscoict.com,원선민,5.5,293717,2,판교
+1891,Smart EIC사업실,saryv@poscoict.com,윤재홍,11.5,293730,2,포항
+1892,Smart EIC사업실,islovelkj@poscoict.com,이경준,13.5,293741,2,광양
+1893,본사근무파견/기타,jhk6249@poscoict.com,정희경,NA,293774,2,판교
+1894,Smart EIC사업실,korku@poscoict.com,황한구,8.5,293785,2,포항
+1895,마케팅전략실,seungmin.hong@poscoict.com,홍승민,6.0,293843,5,판교
+1896,마케팅전략실,woosangkim@poscoict.com,김우상,4.0,293865,5,센터
+1897,SOC사업실,lshui0101@poscoict.com,이휘,9.0,294493,4,판교
+1898,에너지융합사업실,davidjhpark@poscoict.com,박정훈,12.5,294505,4,판교
+1899,R&D센터,aiacos@poscoict.com,김정주,9.5,294527,2,판교
+1900,에너지융합사업실,skoh1245@poscoict.com,오성균,4.0,294540,3,포항
+1901,Smart IT사업실,jckim83@poscoict.com,김종철,4.0,294562,3,판교
+1902,Smart IT사업실,osh1215@poscoict.com,오상헌,5.0,294573,3,센터
+1903,Smart IT사업실,hykim890@poscoict.com,김효영,6.5,294584,4,판교
+1904,Smart IT사업실,skpark01@poscoict.com,박상규,11.5,294595,4,etc
+1905,Smart EIC사업실,mo1741@poscoict.com,이종현,9.0,294607,2,포항
+1906,Smart IT사업실,jk.choi@poscoict.com,최정국,7.0,294618,4,포항
+1907,Smart IT사업실,ling98@poscoict.com,황민규,10.0,294620,3,etc
+1908,Smart IT사업실,thstpals@poscoict.com,손세민,12.0,294653,2,판교
+1909,Smart IT사업실,sjkim0315@poscoict.com,김세중,10.0,294664,4,서울
+1910,Smart IT사업실,leekst@poscoict.com,이강선,4.0,294675,4,센터
+1911,Smart IT사업실,yikim0204@poscoict.com,김영인,10.0,294686,3,판교
+1912,R&D센터,chhaedong@poscoict.com,조해동,9.5,294744,6,포항
+1913,Smart EIC사업실,goodjyjeon@poscoict.com,전재연,13.0,294755,4,포항
+1914,Smart EIC사업실,ikcho@poscoict.com,조인규,9.5,294790,4,포항
+1915,Smart EIC사업실,bryoon@poscoict.com,윤병록,NA,294802,4,etc
+1916,Smart EIC사업실,charmshin@poscoict.com,신판섭,1.0,294813,4,포항
+1917,Smart IT사업실,c0kjs1@poscoict.com,김재성,6.5,294824,4,포항
+1918,Smart IT사업실,ansh@poscoict.com,안성훈,8.0,294835,4,포항
+1919,Smart IT사업실,jungja@poscoict.com,정정애,8.0,294846,2,포항
+1920,Smart IT사업실,webfriend7@poscoict.com,김봉석,9.5,294857,3,포항
+1921,Smart IT사업실,kdh008@poscoict.com,김도형,7.0,294868,2,포항
+1922,Smart IT사업실,minseok.jang@poscoict.com,장민석,6.5,294870,3,포항
+1923,Smart IT사업실,thlee12@poscoict.com,이태훈,9.5,294881,4,포항
+1924,Smart IT사업실,kmkim99@poscoict.com,김경문,9.0,294892,2,포항
+1925,Smart IT사업실,jkyoon@poscoict.com,윤재규,3.0,294926,4,판교
+1926,마케팅전략실,icjang2000@poscoict.com,장익철,4.0,294937,4,센터
+1927,마케팅전략실,sshong4u@poscoict.com,홍성식,2.0,294948,5,판교
+1928,마케팅전략실,dsyoum7253@poscoict.com,염동석,11.0,294961,5,판교
+1929,마케팅전략실,kyhoon33@poscoict.com,김영훈,NA,294972,5,판교
+1930,R&D센터,roigianz@poscoict.com,이재형,3.5,294983,2,판교
+1931,Smart EIC사업실,bipung73@poscoict.com,정동민,10.5,294994,4,광양
+1932,Smart EIC사업실,dbgusto11@poscoict.com,김유현,10.5,295007,3,광양
+1933,Smart EIC사업실,hun-1113@poscoict.com,이헌진,8.0,295042,2,포항
+1934,마케팅전략실,sdankang@poscoict.com,강신단,6.5,295111,6,센터
+1935,경영기획실,yeonsik.shin@poscoict.com,신연식,14.0,295122,4,센터
+1936,Smart IT사업실,skwoo7@poscoict.com,우석균,7.0,295155,4,판교
+1937,마케팅전략실,hjlee87@poscoict.com,이현주,4.5,295166,4,센터
+1938,에너지융합사업실,kjh4931@poscoict.com,김재훈,6.0,295235,2,포항
+1939,경영기획실,oullim2000@poscoict.com,하헌길,3.5,295268,4,판교
+1940,마케팅전략실,youngtae.bae@poscoict.com,배영태,6.0,295279,4,판교
+1941,마케팅전략실,yjy0211@poscoict.com,윤준용,NA,295292,4,센터
+1942,Smart IT사업실,daehee.lee73@poscoict.com,이대희,1.0,295315,3,판교
+1943,Smart IT사업실,khan12@poscoict.com,안경희,0.5,295337,4,etc
+1944,Smart IT사업실,dudwn79@poscoict.com,김영주,NA,295350,3,판교
+1945,Smart IT사업실,ysh1022@poscoict.com,이성호,4.5,295361,3,판교
+1946,Smart IT사업실,kjs228@poscoict.com,김종석,NA,295372,2,판교
+1947,Smart IT사업실,punkdent@poscoict.com,이현종,1.0,295383,3,판교
+1948,Smart IT사업실,hyukjoo@poscoict.com,권혁주,2.0,295428,4,서울
+1949,Smart IT사업실,kck3912@poscoict.com,김찬규,6.0,295430,4,광양
+1950,Smart IT사업실,dwkim@poscoict.com,김대우,3.5,295441,4,센터
+1951,Smart IT사업실,bell.yoon@poscoict.com,윤종현,6.5,295452,4,판교
+1952,Smart IT사업실,kyuhyunlee@poscoict.com,이규현,2.0,295463,4,etc
+1953,경영기획실,hyunmi.kwak@poscoict.com,곽현미,NA,295496,4,센터
+1954,Smart EIC사업실,joonghee.lee@poscoict.com,이중희,2.0,295510,5,센터
+1955,Smart IT사업실,nohjb@poscoict.com,노진백,1.0,295521,4,판교
+1956,Smart IT사업실,hyun6761@poscoict.com,김교현,NA,295565,4,포항
+1957,Smart IT사업실,yuson.ur@poscoict.com,어유선,15.0,295587,4,센터
+1958,마케팅전략실,heejin.an@poscoict.com,안희진,19.5,295598,4,판교
+1959,Smart IT사업실,joonyong.lee@poscoict.com,이준용,14.0,295601,3,센터
+1960,Smart IT사업실,kyungho.kim@poscoict.com,김경호,19.0,295612,2,센터
+1961,Smart IT사업실,jihye_kim@poscoict.com,김지혜,18.5,295623,2,etc
+1962,Smart IT사업실,mes0419@poscoict.com,문은숙,9.5,295634,2,서울
+1963,Smart IT사업실,yhs7@poscoict.com,유현상,16.5,295656,2,판교
+1964,Smart IT사업실,calling814@poscoict.com,윤지성,15.5,295667,2,판교
+1965,R&D센터,sylee83@poscoict.com,이성용,11.0,295678,2,판교
+1966,에너지융합사업실,mdym@poscoict.com,이영민,17.5,295680,2,etc
+1967,경영기획실,seob12@poscoict.com,임창섭,15.0,295691,2,판교
+1968,에너지융합사업실,jantjung@poscoict.com,정경상,7.0,295703,2,포항
+1969,Smart EIC사업실,minsujung@poscoict.com,정민수,16.5,295714,2,포항
+1970,Smart IT사업실,shy001@poscoict.com,유신호,11.5,295873,4,판교
+1971,Smart IT사업실,hwangek@poscoict.com,황의근,18.0,295884,4,판교
+1972,Smart IT사업실,geoduhee@poscoict.com,조두희,11.5,295920,3,etc
+1973,경영기획실,ec4us@poscoict.com,이태현,12.0,295997,4,판교
+1974,Smart IT사업실,sihoonpark@poscoict.com,박시훈,10.5,296023,3,센터
+1975,R&D센터,yongsik.cho@poscoict.com,조용식,12.5,296034,4,판교
+1976,SOC사업실,chpark79@poscoict.com,박창희,7.5,296056,3,etc
+1977,마케팅전략실,hsd@poscoict.com,황상돈,12.0,296067,4,센터
+1978,에너지융합사업실,posenergy2@poscoict.com,김용국,12.5,296160,4,판교
+1979,경영기획실,sgbae0515@poscoict.com,배승갑,9.0,296227,4,판교
+1980,에너지융합사업실,kiseong@poscoict.com,임기성,20.0,296251,4,판교
+1981,SOC사업실,mot0502@poscoict.com,문일채,1.0,296320,4,판교
+1982,R&D센터,geunslim@poscoict.com,임근석,9.0,296353,6,판교
+1983,마케팅전략실,fabk1@poscoict.com,권영경,8.0,296433,4,센터
+1984,에너지융합사업실,changdeok.kim@poscoict.com,김창덕,7.5,296455,5,판교
+1985,마케팅전략실,bruce.jung@poscoict.com,정병용,11.5,296466,4,판교
+1986,에너지융합사업실,mshappy17@poscoict.com,최진영,2.5,296488,2,포항
+1987,본사근무파견/기타,bbola53@poscoict.com,김보라,NA,296490,0,판교
+1988,경영지원실,hwang1210@poscoict.com,황세경,4.0,296502,0,판교
+1989,에너지융합사업실,kmjin@poscoict.com,진경민,4.0,296821,2,판교
+1990,NA,junghyunc01@poscoict.com,최정현,18.5,296854,3,판교
+1991,경영지원실,glade83@poscoict.com,허지은,8.5,296912,0,센터
+1992,Smart IT사업실,hsl220@poscoict.com,이후석,13.0,296923,4,센터
+1993,Smart IT사업실,parkyounghoon@poscoict.com,박영훈,13.0,296934,5,센터
+1994,Smart IT사업실,ks7@poscoict.com,이기수,3.0,297015,6,판교
+1995,경영기획실,top1098@poscoict.com,송은정,9.5,297026,4,판교
+1996,본사근무파견/기타,chunhee.kim@poscoict.com,김천희,NA,297037,4,판교
+1997,SOC사업실,sungki.cho@poscoict.com,조성기,8.0,297048,4,판교
+1998,SOC사업실,jsy7127@poscoict.com,정소연,11.0,297083,1,판교
+1999,SOC사업실,minseok13@poscoict.com,고민석,4.0,297094,1,판교
+2000,Smart IT사업실,jjsy527@poscoict.com,정서연,14.0,297117,1,판교
+2001,Smart EIC사업실,klose13@poscoict.com,이대원,6.5,297128,1,포항
+2002,Smart EIC사업실,kju3450@poscoict.com,김정운,NA,297130,1,포항
+2003,Smart EIC사업실,kbwok6321@poscoict.com,김병우,13.0,297367,6,포항
+2004,SOC사업실,hyunjeong.kim@poscoict.com,김현정,13.0,297380,2,판교
+2005,Smart EIC사업실,sj_lee@poscoict.com,이상진,13.5,297391,1,포항
+2006,Smart EIC사업실,joonglin@poscoict.com,정중린,19.0,297403,1,포항
+2007,Smart IT사업실,ksk124@poscoict.com,김수경,8.5,297414,1,판교
+2008,R&D센터,josh_jang@poscoict.com,장기효,7.5,297436,1,판교
+2009,Smart IT사업실,sol627@poscoict.com,정예솔,9.5,297447,1,판교
+2010,R&D센터,yckim4567@poscoict.com,김연찬,4.0,297460,4,포항
+2011,에너지융합사업실,xinghai621@poscoict.com,신성해,6.0,297516,3,판교
+2012,R&D센터,kdh85@poscoict.com,김동환,6.0,297527,2,판교
+2013,R&D센터,hopuler08@poscoict.com,김준구,8.0,297538,3,판교
+2014,경영지원실,k.s.ryoo@poscoict.com,류기선,7.5,297620,6,판교
+2015,경영기획실,se7715@poscoict.com,김세화,3.5,297631,3,판교
+2016,경영기획실,good376@poscoict.com,정재욱,2.0,297846,3,판교
+2017,경영기획실,mglee0320@poscoict.com,이문기,12.5,297868,5,판교
+2018,에너지융합사업실,sula@poscoict.com,구슬아,8.0,297892,2,판교
+2019,R&D센터,jina3.ryu@poscoict.com,류지나,13.5,297904,1,판교
+2020,SOC사업실,peaberry1@poscoict.com,이초롱,6.0,297915,2,판교
+2021,에너지융합사업실,pjs5dug@poscoict.com,박성희,9.5,297926,1,판교
+2022,R&D센터,wpdms92@poscoict.com,이제은,8.5,297937,1,판교
+2023,에너지융합사업실,yongkyo35@poscoict.com,정용교,3.0,297948,1,포항
+2024,Smart EIC사업실,yonghunkim90@poscoict.com,김용훈,10.5,297950,1,포항
+2025,Smart EIC사업실,hiyoung2@poscoict.com,양해영,9.0,297961,1,광양
+2026,Smart EIC사업실,ljj5869@poscoict.com,이정재,6.5,297972,1,광양
+2027,R&D센터,nina2558@poscoict.com,정수연,8.5,297994,2,판교
+2028,Smart EIC사업실,midas7touch@poscoict.com,김진원,8.5,298100,5,광양
+2029,Smart EIC사업실,kongsk@poscoict.com,공성기,6.0,298111,4,광양
+2030,경영기획실,kwanguk@poscoict.com,유광욱,NA,298166,7,판교
+2031,본사근무파견/기타,kyungshik90@poscoict.com,김경식,NA,298190,7,etc
+2032,SOC사업실,thkwon917@poscoict.com,권태희,5.0,298268,3,판교
+2033,Smart IT사업실,hspark@poscoict.com,박현수,5.0,298281,6,센터
+2034,경영지원실,safety9@poscoict.com,김재구,6.0,298337,4,etc
+2035,에너지융합사업실,dockgyu9363@poscoict.com,고덕규,3.0,298372,3,광양
+2036,마케팅전략실,jhchu@poscoict.com,초금화,NA,298406,2,판교
+2037,Smart EIC사업실,jinhao813@poscoict.com,김호,NA,298565,3,포항
+2038,Smart IT사업실,choijc@poscoict.com,최종철,1.0,298576,3,판교
+2039,SOC사업실,ych7718@poscoict.com,유철희,3.5,298623,3,etc
+2040,SOC사업실,c1ny72@poscoict.com,박진순,12.5,298634,3,etc
+2041,SOC사업실,assa416@poscoict.com,박문수,6.5,298645,3,etc
+2042,SOC사업실,33kmc@poscoict.com,김민채,2.0,298656,3,etc
+2043,SOC사업실,hustlesoo@poscoict.com,음현수,9.5,298667,3,etc
+2044,SOC사업실,xubi7@poscoict.com,정영훈,5.0,298678,3,etc
+2045,SOC사업실,j1121@poscoict.com,정은미,2.5,298680,2,etc
+2046,SOC사업실,immin0290@poscoict.com,권승민,6.0,298691,2,etc
+2047,SOC사업실,rjbwin76@poscoict.com,유재복,7.0,298703,2,etc
+2048,SOC사업실,chs7873@poscoict.com,조한섭,8.0,298714,2,etc
+2049,SOC사업실,assaby12@poscoict.com,황윤동,7.5,298725,2,etc
+2050,Smart IT사업실,jslee8217@poscoict.com,이중식,11.5,298736,6,판교
+2051,SOC사업실,deux@poscoict.com,류인선,8.5,298747,2,etc
+2052,SOC사업실,tiger8j@poscoict.com,이호준,9.0,298758,2,etc
+2053,SOC사업실,ldc7741@poscoict.com,이동찬,7.0,298760,3,etc
+2054,SOC사업실,eupyoung12@poscoict.com,김읍영,6.0,298771,3,etc
+2055,SOC사업실,mina1979@poscoict.com,유명종,5.5,298782,2,etc
+2056,SOC사업실,mike486@poscoict.com,임형진,7.5,298805,3,etc
+2057,SOC사업실,inhan007@poscoict.com,조인한,6.5,298816,2,etc
+2058,SOC사업실,ysw1004@poscoict.com,유승우,8.0,298873,2,etc
+2059,R&D센터,ys.choi@poscoict.com,최영식,6.5,298896,3,판교
+2060,에너지융합사업실,ksh79@poscoict.com,김승현,9.0,298907,2,판교
+2061,에너지융합사업실,bkson@poscoict.com,손봉균,7.5,298918,2,판교
+2062,에너지융합사업실,jimoon@poscoict.com,문정일,6.0,298976,4,판교
+2063,SOC사업실,hcm1252@poscoict.com,황철만,4.5,299012,3,etc
+2064,Smart EIC사업실,kimbr@poscoict.com,김병락,NA,299034,4,etc
+2065,경영지원실,kdh0214@poscoict.com,김도형,7.0,299045,4,etc
+2066,본사근무파견/기타,happybae1@poscoict.com,배도준,3.0,299056,5,etc
+2067,R&D센터,bmkweon@poscoict.com,권보민,4.5,299078,1,etc
+2068,에너지융합사업실,kdw5568@poscoict.com,김동우,5.0,299079,1,etc
+2069,Smart IT사업실,yjryu@poscoict.com,류연중,3.5,299081,1,etc
+2070,Smart IT사업실,hijae21@poscoict.com,리희재,4.5,299082,1,etc
+2071,Smart IT사업실,dhmin@poscoict.com,민동희,0.5,299083,1,etc
+2072,R&D센터,shseo87@poscoict.com,서승현,6.5,299084,1,etc
+2073,R&D센터,hjso@poscoict.com,소현진,11.0,299085,1,etc
+2074,Smart EIC사업실,yoon7780@poscoict.com,윤창균,10.0,299086,1,etc
+2075,SOC사업실,jhlee0462@poscoict.com,이지혜,2.0,299087,1,etc
+2076,SOC사업실,jjm@poscoict.com,정종민,4.0,299088,1,etc
+2077,Smart EIC사업실,sonyw1383@poscoict.com,손영우,10.0,299090,6,포항
+2078,Smart EIC사업실,skoh1105@poscoict.com,오세권,6.0,299091,4,etc
+2079,본사근무파견/기타,jangpia0702@poscoict.com,장진중,1.0,299092,3,etc
+2080,SOC사업실,lim0902@poscoict.com,임금식,5.5,299094,4,etc
+2081,경영지원실,shinkc00@poscoict.com,신경철,NA,299095,7,etc
+2082,Smart IT사업실,jhsuk@poscoict.com,석재호,1.0,299096,7,센터
+2083,Smart EIC사업실,park0314@poscoict.com,박형준,NA,299097,7,etc
+2084,SOC사업실,shkim5@poscoict.com,김승호,NA,299098,7,etc
+2085,SOC사업실,sin0504@poscoict.com,김용신,6.0,299101,1,etc
+2086,본사근무파견/기타,moonho.y@poscoict.com,양문호,NA,299102,7,판교
+2087,SOC사업실,Sihoo1@poscoict.com,박시후,2.0,299104,1,etc
+2088,Smart EIC사업실,phyoung6@poscoict.com,이영수,NA,299107,4,etc
+2089,Smart EIC사업실,kic58088@poscoict.com,권일찬,NA,299109,4,etc
+2090,Smart EIC사업실,dolphin911@poscoict.com,전주태,NA,299111,4,etc
+2091,Smart EIC사업실,h209001@poscoict.com,홍성희,NA,299112,4,etc
+2092,Smart EIC사업실,bumsg@poscoict.com,범삼규,NA,299114,4,etc
+2093,Smart EIC사업실,earring97@poscoict.com,황상수,NA,299115,3,etc
+2094,Smart EIC사업실,bluetree85@poscoict.com,김휘진,NA,299116,2,etc
+2095,Smart EIC사업실,parkyangchin@poscoict.com,박양진,NA,299117,4,etc
+2096,마케팅전략실,qlm2016@poscoict.com,전려매,1.5,299118,1,판교
+2097,Smart IT사업실,minna818@poscoict.com,최미나,NA,299119,1,판교
+2098,Smart EIC사업실,yanghy@poscoict.com,양회영,5.0,299120,5,etc
+2099,마케팅전략실,nerio_park@poscoict.com,박진우,6.0,299121,1,판교
+2100,SOC사업실,lsg418@poscoict.com,이상근,3.5,299122,4,etc
+2101,SOC사업실,kwon34ym@poscoict.com,권영모,2.5,299123,4,etc
+2102,Smart EIC사업실,idkim5@poscoict.com,김인대,5.5,299124,6,포항
+2103,에너지융합사업실,yun007@poscoict.com,윤영철,2.0,299125,3,포항
+2104,SOC사업실,miacho@poscoict.com,조상미,2.0,299133,3,etc
+2105,SOC사업실,chaehwan80@poscoict.com,임채환,1.0,299134,3,etc
+2106,SOC사업실,kth81@poscoict.com,김택현,NA,299135,2,etc
+2107,경영지원실,pdh8142@poscoict.com,박대혁,NA,299136,1,광양
+2108,R&D센터,sooyoung@poscoict.com,박수영,NA,299140,2,etc
+2109,SOC사업실,486asju@poscoict.com,이주성,NA,299141,3,etc
+2110,에너지융합사업실,jchjeon73@poscoict.com,전준철,NA,299142,4,etc
+2111,SOC사업실,comengi1@poscoict.com,이정용,NA,299143,4,etc
+2112,경영지원실,jh.kim78@poscoict.com,김정현,NA,299144,3,etc
+2113,R&D센터,uding38@poscoict.com,홍성우,NA,299145,1,etc
+2114,경영지원실,jj0325@poscoict.com,전주연,NA,299146,2,etc
+2115,경영지원실,ch1004@poscoict.com,임채희,1.0,299147,2,etc
+2116,경영지원실,kiy3@poscoict.com,김일연,NA,299148,2,etc
+2117,Smart IT사업실,jypyo10@poscoict.com,표정열,NA,299149,5,etc
+2118,경영지원실,kkj1106@poscoict.com,김경진,NA,299150,1,etc
+2119,경영기획실,saerom0425@poscoict.com,장새롬,NA,299151,2,etc
+2120,R&D센터,shseo@poscoict.com,서성훈,NA,299152,2,etc
+2121,R&D센터,parkluck@poscoict.com,박재환,NA,299153,2,etc
+2122,SOC사업실,kw6554@poscoict.com,박광윤,NA,299154,4,etc
+2123,SOC사업실,kji1453@poscoict.com,김종인,2.0,299155,4,etc
+2124,SOC사업실,bhk061@poscoict.com,김봉환,NA,299156,4,etc
+2125,SOC사업실,1smile2u@poscoict.com,정지철,NA,299157,4,etc
+2126,SOC사업실,pds1140@poscoict.com,박대식,NA,299158,4,etc
+2127,SOC사업실,woojg1004@poscoict.com,우종국,NA,299159,4,etc
+2128,SOC사업실,gb6256@poscoict.com,김기범,1.0,299160,4,etc
+2129,SOC사업실,tacdec1@poscoict.com,당의철,NA,299162,4,etc
+2130,SOC사업실,dmlee5@poscoict.com,이동민,NA,299163,4,etc
+2131,SOC사업실,jsm1309@poscoict.com,장상민,1.0,299164,3,etc
+2132,SOC사업실,ejrqja57@poscoict.com,유덕범,NA,299165,3,etc
+2133,SOC사업실,wha110@poscoict.com,최중화,NA,299166,3,etc
+2134,SOC사업실,nam3478@poscoict.com,남영길,NA,299167,3,etc
+2135,SOC사업실,seeyaa99@poscoict.com,조현무,NA,299168,3,etc
+2136,SOC사업실,zkth1001@poscoict.com,권태호,NA,299169,3,etc
+2137,SOC사업실,tlstjdan6012@poscoict.com,신성무,NA,299170,3,etc
+2138,SOC사업실,cnsgkr65@poscoict.com,방춘학,NA,299171,3,etc
+2139,SOC사업실,sgg7@poscoict.com,송국교,NA,299172,3,etc
+2140,SOC사업실,wonman1@poscoict.com,김석원,NA,299173,3,etc
+2141,SOC사업실,heejaejeon7@poscoict.com,전희재,NA,299174,3,etc
+2142,SOC사업실,jhh2000@poscoict.com,허정휴,NA,299175,3,etc
+2143,SOC사업실,IJOARA1@poscoict.com,김종현,NA,299176,3,etc
+2144,SOC사업실,chodw0@poscoict.com,조동완,NA,299177,3,etc
+2145,SOC사업실,pondroot21@poscoict.com,왕택근,NA,299178,3,etc
+2146,SOC사업실,ediyoo@poscoict.com,유경상,NA,299180,3,etc
+2147,SOC사업실,daebu@poscoict.com,박철환,NA,299181,3,etc
+2148,SOC사업실,novem44@poscoict.com,장지원,NA,299182,3,etc
+2149,SOC사업실,spyjin@poscoict.com,정장진,NA,299183,3,etc
+2150,SOC사업실,blue2800@poscoict.com,윤재천,NA,299184,3,etc
+2151,SOC사업실,sookwani72@poscoict.com,박수관,2.0,299185,3,etc
+2152,SOC사업실,song2967@poscoict.com,송준호,2.0,299186,3,etc
+2153,SOC사업실,newface2012@poscoict.com,이영섭,NA,299187,3,etc
+2154,SOC사업실,kjpjp72@poscoict.com,김종필,NA,299188,3,etc
+2155,SOC사업실,insik1023@poscoict.com,한인식,NA,299189,4,etc
+2156,SOC사업실,j7575@poscoict.com,정철호,NA,299190,3,etc
+2157,SOC사업실,saint7515@poscoict.com,김두호,NA,299191,3,etc
+2158,SOC사업실,sosim10@poscoict.com,장호성,1.0,299192,3,etc
+2159,SOC사업실,chomk1@poscoict.com,조문기,NA,299193,3,etc
+2160,SOC사업실,doc2421@poscoict.com,주재덕,NA,299194,3,etc
+2161,SOC사업실,ljgwarking@poscoict.com,이재권,NA,299196,3,etc
+2162,SOC사업실,alsdudtka3@poscoict.com,민영삼,NA,299197,3,etc
+2163,SOC사업실,way612@poscoict.com,배성봉,NA,299198,3,etc
+2164,SOC사업실,onlybody-hsj@poscoict.com,홍성준,NA,299199,3,etc
+2165,SOC사업실,thecool13@poscoict.com,김영운,NA,299200,3,etc
+2166,SOC사업실,sdw333@poscoict.com,송동욱,2.0,299201,3,etc
+2167,SOC사업실,march2156@poscoict.com,이영춘,0.5,299202,3,etc
+2168,SOC사업실,kch1964@poscoict.com,김창희,1.0,299203,2,etc
+2169,SOC사업실,kju1120@poscoict.com,김광주,NA,299204,2,etc
+2170,SOC사업실,galapagos@poscoict.com,정병일,NA,299205,2,etc
+2171,SOC사업실,kky6660@poscoict.com,김경열,1.0,299206,2,etc
+2172,SOC사업실,ljs5131109@poscoict.com,이재수,NA,299207,2,etc
+2173,SOC사업실,hoo72000@poscoict.com,송호준,NA,299208,2,etc
+2174,SOC사업실,sungol3@poscoict.com,이건철,NA,299209,2,etc
+2175,SOC사업실,kong7403@poscoict.com,김대용,NA,299210,2,etc
+2176,SOC사업실,kksddd@poscoict.com,김경석,NA,299211,2,etc
+2177,SOC사업실,bmid123@poscoict.com,홍일남,NA,299212,2,etc
+2178,SOC사업실,akm2017@poscoict.com,안국민,NA,299213,2,etc
+2179,SOC사업실,kyuhochoi95@poscoict.com,최규호,NA,299214,2,etc
+2180,SOC사업실,p6120@poscoict.com,박윤철,NA,299215,2,etc
+2181,SOC사업실,lovehj0401@poscoict.com,김형준,NA,299216,2,etc
+2182,SOC사업실,yeonwoon@poscoict.com,김연운,NA,299217,2,etc
+2183,SOC사업실,gallery1212@poscoict.com,박명미,NA,299220,2,etc
+2184,SOC사업실,KJW7712@poscoict.com,김정욱,NA,299221,2,etc
+2185,SOC사업실,axesani@poscoict.com,김남형,NA,299222,2,etc
+2186,SOC사업실,eve1227@poscoict.com,이장열,NA,299223,2,etc
+2187,SOC사업실,palcon78@poscoict.com,강성민,NA,299224,2,etc
+2188,SOC사업실,kflying07@poscoict.com,김정태,NA,299225,2,etc
+2189,SOC사업실,backyj@poscoict.com,백영준,NA,299226,2,etc
+2190,SOC사업실,ssongyj@poscoict.com,송영진,NA,299228,2,etc
+2191,SOC사업실,young-gi79@poscoict.com,김영기,NA,299229,2,etc
+2192,SOC사업실,bjlee25@poscoict.com,이범재,NA,299230,2,etc
+2193,SOC사업실,semtle6th@poscoict.com,허성민,NA,299231,2,etc
+2194,SOC사업실,paichai99@poscoict.com,이승호,NA,299232,2,etc
+2195,SOC사업실,yong3465sik@poscoict.com,김용식,NA,299233,2,etc
+2196,SOC사업실,kim149676@poscoict.com,김상열,NA,299234,2,etc
+2197,SOC사업실,lci272@poscoict.com,이충인,NA,299236,1,etc
+2198,SOC사업실,cnl55@poscoict.com,여대영,NA,299238,1,etc
+2199,SOC사업실,snfired@poscoict.com,정대희,1.0,299239,1,etc
+2200,SOC사업실,hwraith82@poscoict.com,조민기,NA,299240,1,etc
+2201,SOC사업실,sdho99@poscoict.com,신달호,NA,299241,1,etc
+2202,SOC사업실,kid8282@poscoict.com,김일두,NA,299242,1,etc
+2203,SOC사업실,tear0126@poscoict.com,임채동,NA,299243,1,etc
+2204,SOC사업실,Oyj9621@poscoict.com,오영진,NA,299244,1,etc
+2205,SOC사업실,cny0042@poscoict.com,최낙영,NA,299245,1,etc
+2206,SOC사업실,00ting@poscoict.com,백효경,2.0,299246,1,etc
+2207,SOC사업실,kbs0829@poscoict.com,김보성,0.5,299247,1,etc
+2208,SOC사업실,xperion15@poscoict.com,정대현,NA,299248,1,etc
+2209,SOC사업실,ldm2529@poscoict.com,이동민,NA,299249,1,etc
+2210,SOC사업실,bestmobis7@poscoict.com,정사목,1.0,299250,1,etc
+2211,SOC사업실,yj2017@poscoict.com,김연중,NA,299251,1,etc
+2212,SOC사업실,dbschfhd3@poscoict.com,윤초롱,NA,299252,1,etc
+2213,SOC사업실,adentro629@poscoict.com,서동섭,0.5,299255,1,etc
+2214,SOC사업실,m4m1@poscoict.com,안성용,1.0,299256,1,etc
+2215,Smart IT사업실,kswony79@poscoict.com,김성원,NA,299259,3,etc
+2216,Smart IT사업실,smart0708@poscoict.com,김현중,NA,299260,2,etc
+2217,에너지융합사업실,skhong77@poscoict.com,홍순길,NA,299261,4,판교
+2218,SOC사업실,k102003@poscoict.com,김주성,0.5,299262,2,etc
+2219,SOC사업실,april04@poscoict.com,염기철,NA,299263,3,etc
+2220,마케팅전략실,danieljin72@poscoict.com,진다니엘,NA,299264,3,etc
+2221,SOC사업실,sw0307@poscoict.com,신욱,NA,299265,2,etc
+2222,Smart IT사업실,h0131y@poscoict.com,김호연,NA,299266,1,etc
+2223,SOC사업실,twoc2000@poscoict.com,최소영,NA,299267,3,etc
+2224,SOC사업실,doohee3@poscoict.com,조두희,NA,299268,3,etc
+2225,SOC사업실,zayki1118@poscoict.com,김재희,NA,299269,2,etc
+2226,SOC사업실,chahj2000@poscoict.com,차호진,NA,299270,4,etc
+2227,SOC사업실,ahsdsc20062@poscoict.com,안효섭,NA,299271,4,etc
+2228,SOC사업실,soo3490@poscoict.com,박경수,NA,299273,3,etc
+2229,SOC사업실,sjy-gold@poscoict.com,신주영,NA,299274,3,etc
+2230,SOC사업실,rheejb@poscoict.com,이정배,NA,299275,3,etc
+2231,SOC사업실,bbhyy0815@poscoict.com,황윤영,NA,299276,3,etc
+2232,SOC사업실,tuffguy9@poscoict.com,양세용,NA,299277,3,etc
+2233,SOC사업실,bibongri@poscoict.com,조용준,NA,299278,3,etc
+2234,SOC사업실,chan3723@poscoict.com,윤찬,NA,299279,3,etc
+2235,SOC사업실,ych8718@poscoict.com,이연호,NA,299280,3,etc
+2236,SOC사업실,tel3699@poscoict.com,김동환,NA,299281,3,etc
+2237,SOC사업실,micro5@poscoict.com,박상천,NA,299282,3,etc
+2238,SOC사업실,park386@poscoict.com,박영규,NA,299283,3,etc
+2239,SOC사업실,jm7315@poscoict.com,장정만,NA,299284,3,etc
+2240,SOC사업실,red6626@poscoict.com,김한진,NA,299285,3,etc
+2241,SOC사업실,laserdj123@poscoict.com,유동진,NA,299286,3,etc
+2242,SOC사업실,an700805@poscoict.com,안동균,NA,299287,3,etc
+2243,SOC사업실,cyh2036@poscoict.com,최용호,NA,299288,3,etc
+2244,SOC사업실,ksb52@poscoict.com,김상범,NA,299289,3,etc
+2245,SOC사업실,kdcpeter1004@poscoict.com,김대철,NA,299290,3,etc
+2246,SOC사업실,shyeo662@poscoict.com,여승현,NA,299291,3,etc
+2247,SOC사업실,jojina3@poscoict.com,조대길,NA,299292,3,etc
+2248,SOC사업실,solpoong1002@poscoict.com,장영희,NA,299293,3,etc
+2249,SOC사업실,dkhong629@poscoict.com,홍동균,NA,299294,3,etc
+2250,SOC사업실,jazzpian0191@poscoict.com,정경호,NA,299295,3,etc
+2251,SOC사업실,heewon27@poscoict.com,이희원,NA,299296,3,etc
+2252,SOC사업실,kgs5542@poscoict.com,김귀식,NA,299297,3,etc
+2253,SOC사업실,pasuye22@poscoict.com,박성열,NA,299298,3,etc
+2254,SOC사업실,cgimember@poscoict.com,최광일,NA,299299,3,etc
+2255,SOC사업실,mechjzzz0430@poscoict.com,최호종,NA,299300,3,etc
+2256,SOC사업실,songhg102@poscoict.com,송훈규,NA,299301,3,etc
+2257,SOC사업실,jyj1020@poscoict.com,조용주,NA,299302,3,etc
+2258,SOC사업실,isaac01@poscoict.com,고종민,NA,299303,3,etc
+2259,SOC사업실,chifer815@poscoict.com,김상기,NA,299304,3,etc
+2260,SOC사업실,hwang922@poscoict.com,황진우,NA,299305,3,etc
+2261,SOC사업실,juliet7579@poscoict.com,김동준,NA,299306,3,etc
+2262,SOC사업실,psm2384@poscoict.com,박상민,NA,299307,2,etc
+2263,SOC사업실,AMTAK008@poscoict.com,이재덕,NA,299309,2,etc
+2264,SOC사업실,7jinmo@poscoict.com,성진모,NA,299310,2,etc
+2265,SOC사업실,jun6177@poscoict.com,박준용,NA,299311,2,etc
+2266,SOC사업실,lim2520@poscoict.com,임종민,NA,299312,2,etc
+2267,SOC사업실,samgagi9@poscoict.com,이종극,NA,299314,2,etc
+2268,SOC사업실,lbj12@poscoict.com,이병재,NA,299315,2,etc
+2269,SOC사업실,akumajudy79@poscoict.com,최익주,NA,299316,2,etc
+2270,SOC사업실,skyeyecho1341@poscoict.com,이민석,NA,299317,2,etc
+2271,SOC사업실,hkko8079@poscoict.com,김재현,NA,299318,2,etc
+2272,SOC사업실,nicekc@poscoict.com,김철,NA,299319,2,etc
+2273,SOC사업실,y26626@poscoict.com,유이록,NA,299320,2,etc
+2274,SOC사업실,ckm11jn@poscoict.com,최경민,NA,299321,2,etc
+2275,SOC사업실,dduckgom1@poscoict.com,김덕준,NA,299322,2,etc
+2276,SOC사업실,leeheekyo@poscoict.com,이희교,NA,299323,2,etc
+2277,SOC사업실,shin3508@poscoict.com,신우영,NA,299324,2,etc
+2278,SOC사업실,leeshx82@poscoict.com,이상혁,NA,299325,1,etc
+2279,SOC사업실,hmg82@poscoict.com,홍민기,NA,299326,1,etc
+2280,SOC사업실,mta8x015@poscoict.com,안용호,NA,299327,1,etc
+2281,SOC사업실,chogosoo13@poscoict.com,최현중,NA,299328,1,etc
+2282,SOC사업실,jungin39@poscoict.com,김정인,NA,299330,1,etc
+2283,SOC사업실,emyoungsu1@poscoict.com,엄용수,NA,299331,1,etc
+2284,SOC사업실,yain83@poscoict.com,이진수,NA,299332,1,etc
+2285,SOC사업실,mwhgood1@poscoict.com,문원형,NA,299333,1,etc
+2286,SOC사업실,sirius0525@poscoict.com,권민준,NA,299334,1,etc
+2287,SOC사업실,kosang10@poscoict.com,고상열,NA,299335,1,etc
+2288,SOC사업실,chy1206@poscoict.com,최호영,NA,299336,1,etc
+2289,SOC사업실,friend044@poscoict.com,김병규,NA,299337,1,etc
+2290,SOC사업실,dongik85@poscoict.com,임동익,NA,299338,1,etc
+2291,SOC사업실,autoktf@poscoict.com,유재현,NA,299339,1,etc
+2292,SOC사업실,elite1986@poscoict.com,김희준,NA,299340,1,etc
+2293,SOC사업실,86morning@poscoict.com,이명로,NA,299341,1,etc
+2294,SOC사업실,kbj0813kim@poscoict.com,김병준,NA,299342,1,etc
+2295,SOC사업실,ufoscv@poscoict.com,백인학,NA,299343,1,etc
+2296,SOC사업실,moonman69@poscoict.com,김태진,NA,299344,1,etc
+2297,SOC사업실,jyt5257@poscoict.com,정영택,NA,299345,1,etc
+2298,SOC사업실,lik1016@poscoict.com,이일규,NA,299346,1,etc
+2299,SOC사업실,okok156156@poscoict.com,이재용,NA,299347,1,etc
+2300,SOC사업실,ljk5433@poscoict.com,이진규,NA,299349,4,etc
+2301,SOC사업실,lsywhk0323@poscoict.com,이승용,NA,299350,4,etc
+2302,경영기획실,jlee@poscoict.com,이종관,NA,299351,7,etc
+2303,Smart IT사업실,seokjoo@poscoict.com,조석주,5.5,299352,7,etc
+2304,Smart EIC사업실,kimcs@poscoict.com,김춘식,1.0,299353,7,etc
+2305,경영기획실,yjinlee@poscoict.com,이영진,1.0,299354,7,etc
+2306,SOC사업실,hasama@poscoict.com,하승민,NA,299355,2,etc
+2307,SOC사업실,lch09270@poscoict.com,이충현,NA,299356,1,etc
+2308,SOC사업실,kdh6522@poscoict.com,김도형,NA,299357,3,etc
+2309,SOC사업실,kim.bs82@poscoict.com,김보섭,NA,299358,1,etc
+2310,SOC사업실,qawsq1234@poscoict.com,김덕래,NA,299359,1,etc
+2311,Smart IT사업실,martino2100@poscoict.com,김성중,NA,299360,6,센터
+2312,SOC사업실,kmu0323@poscoict.com,김민욱,NA,299361,1,etc
+2313,SOC사업실,hanjj25@poscoict.com,한정재,NA,299362,3,etc
+2314,Smart IT사업실,nso@poscoict.com,니콜라스오,NA,299363,2,etc
+2315,Smart IT사업실,hagang57@poscoict.com,하경도,NA,299364,4,etc
+2316,경영지원실,sam989@poscoict.com,이민규,NA,299365,2,etc
+2317,Smart IT사업실,kws911004@poscoict.com,김완석,NA,299366,1,센터
+2318,Smart IT사업실,mrhow@poscoict.com,김해인,NA,299368,1,센터
+2319,Smart IT사업실,kyh2708@poscoict.com,권용호,NA,299369,1,etc
+2320,Smart IT사업실,Ny4428@poscoict.com,김나영,NA,299370,1,etc
+2321,Smart IT사업실,epris1190@poscoict.com,임형열,NA,299371,1,포항
+2322,Smart IT사업실,gkswlsghk222@poscoict.com,한진화,NA,299372,1,센터
+2323,Smart IT사업실,jungha0127@poscoict.com,우정하,NA,299374,1,etc
+2324,Smart IT사업실,Ljm1126@poscoict.com,이재민,NA,299375,1,광양
+2325,Smart IT사업실,c_lee_ative@poscoict.com,이정민,NA,299377,1,센터
+2326,SOC사업실,Hsoh89@poscoict.com,오현석,NA,299378,1,etc
+2327,SOC사업실,jsJang91@poscoict.com,장주성,NA,299379,1,etc
+2328,에너지융합사업실,ksy1438@poscoict.com,김석연,NA,299381,1,포항
+2329,SOC사업실,changhwaJ90@poscoict.com,정창화,NA,299382,1,etc
+2330,R&D센터,hshaha11@poscoict.com,안현선,NA,299383,1,판교
+2331,R&D센터,sm.jung@poscoict.com,정성미,NA,299384,1,etc
+2332,R&D센터,jinwoo825@poscoict.com,송진우,NA,299385,1,etc
+2333,Smart IT사업실,hui921@poscoict.com,이휘수,NA,299387,1,판교
+2334,경영기획실,Jhong1@poscoict.com,홍지성,NA,299388,1,판교
+2335,경영기획실,leocho88@poscoict.com,조규석,NA,299389,1,판교
+2336,경영지원실,ksh2694@poscoict.com,김석환,NA,299391,1,판교
+2337,SOC사업실,srj861211@poscoict.com,정소룡,NA,299392,1,etc
+2338,SOC사업실,inha3238@poscoict.com,최현민,NA,299393,1,etc
+2339,SOC사업실,lhs36510@poscoict.com,이호석,NA,299394,2,etc
+2340,SOC사업실,zks1318@poscoict.com,양성채,NA,299395,1,etc
+2341,SOC사업실,iamjh91@poscoict.com,김준현,NA,299396,1,etc
+2342,Smart EIC사업실,passions78@poscoict.com,윤호덕,NA,299399,4,etc
+2343,Smart EIC사업실,sungjae@poscoict.com,함성재,NA,299400,4,etc
+2344,경영지원실,Jung0122@poscoict.com,정임식,NA,299401,2,etc
+2345,SOC사업실,iloveds@poscoict.com,송덕수,NA,299402,2,etc
+2346,SOC사업실,sm_229@poscoict.com,조창현,NA,299403,1,etc
+2347,SOC사업실,asvdo01@poscoict.com,정근수,NA,299405,1,etc
+2348,경영지원실,qhr1125@poscoict.com,권명복,NA,299406,2,etc
+2349,경영지원실,safety1@poscoict.com,채문기,NA,299407,4,포항
+2350,경영지원실,Jason0072@poscoict.com,이현동,NA,299408,4,포항
+2351,SOC사업실,hvacjb@poscoict.com,장재방,NA,299410,2,etc
+2352,SOC사업실,taejoon17@poscoict.com,박태준,NA,299412,2,etc
+2353,Smart IT사업실,kihang_lee@poscoict.com,이기항,NA,299414,3,센터
+2354,Smart EIC사업실,kimski04@poscoict.com,김선기,NA,299415,4,etc
+2355,Smart EIC사업실,cj100@poscoict.com,백창진,NA,299416,4,etc
+2356,Smart EIC사업실,hyunkwon@poscoict.com,권현,NA,299417,4,etc
+2357,Smart EIC사업실,night73@poscoict.com,최현호,NA,299418,4,etc
+2358,SOC사업실,summitone@poscoict.com,정상원,NA,299419,1,etc
+2359,Smart IT사업실,namjw60@poscoict.com,남정우,NA,299420,4,etc
+2360,SOC사업실,khc1109@poscoict.com,김현철,NA,299421,2,etc
+2361,SOC사업실,lwt0811@poscoict.com,이원택,NA,299422,2,etc
+2362,SOC사업실,lansi831@poscoict.com,이동혁,NA,299425,1,etc
+2363,SOC사업실,minair@poscoict.com,민병철,NA,299426,1,etc
+2364,SOC사업실,hide376@poscoict.com,김동근,NA,299428,1,etc
+2365,SOC사업실,seungwon7774@poscoict.com,오승원,NA,299429,1,etc
+2366,SOC사업실,hunzare@poscoict.com,박현명,NA,299430,1,etc
+2367,SOC사업실,higd@poscoict.com,권달원,NA,299431,1,etc
+2368,SOC사업실,sungyu@poscoict.com,박선규,NA,299433,1,etc
+2369,SOC사업실,jty011@poscoict.com,지태영,NA,299434,2,etc
+2370,SOC사업실,jy0328@poscoict.com,정주영,NA,299435,1,etc
+2371,SOC사업실,qazwdxs1@poscoict.com,금병우,NA,299436,1,etc
+2372,SOC사업실,dugki8716@poscoict.com,김덕기,NA,299437,1,etc
+2373,SOC사업실,pink3534@poscoict.com,정봄날,NA,299439,1,etc
+2374,SOC사업실,pkt6713@poscoict.com,박기태,NA,299440,1,etc
+2375,SOC사업실,derken@poscoict.com,김영배,NA,299442,1,etc
+2376,SOC사업실,yjssong0326@poscoict.com,송영준,0.5,299443,1,etc
+2377,SOC사업실,rkt999@poscoict.com,류경태,NA,299444,2,etc
+2378,SOC사업실,kmsbb@poscoict.com,안윤호,NA,299445,2,etc
+2379,SOC사업실,psw5065@poscoict.com,박상원,NA,299446,1,etc
+2380,SOC사업실,khkim21@poscoict.com,김경훈,NA,299447,2,etc
+2381,SOC사업실,hells2005@poscoict.com,김희철,NA,299448,1,etc
+2382,SOC사업실,yhc0525@poscoict.com,유희철,NA,299449,1,etc
+2383,SOC사업실,choigunsuk@poscoict.com,최근석,NA,299450,1,etc
+2384,SOC사업실,peter74.yoon@poscoict.com,윤상두,NA,299451,3,etc
+2385,SOC사업실,windbreak@poscoict.com,함운규,NA,299452,2,etc
+2386,SOC사업실,kps8001@poscoict.com,김필수,NA,299453,2,etc
+2387,SOC사업실,zakk81@poscoict.com,박희완,NA,299454,2,etc
+2388,R&D센터,byeongjunjoo@poscoict.com,주병준,NA,299457,1,etc
+2389,R&D센터,EthanKim@poscoict.com,김성민,NA,299458,1,etc
+2390,SOC사업실,jhoonylee@poscoict.com,이정훈,NA,299459,1,etc
+2391,Smart IT사업실,kang3966@poscoict.com,강준현,NA,299460,1,etc
+2392,R&D센터,gtpark@poscoict.com,박규태,NA,299461,1,etc
+2393,Smart EIC사업실,pc303941@poscoict.com,이태준,NA,299462,4,포항
+2394,경영기획실,rainboow7@poscoict.com,김동환,NA,299464,2,etc
+2395,Smart EIC사업실,lst@poscoict.com,임석택,NA,299465,4,광양
+2396,Smart EIC사업실,m007@poscoict.com,최명보,NA,299466,4,etc
+2397,Smart EIC사업실,chm160@poscoict.com,최형만,NA,299467,4,etc
+2398,Smart IT사업실,yh2018sj@poscoict.com,윤종곤,NA,299468,4,etc

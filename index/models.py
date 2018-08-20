@@ -183,6 +183,7 @@ class Education(models.Model):
     employeeID_confirm = models.IntegerField(default=0)
     #Y - 1년이수과정학점
     edu_course_cnt = models.FloatField(null=True, default=0)
+    edu_course_time = models.FloatField(null=True, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     eval_date = models.DateTimeField()
     start_date = models.DateTimeField()
@@ -210,13 +211,12 @@ class EmailData(models.Model):
     sendCnt = models.FloatField(null=True, default=0)
     sendCnt_nwh = models.FloatField(null=True, default=0)
     receiveCnt = models.FloatField(null=True, default=0)
-    sendCnt_byLevelRatio= models.FloatField(null=True, default=0)
-    sendCnt_nwh_byLevelRatio = models.FloatField(null=True, default=0)
-    receiveCnt_byLevelRatio = models.FloatField(null=True, default=0)
+    sendCnt_byLevelRatio= models.FloatField(null=True, default=0) #발신건수_동직급대비
+    sendCnt_nwh_byLevelRatio = models.FloatField(null=True, default=0) #근무시간외_발신_동직급대비
+    receiveCnt_byLevelRatio = models.FloatField(null=True, default=0) #수신건수_동직급대비
     nodeSize = models.FloatField(null=True, default=0)
-    nodeSize_byLevelRatio = models.FloatField(null=True, default=0)
-    nodeSize_byGroupRatio = models.FloatField(null=True, default=0)
-
+    nodeSize_byLevelRatio = models.FloatField(null=True, default=0) #네트워크.크기.동일직급대비
+    nodeSize_byGroupRatio = models.FloatField(null=True, default=0) #타부서.네트워크.비율
     def __str__(self):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
@@ -465,4 +465,14 @@ class Leadership(models.Model):
     def __str__(self):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
+class Target(models.Model):
+    employeeID = models.ForeignKey(Employee, on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    isTarget = models.BooleanField() # high perf:1 , low perf:0
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 

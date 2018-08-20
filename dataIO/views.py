@@ -185,7 +185,7 @@ def dataIO(request):
 
     logModels = [ EmailLog,Token_log ,VDI_log ,M_EP_log,GatePass_log]
 
-    normalModels = [Leadership]
+    normalModels = [Target,Leadership]
 
     if request.method == 'GET':
         search_query = request.GET.get('search_box', None)

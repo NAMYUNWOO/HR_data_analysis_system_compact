@@ -256,6 +256,7 @@ class FillData:
             , 'M_EP_log': self._fillMEPData
             , 'GatePass_log': self._fillGatePassData
             , 'Leadership':self._fillLeaderShipData
+            , "Target":self._fillTargetData
         }
 
         # updateUselessModel
@@ -505,6 +506,28 @@ class FillData:
             Leadership_list.append(leadershipObj)
         Leadership.objects.bulk_create(Leadership_list)
         return True
+
+    def _fillTargetData(self):
+        Target_list = []
+        for i in range(len(self.df)):
+            df_instance = self.df.iloc[i, :]
+
+            try:
+                employeeID_ = int(df_instance.id)
+                employeeID = Employee.objects.get(id=employeeID_)
+            except:
+                continue
+            employeeID_confirm = employeeID_
+            isT = int(df_instance.target)
+            if isT != 0 and isT != 1:
+                continue
+            TargetObj = Target(employeeID=employeeID,employeeID_confirm=employeeID_confirm,
+                               isTarget = bool(isT),eval_date=self.eval_date, start_date = self.start_date)
+
+            Target_list.append(TargetObj)
+        Target.objects.bulk_create(Target_list)
+        return True
+
 
     def _fillEmailData(self):
         module_dir = os.path.dirname(__file__)
