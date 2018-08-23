@@ -49,6 +49,32 @@ class Employee(models.Model):
     empid = models.ForeignKey(Employee,null=False)
     empidN =  models.IntegerField(default=0)
 """
+
+class Score(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    predict = models.FloatField(null=True)
+    intercept = models.FloatField(null=True)
+    grade_co_r3_avg = models.FloatField(null=True)
+    holiday = models.FloatField(null=True)
+    edu_course_cnt =models.FloatField(null=True)
+    edu_course_time =models.FloatField(null=True)
+    sendCnt_byLevelRatio =models.FloatField(null=True)
+    sendCnt_nwh_byLevelRatio = models.FloatField(null=True)
+    receiveCnt_byLevelRatio =models.FloatField(null=True)
+    nodeSize_byLevelRatio = models.FloatField(null=True)
+    nodeSize_byGroupRatio = models.FloatField(null=True)
+    token_receive_byLevelRatio =models.FloatField(null=True)
+    leadership_env_job =models.FloatField(null=True)
+    leadership_env = models.FloatField(null=True)
+    leadership_env_common =models.FloatField(null=True)
+    early_work = models.FloatField(null=True)
+    late_work = models.FloatField(null=True)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    def __str__(self):
+        return str(self.employeeID_confirm) +" "+str(self.eval_date)
+
 class EmployeeBiography(models.Model):
     # 사번
     employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)

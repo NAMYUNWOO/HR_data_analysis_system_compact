@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cd1011-ea31-4e3a-9b40-1b54910c461f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/poscoictsystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/poscoictsystem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataIO/xgb_explainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataIO/fillData.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataIO/fillData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataIO/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataIO/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dataIO.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dataIO.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dataIO/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2042">
-              <caret line="234" column="49" selection-start-line="234" selection-start-column="49" selection-end-line="234" selection-end-column="49" />
+            <state relative-caret-position="389">
+              <caret line="355" column="37" selection-start-line="355" selection-start-column="37" selection-end-line="355" selection-end-column="37" />
+              <folding>
+                <element signature="e#23#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -30,8 +32,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+            <state relative-caret-position="430">
+              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -39,17 +41,17 @@
       <file leaf-file-name="dataIO.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dataIO.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="113" column="68" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="68" />
+            <state relative-caret-position="650">
+              <caret line="270" column="86" selection-start-line="270" selection-start-column="86" selection-end-line="270" selection-end-column="86" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="207" column="22" selection-start-line="207" selection-start-column="4" selection-end-line="207" selection-end-column="22" />
+            <state relative-caret-position="557">
+              <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -57,8 +59,8 @@
       <file leaf-file-name="fillData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="672" column="18" selection-start-line="672" selection-start-column="13" selection-end-line="672" selection-end-column="18" />
+            <state relative-caret-position="303">
+              <caret line="708" column="8" selection-start-line="708" selection-start-column="8" selection-end-line="708" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -75,16 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>grade_sv_r3_avg</find>
-      <find>grade_sv_r2_avg</find>
-      <find>hrModels</find>
-      <find>bio</find>
-      <find>getRecentUpdateDates</find>
-      <find>__strEval_date_converter</find>
-      <find>def __strEval_date_converter</find>
-      <find>vdi</find>
-      <find>create</find>
-      <find>fillemail</find>
       <find>logfirst</find>
       <find>updateEmailDateBeginEnd</find>
       <find>m_ep</find>
@@ -94,7 +86,6 @@
       <find>FillData</find>
       <find>_fillLeaderShipData</find>
       <find>targetdata</find>
-      <find>MODELS_TO_ANALYSIS</find>
       <find>preprocess2Analysis</find>
       <find>normalDataSelects</find>
       <find>normalModels</find>
@@ -105,6 +96,17 @@
       <find>M_ep</find>
       <find>token</find>
       <find>Email</find>
+      <find>form1</find>
+      <find>form2</find>
+      <find>form4</find>
+      <find>updateList</find>
+      <find>MODELS_TO_ANALYSI = [EmployeeBiography,EmployeeGrade,Education,Target,Leadership,EmailData,Token_Data,VDI_Data,M_EPData]</find>
+      <find>MODELS_TO_ANALYSIS</find>
+      <find>getTable</find>
+      <find>def gettable</find>
+      <find>educ</find>
+      <find>bulk</find>
+      <find>form1_1</find>
     </findStrings>
     <replaceStrings>
       <replace>poscoictsystem</replace>
@@ -170,22 +172,23 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/dataIO/models.py" />
         <option value="$PROJECT_DIR$/index/admin.py" />
-        <option value="$PROJECT_DIR$/templates/dataIO.html" />
         <option value="$PROJECT_DIR$/templates/region.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/buGroup.html" />
         <option value="$PROJECT_DIR$/templates/employee.html" />
         <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/dataIO/xgb_explainer.py" />
         <option value="$PROJECT_DIR$/dataIO/fillData.py" />
-        <option value="$PROJECT_DIR$/dataIO/views.py" />
         <option value="$PROJECT_DIR$/index/models.py" />
+        <option value="$PROJECT_DIR$/templates/dataIO.html" />
+        <option value="$PROJECT_DIR$/dataIO/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="874" />
-    <option name="y" value="594" />
-    <option name="width" value="2621" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1054" />
+    <option name="y" value="390" />
+    <option name="width" value="2622" />
     <option name="height" value="1656" />
   </component>
   <component name="ProjectView">
@@ -193,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,6 +232,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,10 +309,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="583" y="396" width="1747" height="1104" extended-state="1" />
+    <frame x="703" y="260" width="1748" height="1104" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13675708" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1366782" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -338,8 +341,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda3-4.2.0/lib/python3.5/site-packages/django_nvd3/templatetags/nvd3_tags.py" />
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda3-4.2.0/lib/python3.5/site-packages/nvd3/lineChart.py" />
     <entry file="file://$USER_HOME$/.pyenv/versions/anaconda3-4.2.0/lib/python3.5/site-packages/nvd3/NVD3Chart.py" />
     <entry file="file://$PROJECT_DIR$/dataIO/customWidget.py" />
     <entry file="file://$PROJECT_DIR$/static/jQRangeSlider/jQAllRangeSliders-min.js" />
@@ -519,9 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -553,38 +551,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
+    <entry file="file://$PROJECT_DIR$/dataIO/xgb_explainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+        <state relative-caret-position="1843">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dataIO.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="113" column="68" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="68" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/bu_group/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dataIO/fillData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="672" column="18" selection-start-line="672" selection-start-column="13" selection-end-line="672" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataIO/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2042">
-          <caret line="234" column="49" selection-start-line="234" selection-start-column="49" selection-end-line="234" selection-end-column="49" />
+        <state relative-caret-position="303">
+          <caret line="708" column="8" selection-start-line="708" selection-start-column="8" selection-end-line="708" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="207" column="22" selection-start-line="207" selection-start-column="4" selection-end-line="207" selection-end-column="22" />
+        <state relative-caret-position="557">
+          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poscoictsystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dataIO.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="270" column="86" selection-start-line="270" selection-start-column="86" selection-end-line="270" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataIO/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="355" column="37" selection-start-line="355" selection-start-column="37" selection-end-line="355" selection-end-column="37" />
+          <folding>
+            <element signature="e#23#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

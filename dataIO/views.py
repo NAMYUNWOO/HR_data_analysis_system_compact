@@ -14,8 +14,7 @@ from urllib import parse
 from .models import *
 from django import db
 import subprocess,re
-
-MODELS_TO_ANALYSIS = [EmployeeBiography, EmailData,EmployeeGrade, Education, Leadership]
+import xgboost as xgb
 
 
 
@@ -169,14 +168,6 @@ def getModelInstanceWithDateRange(Model,dateRangeStr=None,dateRange=None):
 
     return modelInstances
 
-def preprocess2Analysis(start_date,end_date):
-    modelsToPreprocess = []
-    for model in MODELS_TO_ANALYSIS:
-        if model.objects.filter(Q(start_date=start_date) & Q(eval_date=end_date)).count() == 0:
-            modelsToPreprocess.append(model)
-    for model in modelsToPreprocess:
-        PreprocessData(model, start_date, end_date).runPreprocess()
-
 
 def dataIO(request):
     processedModels = [EmailData,Token_Data,VDI_Data,M_EPData,GatePassData]
@@ -259,6 +250,7 @@ def dataIO(request):
             modelname = re.findall(r"removeWithDatetime_([A-Z|a-z|_]*)", reqKeyString)[0]
             start_date = datetime.datetime(int(reqDict["start_date_year"][0]),int(reqDict["start_date_month"][0]),int(reqDict["start_date_day"][0]))
             end_date = datetime.datetime(int(reqDict["end_date_year"][0]),int(reqDict["end_date_month"][0]),int(reqDict["end_date_day"][0]))
+
             modelInstances = getModelInstanceWithDateRange(eval(modelname),dateRange=[start_date,end_date+datetime.timedelta(days=1)])
             modelInstances.delete()
             updateEmailDateBeginEnd(eval(modelname))
@@ -274,35 +266,7 @@ def dataIO(request):
             if not preprocessData.runPreprocess2():
                 preprocessData.runPreprocess()
 
-        elif 'analysis_' in reqKeyString:
-            modelname = re.findall(r"analysis_([A-Z|a-z|_]*)", reqKeyString)[0]
-            start_date = datetime.datetime(int(reqDict["start_date_year"][0]),int(reqDict["start_date_month"][0]),int(reqDict["start_date_day"][0]))
-            end_date = datetime.datetime(int(reqDict["end_date_year"][0]),int(reqDict["end_date_month"][0]),int(reqDict["end_date_day"][0]))
-            updateList = getDatelist2(eval(modelname))
-            print(updateList)
-            dfs = []
-            """
-            scoreDatetime = [dateRangeStr2datetime(dateRangeStr) for dateRangeStr in updateList]
-            for start_date_, end_date_ in scoreDatetime:
-                if start_date != start_date_ and end_date != end_date_:
-                    preprocess2Analysis(start_date_, end_date_)
-                    df_i = getTable(MODELS_TO_ANALYSIS, start_date, end_date, target=True)
-                    dfs.append(df_i)
-            """
-            print("analysis_ "+modelname + " from " + str(start_date) + " to " + str(end_date))
-            preprocess2Analysis(start_date,end_date)
-            df_i = getTable(MODELS_TO_ANALYSIS, start_date,end_date, target=True)
-            dfs.append(df_i)
-            df = pd.concat(dfs, axis=0)
-            df = df.fillna("NA")
-            df.place = df.place.map(lambda x: placeencode(x))
-            df.reindex_axis(sorted(df.columns), axis=1).to_csv("./static/excels/input_new.csv", encoding='cp949')
-            subp = subprocess.call(["C:\\Program Files\\R\\R-3.4.1\\bin\\Rscript", "--vanilla",
-                                    "C:\\Program Files\\poscoictdashboard\\xxxICTv2\\poscoictsystem\\static\\Analaysis_R_code.R"],
-                                   shell=True)
 
-            scoredf = pd.read_csv("./static/excels/output.csv")
-            _fillScoreData(scoredf, start_date,end_date)
         elif "getTestData" in reqKeyString:
             from poscoictsystem.settings import STATICFILES_DIRS
             import zipfile, os, io
@@ -321,16 +285,83 @@ def dataIO(request):
             resp = HttpResponse(b.getvalue(), content_type="application/zip")
             resp['Content-Disposition'] = 'attachment; filename=%s' % zip_filename
             return resp
+        elif "analysis" in reqKeyString:
+            MODELS_TO_ANALYSIS = [Target,Leadership,EmployeeBiography,EmployeeGrade,Education,EmailData,Token_Data,VDI_Data,M_EPData]
+            df_to_Analysis = pd.DataFrame()
+            df_to_predict = pd.DataFrame()
+            for model_i, pref in zip(MODELS_TO_ANALYSIS,reqDict['prefix']):
+                updateList = getDatelist2(model_i)
+                selectedDate = int(pref)
+                modelInstances = getModelInstanceWithDateRange(model_i, dateRangeStr=updateList[selectedDate])
+                model_val = modelInstances.values()
+                header =model_val[0].keys()
+                df_model = pd.DataFrame(list(map(lambda x : list(x.values()),model_val)),columns=header)
+                if model_i == Target:
+                    df_to_Analysis = df_model
+                else:
+                    df_to_Analysis = pd.merge(df_to_Analysis,df_model,how="left",on="employeeID_id")
+                    if len(df_to_predict) == 0:
+                        df_to_predict = df_model
+                    else:
+                        df_to_predict = pd.merge(df_to_predict, df_model, how="outer", on="employeeID_id")
+            df_to_Analysis = df_to_Analysis.drop_duplicates("employeeID_id")
+            df_to_predict = df_to_predict.drop_duplicates("employeeID_id")
+            cols2Select = ["employeeID_id","grade_co_r3_avg","holiday","edu_course_cnt","edu_course_time","sendCnt_byLevelRatio",
+             "sendCnt_nwh_byLevelRatio","receiveCnt_byLevelRatio","nodeSize_byLevelRatio","nodeSize_byGroupRatio",
+             "token_receive_byLevelRatio","mep_early_byLevelRatio","mep_late_byLevelRatio","vdi_early_byLevelRatio",
+             "vdi_late_byLevelRatio","leadership_env_job","leadership_env","leadership_env_common","isTarget"]
+            df_to_Analysis = df_to_Analysis[cols2Select]
+            df_to_Analysis = df_to_Analysis.fillna(df_to_Analysis.mean())
+            df_to_Analysis.index = range(len(df_to_Analysis))
+            df_to_Analysis["early_work"]= (df_to_Analysis.mep_early_byLevelRatio + df_to_Analysis.vdi_early_byLevelRatio)/2
+            df_to_Analysis["late_work"]= (df_to_Analysis.mep_late_byLevelRatio + df_to_Analysis.vdi_late_byLevelRatio)/2
+            df_to_Analysis = df_to_Analysis.drop(["mep_early_byLevelRatio","vdi_early_byLevelRatio","mep_late_byLevelRatio","vdi_late_byLevelRatio"],1)
+            df_to_predict = df_to_predict[cols2Select[:-1]]
+            df_to_predict = df_to_predict.fillna(df_to_predict.mean())
+            clf = xgb.XGBClassifier(learning_rate=0.1, n_estimators=1000, max_depth=2, \
+                                    min_child_weight=1, gamma=0, subsample=1, colsample_bytree=1)
+            clf.fit(df_to_Analysis.drop(["isTarget","employeeID_id"], 1).values, df_to_Analysis.isTarget.values)
+            from . import xgb_explainer as xgb_exp
+
+            dtrain = xgb.DMatrix(data=df_to_Analysis.drop(["isTarget","employeeID_id"], 1).astype(np.float64), label=df_to_Analysis.isTarget.values)
+            params = {"subsample": 1, "colsample_bytree": 1, "gamma": 0, "max_depth": 2, 'silent': 1,
+                      "min_child_weight": 1, "lambda": 1}
+            best_iteration = 1000
+            bst = xgb.train(params=params, num_boost_round=best_iteration, dtrain=dtrain)
+            tree_lst = xgb_exp.model2table(bst, lmda=1.0)
+            feature_names = dtrain.feature_names
+            scores = []
+            for i in df_to_Analysis.index:
+                row = []
+                sample = xgb.DMatrix.slice(dtrain, [i])
+                sample.feature_names = feature_names
+                empid = df_to_Analysis.iloc[i].employeeID_id
+                pred= bst.predict(sample)[0]
+                row.append(empid)
+                row.append(pred)
+
+                leaf_lst = bst.predict(sample, pred_leaf=True)
+                dist = xgb_exp.logit_contribution(tree_lst, leaf_lst[0])
+                row.append(dist['intercept'])
+                for f_name in feature_names:
+                    try:
+                        row.append(dist[f_name])
+                    except:
+                        row.append(0.0)
+                today = datetime.datetime.today()
+                dt =datetime.date(today.year,today.month,today.day)
+                dist.update({"employeeID_confirm":empid,"employeeID":Employee.objects.get(id=empid),"predict":pred,
+                             "eval_date":dt,"start_date":dt})
+                scorei = Score(**dist)
+                scores.append(scorei)
+                #result_mtx.append(row)
+            cols = ["ID", "predict","intercept"] + list(feature_names)
+            Score.objects.bulk_create(scores)
+            #analysis_result = pd.DataFrame(result_mtx,columns=cols)
+            #analysis_result.to_excel("rslt.xlsx")
         return HttpResponseRedirect(reverse('dataIO'))
     else:
         db.connections.close_all()
-        form1 = UploadFileForm()
-        form1_1 = DateRangePickForm()
-        form2 = DateRangePickForm()
-        form3 = DateRangePickForm()
-        form4 = remove_choice_Form()
-
-
 
         processedDataSelects = [StructuredDataSelect(model=processedModel) for processedModel in processedModels]
 
@@ -340,20 +371,15 @@ def dataIO(request):
 
         normalDataSelects = [StructuredDataSelect(model=normalmodel) for normalmodel in normalModels]
 
-        #scoreDataSelects = [StructuredDataSelect(model = "")]
+        scoreDataSelects = [StructuredDataSelect(model = Score)]
 
 
     context = {  'bu': get_Bu_buUrl(),
-                 'form1': form1,
-                 'form2': form2,
-                 'form1_1': form1_1,
-                 'form3': form3,
-                 'form4':form4,
                  "recentUpdateDate": getRecentUpdateDates(),
                  'processedDataSelects':processedDataSelects,
                  'normalDataSelects':normalDataSelects,
                  'hrDataSelects':hrDataSelects,
-                 #'scoreDataSelects':scoreDataSelects,
+                 'scoreDataSelects':scoreDataSelects,
                  'logDataSelects':logDataSelects,
                  'title': 'Excel file upload and download example',
                  'header': ('Please choose any excel file ' +

@@ -103,35 +103,35 @@
                 &nbsp;
                 <table border="1" cellpadding="10px">
                     <tbody>
-                        <tr>
-                            <th>데이터</th>
-                            <th>입력 데이터 유효 범위</th>
-                            <th>입력 수행</th>
-                            <th>입력된 데이터 범위 </th>
-                            <th>지정범위 출력</th>
-                            <th>지정범위 삭제</th>
-                        </tr>
-                        {% for normalDataSelect in normalDataSelects %}
-                        <tr>
-                            <form action="."  enctype="multipart/form-data" method="post">
+                    <tr>
+                        <th>데이터</th>
+                        <th>입력 데이터 유효 범위</th>
+                        <th>입력 수행</th>
+                        <th>입력된 데이터 범위 </th>
+                        <th>지정범위 출력</th>
+                        <th>지정범위 삭제</th>
+                    </tr>
+                    {% for normalDataSelect in normalDataSelects %}
+                    <tr>
+                        <form action="."  enctype="multipart/form-data" method="post">
 
-                                <th>{{ normalDataSelect.visible_fields.0.label  }}</th>
-                                <td>{{ normalDataSelect.visible_fields.1.label  }}&nbsp;{{ normalDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ normalDataSelect.visible_fields.2.label  }}&nbsp;{{ normalDataSelect.visible_fields.2  }}<br><br>
-                                </td>
-                                <td>{{ form1.visible_fields.0 }}
-                                    {% csrf_token %}
-                                    <button type="submit" name= 'inputWithDatetime_{{ normalDataSelect.visible_fields.0.label }}' >입력</button></td>
-                            </form>
-                            <form action="."  enctype="multipart/form-data" method="post">
-                                <td>{{ normalDataSelect.visible_fields.0  }}</td>
+                            <th>{{ normalDataSelect.visible_fields.0.label  }}</th>
+                            <td>{{ normalDataSelect.visible_fields.1.label  }}&nbsp;{{ normalDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ normalDataSelect.visible_fields.2.label  }}&nbsp;{{ normalDataSelect.visible_fields.2  }}<br><br>
+                            </td>
+                            <td>{{ form1.visible_fields.0 }}
+                                {% csrf_token %}
+                                <button type="submit" name= 'inputWithDatetime_{{ normalDataSelect.visible_fields.0.label }}' >입력</button></td>
+                        </form>
+                        <form action="."  enctype="multipart/form-data" method="post">
+                            <td>{{ normalDataSelect.visible_fields.0  }}</td>
 
-                                {% csrf_token %}
-                                <td><button type="submit" name= 'output_{{ normalDataSelect.visible_fields.0.label }}' >출력</button></td>
-                                {% csrf_token %}
-                                <td><button type="submit" name= 'remove_{{ normalDataSelect.visible_fields.0.label }}' >삭제</button></td>
-                            </form>
-                        </tr>
-                        {% endfor %}
+                            {% csrf_token %}
+                            <td><button type="submit" name= 'output_{{ normalDataSelect.visible_fields.0.label }}' >출력</button></td>
+                            {% csrf_token %}
+                            <td><button type="submit" name= 'remove_{{ normalDataSelect.visible_fields.0.label }}' >삭제</button></td>
+                        </form>
+                    </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
                 <hr>
@@ -209,39 +209,72 @@
                 </table>
                 <hr>
                 <br>
-                {% comment "score deprecated" %}
+                <h5><strong>분석 데이터 선택</strong></h5>
+                &nbsp;
+                <table border="1" cellpadding="10px">
+                    <tbody>
+                    <tr>
+                        <th>데이터</th>
+                        <th>전처리된 범위</th>
+
+                    </tr>
+                    <form action="."  enctype="multipart/form-data" method="post">
+                        {% for processedDataSelect in normalDataSelects %}
+                        <tr>
+                            <th>{{ processedDataSelect.visible_fields.0.label  }}</th>
+                            <td>{{ processedDataSelect.visible_fields.0  }}</td>
+                        </tr>
+                        {% endfor %}
+                        {% for processedDataSelect in hrDataSelects %}
+                        <tr>
+                            <th>{{ processedDataSelect.visible_fields.0.label  }}</th>
+                            <td>{{ processedDataSelect.visible_fields.0  }}</td>
+                        </tr>
+                        {% endfor %}
+                        {% for processedDataSelect in processedDataSelects|slice:":4" %}
+                        <tr>
+                            <th>{{ processedDataSelect.visible_fields.0.label  }}</th>
+                            <td>{{ processedDataSelect.visible_fields.0  }}</td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            {% csrf_token %}
+                            <td colspan="2" align="right"><button type="submit" name= 'analysis'  >분석</button></td>
+                        </tr>
+                    </form>
+                    </tbody>
+                </table>
+                <hr>
+                <br>
+
                 <h5><strong>스코어 데이터 이력</strong></h5>
                 &nbsp;
                 <table border="1" cellpadding="10px">
                     <tbody>
                     <tr>
                         <th>데이터</th>
-                        <th>기간 데이터 분석</th>
-                        <th>분석된 데이터 범위</th>
+                        <th>분석일</th>
                         <th>지정범위 출력</th>
                         <th>지정범위 삭제</th>
 
                     </tr>
                     {% for scoreDataSelect in scoreDataSelects %}
                     <tr>
-                        <th>{{ scoreDataSelect.visible_fields.0.label  }}</th>
                         <form action="."  enctype="multipart/form-data" method="post">
-                            <td align="center">{{ scoreDataSelect.visible_fields.1.label  }}&nbsp;{{ scoreDataSelect.visible_fields.1  }}&nbsp;&nbsp;~&nbsp;&nbsp;{{ scoreDataSelect.visible_fields.2.label  }}&nbsp;{{ scoreDataSelect.visible_fields.2  }}<br><br>
 
-                                {% csrf_token %}
-                                <button type="submit" name= 'analysis_{{ scoreDataSelect.visible_fields.0.label }}' >분석</button></td>
-                        </form>
-                        <form action="."  enctype="multipart/form-data" method="post">
+                            <th>{{ scoreDataSelect.visible_fields.0.label  }}</th>
                             <td>{{ scoreDataSelect.visible_fields.0  }}</td>
+
                             {% csrf_token %}
                             <td><button type="submit" name= 'output_{{ scoreDataSelect.visible_fields.0.label }}' >출력</button></td>
+                            {% csrf_token %}
                             <td><button type="submit" name= 'remove_{{ scoreDataSelect.visible_fields.0.label }}' >삭제</button></td>
                         </form>
                     </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-                {% endcomment %}
+
             </div>
         </div>
     </div>
