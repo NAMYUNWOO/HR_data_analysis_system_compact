@@ -170,11 +170,15 @@ def getModelInstanceWithDateRange(Model,dateRangeStr=None,dateRange=None):
 
 
 def dataIO(request):
-    processedModels = [EmailData,Token_Data,VDI_Data,M_EPData,GatePassData]
+
+    processedModels = [EmailData,Token_Data,VDI_Data,M_EPData,GatePassData,ApprovalData,PCMData,TMSData,EPData,
+                       MeetingData, Thanks_Data, Portable_out_Data, IMSData,PC_control_Data,PC_out_Data,
+                       BlogData, CafeteriaData, ECMData]
 
     hrModels = [EmployeeBiography, EmployeeGrade, Education]
 
-    logModels = [ EmailLog,Token_log ,VDI_log ,M_EP_log,GatePass_log]
+    logModels = [ EmailLog,Token_log ,VDI_log ,M_EP_log,GatePass_log,Approval_log,PCM_log,TMS_log,EP_log,Meeting_log,
+                  Thanks_log, Portable_out_log, IMS_log, PC_control_log, PC_out_log,Blog_log,Cafeteria_log,ECM_log]
 
     normalModels = [Target,Leadership]
 

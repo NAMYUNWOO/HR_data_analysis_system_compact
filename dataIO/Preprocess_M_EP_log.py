@@ -4,6 +4,7 @@ import datetime
 import numpy as np
 from django.db.models import Q
 from index.models import Employee
+from .models import ifexistDel
 N_IQR = 3
 
 def mean_except_outlier(series):
@@ -14,6 +15,7 @@ def mean_except_outlier(series):
     if len(series2) == 0:
         return np.mean(series)
     return np.mean(series2)
+
 
 def preprocess_M_EP_log(M_EP_log,M_EPData,dateRange):
     late = [20, 3]
@@ -103,6 +105,7 @@ def preprocess_M_EP_log(M_EP_log,M_EPData,dateRange):
         eval_date = dateRange[1]
         params.update({"eval_date": eval_date})
         start_date = dateRange[0]
+        ifexistDel(M_EPData,employeeID,eval_date,start_date)
         params.update({"start_date": start_date})
         mep_normal = df_instance.normalCntAvg_mon
         params.update({"mep_normal": mep_normal})

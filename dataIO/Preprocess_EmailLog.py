@@ -4,6 +4,7 @@ from django.db.models import Q
 from functools import reduce
 from index.models import Employee
 from .Edge import *
+from .models import ifexistDel
 
 def isIn_q1_sub_3iqr(series):
     q1 = series.quantile(0.25)
@@ -30,7 +31,6 @@ def get_nodes_sizes_df(dt, temp):
     tempdf = temp[temp.year_x_month == dt].edge.iloc[0].nodes_sizes()
     tempdf["month"] = pd.Series([dt] * len(tempdf))
     return tempdf
-
 
 
 def preprocess_EmailLog(EmailLog,EmailData,dateRange):
@@ -122,6 +122,7 @@ def preprocess_EmailLog(EmailLog,EmailData,dateRange):
         employeeID_confirm = df_instance.ID
         eval_date = dateRange[1]
         start_date = dateRange[0]
+        ifexistDel(EmailData,employeeID,eval_date,start_date)
         sendCnt = df_instance.sendCount_total
         sendCnt_nwh = df_instance.sendCount_overtime
         receiveCnt = df_instance.receiveCount_total

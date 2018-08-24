@@ -94,7 +94,20 @@ class PreprocessData:
                             Token_log:Token_Data,
                             VDI_log:VDI_Data,
                             M_EP_log:M_EPData,
-                            GatePass_log : GatePassData
+                            GatePass_log : GatePassData,
+                            Approval_log: ApprovalData,
+                            PCM_log: PCMData,
+                            TMS_log: TMSData,
+                            EP_log: EPData,
+                            Meeting_log: MeetingData,
+                            Thanks_log: Thanks_Data,
+                            Portable_out_log: Portable_out_Data,
+                            IMS_log: IMSData,
+                            PC_control_log: PC_control_Data,
+                            PC_out_log: PC_out_Data,
+                            Blog_log: BlogData,
+                            Cafeteria_log: CafeteriaData,
+                            ECM_log: ECMData
                         }
         self.preprocess_func_hash = {
             EmailLog : preprocess_EmailLog,
@@ -110,8 +123,6 @@ class PreprocessData:
             PCM_log:PCMData,
             TMS_log:TMSData,
             EP_log:EPData,
-            VDI_indi_log:VDI_indi_Data,
-            VDI_share_log:VDI_share_Data,
             Meeting_log:MeetingData,
             Thanks_log:Thanks_Data,
             Portable_out_log:Portable_out_Data,
@@ -176,38 +187,6 @@ class PreprocessData:
             if isExists.count() != 0:
                 isExists.delete()
             instance_i = self.Model(employeeID=empObj, employeeID_confirm=id_i, start_date=self.start_date,eval_date=self.eval_date)
-            """
-            # no difference between email and others
-            if self.Model != EmailData:
-                instance_i = self.Model(employeeID=empObj, employeeID_confirm=id_i, start_date=self.start_date, eval_date=self.eval_date)
-            else:
-                cls_ind_outd_all = self.getSnaData(id_i, graph=self.egp.networksJson["all"])
-                cls_ind_outd_sangsa = self.getSnaData(id_i, graph=self.egp.networksJson[str(empObj.level) + "_sangsa"])
-                cls_ind_outd_dongryo = self.getSnaData(id_i, graph=self.egp.networksJson[str(empObj.level) + "_dongryo"])
-                cls_ind_outd_buha = self.getSnaData(id_i, graph=self.egp.networksJson[str(empObj.level) + "_buha"])
-                instance_i = self.Model(employeeID=empObj, employeeID_confirm=id_i, start_date=self.start_date,
-                                        eval_date=self.eval_date
-                                        , sna_closeness=cls_ind_outd_all[0]
-                                        , sna_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson["all_betweenness"])
-                                        , sna_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson["all_eigenvector"])
-                                        , sna_indegree=cls_ind_outd_all[1]
-                                        , sna_outdegree=cls_ind_outd_all[2]
-                                        , buha_closeness=cls_ind_outd_buha[0]
-                                        , buha_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_buha_betweenness"])
-                                        , buha_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_buha_eigenvector"])
-                                        , buha_indegree=cls_ind_outd_buha[1]
-                                        , buha_outdegree=cls_ind_outd_buha[2]
-                                        , dongryo_closeness=cls_ind_outd_dongryo[0]
-                                        , dongryo_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson[ str(empObj.level) + "_dongryo_betweenness"])
-                                        , dongryo_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_dongryo_eigenvector"])
-                                        , dongryo_indegree=cls_ind_outd_dongryo[1]
-                                        , dongryo_outdegree=cls_ind_outd_dongryo[2]
-                                        , sangsa_closeness=cls_ind_outd_sangsa[0]
-                                        , sangsa_eigenvector=self.getSnaData(id_i, myDict=self.egp.centralityJson[ str(empObj.level) + "_sangsa_betweenness"])
-                                        , sangsa_betweenness=self.getSnaData(id_i, myDict=self.egp.centralityJson[str(empObj.level) + "_sangsa_eigenvector"])
-                                        , sangsa_indegree=cls_ind_outd_sangsa[1]
-                                        , sangsa_outdegree=cls_ind_outd_sangsa[2])
-            """
             attrs = []
             for name in dir(instance_i):
                 try:

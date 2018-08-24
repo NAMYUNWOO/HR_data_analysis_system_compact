@@ -3,6 +3,7 @@ import datetime
 import numpy as np
 from index.models import Employee
 from django.db.models import Q
+from .models import ifexistDel
 import re
 from functools import reduce
 N_IQR = 3
@@ -15,6 +16,7 @@ def mean_except_outlier(series):
     if len(series2) == 0:
         return np.mean(series)
     return np.mean(series2)
+
 
 def preprocess_Token_log(Token_log,Token_Data,dateRange):
     rows = list(Token_log.objects.filter(Q(eval_date__gte=dateRange[0]) & Q(eval_date__lte=dateRange[1] + datetime.timedelta(days=1))).values_list("sendID_id", "eval_date", "receiveID_id"))
@@ -105,6 +107,7 @@ def preprocess_Token_log(Token_log,Token_Data,dateRange):
         eval_date = dateRange[1]
         params.update({"eval_date": eval_date})
         start_date = dateRange[0]
+        ifexistDel(Token_Data,employeeID,eval_date,start_date)
         params.update({"start_date": start_date})
         token_send = df_instance.sendCntMean_mon
         params.update({"token_send": token_send})

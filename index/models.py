@@ -46,12 +46,12 @@ class Employee(models.Model):
 
 
 """
-    empid = models.ForeignKey(Employee,null=False)
+    empid = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     empidN =  models.IntegerField(default=0)
 """
 
 class Score(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
     predict = models.FloatField(null=True)
     intercept = models.FloatField(null=True)
@@ -77,7 +77,7 @@ class Score(models.Model):
 
 class EmployeeBiography(models.Model):
     # 사번
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
 
     # 부	부.그룹. 이 아닌 그냥 부 (최소단위)
@@ -123,7 +123,7 @@ class EmployeeBiography(models.Model):
 
 # 직원평가
 class EmployeeGrade(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
 
     # 년 역량 하향 등급	년 역량하향 등급 (상사로부터의 평가)
@@ -205,7 +205,7 @@ class EmployeeGrade(models.Model):
 # 교육평가
 class Education(models.Model):
 
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
     #Y - 1년이수과정학점
     edu_course_cnt = models.FloatField(null=True, default=0)
@@ -230,7 +230,7 @@ class EmailLog(models.Model):
         return str(self.sendID) + "_to_" + str(self.receiveID) + "_at_" + str(self.eval_date)
 
 class EmailData(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
     eval_date = models.DateTimeField()
     start_date = models.DateTimeField()
@@ -289,7 +289,7 @@ class VDI_log(models.Model):
         return str(self.employeeID) + "_at_" + str(self.eval_date)
 
 class VDI_Data(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
     eval_date = models.DateTimeField()
     start_date = models.DateTimeField()
@@ -316,7 +316,7 @@ class Token_log(models.Model):
         return str(self.sendID) +"to" +str(self.receiveID)
 
 class Token_Data(models.Model):
-    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT,null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
     eval_date = models.DateTimeField()
     start_date = models.DateTimeField()
@@ -476,7 +476,7 @@ class GatePassData(models.Model):
 
 
 class Leadership(models.Model):
-    employeeID = models.ForeignKey(Employee, on_delete=models.PROTECT, null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
     eval_date = models.DateTimeField()
     start_date = models.DateTimeField()
@@ -492,7 +492,7 @@ class Leadership(models.Model):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
 class Target(models.Model):
-    employeeID = models.ForeignKey(Employee, on_delete=models.PROTECT, null=False)
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
     employeeID_confirm = models.IntegerField(default=0)
     eval_date = models.DateTimeField()
     start_date = models.DateTimeField()
@@ -502,3 +502,480 @@ class Target(models.Model):
     def __str__(self):
         return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
 
+
+
+
+#----------------------------------------- useless table below ------------------------------------------
+#########################################################################################################
+
+
+
+class PCM_log(models.Model):
+    employeeID =  models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField()
+    pcm_tot_enroll  = models.FloatField(null=True, default=0)
+    pcm_tot_remove  = models.FloatField(null=True, default=0)
+    pcm_tot_check  = models.FloatField(null=True, default=0)
+    pcm_tot_checked  = models.FloatField(null=True, default=0)
+
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+
+class PCMData(models.Model):
+    employeeID =  models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    pcm_tot_enroll  = models.FloatField(null=True, default=0)
+    pcm_tot_remove  = models.FloatField(null=True, default=0)
+    pcm_tot_check  = models.FloatField(null=True, default=0)
+    pcm_tot_checked  = models.FloatField(null=True, default=0)
+
+    def posco_set_all(self):
+        pcmobj_ = PCM_log.objects.filter(employeeID=self.employeeID_confirm).order_by("eval_date")
+        if len(pcmobj_) == 0:
+            return
+        pcmobj = pcmobj_.first()
+        self.pcm_tot_enroll = pcmobj.pcm_tot_enroll
+        self.pcm_tot_remove = pcmobj.pcm_tot_remove
+        self.pcm_tot_check = pcmobj.pcm_tot_check
+        self.pcm_tot_checked = pcmobj.pcm_tot_checked
+
+
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+
+class IMS_log(models.Model):
+    employeeID =  models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    imstype = models.CharField(max_length=20, null=False)
+    eval_date = models.DateTimeField()
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+class IMSData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    ims_tot_enroll = models.FloatField(null=True, default=0)
+    ims_tot_opinion_enroll  = models.FloatField(null=True, default=0)
+    ims_tot_idea_enroll  = models.FloatField(null=True, default=0)
+    ims_tot_board_enroll  = models.FloatField(null=True, default=0)
+    ims_tot_board_opinion_enroll  = models.FloatField(null=True, default=0)
+
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+
+    def yearbeforpoint(self):
+        return IMS_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def _ims_tot_opinion_enroll(self):
+        imsObj = IMS_log.objects.filter(Q(employeeID=self.employeeID_confirm)&Q(imstype="opinion") &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.ims_tot_opinion_enroll = imsObj.count()
+
+    def _ims_tot_idea_enroll(self):
+        imsObj = IMS_log.objects.filter(Q(employeeID=self.employeeID_confirm)&Q(imstype="idea") &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.ims_tot_idea_enroll = imsObj.count()
+
+    def _ims_tot_board_enroll(self):
+        imsObj = IMS_log.objects.filter(Q(employeeID=self.employeeID_confirm)&Q(imstype="board") &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.ims_tot_board_enroll = imsObj.count()
+
+    def _ims_tot_board_opinion_enroll(self):
+        imsObj = IMS_log.objects.filter(Q(employeeID=self.employeeID_confirm)&Q(imstype="board_opinion") &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.ims_tot_board_opinion_enroll = imsObj.count()
+
+    def _ims_tot_enroll(self):
+        self.ims_tot_enroll = self.ims_tot_opinion_enroll + self.ims_tot_idea_enroll +  self.ims_tot_board_enroll + self.ims_tot_board_opinion_enroll
+
+    def posco_set_ims_data_set(self):
+        self._ims_tot_opinion_enroll()
+        self._ims_tot_idea_enroll()
+        self._ims_tot_board_enroll()
+        self._ims_tot_board_opinion_enroll()
+        self._ims_tot_enroll()
+
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+
+class Meeting_log(models.Model):
+    employeeID =  models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField() # meeting start
+    eval_date2 = models.DateTimeField() # meeting end
+
+    def __str__(self):
+        return str(self.employeeID) + "_meeting_from_" + str(self.eval_date) + "_to_"  +str(self.eval_date2)
+
+
+class MeetingData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    meeting_join_count = models.FloatField(null=True, default=0)
+    mean_meeting_time  = models.FloatField(null=True, default=0)  # 시간단위
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+
+    def yearbeforpoint(self):
+        return Meeting_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_meeting_join_count(self):
+        meetingObj = Meeting_log.objects.filter(Q(employeeID=self.employeeID)&Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.meeting_join_count = meetingObj.count()
+
+    def posco_set_mean_meeting_time(self):
+        meetingObj = Meeting_log.objects.filter(Q(employeeID=self.employeeID) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1))
+                            ).annotate(
+                            gap = ExpressionWrapper(F("eval_date2") - F("eval_date"),DurationField())
+                            ).values_list("gap",flat=True)
+        if meetingObj.count() == 0:
+            return 0
+        mean_meeting = sum(map(lambda x:x.total_seconds()/3600,meetingObj))/meetingObj.count()
+        self.mean_meeting_time = mean_meeting
+
+
+class EP_log(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField()
+
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+
+class EPData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    ep_access_day_mean = models.FloatField(null=True, default=0)
+    ep_access_day_var = models.FloatField(null=True, default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+
+    def yearbeforpoint(self):
+        return EP_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+
+    def posco_set_ep_access_day_mean(self):
+        epobj = EP_log.objects.filter(Q(employeeID=self.employeeID) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        if epobj.count() == 0:
+            return 0
+        avg = epobj.annotate(day=TruncDay("eval_date")).values("day").annotate(the_count=Count("employeeID")).aggregate(avg=Avg("the_count"))["avg"]
+        self.ep_access_day_mean = avg
+        return self.ep_access_day_mean
+
+    def posco_set_ep_access_day_var(self):
+        epobj = EP_log.objects.filter(Q(employeeID=self.employeeID) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        if epobj.count() == 0:
+            return 0
+        valList = list(epobj.annotate(day=TruncMonth("eval_date")).values("day").annotate(the_count=Count("employeeID")).values_list("the_count",flat=True))
+        var_ = np.std(valList)
+        self.ep_access_day_var = var_
+
+class TMS_log(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="tms_main_id1")
+    employeeID2 = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="tms_coworker_id2")
+    eval_date = models.DateTimeField()
+    def __str__(self):
+        return str(self.employeeID) + "_and_" + str(self.employeeID2) + "_at_" + str(self.eval_date)
+
+class TMSData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    tms_tot_attendant = models.FloatField(null=True,default=0)
+    tms_tot_coworker = models.FloatField(null=True,default=0)
+    def posco_set_tms_tot_attendant(self):
+        tmsobj = TMS_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.tms_tot_attendant = tmsobj.count()
+
+
+    def posco_set_tms_tot_coworker(self):
+        tmsobj = TMS_log.objects.filter(Q(employeeID2=self.employeeID_confirm) & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.tms_tot_coworker = tmsobj.count()
+
+
+class Approval_log(models.Model):
+    requesterID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="appr_reqID")
+    approverID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False, related_name="appr_apprID")
+    eval_date = models.DateTimeField()
+    approve_date = models.DateTimeField()
+    def __str__(self):
+        return str(self.requesterID) + "_to_" + str(self.approverID) + "_at_" + str(self.eval_date)
+
+
+
+class ApprovalData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    approve_tot_request = models.FloatField(null=True,default=0)
+    approve_tot_sign = models.FloatField(null=True,default=0)
+    approve_mean_timeh = models.FloatField(null=True,default=0)
+    def yearbeforpoint(self):
+        return Approval_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_approve_tot_request(self):
+        approvalObj = Approval_log.objects.filter(Q(requesterID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.approve_tot_request = approvalObj.count()
+
+    def posco_set_approve_tot_sign(self):
+        approvalObj = Approval_log.objects.filter(Q(approverID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.approve_tot_sign = approvalObj.count()
+
+    def posco_set_approve_mean_timeh(self):
+        approvalObj = Approval_log.objects.filter(
+                            Q(requesterID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1))
+                            ).annotate(
+                            gap = ExpressionWrapper(F("approve_date") - F("eval_date"),DurationField())
+                            ).values_list("gap",flat=True)
+        if approvalObj.count() == 0:
+            return 0
+        approve_mean_timeh = sum(map(lambda x:x.total_seconds()/3600,approvalObj))/approvalObj.count()
+        self.approve_mean_timeh = approve_mean_timeh
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+class Portable_out_log(models.Model):
+    requesterID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.requesterID) + "_at_" + str(self.eval_date)
+
+
+
+class Portable_out_Data(models.Model):
+
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    porta_tot_request = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return Portable_out_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+    def posco_set_porta_tot_request(self):
+        portaObj = Portable_out_log.objects.filter(Q(requesterID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.porta_tot_request = portaObj.count()
+        return self.porta_tot_request
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+
+class PC_control_log(models.Model):
+    requesterID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    approval_date = models.DateTimeField(null=True,default = timezone.now)
+    eval_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.requesterID) + "_at_" + str(self.eval_date)
+
+
+class PC_control_Data(models.Model):
+
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    pccontrol_mean_timeh = models.FloatField(null=True,default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return PC_control_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_pccontrol_mean_timeh(self):
+        pcObj = PC_control_log.objects.filter(
+                            Q(requesterID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1))
+                            ).annotate(
+                            gap = ExpressionWrapper(F("approval_date") - F("eval_date"),DurationField())
+                            ).values_list("gap",flat=True)
+        if pcObj.count() == 0:
+            return 0
+        pccontrol_meanH = sum(map(lambda x:x.total_seconds()/3600,pcObj))/pcObj.count()
+        self.pccontrol_mean_timeh = pccontrol_meanH
+        return self.pccontrol_mean_timeh
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+
+class PC_out_log(models.Model):
+    requesterID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.requesterID) + "_at_" + str(self.eval_date)
+
+
+class PC_out_Data(models.Model):
+
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    pcout_tot_request = models.FloatField(null=True,default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return PC_out_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_pcout_tot_request(self):
+        pcObj = PC_out_log.objects.filter(Q(requesterID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.pcout_tot_request =  pcObj.count()
+        return self.pcout_tot_request
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+class Thanks_log(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    #thxs_receiveID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    thxType = models.CharField(max_length=20,null=False) # {"감사노트":"thanksNote","감사문자":"thanksMsg","감사토큰":"thanksToken","감사편지":"thanksletter"}
+    writerType = models.CharField(max_length=20,null=False) # send, receive, follow,
+    followType = models.CharField(max_length=20,null=False) #c {"내용":"contents","공감":"like","댓글":"reply"}
+    eval_date = models.DateField()
+    def __str__(self):
+        return str(self.employeeID) + "_at_" + str(self.eval_date)
+
+class Thanks_Data(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    thank_letter_tot_receive = models.FloatField(null=True,default=0)
+    thank_token_tot_receive = models.FloatField(null=True, default=0)
+    thank_msg_tot_receive = models.FloatField(null=True, default=0)
+    thank_note_tot_receive = models.FloatField(null=True, default=0)
+    thank_letter_tot_send = models.FloatField(null=True,default=0)
+    thank_token_tot_send = models.FloatField(null=True, default=0)
+    thank_msg_tot_send = models.FloatField(null=True, default=0)
+    thank_note_tot_send = models.FloatField(null=True, default=0)
+    thank_like_tot = models.FloatField(null=True, default=0)
+    thank_reply_tot = models.FloatField(null=True, default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+
+    def yearbeforpoint(self):
+        return Thanks_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_thank_tot_receive_send(self):
+        thxTypes_arr = ["thanksletter","thanksToken","thanksMsg","thanksNote"]
+        send_or_recieve = ["send", "receive"]
+        for thxType in thxTypes_arr:
+            for sor in send_or_recieve:
+                thxObj = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm)&Q(writerType=sor)&Q(thxType = thxType) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+                if thxType == "thanksletter" and sor == "send":
+                    self.thank_letter_tot_send = thxObj.count()
+                elif thxType == "thanksToken" and sor == "send":
+                    self.thank_token_tot_send = thxObj.count()
+                elif thxType == "thanksMsg" and sor == "send":
+                    self.thank_msg_tot_send = thxObj.count()
+                elif thxType == "thanksNote" and sor == "send":
+                    self.thank_note_tot_send = thxObj.count()
+                elif thxType == "thanksletter" and sor == "receive":
+                    self.thank_letter_tot_receive = thxObj.count()
+                elif thxType == "thanksToken" and sor == "receive":
+                    self.thank_token_tot_receive = thxObj.count()
+                elif thxType == "thanksMsg" and sor == "receive":
+                    self.thank_msg_tot_receive = thxObj.count()
+                elif thxType == "thanksNote" and sor == "receive":
+                    self.thank_note_tot_receive = thxObj.count()
+
+    def posco_set_thank_tot_follow(self):
+        thxObjLike = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(writerType="follow") & Q(followType="like") & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        thxObjReply = Thanks_log.objects.filter(Q(employeeID=self.employeeID_confirm) & Q(writerType="follow") & Q(followType="reply") & Q(eval_date__gte=self.start_date) & Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.thank_like_tot = thxObjLike.count()
+        self.thank_reply_tot = thxObjReply.count()
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+
+class ECM_log(models.Model):
+    userECMID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.userECMID) + "_at_" + str(self.eval_date)
+
+
+class ECMData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    ecm_before_in79 = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return ECM_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_ecm_before_in79(self):
+        ecmCnctObj = ECM_log.objects.filter(Q(userECMID=self.employeeID_confirm)&Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        if ecmCnctObj.count() == 0:
+            return 0
+        daycnt = ecmCnctObj.filter(Q(eval_date__hour__gte=7) & Q(eval_date__hour__lt=9)).annotate(day=TruncDay("eval_date")).values("day").distinct().count()
+        self.ecm_before_in79 = daycnt
+        return self.ecm_before_in79
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+class Cafeteria_log(models.Model):
+    buyerID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    payment = models.FloatField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    eval_date = models.DateField()
+    def __str__(self):
+        return str(self.buyerID) + "_at_" + str(self.eval_date)
+
+
+class CafeteriaData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    food_tot_spend = models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return Cafeteria_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_food_tot_spend(self):
+        cafeterialObj = Cafeteria_log.objects.filter(Q(buyerID=self.employeeID_confirm) &Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.food_tot_spend = cafeterialObj.aggregate(tot = Sum("payment"))["tot"]
+        return self.food_tot_spend
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)
+
+
+class Blog_log(models.Model):
+    blogID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    eval_date = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.blogID) + "_at_" + str(self.eval_date)
+
+
+
+class BlogData(models.Model):
+    employeeID = models.ForeignKey(Employee,on_delete=models.PROTECT, null=False)
+    employeeID_confirm = models.IntegerField(default=0)
+    eval_date = models.DateTimeField()
+    start_date = models.DateTimeField()
+    blog_tot_visit =  models.FloatField(null=True,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def yearbeforpoint(self):
+        return Blog_log.objects.order_by("-eval_date").first().eval_date - datetime.timedelta(days=365)
+
+    def posco_set_blog_tot_visit(self):
+        blogObj = Blog_log.objects.filter(Q(blogID=self.employeeID_confirm)&Q(eval_date__gte = self.start_date)&Q(eval_date__lte = self.eval_date+datetime.timedelta(days=1)))
+        self.blog_tot_visit = blogObj.count()
+        return self.blog_tot_visit
+
+    def __str__(self):
+        return str(self.employeeID_confirm) + "_at_" + str(self.eval_date)

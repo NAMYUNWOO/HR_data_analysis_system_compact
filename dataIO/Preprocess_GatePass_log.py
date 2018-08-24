@@ -1,11 +1,13 @@
 from django.db.models import Q,F, Sum, Count, Case, When, Avg, Func,ExpressionWrapper,DurationField
 from index.models import Employee
 import datetime
+from .models import ifexistDel
 
 def overOutAddTime(seconds):
     if seconds <= 14400:
         return seconds + 86400
     return seconds
+
 
 def preprocess_GatePass_log(GatePass_log,GatePassData,dateRange):
     GatePassData_list = []
@@ -106,6 +108,7 @@ def preprocess_GatePass_log(GatePass_log,GatePassData,dateRange):
                     outStack = []
                     inStack = []
         modelParams = {"employeeID":empObj,"employeeID_confirm":emp_id,"start_date":dateRange[0], "eval_date":dateRange[1]}
+        ifexistDel(GatePassData, empObj, dateRange[1], dateRange[0])
         if len(outtingFreqArr) != 0:
             outting_freq_mean = sum(outtingFreqArr) / len(outtingFreqArr)
             modelParams.update({"outting_freq_mean":outting_freq_mean})

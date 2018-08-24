@@ -48,3 +48,7 @@ def getRecentUpdateDates2():
     return (logData,processedData,hrData,scoreData)
 
 
+def ifexistDel(model,empObj,eval_date,start_date):
+    isExists = model.objects.filter(Q(employeeID=empObj) & Q(eval_date=eval_date) & Q(start_date=start_date))
+    if isExists.count() != 0:
+        isExists.delete()
