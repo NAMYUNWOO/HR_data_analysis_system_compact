@@ -320,14 +320,20 @@ def dataIO(request):
             df_to_Analysis["early_work"]= (df_to_Analysis.mep_early_byLevelRatio + df_to_Analysis.vdi_early_byLevelRatio)/2
             df_to_Analysis["late_work"]= (df_to_Analysis.mep_late_byLevelRatio + df_to_Analysis.vdi_late_byLevelRatio)/2
             df_to_Analysis = df_to_Analysis.drop(["mep_early_byLevelRatio","vdi_early_byLevelRatio","mep_late_byLevelRatio","vdi_late_byLevelRatio"],1)
+
             df_to_predict = df_to_predict[cols2Select[:-1]]
             df_to_predict = df_to_predict.fillna(df_to_predict.mean())
+            df_to_predict.index = range(len(df_to_predict))
+            df_to_predict["early_work"]= (df_to_predict.mep_early_byLevelRatio + df_to_predict.vdi_early_byLevelRatio)/2
+            df_to_predict["late_work"]= (df_to_predict.mep_late_byLevelRatio + df_to_predict.vdi_late_byLevelRatio)/2
+            df_to_predict = df_to_predict.drop(["mep_early_byLevelRatio","vdi_early_byLevelRatio","mep_late_byLevelRatio","vdi_late_byLevelRatio"],1)
             clf = xgb.XGBClassifier(learning_rate=0.1, n_estimators=1000, max_depth=2, \
                                     min_child_weight=1, gamma=0, subsample=1, colsample_bytree=1)
             clf.fit(df_to_Analysis.drop(["isTarget","employeeID_id"], 1).values, df_to_Analysis.isTarget.values)
             from . import xgb_explainer as xgb_exp
 
             dtrain = xgb.DMatrix(data=df_to_Analysis.drop(["isTarget","employeeID_id"], 1).astype(np.float64), label=df_to_Analysis.isTarget.values)
+            dtest = xgb.DMatrix(data=df_to_predict.drop(["employeeID_id"], 1).astype(np.float64))
             params = {"subsample": 1, "colsample_bytree": 1, "gamma": 0, "max_depth": 2, 'silent': 1,
                       "min_child_weight": 1, "lambda": 1}
             best_iteration = 1000
@@ -335,11 +341,11 @@ def dataIO(request):
             tree_lst = xgb_exp.model2table(bst, lmda=1.0)
             feature_names = dtrain.feature_names
             scores = []
-            for i in df_to_Analysis.index:
+            for i in df_to_predict.index:
                 row = []
-                sample = xgb.DMatrix.slice(dtrain, [i])
+                sample = xgb.DMatrix.slice(dtest, [i])
                 sample.feature_names = feature_names
-                empid = df_to_Analysis.iloc[i].employeeID_id
+                empid = df_to_predict.iloc[i].employeeID_id
                 pred= bst.predict(sample)[0]
                 row.append(empid)
                 row.append(pred)
