@@ -78,6 +78,28 @@ class LineChart(Chart):
             dataSetArr.append(DataSet_i)
         return dataSetArr
 
+class BarChart(Chart):
+    chart_type = 'bar'
+    scaleBeginAtZero = False
+
+    def getLabelData(self,**kwargs):
+        self.labels = kwargs["labels"]
+        self.datas = kwargs["xdata"]
+
+    def get_labels(self, **kwargs):
+        return self.labels
+
+    def get_datasets(self, **kwargs):
+        data = self.datas
+        colors = [rgba(255, 99, 132, 0.2) if val > 0 else rgba(54, 162, 235, 0.2) for val in data]
+
+
+        return [DataSet(label="영향력",
+                        data=data,
+                        borderWidth=1,
+                        backgroundColor=colors,
+                        borderColor=colors)]
+
 
 
 class Round(Func):

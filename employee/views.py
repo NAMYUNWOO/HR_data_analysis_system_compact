@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from index.views import get_Bu_buUrl
-from index.models import Employee,EmployeeBiography,EmailData,M_EPData,EmployeeGrade,Education,Token_Data,VDI_Data,GatePassData
-from index.views import LineChart
-from django.db.models import F
+from index.models import Employee,EmployeeBiography,EmailData,M_EPData,EmployeeGrade,Education,Token_Data,VDI_Data,GatePassData,Score
+from index.views import LineChart, BarChart
+from django.db.models import F,Q
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
@@ -72,8 +72,13 @@ def employee(request,id):
                                               ["staying_office_meanM", "outting_freq_mean", "inTime_mean",
                                                "outTime_mean", "working_days"],
                                               ["근무시간(분)", "외출빈도", "출근시간", "퇴근시간", "근무일"])
-
-
+    scoreObj = Score.objects.filter(employeeID = empobj).order_by("-eval_date").first().__dict__
+    scoreFields = ['predict','intercept','grade_co_r3_avg','holiday','edu_course_cnt','edu_course_time','sendCnt_byLevelRatio',
+                    'sendCnt_nwh_byLevelRatio','receiveCnt_byLevelRatio','nodeSize_byLevelRatio','nodeSize_byGroupRatio',
+                    'token_receive_byLevelRatio','leadership_env_job','leadership_env','leadership_env_common','early_work','late_work']
+    xdataScore = [scoreObj[fl] for fl in scoreFields]
+    scoreBar = BarChart()
+    scoreBar.getLabelData(labels=scoreFields,xdata=xdataScore)
 
     context = {"bu":get_Bu_buUrl(),
                "empID":id, "name":empobj.empname,
@@ -87,6 +92,7 @@ def employee(request,id):
                "edu":edu_LineChart,
                "token":token_LineChart,
                "vdi":vdi_LineChart,
-               "gate":gatepass_LineChart
+               "gate":gatepass_LineChart,
+               "score":scoreBar
                }
     return render(request, 'employee.html',context)
